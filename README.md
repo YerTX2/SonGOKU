@@ -1,13 +1,14 @@
-<h1 align="center">‧ GokuSjjRose-BOT ‧
+<h1 align="center"> ☪★Hades-Bot★☪
+
 </p>
 <p>
-        <img src= "https://telegra.ph/file/89fa6a3c8e9cedda6f5ca.jpg">
+        <img src= "https://i.ibb.co/4gtGgtm/miniurl.jpg">
     </p>
     <p align="center">
         <a href="#"><img title="simple-whatsapp-bot" src="https://img.shields.io/badge/-SIMPLE--WHATSAPP--BOT-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
     </p>
     <p>
-        <a href="https://github.com/StarlightsTeam"><img title="Author"    src="https://img.shields.io/badge/Author-おDaniel-purple.svg?style=for-the-badge&logo=github"></a>
+        <a href="https://github.com/YerTX2/Hades-BotZx"><img title="Author"    src="https://img.shields.io/badge/Author- ZxYerSixZx-purple.svg?style=for-the-badge&logo=github"></a>
     </p>
     <p>
         <a href="https://github.com/StarlightsTeamollowers"><img title="Followers" src="https://img.shields.io/github/followers/StarlightsTeam?color=blue&style=flat-square"></a>
@@ -47,7 +48,7 @@ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
 
 ```bash
-git clone https://github.com/StarlightsTeam/Ai-Hoshino.git && cd Ai-Hoshino
+git clone https://github.com/YerTX2/Hades-BotZx.git && cd Hades-BotZx 
 ```
 
 ```bash
@@ -91,7 +92,7 @@ npm start
 
 - Si la Bot tiene algún contactame ฅ^•ﻌ•^ฅ
 
-* <a href="https://wa.me/5218139760662"><img alt="WhatsApp" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+* <a href="https://wa.me/+51907 376960 "><img alt="WhatsApp" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
 ---------
 
@@ -100,13 +101,7 @@ npm start
 
 - Si quieres probar la Bot antes de instalar
 
-* <a href="https://chat.whatsapp.com/CqdWTXmS702JD31SQzr0Ph"><img alt="Group" src="https://img.shields.io/badge/Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
-
----------
-
-## Repo Stats 🔭
-
-![github card](https://github-readme-stats.vercel.app/api/pin/?username=StarlightsTeam&repo=Ai-Hoshino&theme=chartreuse-dark)
+* <a href="https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v"><img alt="Group" src="https://img.shields.io/badge/Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
 ---------
 
@@ -117,8 +112,30 @@ npm start
 
 ---------
 <div align="center">
-  <h1 align="center">Editor y Propietario de la Bot</h1>
+  <h1 align="center">Editor y Propietario de ★Hades-Bot ★ </h1>
 
-<a href="https://github.com/StarlightsTeam"><img src="https://i.ibb.co/qRfKp3t/file.jpg" width="300" height="300" alt="おDaniel"/></a>
+<a href="https://github.com/YerTX2/Hades-BotZx.git"><img src="https://i.ibb.co/PGpvpMp/55ae37a113d87da406abec3662a2ba27.jpg" width="300" height="300" alt="ZxYerSixZx"/></a>
 
 `© Ai Hoshino - MD / Starlights Team _ By おDaniel & ZxYerSixZx`
+
+            
+    ALOJAMIENTO 
+    PARA MANTENER TU BOT ACTIVO 24/7.
+      
+
+### 🟢 INFINITY HOST
+### □ ACTIVAR EN INFINITY-HOST
+[![blog](https://img.shields.io/badge/Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
+](https://youtu.be/c9RCnOV418E?si=kNWog_fSi8wCWX3A)
+
+<a href="https://dashboard.infinitywa.xyz"><img src="https://qu.ax/TPhh.jpg" height="125px"></a>
+
+- **Página:** [`Click aqui`](https://dashboard.infinitywa.xyz)
+- **Dashboard:** [`Aquí`](https://dashboard.infinitywa.xyz)
+- **Panel:** [`Aquí`](https://live.panel-infinitywa.store)
+- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/GQ82mPnSYnm0XL2hLPk7FV)
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A)
+
+- **Discord:** [`Aqui`](https://discord.com/invite/vgfpe4Nwd8)
+
+
