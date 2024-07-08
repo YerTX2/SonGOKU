@@ -13,9 +13,9 @@
     <p>
         <a href="https://github.com/YerTX2/GokuBlackRose"><img title="Followers" src="https://img.shields.io/github/followers/YerTX2?color=blue&style=flat-square"></a>
         <a href="https://github.com/YerTX2/GokuBlackRose/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/YerTX2/GokuBlackRose?color=red&style=flat-square"></a>
-        <a href="https://github.com/StarlightsTeam/Ai-Hoshino/network/members"><img title="Forks" src="http://img.shields.io/github/forks/StarlightsTeam/Ai-Hoshino?color=red&style=flat-square"></a>
+        <a href="https://github.com/YerTX2/GokuBlackRose/network/members"><img title="Forks" src="http://img.shields.io/github/forks/YerTX2/GokuBlackRose?color=red&style=flat-square"></a>
         <a href="#"><img src="https://img.shields.io/badge/MANTENIMIENTO-SI-blue.svg"</a>
-        <img src="https://img.shields.io/github/repo-size/StarlightsTeam/Ai-Hoshino" /> <br>
+        <img src="https://img.shields.io/github/repo-size/YerTX2/GokuBlackRose" /> <br>
    </p>
    <p>
 </h1>
@@ -48,7 +48,7 @@ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
 
 ```bash
-git clone https://github.com/YerTX2/Hades-BotZx.git && cd Hades-BotZx 
+git clone https://github.com/YerTX2/GokuBlackRose.git && cd GokuBlackRose
 ```
 
 ```bash
@@ -116,7 +116,7 @@ npm start
 
 <a href="https://github.com/YerTX2/Hades-BotZx.git"><img src="https://i.ibb.co/PGpvpMp/55ae37a113d87da406abec3662a2ba27.jpg" width="300" height="300" alt="ZxYerSixZx"/></a>
 
-`© Ai Hoshino - MD / Starlights Team _ By おDaniel & ZxYerSixZx`
+ おDaniel & ZxYerSixZx`
 
             
     ALOJAMIENTO 
