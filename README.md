@@ -112,7 +112,7 @@ npm start
 
 ---------
 <div align="center">
-  <h1 align="center">Editor y Propietario de ★Hades-Bot ★ </h1>
+  <h1 align="center">Editor y Propietario de GokuBlackRose</h1>
 
 <a href="https://github.com/YerTX2/Hades-BotZx.git"><img src="https://i.ibb.co/tYLHSWv/latest.webp" width="300" height="300" alt="ZxYerSixZx"/></a>
 
