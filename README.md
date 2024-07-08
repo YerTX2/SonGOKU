@@ -1,4 +1,4 @@
-<h1 align="center"> 🐉GokuBlackRose🐉
+<h1 align="center"> GokuBlackRose
 
 </p>
 <p>
