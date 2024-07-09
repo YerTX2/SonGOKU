@@ -15,7 +15,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   if (name.length >= 100) return m.reply('🐉 El nombre es demasiado largo.' )
   age = parseInt(age)
   if (age > 100) return m.reply('👴🏻 eres tu maestro Roshi.')
-  if (age < 5) return m.reply('🍼  vaya a tomar lechita. ')
+  
   user.name = name.trim()
   user.age = age
   user.regTime = + new Date
