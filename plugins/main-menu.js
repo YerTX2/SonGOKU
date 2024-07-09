@@ -39,7 +39,8 @@ const defaultMenu = {
 %readmore
 *꒷꒦꒷꒷꒦꒷꒦꒷꒷꒦꒷꒦꒷꒦꒷꒷꒦꒷꒷꒦꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷*
 
-\t\t\t*L I S T A  -  M E N Ú S*
+\t\t\t*L I S T A  -  M E N Ú S
+░G░o░k░u░-░B░l░a░c░k░*
 `.trimStart(),
 header: '╭──⬣「 *%category* 」⬣',
 body: '│  ≡◦ *%cmd*\n',
