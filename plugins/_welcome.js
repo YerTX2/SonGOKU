@@ -14,7 +14,7 @@ await conn.sendAi(m.chat, botname, textbot, bienvenida, img, img, canal)
   }
   
   if (chat.bienvenida && m.messageStubType == 28) {
-    let bye = `┌─★ *Sumi Sakurasawa* \n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Se fue\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+    let bye = `┌─★ *░G░o░k░u░-░B░l░a░c░k░* \n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Se fue\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹`
 await conn.sendAi(m.chat, botname, textbot, bye, img, img, canal)
   }
   
