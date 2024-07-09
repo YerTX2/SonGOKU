@@ -28,8 +28,8 @@ global.packname = ``
 global.author = '{\n "bot": {\n   "name": "Goku-Black",\n     "author": "YerTX2",\n   "status_bot": "active"\n }\n}'
 global.wait = '🐢 *GokuBlack*'
 global.botname = 'Goku - Black '
-global.textbot = `Powered By Starlights Team`
-global.listo = '*🍭 Aqui tiene*'
+global.textbot = `✯Goku-Black✰`
+global.listo = '*⚔️ Aqui tiene*'
 global.namechannel = '【 ✯Goku-Black✰ 】'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
