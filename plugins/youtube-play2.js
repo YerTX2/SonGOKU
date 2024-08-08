@@ -7,7 +7,7 @@ let user = global.db.data.users[m.sender]
 try {
 let res = await Scraper.ytsearch(text)
 let { title, size, quality, thumbnail, dl_url } = await Scraper.ytmp4(res[0].url)
-if (size.includes('GB') || size.replace(' MB', '') > 300) { return await m.reply('El archivo pesa mas de 300 MB, se canceló la Descarga.')}
+if (size.includes('GB') || size.replace(' MB', '') > 700) { return await m.reply('El archivo pesa mas de 700 MB, se canceló la Descarga.')}
 let txt = `╭─⬣「 *YouTube Play* 」⬣\n`
     txt += `│  ≡◦ *🍭 Titulo ∙* ${title}\n`
     txt += `│  ≡◦ *📅 Publicado ∙* ${res[0].published}\n`
