@@ -1,5 +1,5 @@
 {
-  "name": "Sumi-Sakurasawa",
+  "name": "Son-Goku",
   "version": "5.0.0",
   "description": "Simple WhatsApp Bot Multi Device",
   "main": "index.js",
@@ -18,16 +18,16 @@
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
-  "homepage": "https://github.com/DanielDiod/Sumi-Sakurasawa",
+  "homepage": "https://github.com/YerTX2/SonGOKU",
   "author": {
-    "name": "DanielDiod"
+    "name": "YerTX2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanielDiod/Sumi-Sakurasawa.git"
+    "url": "git+https://github.com/YerTX2/SonGOKU.git"
   },
   "bugs": {
-    "url": "https://github.com/DanielDiod/Sumi-Sakurasawa/issues"
+    "url": "https://github.com/YerTX2/SonGOKU/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
