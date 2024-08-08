@@ -1,15 +1,15 @@
 import fetch from 'node-fetch'
 
 export async function before(m, { conn }) {
-//let img = await (await fetch(`https://tinyurl.com/2c5hk765`)).buffer()
+//let img = await (await fetch(`https://tinyurl.com/299lyvo5`)).buffer()
 let img = catalogo
  global.rcanal = {
     contextInfo: {
     	isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "120363206717994793@newsletter",
+      newsletterJid: "120363314192605628@newsletter",
       serverMessageId: 100,
-      newsletterName: 'Sumi - Sakursawa Channel 🎌',
+      newsletterName: 'Son - Goku Channel 🌀',
     },
 	    externalAdReply: {
 				    showAdAttribution: true,
@@ -18,7 +18,7 @@ let img = catalogo
 					mediaUrl: null,
 					description: null,
 					previewType: "PHOTO",
-					thumbnailUrl: 'https://telegra.ph/file/474de03b8c0cf87231d8e.jpg',
+					thumbnailUrl: 'https://telegra.ph/file/8813c9636643198e783fd.jpg',
 		           sourceUrl: canal,
 		           mediaType: 1,
                    renderLargerThumbnail: false
