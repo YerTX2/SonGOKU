@@ -22,7 +22,7 @@ const rl = createInterface(process.stdin, process.stdout)
 const app = express()
 const port = process.env.PORT || 8080;
 
-say('Son\nGoku\n\nCreador y editor Yer gracias por usar al bot', {
+say('Son\nGoku\n\nCreador y editor del bot Yer', {
 font: 'chrome',
 align: 'center',
 gradient: ['red', 'magenta']})
