@@ -1,13 +1,13 @@
 import fetch from 'node-fetch'
 
 export async function before(m, { conn }) {
-let img = await (await fetch(`https://tinyurl.com/2c5hk765`)).buffer()
+let img = await (await fetch(`https://tinyurl.com/299lyvo5`)).buffer()
 
  global.rcanal = {
     contextInfo: {
     	isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "0029Vaj67qQJUM2Wa5Ey3y1v@newsletter",
+      newsletterJid: "120363314192605628@newsletter",
       serverMessageId: 100,
       newsletterName: namechannel,
     },
