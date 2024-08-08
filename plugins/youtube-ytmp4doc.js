@@ -2,7 +2,7 @@ import fg from 'api-dylux'
 import yts from 'yt-search'
 import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
 import fetch from 'node-fetch' 
-let limit = 300
+let limit = 2000
 
 let handler = async (m, { conn: star, args, text, isPrems, isOwner, usedPrefix, command }) => {
 if (!args || !args[0]) return star.reply(m.chat, '🚩 Ingresa bien el enlace del vídeo de YouTube junto al comando.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* https://youtu.be/q3jS4f9ItnE`, m, rcanal)
