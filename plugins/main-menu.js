@@ -148,10 +148,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
    
-const SonGoku = ['https://telegra.ph/file/cbfe9e51c144cd2bf11f3.mp4',
-'https://telegra.ph/file/e9eb6e019e4cec6e564c5.mp4',
-'https://telegra.ph/file/d9942e847d6a2f7f26434.mp4']
-
+let img = await (await fetch(`https://telegra.ph/file/bbc4b42ba8db4ccc63382.mp4`)).buffer()
+    await m.react('🌀')
 
  // await conn.sendMessage(m.chat, { video: { url: SonGoku.getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: estilo })
     await conn.sendFile(m.chat, img, 'thumbnail.jpg', text.trim(), m, null, rcanal)
