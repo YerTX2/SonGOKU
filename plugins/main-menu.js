@@ -151,12 +151,28 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
 let img = await (await fetch(`https://telegra.ph/file/e9eb6e019e4cec6e564c5.mp4`)).buffer()
     await m.react('⭐')
 
-let img = await (await fetch(`https://telegra.ph/file/d9942e847d6a2f7f26434.mp4`)).buffer()
-    await m.react('⭐')
-   
+
+  
 /*await conn.sendMessage(m.chat, { video: { url: natsuki.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fake0 })*/
     await conn.sendFile(m.chat, img, 'thumbnail.jpg', text.trim(), m, null, rcanal)
-   //await conn.sendAi(m.chat, botname, textbot, text.trim(), img, img, canal, estilo) 
+   await conn.sendMessage(m.chat, { video: { url: natsuki.getRandom() }, gifPlayback: true, caption: menu,
+contextInfo: {
+isForwarded: true,
+forwardedNewsletterMessageInfo: {
+newsletterJid: '120363314192605628@newsletter',
+newsletterName: "[🐉SonGOKU-MD🐉]",
+serverMessageId: -1
+},
+forwardingScore: 999,
+externalAdReply: {
+mentionedJid: [m.sender],
+title: gt,
+body: wm,
+thumbnailUrl: pp,
+sourceUrl: md,
+mediaType: 1,
+renderLargerThumbnail: false
+}}}) 
 
 
   } catch (e) {
