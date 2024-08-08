@@ -1,5 +1,5 @@
 function _0x278b() {
-    const _0x389b21 = ['tags', 'getBufferAsync', 'group', 'adm', '3729642jTtpyS', 'getHeight', 'msg', 'w:profile:picture', '🍭 Responde a una *Imagen.*', 'picture', 'command', '2VUYQTB', '12PdWAYT', '39645AizItY', 'AUTO', 'chat', 'reply', 'setppgc', 'resize', 'getWidth', '3414468AzGyTc', 'help', 'botAdmin', 'alias', '451828NOPkGW', '1051098ThEpka', '25757347CPUdpb', 'query', '8PEmlmf', 'mimetype', '293845KHONfT', '78aXsQPU', '1370rCeRwD', 'image', 'quoted', 'setppgrup', 'read', 'setppgroup'];
+    const _0x389b21 = ['tags', 'getBufferAsync', 'group', 'adm', '3729642jTtpyS', 'getHeight', 'msg', 'w:profile:picture', '🌀 Responde a una *Imagen.*', 'picture', 'command', '2VUYQTB', '12PdWAYT', '39645AizItY', 'AUTO', 'chat', 'reply', 'setppgc', 'resize', 'getWidth', '3414468AzGyTc', 'help', 'botAdmin', 'alias', '451828NOPkGW', '1051098ThEpka', '25757347CPUdpb', 'query', '8PEmlmf', 'mimetype', '293845KHONfT', '78aXsQPU', '1370rCeRwD', 'image', 'quoted', 'setppgrup', 'read', 'setppgroup'];
     _0x278b = function () {
         return _0x389b21;
     };
@@ -72,7 +72,7 @@ let handler = async (_0x394eb8, {
                 }
                 , 'content': _0x4fe079
             }]
-        }), _0x394eb8[_0x1a6abe(0x1d6)]('🍭 Imagen actualizada con éxito.');
+        }), _0x394eb8[_0x1a6abe(0x1d6)]('🌀 Imagen actualizada con éxito.');
     } catch {
         throw _0x1a6abe(0x1ce);
     }
