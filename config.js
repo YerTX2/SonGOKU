@@ -10,7 +10,7 @@ import moment from 'moment-timezone'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.owner = [
-  ['51907376960', 'YerTX2 🌟', true],
+  ['51907376960', 'Yer 🌀', true],
   ['51907376960'],
   ['51907376960'],
   ['51907376960'],
@@ -25,12 +25,12 @@ global.prems = []
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.packname = ``
-global.author = '{\n "bot": {\n   "name": "Goku-Black",\n     "author": "YerTX2",\n   "status_bot": "active"\n }\n}'
+global.author = '{\n "bot": {\n   "name": "🌀SonGoku🌀",\n     "author": "YerTX2",\n   "status_bot": "active"\n }\n}'
 global.wait = '🌀 *SonGoku*'
 global.botname = 'Son - Goku '
 global.textbot = `🌀SonGoku🌀`
 global.listo = '*⚔️ Aqui tiene*'
-global.namechannel = '【 ✯Goku-Black✰ 】'
+global.namechannel = '【🌀SonGoku🌀】'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
