@@ -5,9 +5,9 @@ if (!args[0]) return m.reply('🌀 Ingresa el enlace del archivo de Mediafire ju
 if (!args[0].match(/mediafire/gi)) return m.reply('El enlace deve ser de un archivo de Mediafire.')
 try {
 let { title, ext, aploud, size, dl_url } = await Scraper.mediafire(args[0])
-if (size.includes('GB') || size.replace(' MB', '') > 1000) { return await m.reply('El archivo pesa mas de 1000 MB, se canceló la Descarga.')}
+if (size.includes('GB') || size.replace(' MB', '') > 4000) { return await m.reply('El archivo pesa mas de 4000 MB, se canceló la Descarga.')}
 let txt = `╭─⬣「 *Mediafire Download* 」⬣\n`
-    txt += `│  ≡◦ *🍭 Nombre ∙* ${title}\n`
+    txt += `│  ≡◦ *🌀 Nombre ∙* ${title}\n`
     txt += `│  ≡◦ *🪴 Subido ∙* ${aploud}\n`
     txt += `│  ≡◦ *📚 MimeType ∙* ${ext}\n`
     txt += `│  ≡◦ *⚖ Peso ∙* ${size}\n`
