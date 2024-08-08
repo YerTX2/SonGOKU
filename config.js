@@ -26,9 +26,9 @@ global.prems = []
 
 global.packname = ``
 global.author = '{\n "bot": {\n   "name": "Goku-Black",\n     "author": "YerTX2",\n   "status_bot": "active"\n }\n}'
-global.wait = '🐢 *GokuBlack*'
-global.botname = 'Goku - Black '
-global.textbot = `✯Goku-Black✰`
+global.wait = '🌀 *SonGoku*'
+global.botname = 'Son - Goku '
+global.textbot = `🌀SonGoku🌀`
 global.listo = '*⚔️ Aqui tiene*'
 global.namechannel = '【 ✯Goku-Black✰ 】'
 
