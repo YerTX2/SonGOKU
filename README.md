@@ -18,34 +18,34 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 <p align="center">
 <a href="#"><img title="FantasyBot-MD" src="https://img.shields.io/badge/𝐒𝐈 𝐓𝐄 𝐀𝐆𝐑𝐀𝐃𝐀 𝐄𝐋 𝐑𝐄𝐏𝐎𝐒𝐈𝐓𝐎𝐑𝐈𝐎 𝐌𝐄 𝐀𝐏𝐎𝐘𝐀𝐑𝐈𝐀𝐒 𝐂𝐎𝐍 𝐔𝐍𝐀 🌟-¡GRACIAS! -red?colorA=%255ff0000&colorB=%23017e40&style=for-the-badge"></a> 
 <p align="center">
-<a href="https://github.com/Wilsmac"><img title="FantasyBot-MD"src="https://img.shields.io/badge/𝗚𝗥𝗔𝗖𝗜𝗔𝗦 𝗣𝗢𝗥 𝗦𝗨 𝗣𝗥𝗘𝗙𝗘𝗥𝗘𝗡𝗖𝗜𝗔.-red?colorA=000000&colorB=000000&style=for-the-badge"></a> 
-<a href="https://github.com/Wilsmac"><img title="FantasyBot-MD" src="https://img.shields.io/badge/𝐂𝐎𝐌𝐏𝐀𝐓𝐈𝐁𝐋𝐄 𝐂𝐎𝐍 𝐋𝐀𝐒 𝐕𝐄𝐑𝐒𝐈𝐎𝐍𝐄𝐒 𝐌𝐔𝐋𝐓𝐈 𝐃𝐈𝐒𝐏𝐎𝐒𝐈𝐓𝐈𝐕𝐎𝐒 𝐃𝐄 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏-red?colorA=000000&colorB=000000&style=for-the-badge"></a>
+<a href="https://github.com/YerTX2"><img title="SonGoku"src="https://img.shields.io/badge/𝗚𝗥𝗔𝗖𝗜𝗔𝗦 𝗣𝗢𝗥 𝗦𝗨 𝗣𝗥𝗘𝗙𝗘𝗥𝗘𝗡𝗖𝗜𝗔.-red?colorA=000000&colorB=000000&style=for-the-badge"></a> 
+<a href="https://github.com/YerTX2"><img title="SonGoku" src="https://img.shields.io/badge/𝐂𝐎𝐌𝐏𝐀𝐓𝐈𝐁𝐋𝐄 𝐂𝐎𝐍 𝐋𝐀𝐒 𝐕𝐄𝐑𝐒𝐈𝐎𝐍𝐄𝐒 𝐌𝐔𝐋𝐓𝐈 𝐃𝐈𝐒𝐏𝐎𝐒𝐈𝐓𝐈𝐕𝐎𝐒 𝐃𝐄 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏-red?colorA=000000&colorB=000000&style=for-the-badge"></a>
 </p>
 
-<a href="https://github.com/Wilsmac/FantasyBot-MD-v1/watchers"><img title="espectadores" src="https://img.shields.io/github/watchers/Wilsmac/FantasyBot-MD-v1?label=Espectadores&style=social"></a>
+<a href="https://github.com/YerTX2/SonGoku/watchers"><img title="espectadores" src="https://img.shields.io/github/watchers/YerTX2/SonGoku?label=Espectadores&style=social"></a>
 </p>
 
 </p>
-<p align="center"><img src="https://profile-counter.glitch.me/{FantasyBot-MD}/count.svg" alt="Wilsmac :: Visitor's Count" /></p>
+<p align="center"><img src="https://profile-counter.glitch.me/{SonGoku}/count.svg" alt="YerTX2:: Visitor's Count" /></p>
 
 </p>
 <p align="center"> 
-<a href="https://github.com/Wilsmac/FantasyBot-MD-v1"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=𝙉𝙖𝙩𝙨𝙪𝙠𝙞𝘽𝙤𝙩++;𝙷𝚘𝚕𝚊,+𝙶𝚛𝚊𝚌𝚒𝚊𝚜+𝙿𝚘𝚛+𝚅𝚒𝚜𝚒𝚝𝚊𝚛+𝙴𝚕+𝚁𝚎𝚙𝚘𝚜𝚒𝚝𝚘𝚛𝚒𝚘" height="40px"></a> 
+<a href="https://github.com/YerTX2/SonGoku"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=🌀░S░o░n░G░o░k░u🌀++;𝙷𝚘𝚕𝚊,+𝙶𝚛𝚊𝚌𝚒𝚊𝚜+𝙿𝚘𝚛+𝚅𝚒𝚜𝚒𝚝𝚊𝚛+𝙴𝚕+𝚁𝚎𝚙𝚘𝚜𝚒𝚝𝚘𝚛𝚒𝚘" height="40px"></a> 
 </p>
  
 <p align="center"> 
-<a href="https://github.com/Wilsmac"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=19&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=𝙉𝙖𝙩𝙨𝙪𝙠𝙞𝘽𝙤𝙩++;𝙶𝚛𝚞𝚙𝚘𝚜+𝙾𝚏𝚒𝚌𝚒𝚊𝚕𝚎𝚜+𝙳𝚎" height="35px"></a> 
+<a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=19&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=🌀░S░o░n░G░o░k░u🌀++;𝙶𝚛𝚞𝚙𝚘𝚜+𝙾𝚏𝚒𝚌𝚒𝚊𝚕𝚎𝚜+𝙳𝚎" height="35px"></a> 
 </p>
 
 <a
-href="https://whatsapp.com/channel/0029VaCUlPX0LKZAlP10pC43" target="white"><img src="https://img.shields.io/badge/Canal- oficial del bot-000000?style=for-the-badge&logo=whatsapp&logoColor=black" /></a>
-<a href="https://chat.whatsapp.com/EAxOACyzjB6JhkRvQvw4zl" target="white"><img src="https://img.shields.io/badge/Grupo-OfiCIAL DEL BOT-000000?style=for-the-badge&logo=whatsapp&logoColor=black" /></a>
-<a href="https://chat.whatsapp.com/HHRk7p4QDzdCP9oYHS1Bzq" target="blank"><img src="https://img.shields.io/badge/grupo- de soporté-000000?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
+href="https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v" target="white"><img src="https://img.shields.io/badge/Canal- oficial del bot-000000?style=for-the-badge&logo=whatsapp&logoColor=black" /></a>
+<a href="https://chat.whatsapp.com/LBV1BouJqL0ICIRogyq6IT" target="white"><img src="https://img.shields.io/badge/Grupo-OfiCIAL DEL BOT-000000?style=for-the-badge&logo=whatsapp&logoColor=black" /></a>
+<a href="https://chat.whatsapp.com/LBV1BouJqL0ICIRogyq6IT" target="blank"><img src="https://img.shields.io/badge/grupo- de soporté-000000?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
 --------------------------
-> LOS NUMEROS QUE NO SEAN BOTS DE FANTASY NO SE ADMITEN POR LO TANTO SERÁN ELIMINADOS.
+> LOS NUMEROS QUE NO SEAN BOTS DE SonGoku NO SE ADMITEN POR LO TANTO SERÁN ELIMINADOS.
 --------------------------
 <p align="center"> 
-<a href="https://github.com/Wilsmac"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=𝙉𝙖𝙩𝙨𝙪𝙠𝙞𝘽𝙤𝙩++;𝙱𝚘𝚝𝚜+𝙾𝚏𝚒𝚌𝚒𝚊𝚕𝚎𝚜+𝙳𝚎" height="35px"></a> 
+<a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=🌀░S░o░n░G░o░k░u🌀++;𝙱𝚘𝚝𝚜+𝙾𝚏𝚒𝚌𝚒𝚊𝚕𝚎𝚜+𝙳𝚎" height="35px"></a> 
 </p>
 <a href="https://api.whatsapp.com/send/?phone=50250101139&text=Hola,%20vengo%20a%20pedir%20el%20numero%20del%20bot.&type=phone_number&app_absent=0" target="blank"><img src="https://img.shields.io/badge/BOT_OFICIAL_1-000000?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
@@ -56,17 +56,17 @@ href="https://whatsapp.com/channel/0029VaCUlPX0LKZAlP10pC43" target="white"><img
 <p align="center"> 
 
 <p align="center"> 
-<a href="https://github.com/Wilsmac"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=𝙉𝙖𝙩𝙨𝙪𝙠𝙞𝘽𝙤𝙩++;𝙲𝚘𝚗𝚏𝚒𝚐𝚞𝚛𝚊𝚌𝚒𝚘𝚗+𝙿𝚊𝚛𝚊" height="60px"></a> 
+<a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=🌀░S░o░n░G░o░k░u🌀++;𝙲𝚘𝚗𝚏𝚒𝚐𝚞𝚛𝚊𝚌𝚒𝚘𝚗+𝙿𝚊𝚛𝚊" height="60px"></a> 
 
- <a href="https://github.com/Wilsmac/FantasyBot-MD-v1/fork" target="black"><img src="https://img.shields.io/badge/♥️-clona_el_repositorio-000000?style=for-the-badge&logo=GitHub&logoColor=black" /></a>
+ <a href="https://github.com/YerTX2/SonGoku/fork" target="black"><img src="https://img.shields.io/badge/♥️-clona_el_repositorio-000000?style=for-the-badge&logo=GitHub&logoColor=black" /></a>
 
-<a href="https://github.com/Wilsmac/FantasyBot-MD-v1/blob/main/config.js" target="black"><img src="https://img.shields.io/badge/♥️-Cambiar el owner del bot-000000?style=for-the-badge&logo=GitHub&logoColor=black" /></a>
+<a href="https://github.com/YerTX2/SonGoku/blob/main/config.js" target="black"><img src="https://img.shields.io/badge/♥️-Cambiar el owner del bot-000000?style=for-the-badge&logo=GitHub&logoColor=black" /></a>
 
 <p align="center"> 
-<a href="https://github.com/Wilsmac"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=𝚁𝚎𝚙𝚕𝚒𝚝++;𝙰𝚌𝚝𝚒𝚟𝚊+𝙴𝚕+𝙱𝚘𝚝+𝙴𝚗" height="60px"></a> 
+<a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=𝚁𝚎𝚙𝚕𝚒𝚝++;𝙰𝚌𝚝𝚒𝚟𝚊+𝙴𝚕+𝙱𝚘𝚝+𝙴𝚗" height="60px"></a> 
 </p>
 
-[![Run on Repl.it](https://repl.it/badge/github/Wilsmac/FantasyBot-MD-v1)](https://repl.it/github/Wilsmac/FantasyBot-MD-v1) 
+[![Run on Repl.it](https://repl.it/badge/github/YerTX2/SonGoku)](https://repl.it/github/YerTX2/SonGoku) 
 
 ## <h1>Instalación automática por termux</h1>
 
@@ -74,11 +74,11 @@ href="https://whatsapp.com/channel/0029VaCUlPX0LKZAlP10pC43" target="white"><img
 termux-setup-storage
 ```  
 ```ts
-apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/Wilsmac/FantasyBot-MD-v1/master/Fantasy.sh | bash
+apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/YerTX2/SonGoku/master/SonGoku.sh | bash
 ```
 
  <p align="center"> 
-<a href="https://github.com/Wilsmac"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=20&duration=3000&color=[00FFFF]&center=falso&vCenter=falso&lines=𝚃𝚎𝚛𝚖𝚞𝚡++;𝙰𝚌𝚝𝚒𝚟𝚊+𝙴𝙻+𝙱𝚘𝚝+𝙴𝚗" height="50px"></a> 
+<a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=20&duration=3000&color=[00FFFF]&center=falso&vCenter=falso&lines=𝚃𝚎𝚛𝚖𝚞𝚡++;𝙰𝚌𝚝𝚒𝚟𝚊+𝙴𝙻+𝙱𝚘𝚝+𝙴𝚗" height="50px"></a> 
 </p>
 
 - ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
@@ -91,7 +91,7 @@ apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 
 ```
-git clone https://github.com/Wilsmac/NatsukiBot && cd NatsukiBot
+git clone https://github.com/YerTX2/SonGoku && cd SonGoku
 ```
 
 ```
@@ -102,43 +102,41 @@ yarn install && npm install
 npm start
 ```
 
-## usar a Natsuki 24/7
+## usar a SonGoku 24/7
 ```bash
 termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```
 
 <p align="center"> 
-<a href="https://github.com/Wilsmac"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=♥️✨++;𝙴𝚗+𝙲𝚊𝚜𝚘+𝙳𝚎+𝙳𝚎𝚝𝚎𝚗𝚎𝚛𝚜𝚎+𝚎𝚗+𝚃𝚎𝚛𝚖𝚞𝚡" height="70px"></a> 
+<a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=♥️✨++;𝙴𝚗+𝙲𝚊𝚜𝚘+𝙳𝚎+𝙳𝚎𝚝𝚎𝚗𝚎𝚛𝚜𝚎+𝚎𝚗+𝚃𝚎𝚛𝚖𝚞𝚡" height="70px"></a> 
 </p>
 
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd
-> cd NatsukiBot
+> cd SonGoku
 > npm start
 ```
 
 <p align="center"> 
-<a href="https://github.com/Wilsmac"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[000000]&center=falso&vCenter=falso&lines=✨♥️++;Pedir+otro+codigo+qr+en+termux" height="60px"></a> 
+<a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[000000]&center=falso&vCenter=falso&lines=✨♥️++;Pedir+otro+codigo+qr+en+termux" height="60px"></a> 
 </p>
   
 
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
-> rm -rf FantasySession 
+> rm -rf SonGoku
 > npm start
 ```
 
-> [!warning]
-> *EL ADD Y EL KICK PUEDEN OCASIONAR QUE EL NUMERO SE VAYA A SOPORTE POR ELLO SE ACTIVA CON #enable restrict, UNIFINED NO SE HACE RESPONSABLE DEL USO, NUMEROS, PRIVACIDAD Y CONTENIDO MANDADO, USADO O GESTIONADO POR USTEDES O EL BOT*
 
  ### ` DUDAS SOBRE EL BOT?, CONTACTAME`
-<a href="http://wa.me/50258115623" target="blank"><img src="https://img.shields.io/badge/Wilmer oficial-000000?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="http://wa.me/51907376960" target="blank"><img src="https://img.shields.io/badge/YerTX2oficial-000000?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
 
 ## <h2>`PROPIETARIO DEL BOT`</h2> 
 
-<a href="https://github.com/Wilsmac"><img src="https://github.com/Wilsmac.png" width="200" height="200" alt="Wilsmac"/></a>
+<a href="https://github.com/YerTX2"><img src="https://github.com/YerTX2.png" width="200" height="200" alt="YerTX2"/></a>
 
-`DESARROLLADOR DEL BOT (@WILMER OFC)`
+`DESARROLLADOR DEL BOT Y EDITOR (YerTX2 o ZxYerSixZx)`
