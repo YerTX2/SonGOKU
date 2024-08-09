@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
   let tiempoEspera = 5 * 60
   if (cooldowns[m.sender] && Date.now() - cooldowns[m.sender] < tiempoEspera * 1000) {
     let tiempoRestante = segundosAHMS(Math.ceil((cooldowns[m.sender] + tiempoEspera * 1000 - Date.now()) / 1000))
-    m.reply(`🍭 Ya has cometido un Crimen recientemente, espera *⏱ ${tiempoRestante}* para cometer tu próximo Crimen y evitar ser atrapado.`)
+    m.reply(`🌟 Ya has cometido un Crimen recientemente, espera *⏱ ${tiempoRestante}* para cometer tu próximo Crimen y evitar ser atrapado.`)
     return
   }
   
@@ -36,7 +36,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
   users[senderId].limit = Math.min(senderLimit + amountTaken, maxAmount)
   users[randomUserId].limit = Math.max(randomUserLimit - amountTaken, 0)
   conn.sendMessage(m.chat, {
-        text: `🍭¡Lograste cometer tu crimen con exito!, acabas de robar *${amountTaken} 🍭 Dulces* a @${randomUserId.split("@")[0]}\n\nSe suman *+${amountTaken} 🍭 Dulces* a ${senderName}.`,
+        text: `✅¡Lograste cometer tu crimen con exito!, acabas de robar *${amountTaken} 🍭 Dulces* a @${randomUserId.split("@")[0]}\n\nSe suman *+${amountTaken} 🍭 Dulces* a ${senderName}.`,
   contextInfo: { 
   mentionedJid: [randomUserId],
   }
@@ -46,7 +46,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
   case 1:
   let amountSubtracted = Math.min(Math.floor(Math.random() * (senderLimit - minAmount + 1)) + minAmount, maxAmount)
   users[senderId].limit = Math.max(senderLimit - amountSubtracted, 0)
-  conn.reply(m.chat, `🍭 No fuiste cuidadoso y te atraparon mientras cometias tu cirme, se restaron *-${amountSubtracted} 🍬 Dulces* a ${senderName}.`, m)
+  conn.reply(m.chat, `❌ No fuiste cuidadoso y te atraparon mientras cometias tu cirme, se restaron *-${amountSubtracted} 🍬 Dulces* a ${senderName}.`, m)
   break
 
   case 2:
@@ -54,7 +54,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
   users[senderId].limit = Math.min(senderLimit + smallAmountTaken, maxAmount)
   users[randomUserId].limit = Math.max(randomUserLimit - smallAmountTaken, 0)
   conn.sendMessage(m.chat, {
-  text: `🍭 Lograste cometer tu crimen con exito, pero te descubrieron y solo lograste tomar *${smallAmountTaken} 🍬 Dulces* de @${randomUserId.split("@")[0]}\n\nSe suman *+${smallAmountTaken} 🍬 Dulces* a ${senderName}.`,
+  text: `✅ Lograste cometer tu crimen con exito, pero te descubrieron y solo lograste tomar *${smallAmountTaken} 🍬 Dulces* de @${randomUserId.split("@")[0]}\n\nSe suman *+${smallAmountTaken} 🍬 Dulces* a ${senderName}.`,
   contextInfo: { 
   mentionedJid: [randomUserId],
   }
