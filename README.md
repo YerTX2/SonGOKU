@@ -12,7 +12,7 @@ href="https://wa.me/+51907376960" target="white"><img src="https://img.shields.i
 <a href="https://x.com/ZxYerSixZx" target="black"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=back" />
 <a href="https://www.facebook.com/profile.php?id=10008861448&mibextid=ZbWKwL" target="black"><img src="https://img.shields.io/badge/Facebook-000000?style=for-the-badge&logo=facebook&logoColor=back" />
 <a
-href="https://www.paypal.com/paypalme/YerSex" target="black"><img
+href="https://www.paypal.com/paypalme/YerSix" target="black"><img
 src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&logoColor=white" />
 <a href="https://www.instagram.com/yer29_07?igsh=eGN1cWk5MmFkbWM1" target="black"><img src="https://img.shields.io/badge/Instagram-000000?style=for-the-badge&logo=instagram&logoColor=back" />
 <p align="center">
