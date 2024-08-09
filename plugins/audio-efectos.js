@@ -40,7 +40,7 @@ let handler = async (m, { conn, args, __dirname, usedPrefix, command }) => {
                 let buff = await readFileSync(filename)
                 await conn.sendFile(m.chat, buff, ran, null, m, true, { type: 'audioMessage', ptt: true })
             })
-        } else m.reply(`🍭 Responde al *Audio o Nota de Voz.*`)
+        } else m.reply(`✅ Responde al *Audio o Nota de Voz.*`)
     } catch {
     }
 }
