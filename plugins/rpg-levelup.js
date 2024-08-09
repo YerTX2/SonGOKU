@@ -2,16 +2,16 @@ import { canLevelUp, xpRange } from '../lib/levelling.js'
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn }) => {
-    let img = await (await fetch(`https://i.ibb.co/pKW5wkj/20240704-211557.jpg`)).buffer()
+    let img = await (await fetch(`https://tinyurl.com/256luy5x`)).buffer()
 	let name = conn.getName(m.sender)
     let user = global.db.data.users[m.sender]
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
         let { min, xp, max } = xpRange(user.level, global.multiplier)
         let txt = ` –  *L E V E L U P  -  U S E R*\n\n`
-            txt += `┌  ☪  *Nombre* : ${name}\n`
-            txt += `│  ☪  *Nivel* : ${user.level}\n`
-            txt += `└  ☪  *XP* : ${user.exp - min}/${xp}\n\n`
-            txt += `Te falta *${max - user.exp}* de *💫 XP* para subir de nivel`
+            txt += `┌  🌀  *Nombre* : ${name}\n`
+            txt += `│  🌀  *Nivel* : ${user.level}\n`
+            txt += `└  🌀 *XP* : ${user.exp - min}/${xp}\n\n`
+            txt += `Te falta *${max - user.exp}* de *🌀 XP* para subir de nivel`
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
     }
     let before = user.level * 1
@@ -21,7 +21,7 @@ await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
            txt += `┌  ✩  *Nombre* : ${conn.getName(m.sender)}\n`
            txt += `│  ✩  *Nivel Anterior* : ${before}\n`
            txt += `└  ✩  *Nivel Actual* : ${user.level}\n\n`
-           txt += `⚔️ Cuanto más interactúes con *★ Hades-Bot ★*, mayor será tu Nivel ⬆️`
+           txt += `⚔️ Cuanto más interactúes con *🌀░S░o░n░G░o░k░u🌀*, mayor será tu Nivel ⬆️`
 
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
         }
