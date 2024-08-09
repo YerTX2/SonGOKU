@@ -3,7 +3,7 @@ import { promisify } from 'util'
 let exec = promisify(_exec).bind(cp)
 let handler = async (m, { conn, isOwner, command, text }) => {
   if (conn.user.jid != conn.user.jid) return
-  m.reply('🍭 Ejecutando...')
+  m.reply('✅ Ejecutando...')
   let o
   try {
     o = await exec(command.trimStart()  + ' ' + text.trimEnd())
