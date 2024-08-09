@@ -7,7 +7,7 @@
 href="https://wa.me/+51907376960" target="white"><img src="https://img.shields.io/badge/☄️-Prueba la IA por tiempo limitado-000000?style=for-the-badge&logo=whatsapp&logoColor=black" /></a>
 
 <p align="center">
-<img src="https://telegra.ph/file/5a2eb62dca1eafb952f31.jpg" alt="FantasyBot-MD-v1" width="900"/>
+<img src="https://telegra.ph/file/5a2eb62dca1eafb952f31.jpg" alt="SonGOKU" width="900"/>
 </p>
 <a href="https://x.com/wilmerofc1" target="black"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=back" />
 <a href="https://www.facebook.com/profile.php?id=100088614427458&mibextid=ZbWKwL" target="black"><img src="https://img.shields.io/badge/Facebook-000000?style=for-the-badge&logo=facebook&logoColor=back" />
