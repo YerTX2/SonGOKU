@@ -1,10 +1,10 @@
 ------------------
-> **aviso**: Yo Wilmer ya me iré retirando de el tema de los bots y en algún momento este bot quedará en obsoleto y sin manteniendo, gracias por este recorrido de los bots y gracias por sus preferencia.
+> Hola gracias por visitar mi repositorio no te olvides de darle una 🌟así me apoyas mucho. 
 ------------------
 
 
 <a
-href="https://wa.me/+50587047577" target="white"><img src="https://img.shields.io/badge/☄️-Prueba la IA por tiempo limitado-000000?style=for-the-badge&logo=whatsapp&logoColor=black" /></a>
+href="https://wa.me/+51907376960" target="white"><img src="https://img.shields.io/badge/☄️-Prueba la IA por tiempo limitado-000000?style=for-the-badge&logo=whatsapp&logoColor=black" /></a>
 
 <p align="center">
 <img src="https://telegra.ph/file/b95059bd21a2bbbd0218b.jpg" alt="FantasyBot-MD-v1" width="900"/>
