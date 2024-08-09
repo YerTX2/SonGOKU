@@ -17,7 +17,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     await m.react('🕓')
     var res = await yts(text)
     var vid = res.videos[0]
-    var q = '128kbps'
+    var q = '320kbps'
 const texto1 = `乂  Y O U T U B E   M U S I C\n
 	✩ *Título ∙* ${vid.title}\n
         ✩ *Duración ∙* ${vid.timestamp}\n
@@ -38,7 +38,7 @@ await conn.sendButton2(m.chat, texto1, botname, res.videos[0].thumbnail, [
        try {
     const res = await yts(text)
     const vid = res.videos[0]
-    const q = '128kbps'
+    const q = '320kbps'
        let yt = await fg.yta(vid.url, q)
        let { title, dl_url, size } = yt
        let limit = 100
@@ -86,7 +86,7 @@ thumbnail: await (await fetch(vid.thumbnail)).buffer()}}}, { quoted: m })
     await m.react('🕓')
     let res = await yts(text)
     let vid = res.videos[0]
-    let q = '360p'
+    let q = '480p'
 	const texto1 = `Y O U T U B E 乂 M U S I C\n
 	✩ *Título ∙* ${vid.title}\n
         ✩ *Duración ∙* ${vid.timestamp}\n
@@ -129,7 +129,7 @@ if (size.split('MB')[0] >= limit) return conn.reply(m.chat,`El archivo pesa mas 
     await m.react('🕓')
     let res = await yts(text)
     let vid = res.videos[0]
-    let q = '128kbps'
+    let q = '320kbps'
 	const texto1 = `Y O U T U B E 乂 D O C\n
        ✩ *Título ∙* ${vid.title}\n
        ✩ *Duración ∙* ${vid.timestamp}\n
