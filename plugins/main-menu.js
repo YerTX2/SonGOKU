@@ -8,7 +8,7 @@ let tags = {
   'search': 'Busquedas 🔎',
   'game': 'Juegos 🎮',
   'serbot': 'Sub Bots 🤖',
-  'rpg': 'RPG',
+ 'rpg': 'RPG 🌠',
   'rg': 'Registro 📁',
   'sticker': 'Stickers 🏞',
   'img': 'Imágenes 📸',
