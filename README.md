@@ -145,7 +145,7 @@ ALOJAMIENTO
     PARA MANTENER TU BOT ACTIVO 24/7.
       
 
-### 🟢 Olympus-Host
+### ⚡Olympus-Host⚡
 
 
 <a href="https://dashboard.infinitywa.xyz"><img src="https://tinyurl.com/233po67w" height="125px"></a>
