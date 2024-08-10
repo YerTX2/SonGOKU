@@ -148,7 +148,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
 Un hosting es un servicio de alojamiento web que te permite publicar un sitio web o maneter un bot de WhatsApp, bot de discord activo las 24H y no tienen límite de trasferencia de conexión de Internet para que descargue videos,músicas entre otras cosas.
 
-```⚡olympus-host⚡```
+```⚡OLYMPUS-HOST⚡```
 
 <a href="https://dashboard.infinitywa.xyz"><img src="https://tinyurl.com/233po67w" height="125px"></a>
 
