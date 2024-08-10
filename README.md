@@ -146,14 +146,13 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
            ¿Que es hostig? 
 
-Un hosting es un servicio de alojamiento web que te permite publicar un sitio web o maneter un bot de WhatsApp, bot de discord activo las 24H y no tienen límite de trasferencia de conexión de Internet para que descargue videos,músicas entre otras cosas.
+Un hosting es un servicio de alojamiento web que te permite publicar un sitio web o mantener un bot de WhatsApp, bot de discord activo las 24H y no tienen límite de trasferencia de conexión de Internet para que descargue videos,músicas entre otras cosas.
 
 ```⚡OLYMPUS-HOST⚡```
 
-<a href="https://dashboard.infinitywa.xyz"><img src="https://tinyurl.com/233po67w" height="125px"></a>
+<a href="https://kingsvhost.asifofc.xyz"><img src="https://tinyurl.com/233po67w" height="125px"></a>
 
 - **💻Dash:** [`Aquí`](https://kingsvhost.asifofc.xyz)
 - **Panel:** [`Aquí`](https://host.asifofc.xyz)
-- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/DIcTMnXJjYAA0JJ9bBTYXU)
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J)
 
