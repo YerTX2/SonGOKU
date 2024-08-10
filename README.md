@@ -145,12 +145,10 @@ ALOJAMIENTO
     PARA MANTENER TU BOT ACTIVO 24/7.
       
 
-### 🟢 INFINITY HOST
-### □ ACTIVAR EN INFINITY-HOST
-[![blog](https://img.shields.io/badge/Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
-](https://youtu.be/c9RCnOV418E?si=kNWog_fSi8wCWX3A)
+### 🟢 Olympus-Host
 
-<a href="https://dashboard.infinitywa.xyz"><img src="https://qu.ax/TPhh.jpg" height="125px"></a>
+
+<a href="https://dashboard.infinitywa.xyz"><img src="https://tinyurl.com/233po67w" height="125px"></a>
 
 - **Página:** [`Click aqui`](https://dashboard.infinitywa.xyz)
 - **Dashboard:** [`Aquí`](https://dashboard.infinitywa.xyz)
