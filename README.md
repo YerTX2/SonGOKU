@@ -139,6 +139,8 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
 <a href="https://github.com/YerTX2"><img src="https://github.com/YerTX2.png" width="200" height="200" alt="YerTX2"/></a>
 
+`DESARROLLADOR DEL BOT Y EDITOR (YerTX2 o ZxYerSixZx)`
+
 ALOJAMIENTO 
     PARA MANTENER TU BOT ACTIVO 24/7.
       
@@ -156,4 +158,3 @@ ALOJAMIENTO
 - **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/GQ82mPnSYnm0XL2hLPk7FV)
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A)
 
-`DESARROLLADOR DEL BOT Y EDITOR (YerTX2 o ZxYerSixZx)`
