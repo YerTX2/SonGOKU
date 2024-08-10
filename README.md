@@ -141,9 +141,11 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
 `DESARROLLADOR DEL BOT Y EDITOR (YerTX2 o ZxYerSixZx)`
 
-ALOJAMIENTO 
-    PARA MANTENER TU BOT ACTIVO 24/7.
-      
+
+ALOJAMIENTO (HOSTIG) PARA MANTENER ACTIVO TU BOT 24/7
+¿Que es hostig? 
+
+Un hosting es un servicio de alojamiento web que te permite publicar un sitio web o maneter un bot de WhatsApp, bot de discord activo las 24H y no tienen límite de trasferencia de conexión de Internet para que descargue videos,músicas entre otras cosas.
 
 ### ⚡Olympus-Host⚡
 
