@@ -150,9 +150,8 @@ ALOJAMIENTO
 
 <a href="https://dashboard.infinitywa.xyz"><img src="https://tinyurl.com/233po67w" height="125px"></a>
 
-- **Página:** [`Click aqui`](https://dashboard.infinitywa.xyz)
-- **Dashboard:** [`Aquí`](https://dashboard.infinitywa.xyz)
-- **Panel:** [`Aquí`](https://live.panel-infinitywa.store)
-- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/GQ82mPnSYnm0XL2hLPk7FV)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A)
+- **💻Dash:** [`Aquí`](https://kingsvhost.asifofc.xyz)
+- **Panel:** [`Aquí`](https://host.asifofc.xyz)
+- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/DIcTMnXJjYAA0JJ9bBTYXU)
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J)
 
