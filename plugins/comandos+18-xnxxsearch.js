@@ -36,7 +36,7 @@ async function xnxxsearch(query) {
   return new Promise((resolve, reject) => {
     const baseurl = 'https://www.xnxx.com';
     fetch(`${baseurl}/search/${query}/${Math.floor(Math.random() * 3) + 1}`, {method: 'get'}).then((res) => res.text()).then((res) => {
-      const $ = cheerio.load(res, {xmlMode: false});
+      (res, {xmlMode: false});
       const title = [];
       const url = [];
       const desc = [];
