@@ -1,5 +1,5 @@
 {
-  "name": "Sumi-Sakurasawa",
+  "name": "Son-Goku",
   "version": "5.0.0",
   "description": "Simple WhatsApp Bot Multi Device",
   "main": "index.js",
@@ -18,16 +18,16 @@
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
-  "homepage": "https://github.com/DanielDiod/Sumi-Sakurasawa",
+  "homepage": "https://github.com/YerTX2/SonGOKU",
   "author": {
-    "name": "DanielDiod"
+    "name": "YerTX2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanielDiod/Sumi-Sakurasawa.git"
+    "url": "git+https://github.com/YerTX2/SonGOKU.git"
   },
   "bugs": {
-    "url": "https://github.com/DanielDiod/Sumi-Sakurasawa/issues"
+    "url": "https://github.com/YerTX2/SonGOKU/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
@@ -45,8 +45,7 @@
         "cfonts": "^3.1.1",
         "chalk": "^5.1.0",
         "url-file-size": "^1.0.5-1",
-        "fluid-spotify.js": "*",
-        "cheerio": "github:AikerDev/cheeiro",
+        "fluid-spotify.js": "*",    
         "colors": "1.4.0",
         "express": "^4.18.1",
         "file-type": "^18.0.0",
