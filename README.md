@@ -155,5 +155,5 @@ Un hosting es un servicio de alojamiento web que te permite publicar un sitio we
 - **💻Dash:** [`Aquí`](https://kingsvhost.asifofc.xyz)
 - **Panel:** [`Aquí`](https://host.asifofc.xyz)
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J)
-- **Grupo de WhatsApp:** [`Aquí`]https://chat.whatsapp.com/Jt0Z1ERzXCV5srN7XH7Qws
+- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/Jt0Z1ERzXCV5srN7XH7Qws) 
 
