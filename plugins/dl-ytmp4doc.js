@@ -22,12 +22,12 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
   const caption = `\`⋆｡˚꒰ঌ 𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝚈𝚃𝙼𝙿𝟺𝙳𝙾𝙲 ໒꒱˚｡⋆\`
   
   
-  ꨄ︎ \`𝚃𝚒𝚝𝚞𝚕𝚘\`: ${data.data.title}
-  ꨄ︎ \`𝙰𝚞𝚝𝚘𝚛\`: ${data.data.author.name}
-  ꨄ︎ \`𝙲𝚊𝚗𝚊𝚕\`: ${data.data.author.url}
-  ꨄ︎ \`𝙴𝚗𝚕𝚊𝚌𝚎\`: ${data.data.src_url}
-  ꨄ︎ \`𝙼𝚒𝚗𝚒𝚊𝚝𝚞𝚛𝚊\` ${data.data.picture}
-  ⊱─━─━⊱༻˗ˏˋ ♡ ˎˊ˗༺⊰━━──⊰
+  🐉 \`𝚃𝚒𝚝𝚞𝚕𝚘\`: ${data.data.title}
+  🐉 \`𝙰𝚞𝚝𝚘𝚛\`: ${data.data.author.name}
+  🐉 \`𝙲𝚊𝚗𝚊𝚕\`: ${data.data.author.url}
+  🐉 \`𝙴𝚗𝚕𝚊𝚌𝚎\`: ${data.data.src_url}
+  🐉 \`𝙼𝚒𝚗𝚒𝚊𝚝𝚞𝚛𝚊\` ${data.data.picture}
+  ━━━━━━━━✦✗✦━━━━━━━━━
   `
 
   let vres = data.downloads.mp4.url
