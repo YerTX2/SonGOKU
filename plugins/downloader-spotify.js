@@ -5,6 +5,13 @@ import pkg2 from 'fluid-spotify.js'
 let { Spotify } = pkg2
 
 let handler = async (m, { conn, text }) => {
+async function loading() {
+var hawemod = [
+"_《 █▒▒▒▒▒▒▒▒▒▒▒》10%_",
+"_《 ████▒▒▒▒▒▒▒▒》30%_",
+"_《 ███████▒▒▒▒▒》50%_",
+"_《 ██████████▒▒》80%_",
+"_《 ████████████》100%_"]
  if (!text) throw `🚩 Ingresa el enlace de algún Track, PlayList o Álbum de Spotify.`; 
  let isSpotifyUrl = text.match(/^(https:\/\/open\.spotify\.com\/(album|track|playlist)\/[a-zA-Z0-9]+)/i);
  if (!isSpotifyUrl && !text) throw `🚩 Ingresa el enlace de algún Track, Playlist o Álbum de Spotify.`
@@ -21,13 +28,6 @@ let txt = `*乂  S P O T I F Y  -  D O W N L O A D*\n\n`
     txt += `	✩   *Publicado* : ${album.metadata.releaseDate}\n`   
     txt += `	✩   *Tracks totales* : ${album.trackList.length}\n\n`   
     txt += `*- ↻ Los audios se estan enviando espera un momento, soy lenta. . .*`
-async function loading() {
-var hawemod = [
-"_《 █▒▒▒▒▒▒▒▒▒▒▒》10%_",
-"_《 ████▒▒▒▒▒▒▒▒》30%_",
-"_《 ███████▒▒▒▒▒》50%_",
-"_《 ██████████▒▒》80%_",
-"_《 ████████████》100%_"]
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
 for (let i = 0; i < album.trackList.length; i++) {
 await conn.sendFile(m.chat, album.trackList[i].audioBuffer, album.trackList[i].metadata.name + '.mp3', null, m, false, { mimetype: 'audio/mpeg', asDocument: user.useDocument })
