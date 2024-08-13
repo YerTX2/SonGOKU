@@ -4,8 +4,7 @@ import fetch from 'node-fetch'
 import pkg2 from 'fluid-spotify.js'
 let { Spotify } = pkg2
 
-let handler = async (m, { conn, text }) => {
-async function loading() {
+let handler = async function loading() {
 var hawemod = [
 "_《 █▒▒▒▒▒▒▒▒▒▒▒》10%_",
 "_《 ████▒▒▒▒▒▒▒▒》30%_",
