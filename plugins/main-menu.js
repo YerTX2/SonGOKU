@@ -27,7 +27,7 @@ let tags = {
 
 const defaultMenu = {
   before: `
-*■■■■■■■■■■■■■■■■■■□90% * 
+*■■■■■■■■■■■■■■■■■■□90%* 
 
 “ Hola *%name*, Bienvenido al menú de 🌀░S░o░n░G░o░k░u🌀  ”
 
@@ -40,7 +40,7 @@ const defaultMenu = {
 %readmore
   CON EL COMANDO (.goku)
   Puede ingresar al menu
-*■■■■■■■■■■■■■■■■■■□100% *
+*■■■■■■■■■■■■■■■■■■□100%*
 
 \t\t\t L I S T A  -  M E N Ú S
 🌀░S░o░n░G░o░k░u🌀
