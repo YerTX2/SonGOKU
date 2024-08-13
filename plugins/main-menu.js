@@ -151,8 +151,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     
    
 let pp = `https://telegra.ph/file/666f347726644b3f59504.mp4`
-    await m.react('💙')
-    await conn.sendMessage(m.chat, { video: { url: [ pp ].
+    await m.react('🐉')
+    await conn.sendMessage(m.chat, { video: { url: [ pp ]
+
     await conn.sendFile(m.chat, img, 'thumbnail.mp4', text.trim(), m, null, rcanal)
    //await conn.sendAi(m.chat, botname, textbot, text.trim(), img, img, canal, estilo)
   } catch (e) {
