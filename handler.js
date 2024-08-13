@@ -293,7 +293,7 @@ export async function handler(chatUpdate) {
                 else
                     m.exp += xp
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                    conn.reply(m.chat, `Ya no tiene más*⚡ Ki*`, m, rcanal)
+                    conn.reply(m.chat, `Ya no tiene más *⚡ Ki*`, m, rcanal)
                     continue
                 }
                 let extra = {
@@ -341,7 +341,7 @@ export async function handler(chatUpdate) {
                         }
                     }
                     if (m.limit)
-                        conn.reply(m.chat, `Utilizaste *${+m.limit}* 🍬`, m, rcanal)
+                        conn.reply(m.chat, `Utilizaste *${+m.limit}* ⚡`, m, rcanal)
                 }
                 break
             }
