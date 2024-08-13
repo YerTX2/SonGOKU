@@ -10,5 +10,13 @@ conn.sendFile(m.chat, haha, 'error.jpg', `*${command}*`, m, null, rcanal)
 
 handler.command = handler.help = ['alisa', 'aihoshino', 'remcham', 'akira', 'akiyama', 'anna', 'asuna', 'ayuzawa', 'boruto', 'chiho', 'chitoge', 'deidara', 'erza', 'elaina', 'eba', 'emilia', 'hestia', 'hinata', 'inori', 'isuzu', 'itachi', 'itori', 'kaga', 'kagura', 'kaori', 'keneki', 'kotori', 'kurumitokisaki', 'madara', 'mikasa', 'miku', 'minato', 'naruto', 'nezuko', 'sagiri', 'sasuke', 'sakura']
 handler.tags = ['anime']
-
+} catch {
+}}
+handler.help = ['anime']
+handler.tags = ['img']
+handler.command = ['anime']
+handler.register = true 
+//handler.limit = 1
 export default handler
+
+
