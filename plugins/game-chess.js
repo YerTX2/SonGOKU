@@ -151,8 +151,11 @@ Escribe *chess join* para unirte a una partida de ajedrez en espera.
   return conn.reply(m.chat, '❓ Comando inválido. Utilice *"chess help"* para ver los comandos disponibles.', m);
 };
 
-handler.help = ['chess [from to]', 'chess delete', 'chess join', 'chess start'];
-handler.tags = ['game'];
-handler.command = /^(chess|chatur)$/i;
-
-export default handler;
+${end}`, m) 
+}
+handler.help = ['chess >']
+handler.tags = ['game']
+handler.command = ['chess']
+handler.register = true
+handler.group = false 
+export default handler
