@@ -36,7 +36,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
   users[senderId].limit = Math.min(senderLimit + amountTaken, maxAmount)
   users[randomUserId].limit = Math.max(randomUserLimit - amountTaken, 0)
   conn.sendMessage(m.chat, {
-        text: `✅¡Lograste cometer tu crimen con exito!, acabas de robar *${amountTaken} 🍭 Dulces* a @${randomUserId.split("@")[0]}\n\nSe suman *+${amountTaken} 🍭 Dulces* a ${senderName}.`,
+        text: `✅¡Lograste cometer tu crimen con exito!, acabas de robar *${amountTaken} ⚡ Ki* a @${randomUserId.split("@")[0]}\n\nSe suman *+${amountTaken} ⚡ Ki* a ${senderName}.`,
   contextInfo: { 
   mentionedJid: [randomUserId],
   }
@@ -46,7 +46,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
   case 1:
   let amountSubtracted = Math.min(Math.floor(Math.random() * (senderLimit - minAmount + 1)) + minAmount, maxAmount)
   users[senderId].limit = Math.max(senderLimit - amountSubtracted, 0)
-  conn.reply(m.chat, `❌ No fuiste cuidadoso y te atraparon mientras cometias tu cirme, se restaron *-${amountSubtracted} 🍬 Dulces* a ${senderName}.`, m)
+  conn.reply(m.chat, `❌ No fuiste cuidadoso y te atraparon mientras cometias tu cirme, se restaron *-${amountSubtracted} ⚡ ki* a ${senderName}.`, m)
   break
 
   case 2:
@@ -54,7 +54,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
   users[senderId].limit = Math.min(senderLimit + smallAmountTaken, maxAmount)
   users[randomUserId].limit = Math.max(randomUserLimit - smallAmountTaken, 0)
   conn.sendMessage(m.chat, {
-  text: `✅ Lograste cometer tu crimen con exito, pero te descubrieron y solo lograste tomar *${smallAmountTaken} 🍬 Dulces* de @${randomUserId.split("@")[0]}\n\nSe suman *+${smallAmountTaken} 🍬 Dulces* a ${senderName}.`,
+  text: `✅ Lograste cometer tu crimen con exito, pero te descubrieron y solo lograste tomar *${smallAmountTaken} ⚡ Ki* de @${randomUserId.split("@")[0]}\n\nSe suman *+${smallAmountTaken} ⚡ ki* a ${senderName}.`,
   contextInfo: { 
   mentionedJid: [randomUserId],
   }
