@@ -10,8 +10,8 @@ let handler = async (m, { conn, usedPrefix, command}) => {
   let username = conn.getName(who)
   let prem = global.prems.includes(who.split`@`[0])
   let txt = `╭─⬣「 *User Perfil* 」⬣\n`
-     txt += `│  ≡◦ *🪴 Nombre ∙* ${name}\n`
-     txt += `│  ≡◦ *🐢 Edad ∙* ${age} años\n`
+     txt += `│  ≡◦ *📝🪴 Nombre ∙* ${name}\n`
+     txt += `│  ≡◦ *🌀 Edad ∙* ${age} años\n`
      
      txt += `│  ≡◦ *📞 Numero ∙* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}\n`
      txt += `│  ≡◦ *⚡Ki ∙* ${limit}\n`
