@@ -10,7 +10,7 @@ let tags = {
   'serbot': 'Sub Bots 🤖',
  'rpg': 'RPG 🌠',
   'rg': 'Registro 📁',
-  'sticker': 'Stickers 🏞',
+  'sticker': 'Stickers 🗻',
   'img': 'Imágenes 📸',
   'group': 'Grupos 👥',
   'logo': 'Logo - maker 🎨',
@@ -19,7 +19,7 @@ let tags = {
   'tools': 'Herramientas 🔧',
   'fun': 'Diversión 🎲',
   'nsfw': 'Nsfw 🔞', 
-  'owner': 'Creador 😺', 
+  'owner': 'Creador 🥇', 
   'audio': 'Audios 🔉', 
   'advanced': 'Avanzado 💠',
  
@@ -33,9 +33,9 @@ const defaultMenu = {
 
 ╭━─━─≪ *Tu Información* ≫─━─━━╮
 │  ≡◦ *✨ Nombre ∙* %name
-│  ≡◦ *🍬 Dulces ∙* %limit
+│  ≡◦ *⚡ Ki ∙* %limit
 │  ≡◦ *🪐 XP ∙* %totalexp
-│  ≡◦ *🌀 Nivel ∙* %level
+│  ≡◦ *🔰 Nivel ∙* %level
 ╰━─━──━━━─≪✠≫─━──━─━━─━╯
 %readmore
 *▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃*
