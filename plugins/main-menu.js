@@ -149,7 +149,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-let = await (await fetch(`https://telegra.ph/file/51b345301e8c7dc23f88d.mp4`)).buffer()
+let gif = await (await fetch(`https://telegra.ph/file/51b345301e8c7dc23f88d.mp4`)).buffer()
     await m.react('🐉')
 
   } catch (e) {
