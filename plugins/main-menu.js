@@ -148,14 +148,11 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    
-   
-let pp = `https://telegra.ph/file/666f347726644b3f59504.mp4`
+
+let pp=`https://telegra.ph/file/666f347726644b3f59504.mp4`
     await m.react('🐉')
     await conn.sendMessage(m.chat, { video: { url: [ pp ]
 
-    await conn.sendFile(m.chat, img, 'thumbnail.mp4', text.trim(), m, null, rcanal)
-   //await conn.sendAi(m.chat, botname, textbot, text.trim(), img, img, canal, estilo)
   } catch (e) {
     conn.reply(m.chat, 'Lo sentimos, el menú tiene un error.', m)
     throw e
