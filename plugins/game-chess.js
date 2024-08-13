@@ -149,7 +149,6 @@ Escribe *chess join* para unirte a una partida de ajedrez en espera.
     `, m);
   }
   return conn.reply(m.chat, '❓ Comando inválido. Utilice *"chess help"* para ver los comandos disponibles.', m);
-};
 
 ${end}`, m) 
 }
