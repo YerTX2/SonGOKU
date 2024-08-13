@@ -6,7 +6,7 @@ let handler = async (m, {conn, usedPrefix}) => {
    await m.reply(`${who == m.sender ? `Tienes *${user.limit} ⚡ KI* en tu Cartera` : `El usuario @${who.split('@')[0]} tiene *${user.limit} ⚡ KI* en su Cartera`}. `, null, { mentions: [who] })
 }
 
-handler.help = ['dulces']
+handler.help = ['ki']
 handler.tags = ['rpg']
 handler.command = ['ki']
 handler.register = true 
