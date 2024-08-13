@@ -150,12 +150,12 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
    
-const menu= ['https://telegra.ph/file/fc75439751a71e3419c68.mp4',
-'https://telegra.ph/file/60222a8e88addd43523b7.mp4',
-'https://telegra.ph/file/efc37a04ba264b60ea1ec.mp4']
+let img = await (await fetch(`https://telegra.ph/file/51b345301e8c7dc23f88d.mp4`)).buffer()
+    await m.react('🐉')
 
-    await conn.sendMessage(m.chat, { video: { url: menu.getRandom() }, gifPlayback: true, caption: menu,
-
+ // await conn.sendMessage(m.chat, { video: { url:https://telegra.ph/file/51b345301e8c7dc23f88d.mp4 .getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: estilo })
+    await conn.sendFile(m.chat, img, 'thumbnail.mp4', text.trim(), m, null, rcanal)
+   //await conn.sendAi(m.chat, botname, textbot, text.trim(), img, img, canal, estilo)
   } catch (e) {
     conn.reply(m.chat, 'Lo sentimos, el menú tiene un error.', m)
     throw e
