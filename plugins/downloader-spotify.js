@@ -10,8 +10,7 @@ var hawemod = [
 "_《 ████▒▒▒▒▒▒▒▒》30%_",
 "_《 ███████▒▒▒▒▒》50%_",
 "_《 ██████████▒▒》80%_",
-"_《 ████████████》100%_"]
- if (!text) throw `🚩 Ingresa el enlace de algún Track, PlayList o Álbum de Spotify.`; 
+"_《 ████████████》100%_" ]
  let isSpotifyUrl = text.match(/^(https:\/\/open\.spotify\.com\/(album|track|playlist)\/[a-zA-Z0-9]+)/i);
  if (!isSpotifyUrl && !text) throw `🚩 Ingresa el enlace de algún Track, Playlist o Álbum de Spotify.`
 let user = global.db.data.users[m.sender]
