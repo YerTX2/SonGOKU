@@ -6,8 +6,8 @@ let handler = async (m, {conn, usedPrefix}) => {
    await m.reply(`${who == m.sender ? `Tienes *${user.limit} ⚡ KI* en tu Cartera` : `El usuario @${who.split('@')[0]} tiene *${user.limit} ⚡ KI* en su Cartera`}. `, null, { mentions: [who] })
 }
 
-handler.help = ['poder']
+handler.help = ['energia']
 handler.tags = ['rpg']
-handler.command = ['wallet', 'cartera', 'dulces', 'bal', 'coins']
+handler.command = ['ki']
 handler.register = true 
 export default handler
