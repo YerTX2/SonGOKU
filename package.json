@@ -57,7 +57,6 @@
         "cfonts": "^3.1.1",
         "chalk": "^5.1.0",
         "url-file-size": "^1.0.5-1",
-    "cheerio": "^1.0.0-rc.12",
     "chess.js": "*",
     "colors": "1.4.0",
     "didyoumean": "^1.2.2",
