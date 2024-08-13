@@ -164,7 +164,7 @@ let img = await (await fetch(`https://telegra.ph/file/51b345301e8c7dc23f88d.mp4`
 
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu', 'help', 'menú'] 
+handler.command = ['menu', 'help','menugoku', 'menú'] 
 handler.register = true 
 export default handler
 
