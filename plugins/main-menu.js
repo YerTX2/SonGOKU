@@ -150,7 +150,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
    
-let img = await (await fetch(`https://telegra.ph/file/51b345301e8c7dc23f88d.mp4`)).buffer()
+let img = await (await fetch(`https://telegra.ph/file/2d2a35bdcf8d79a3fb0f4.mp4`)).buffer()
     await m.react('🐉')
 
     await conn.sendFile(m.chat, img, 'thumbnail.mp4', text.trim(), m, null, rcanal)
