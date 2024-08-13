@@ -1,6 +1,7 @@
-import { Chess } from 'chess.js';
+let cooldowns = {}
+let handler = async (m, { conn, args, usedPrefix, command }) => {
 
-const handler = async (m, { conn, args }) => {
+ => {
   const key = m.chat;
   conn.chess = conn.chess || {};
   let chessData = conn.chess[key] || {
