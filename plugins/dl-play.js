@@ -23,12 +23,12 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     txt += `> *𝚅𝚒𝚜𝚒𝚝𝚊𝚜* : _${views.toLocaleString()}_\n`;
     txt += `> *𝙻𝚒𝚗𝚔* : _https://www.youtube.com/watch?v=${videoId}_\n`;
     txt += '===========================\n';
-    txt += '*𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝙶𝚊𝚋𝚛𝚒𝚎𝚕 𝙲𝚞𝚛𝚒*';
+    txt += '*ZxYerSixZx*';
 
-    await conn.sendButton2(m.chat, txt, '-ThePapusTeam-', thumbnail, [
+    await conn.sendButton2(m.chat, txt, '. ', thumbnail, [
         ['Audio', `${usedPrefix}ytmp3 ${url}`],
         ['Video', `${usedPrefix}ytmp4 ${url}`]
-    ], null, [['Canal', 'https://whatsapp.com/channel/0029VaeQcFXEFeXtNMHk0D0n']], m);
+    ], null, [['Canal', 'https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v']], m);
 
     await m.react('✅');
 };
