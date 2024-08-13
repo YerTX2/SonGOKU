@@ -9,8 +9,8 @@ let handler = async (m) => {
     return
   }
   
-   let claim = `Felicidades 🎉, reclamaste *20 🍬 Dulces*.`
-   user.limit += 20
+   let claim = `Felicidades ✨, reclamaste *30 ⚡ ki*.`
+   user.limit += 30
    await m.reply(claim)
    cooldowns[m.sender] = Date.now()
 }
