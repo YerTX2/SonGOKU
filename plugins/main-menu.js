@@ -22,7 +22,6 @@ let tags = {
   'owner': 'Creador 🥇', 
   'audio': 'Audios 🔉', 
   'advanced': 'Avanzado 💠',
-  'image' : 'imagen 🖼️',
  
 }
 
