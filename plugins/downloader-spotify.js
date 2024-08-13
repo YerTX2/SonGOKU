@@ -4,13 +4,14 @@ import fetch from 'node-fetch'
 import pkg2 from 'fluid-spotify.js'
 let { Spotify } = pkg2
 
-let handler = async function loading() {
-var hawemod = [
-"_《 █▒▒▒▒▒▒▒▒▒▒▒》10%_",
-"_《 ████▒▒▒▒▒▒▒▒》30%_",
-"_《 ███████▒▒▒▒▒》50%_",
-"_《 ██████████▒▒》80%_",
-"_《 ████████████》100%_" ]
+import pkg from 'sanzy-spotifydl'
+let { downloadTrack, downloadAlbum, search } = pkg
+import fetch from 'node-fetch'
+import pkg2 from 'fluid-spotify.js'
+let { Spotify } = pkg2
+
+let handler = async (m, { conn, text }) => {
+ if (!text) throw `🚩 Ingresa el enlace de algún Track, PlayList o Álbum de Spotify.`; 
  let isSpotifyUrl = text.match(/^(https:\/\/open\.spotify\.com\/(album|track|playlist)\/[a-zA-Z0-9]+)/i);
  if (!isSpotifyUrl && !text) throw `🚩 Ingresa el enlace de algún Track, Playlist o Álbum de Spotify.`
 let user = global.db.data.users[m.sender]
