@@ -150,11 +150,11 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
    
-const main-menu= ['https://telegra.ph/file/fc75439751a71e3419c68.mp4',
+const menu= ['https://telegra.ph/file/fc75439751a71e3419c68.mp4',
 'https://telegra.ph/file/60222a8e88addd43523b7.mp4',
 'https://telegra.ph/file/efc37a04ba264b60ea1ec.mp4']
 
-    await conn.sendMessage(m.chat, { video: { url: main-menu.getRandom() }, gifPlayback: true, caption: main-menu,
+    await conn.sendMessage(m.chat, { video: { url: menu.getRandom() }, gifPlayback: true, caption: menu,
 
   } catch (e) {
     conn.reply(m.chat, 'Lo sentimos, el menú tiene un error.', m)
