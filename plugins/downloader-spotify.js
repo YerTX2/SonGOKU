@@ -21,6 +21,13 @@ let txt = `*乂  S P O T I F Y  -  D O W N L O A D*\n\n`
     txt += `	✩   *Publicado* : ${album.metadata.releaseDate}\n`   
     txt += `	✩   *Tracks totales* : ${album.trackList.length}\n\n`   
     txt += `*- ↻ Los audios se estan enviando espera un momento, soy lenta. . .*`
+async function loading() {
+var hawemod = [
+"_《 █▒▒▒▒▒▒▒▒▒▒▒》10%_",
+"_《 ████▒▒▒▒▒▒▒▒》30%_",
+"_《 ███████▒▒▒▒▒》50%_",
+"_《 ██████████▒▒》80%_",
+"_《 ████████████》100%_"]
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
 for (let i = 0; i < album.trackList.length; i++) {
 await conn.sendFile(m.chat, album.trackList[i].audioBuffer, album.trackList[i].metadata.name + '.mp3', null, m, false, { mimetype: 'audio/mpeg', asDocument: user.useDocument })
