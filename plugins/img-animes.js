@@ -1,6 +1,4 @@
-/*
-AVISO : si vas a usar la api ( https://raw.githubusercontent.com/davidprospero123/api-anime/main/BOT-JSON/anime-${command}.json ) dejale creditos al curly, digo digo, curi
-*/
+
 
 import axios from "axios"
 
