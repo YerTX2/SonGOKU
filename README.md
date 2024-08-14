@@ -139,7 +139,10 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
 <a href="https://github.com/YerTX2"><img src="https://github.com/YerTX2.png" width="200" height="200" alt="YerTX2"/></a>
 
-`DESARROLLADOR DEL BOT Y EDITOR (YerTX2 o ZxYerSixZx)`
+`DESARROLLADOR DEL BOT Y EDITOR (YerTX2)
+           AGRADECIMIENTO A 
+       DVdaniel🇦🇱 Base del bot 
+           CURI  `
 
 
 ✨'' ALOJAMIENTO DE SON GOKU''' ✨
