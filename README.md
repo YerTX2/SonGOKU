@@ -22,15 +22,15 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 <a href="https://github.com/YerTX2"><img title="SonGoku" src="https://img.shields.io/badge/𝐂𝐎𝐌𝐏𝐀𝐓𝐈𝐁𝐋𝐄 𝐂𝐎𝐍 𝐋𝐀𝐒 𝐕𝐄𝐑𝐒𝐈𝐎𝐍𝐄𝐒 𝐌𝐔𝐋𝐓𝐈 𝐃𝐈𝐒𝐏𝐎𝐒𝐈𝐓𝐈𝐕𝐎𝐒 𝐃𝐄 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏-red?colorA=000000&colorB=000000&style=for-the-badge"></a>
 </p>
 
-<a href="https://github.com/YerTX2/SonGoku/watchers"><img title="espectadores" src="https://img.shields.io/github/watchers/YerTX2/SonGoku?label=Espectadores&style=social"></a>
+<a href="https://github.com/YerTX2/SonGOKU/watchers"><img title="espectadores" src="https://img.shields.io/github/watchers/YerTX2/SonGoku?label=Espectadores&style=social"></a>
 </p>
 
 </p>
-<p align="center"><img src="https://profile-counter.glitch.me/{SonGoku}/count.svg" alt="YerTX2:: Visitor's Count" /></p>
+<p align="center"><img src="https://profile-counter.glitch.me/{SonGOKU}/count.svg" alt="YerTX2:: Visitor's Count" /></p>
 
 </p>
 <p align="center"> 
-<a href="https://github.com/YerTX2/SonGoku"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=🌀░S░o░n░G░o░k░u🌀++;𝙷𝚘𝚕𝚊,+𝙶𝚛𝚊𝚌𝚒𝚊𝚜+𝙿𝚘𝚛+𝚅𝚒𝚜𝚒𝚝𝚊𝚛+𝙴𝚕+𝚁𝚎𝚙𝚘𝚜𝚒𝚝𝚘𝚛𝚒𝚘" height="40px"></a> 
+<a href="https://github.com/YerTX2/SonGOKU"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=🌀░S░o░n░G░o░k░u🌀++;𝙷𝚘𝚕𝚊,+𝙶𝚛𝚊𝚌𝚒𝚊𝚜+𝙿𝚘𝚛+𝚅𝚒𝚜𝚒𝚝𝚊𝚛+𝙴𝚕+𝚁𝚎𝚙𝚘𝚜𝚒𝚝𝚘𝚛𝚒𝚘" height="40px"></a> 
 </p>
  
 <p align="center"> 
@@ -42,7 +42,7 @@ href="https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v" target="white"><img
 <a href="https://chat.whatsapp.com/LBV1BouJqL0ICIRogyq6IT" target="white"><img src="https://img.shields.io/badge/Grupo-OfiCIAL DEL BOT-000000?style=for-the-badge&logo=whatsapp&logoColor=black" /></a>
 <a href="https://chat.whatsapp.com/LBV1BouJqL0ICIRogyq6IT" target="blank"><img src="https://img.shields.io/badge/grupo- de soporté-000000?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
 --------------------------
-> LOS NUMEROS QUE NO SEAN BOTS DE SonGoku NO SE ADMITEN POR LO TANTO SERÁN ELIMINADOS.
+> LOS NUMEROS QUE NO SEAN BOTS DE SonGOKU NO SE ADMITEN POR LO TANTO SERÁN ELIMINADOS.
 --------------------------
 <p align="center"> 
 <a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=🌀░S░o░n░G░o░k░u🌀++;𝙱𝚘𝚝𝚜+𝙾𝚏𝚒𝚌𝚒𝚊𝚕𝚎𝚜+𝙳𝚎" height="35px"></a> 
@@ -58,15 +58,15 @@ href="https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v" target="white"><img
 <p align="center"> 
 <a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=🌀░S░o░n░G░o░k░u🌀++;𝙲𝚘𝚗𝚏𝚒𝚐𝚞𝚛𝚊𝚌𝚒𝚘𝚗+𝙿𝚊𝚛𝚊" height="60px"></a> 
 
- <a href="https://github.com/YerTX2/SonGoku/fork" target="black"><img src="https://img.shields.io/badge/♥️-clona_el_repositorio-000000?style=for-the-badge&logo=GitHub&logoColor=black" /></a>
+ <a href="https://github.com/YerTX2/SonGOKU/fork" target="black"><img src="https://img.shields.io/badge/♥️-clona_el_repositorio-000000?style=for-the-badge&logo=GitHub&logoColor=black" /></a>
 
-<a href="https://github.com/YerTX2/SonGoku/blob/main/config.js" target="black"><img src="https://img.shields.io/badge/♥️-Cambiar el owner del bot-000000?style=for-the-badge&logo=GitHub&logoColor=black" /></a>
+<a href="https://github.com/YerTX2/SonGOKU/blob/main/config.js" target="black"><img src="https://img.shields.io/badge/♥️-Cambiar el owner del bot-000000?style=for-the-badge&logo=GitHub&logoColor=black" /></a>
 
 <p align="center"> 
 <a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=𝚁𝚎𝚙𝚕𝚒𝚝++;𝙰𝚌𝚝𝚒𝚟𝚊+𝙴𝚕+𝙱𝚘𝚝+𝙴𝚗" height="60px"></a> 
 </p>
 
-[![Run on Repl.it](https://repl.it/badge/github/YerTX2/SonGoku)](https://repl.it/github/YerTX2/SonGoku) 
+[![Run on Repl.it](https://repl.it/badge/github/YerTX2/SonGOKU)](https://repl.it/github/YerTX2/SonGOKU) 
 
 ## <h1>Instalación automática por termux</h1>
 
@@ -74,7 +74,7 @@ href="https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v" target="white"><img
 termux-setup-storage
 ```  
 ```ts
-apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/YerTX2/SonGoku/SonGoku.sh | bash
+apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/YerTX2/SonGOKU/SonGOKU.sh | bash
 ```
 
  <p align="center"> 
@@ -91,7 +91,7 @@ apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 
 ```
-git clone https://github.com/YerTX2/SonGoku && cd SonGoku
+git clone https://github.com/YerTX2/SonGOKU && cd SonGOKU
 ```
 
 ```
@@ -102,7 +102,7 @@ yarn install && npm install
 npm start
 ```
 
-## usar a SonGoku 24/7
+## usar a SonGOKU 24/7
 ```bash
 termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```
@@ -114,7 +114,7 @@ termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd
-> cd SonGoku
+> cd SonGOKU
 > npm start
 ```
 
@@ -126,7 +126,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
-> rm -rf SonGoku
+> rm -rf SonGOKU
 > npm start
 ```
 
