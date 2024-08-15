@@ -150,12 +150,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
 let gifUrl = "https://telegra.ph/file/5d3143ba763dba19fa349.mp4";
-try {
-await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: "Welcome to Menu", mentions: [m.sender]}, {quoted: m});
-} catch (e) {
-console.error(e);
-m.reply(e.toString());
-}
+await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
 
   } catch (e) {
     conn.reply(m.chat, 'Lo sentimos, el menú tiene un error.', m)
