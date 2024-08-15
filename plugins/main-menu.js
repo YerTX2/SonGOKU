@@ -151,7 +151,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     
 et id = text ? text : m.chat    
 let pp = 'https://telegra.ph/file/f971feff8db773b6b3633.mp4'
-await conn.sendMessage(m.chat, { video: { url: pp }, gifPlayback:
+await conn.sendMessage(m.chat, { video: { url: pp }, gifPlayback:true, caption: '*🐉*'
 
   } catch (e) {
     conn.reply(m.chat, 'Lo sentimos, el menú tiene un error.', m)
