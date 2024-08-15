@@ -71,7 +71,8 @@
         "readline": "^1.3.0",
         "similarity": "^1.2.1",
         "g-i-s": "^2.1.6",
-        "cheerio": "github:AikerDev/cheeiro",
+        "ytdl-core": "github:HanSamu-27/ytdl-core#main"
+  }, 
         "fb-downloader-scrapper": "^1.0.1",
         "socket.io": "^4.5.2",
         "syntax-error": "^1.4.0",
