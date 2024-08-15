@@ -149,9 +149,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-et id = text ? text : m.chat    
-let pp = 'https://telegra.ph/file/f971feff8db773b6b3633.mp4'
-await conn.sendMessage(m.chat, { video: { url: pp }, gifPlayback:true, caption: '*🐉*'
+ let pp = '.https://tinyurl.com/22ymr475'
+    await conn.sendFile(m.chat, pp, 'gifPlayback', text.trim(), m, null, rcanal)
 
   } catch (e) {
     conn.reply(m.chat, 'Lo sentimos, el menú tiene un error.', m)
