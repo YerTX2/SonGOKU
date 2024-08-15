@@ -149,7 +149,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-   
+et id = text ? text : m.chat    
 let pp = 'https://telegra.ph/file/f971feff8db773b6b3633.mp4'
 await conn.sendMessage(m.chat, { video: { url: pp }, gifPlayback:
 
