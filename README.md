@@ -74,7 +74,7 @@ href="https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v" target="white"><img
 termux-setup-storage
 ```  
 ```ts
-apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/YerTX2/SonGoku/master/SonGoku.sh | bash
+apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/YerTX2/SonGoku/SonGoku.sh | bash
 ```
 
  <p align="center"> 
