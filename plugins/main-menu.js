@@ -150,11 +150,16 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
    
-let pp = 'https://telegra.ph/file/f971feff8db773b6b3633.mp4'
-await conn.sendMessage(m.chat, { video: { url: pp }, gifPlayback: true, caption:
-.buffer()
-    await m.react('🐉') 
+//await conn.sendFile(m.chat, fantasyImg, 'lp.jpg', menu, fake0, false, { contextInfo: {mentionedJid, externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: gt, body: ' 𝙉𝙖𝙩𝙨𝙪𝙠𝙞𝘽𝙤𝙩 ', previewType: 0, thumbnail: picture, sourceUrl: nn }}})
+//await conn.sendFile(m.chat, gataVidMenu.getRandom(), 'gata.mp4', menu, fake0)
 
+const natsuki = ['https://telegra.ph/file/fc75439751a71e3419c68.mp4',
+'https://telegra.ph/file/60222a8e88addd43523b7.mp4',
+'https://telegra.ph/file/efc37a04ba264b60ea1ec.mp4']
+
+/*await conn.sendMessage(m.chat, { video: { url: natsuki.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fake0 })*/
+
+await conn.sendMessage(m.chat, { video: { url: natsuki.getRandom() }, gifPlayback: true, caption: menu,
   } catch (e) {
     conn.reply(m.chat, 'Lo sentimos, el menú tiene un error.', m)
     throw e
