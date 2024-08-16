@@ -13,11 +13,11 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     let searchQuery = keywords.join(" ");
     
     if (!lister.includes(format)) {
-        return conn.reply(m.chat, `*💙 𝙸𝚗𝚐𝚛𝚎𝚜𝚊 𝚎𝚕 𝚏𝚘𝚛𝚖𝚊𝚝𝚘 𝚎𝚗 𝚚𝚞𝚎 𝚍𝚎𝚜𝚎𝚊𝚜 𝚍𝚎𝚜𝚌𝚊𝚛𝚐𝚊𝚛 𝚖á𝚜 𝚎𝚕 𝚝í𝚝𝚞𝚕𝚘 𝚍𝚎 𝚞𝚗 𝚟𝚒𝚍𝚎𝚘 𝚘 𝚖ú𝚜𝚒𝚌𝚊 𝚍𝚎 𝚈𝚘𝚞𝚃𝚞𝚋𝚎.*\n\n𝙴𝚓𝚎𝚖𝚙𝚕𝚘: ${usedPrefix + command} *mp3* Connor RK800 - I Am Machine\n\n𝙵𝚘𝚛𝚖𝚊𝚝𝚘𝚜 𝚍𝚒𝚜𝚙𝚘𝚗𝚒𝚋𝚕𝚎𝚜:\n${lister.map(f => `${usedPrefix + command} *${f}*`).join('\n')}`, m);
+        return conn.reply(m.chat, `*⚠️ 𝙸𝚗𝚐𝚛𝚎𝚜𝚊 𝚎𝚕 𝚏𝚘𝚛𝚖𝚊𝚝𝚘 𝚎𝚗 𝚚𝚞𝚎 𝚍𝚎𝚜𝚎𝚊𝚜 𝚍𝚎𝚜𝚌𝚊𝚛𝚐𝚊𝚛 𝚖á𝚜 𝚎𝚕 𝚝í𝚝𝚞𝚕𝚘 𝚍𝚎 𝚞𝚗 𝚟𝚒𝚍𝚎𝚘 𝚘 𝚖ú𝚜𝚒𝚌𝚊 𝚍𝚎 𝚈𝚘𝚞𝚃𝚞𝚋𝚎.*\n\n𝙴𝚓𝚎𝚖𝚙𝚕𝚘: ${usedPrefix + command} *mp3* Connor RK800 - I Am Machine\n\n𝙵𝚘𝚛𝚖𝚊𝚝𝚘𝚜 𝚍𝚒𝚜𝚙𝚘𝚗𝚒𝚋𝚕𝚎𝚜:\n${lister.map(f => `${usedPrefix + command} *${f}*`).join('\n')}`, m);
     }
     
     if (!searchQuery) {
-        return conn.reply(m.chat, `*💙 𝙸𝚗𝚐𝚛𝚎𝚜𝚊 𝚎𝚕 𝚝í𝚝𝚞𝚕𝚘 𝚍𝚎 𝚞𝚗 𝚟𝚒𝚍𝚎𝚘 𝚘 𝚖ú𝚜𝚒𝚌𝚊 𝚍𝚎 𝚈𝚘𝚞𝚃𝚞𝚋𝚎.*`, m);
+        return conn.reply(m.chat, `*🐉 Ingresa el nombre 𝚍𝚎l 𝚟𝚒𝚍𝚎𝚘 𝚘 𝚖ú𝚜𝚒𝚌𝚊 que quiere que busgue en 𝚈𝚘𝚞𝚃𝚞𝚋𝚎.*`, m);
     }
     
     try {
@@ -36,7 +36,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
         txt += `❏ 𝙰𝚄𝚃𝙾𝚁: ${vid.author.name}\n`;
         txt += `❏ 𝙿𝚞𝚋𝚕𝚒𝚌𝚊𝚍𝚘: ${vid.ago}\n`;
         txt += `❏ 𝚄𝚁𝙻: https://youtu.be/${vid.videoId}\n\n`;
-        txt += `❄𝚁𝚎𝚌𝚞𝚎𝚛𝚍𝚊 @${m.sender.split('@')[0]}, 𝙲𝚞𝚛𝚒 𝚎𝚜 𝚖𝚒 𝚘𝚠𝚗𝚎𝚛 𝚜𝚒 𝚟𝚊𝚜 𝚊 𝚌𝚊𝚛𝚐𝚊𝚛 𝚕𝚘𝚜 𝚙𝚕𝚞𝚐𝚒𝚗𝚜 𝚍𝚊 𝚌𝚛𝚎𝚍𝚒𝚝𝚘𝚜❄`;
+        txt += `🐉 @${m.sender.split('@')[0]}, 🌀░S░o░n░G░o░k░u🌀`;
 
         
         await conn.sendFile(m.chat, responseImg.data, "thumbnail.jpg", txt, m, null, rcanal);
