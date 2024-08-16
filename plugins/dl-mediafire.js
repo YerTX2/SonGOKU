@@ -2,10 +2,10 @@ import axios from 'axios';
 import cheerio from 'cheerio';
 
 const handler = async (m, { conn, args }) => {
-    if (!args[0]) throw `♡ 𝙸𝚗𝚐𝚛𝚎𝚜𝚊 𝚎𝚕 𝚎𝚗𝚕𝚊𝚌𝚎 𝚍𝚎 𝙼𝚎𝚍𝚒𝚊𝙵𝚒𝚛𝚎 𝚊𝚕 𝚕𝚊𝚍𝚘 𝚍𝚎𝚕 𝚌𝚘𝚖𝚊𝚗𝚍𝚘`;
-    if (!args[0].match(/mediafire/gi)) throw `♡ 𝙴𝚗𝚕𝚊𝚌𝚎 𝚗𝚘 𝚟𝚊𝚕𝚒𝚍𝚘`;
+    if (!args[0]) throw `🐉 INGRESE EL ENLACE 🐉`;
+    if (!args[0].match(/mediafire/gi)) throw `⚠️ Enlace incorrecto`;
 
-    m.react('💙'); 
+    m.react('🐉'); 
 
     const getDownloadDetails = async (url) => {
         try {
@@ -57,7 +57,7 @@ const handler = async (m, { conn, args }) => {
 };
 
 handler.help = ['mediafire <url>'];
-handler.tags = ['downloader', 'premium'];
+handler.tags = ['downloader'];
 handler.command = ['mediafire', 'mfire'];
 handler.register = true;
 handler.premium = false;
