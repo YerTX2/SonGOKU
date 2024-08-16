@@ -166,7 +166,8 @@ let urls = [
 "https://telegra.ph/file/e8526d77280860f329c85.mp4", 
 "https://telegra.ph/file/cc520c3faa8ddad73183e.mp4", 
 "https://telegra.ph/file/5b8ce73e4adbf7319c71f.mp4", 
-"https://telegra.ph/file/7679e1fd48f7036e52fcb.mp4" 
+"https://telegra.ph/file/7679e1fd48f7036e52fcb.mp4", 
+"https://telegra.ph/file/72171ddecfdc5aa980352.mp4" 
 ];
 let gifUrl = urls[Math.floor(Math.random() * urls.length)];
 await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
