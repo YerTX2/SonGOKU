@@ -47,7 +47,7 @@ const handler = async (m, { conn, args }) => {
 ╰─────────────────────
     `.trim();
 
-    const imageUrl = "https://telegra.ph/file/b09e343ef667887945c0a.jpg";
+    const imageUrl = "https://telegra.ph/file/3b13b5d7bb6a92aa3c663.jpg";
     const responseImg = await axios.get(imageUrl, { responseType: 'arraybuffer' });
     await conn.sendFile(m.chat, responseImg.data, "thumbnail.png", caption, m);
 
