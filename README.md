@@ -47,7 +47,7 @@ href="https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v" target="white"><img
 <p align="center"> 
 <a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=🌀░S░o░n░G░o░k░u🌀++;𝙱𝚘𝚝𝚜+𝙾𝚏𝚒𝚌𝚒𝚊𝚕𝚎𝚜+𝙳𝚎" height="35px"></a> 
 </p>
-<a href="https://api.whatsapp.com/send/?phone=50250101139&text=Hola,%20vengo%20a%20pedir%20el%20numero%20del%20bot.&type=phone_number&app_absent=0" target="blank"><img src="https://img.shields.io/badge/BOT_OFICIAL_1-000000?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="https://api.whatsapp.com/send/?phone=51907376960&text=Hola,%20vengo%20a%20pedir%20el%20numero%20del%20bot.&type=phone_number&app_absent=0" target="blank"><img src="https://img.shields.io/badge/BOT_OFICIAL_1-000000?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
 > NO SPAMEAR COMANDOS
 
