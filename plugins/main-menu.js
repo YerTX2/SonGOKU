@@ -47,9 +47,9 @@ const defaultMenu = {
 \t\t\t L I S T A  -  M E N Ú S
 🌀░S░o░n░G░o░k░u🌀
 `.trimStart(),
-header: '╭━━━━━━━✦✗ *%category* ',
+header: '╭━━━━━✦✗ *%category* ',
 body: '│  > 🐉 *%cmd*\n',
-footer: '╰━━━━━━━✦✗ \n',
+footer: '╰━━━━━✦✗ \n',
 after: '',
 }
 
