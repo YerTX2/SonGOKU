@@ -150,8 +150,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
 let urls = [
-"https://telegra.ph/file/c83ffaff88b5c60f2bb34.mp4",
-"https://telegra.ph/file/48b1660c6367d59352f1e.mp4",
+"https://telegra.ph/file/c83ffaff88b5c60f2bb34.mp4"
+"https://telegra.ph/file/48b1660c6367d59352f1e.mp4"
 "https://telegra.ph/file/f66e1b57736723d0d28fd.mp4"
 "https://telegra.ph/file/5dafbf13bc24570ff2b41.mp4" 
 "https://telegra.ph/file/6584236c790b8dfc9a566.mp4" 
