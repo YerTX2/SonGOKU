@@ -66,7 +66,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
             await m.react('✅');
         }
     } catch (error) {
-        await conn.reply(m.chat, `ɴᴏ ᴇꜱᴛᴀ ɪɴꜱᴛᴀʟᴀᴅᴏ ꜰꜰᴍᴘɢ ᴠᴜᴇʟᴠᴀ ᴀʟ ʀᴇᴘᴏꜱɪᴛᴏʀɪᴏ ᴘᴀʀᴀ ᴄʜᴇᴄᴀʀ ᴄᴏᴍᴏ ɪɴꜱᴛᴀʟᴀʀʟᴏ`, m);
+        await conn.reply(m.chat, `No disponible erro probar con ytmp3 `, m);
         console.error(error);
     }
 };
