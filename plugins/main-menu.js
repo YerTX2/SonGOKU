@@ -28,9 +28,10 @@ let tags = {
 const defaultMenu = {
   before: `
 
-ぁ あ ぃ い ぅ う ぇ 
-
-“ Hola *%name*, Bienvenido al menú de 🌀░S░o░n░G░o░k░u🌀  ”
+ぁ あ ぃ い ぅ う ぇぃ い 
+ぃ いぃ いぃ いぃ いぃ い
+“ Hola *%name*, 🐉Bienvenido 
+A ░S░o░n░G░o░k░u🐉  ”
 
 ╭━─━━─≪ *TU INFO*
 │  🐉 *✨ Nombre ∙* %name
@@ -39,10 +40,9 @@ const defaultMenu = {
 │  🐉 *🔰 Nivel ∙* %level
 ╰━──━─≪
 %readmore
-  CON EL COMANDO (.goku)
-  Puede ingresar al menu
-
-ぁ あ ぃ い ぅ う ぇ
+  
+ぁ あ ぃ い ぅ う ぇぃ い 
+ぃ いぃ いぃ いぃ いぃ い
 
 \t\t\t L I S T A  -  M E N Ú S
 🌀░S░o░n░G░o░k░u🌀
