@@ -150,20 +150,20 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
 let urls = [
-"https://telegra.ph/file/c83ffaff88b5c60f2bb34.mp4"
-"https://telegra.ph/file/48b1660c6367d59352f1e.mp4"
-"https://telegra.ph/file/f66e1b57736723d0d28fd.mp4"
-"https://telegra.ph/file/5dafbf13bc24570ff2b41.mp4" 
-"https://telegra.ph/file/6584236c790b8dfc9a566.mp4" 
-"https://telegra.ph/file/eb547ad93e42e666ef287.mp4" 
-"https://telegra.ph/file/611f8524fb8692c463eac.mp4" 
-"https://telegra.ph/file/71b6b4572ae7717a76aed.mp4" 
-"https://telegra.ph/file/d995a052f0f857b769a35.mp4" 
-"https://telegra.ph/file/bfe10f45b594ab65d1d55.mp4" 
-"https://telegra.ph/file/beb5354b079073c158c73.mp4" 
-"https://telegra.ph/file/76cd3f11b595004ae4411.mp4" 
-"https://telegra.ph/file/f77e9efafd0e8807fc9f1.mp4" 
-"https://telegra.ph/file/e8526d77280860f329c85.mp4" 
+"https://telegra.ph/file/c83ffaff88b5c60f2bb34.mp4", 
+"https://telegra.ph/file/48b1660c6367d59352f1e.mp4", 
+"https://telegra.ph/file/f66e1b57736723d0d28fd.mp4", 
+"https://telegra.ph/file/5dafbf13bc24570ff2b41.mp4", 
+"https://telegra.ph/file/6584236c790b8dfc9a566.mp4", 
+"https://telegra.ph/file/eb547ad93e42e666ef287.mp4", 
+"https://telegra.ph/file/611f8524fb8692c463eac.mp4", 
+"https://telegra.ph/file/71b6b4572ae7717a76aed.mp4", 
+"https://telegra.ph/file/d995a052f0f857b769a35.mp4", 
+"https://telegra.ph/file/bfe10f45b594ab65d1d55.mp4", 
+"https://telegra.ph/file/beb5354b079073c158c73.mp4", 
+"https://telegra.ph/file/76cd3f11b595004ae4411.mp4", 
+"https://telegra.ph/file/f77e9efafd0e8807fc9f1.mp4", 
+"https://telegra.ph/file/e8526d77280860f329c85.mp4", 
 ];
 let gifUrl = urls[Math.floor(Math.random() * urls.length)];
 await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
