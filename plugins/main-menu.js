@@ -31,12 +31,12 @@ const defaultMenu = {
 
 “ Hola *%name*, Bienvenido al menú de 🌀░S░o░n░G░o░k░u🌀  ”
 
-╭━─━─≪ *Tu Información* ≫─━─━━╮
+╭━─━━─≪ *TU INFO*
 │  🐉 *✨ Nombre ∙* %name
 │  🐉 *⚡ Ki ∙* %limit
 │  🐉 *🪐 XP ∙* %totalexp
 │  🐉 *🔰 Nivel ∙* %level
-╰━─━──━━━─≪✠≫─━──━─━━─━╯
+╰━──━─≪
 %readmore
   CON EL COMANDO (.goku)
   Puede ingresar al menu
@@ -45,9 +45,9 @@ const defaultMenu = {
 \t\t\t L I S T A  -  M E N Ú S
 🌀░S░o░n░G░o░k░u🌀
 `.trimStart(),
-header: '╭────• *%category* •────╮ ',
-body: '│  🐉 *%cmd*\n',
-footer: '╰─────━──•◈•────━───╯ \n',
+header: '╭━━━━━━━✦✗ *%category* ',
+body: '│  >🐉 *%cmd*\n',
+footer: '╰━━━━━━━✦✗ \n',
 after: '',
 }
 
