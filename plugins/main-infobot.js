@@ -15,7 +15,7 @@ let handler = async (m, { conn, isRowner}) => {
   const groupsIn = chats.filter(([id]) => id.endsWith('@g.us')) 
   const used = process.memoryUsage()
   let txt = `
-╭━─━─≪ *Info Bot* ≫─━─━━╮
+╭━─━─≪ *Info Goku* ≫─━─━━╮
  \n`
       txt += `│  ≡◦ *🌟 Creador ∙* ZxYerSixZx\n`
       txt += `│  ≡◦ *📚 Grupos Unidos ∙* ${groupsIn.length}\n`
