@@ -142,7 +142,8 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 `DESARROLLADOR DEL BOT Y EDITOR (YerTX2)
       AGRADECIMIENTO A 
 DVdaniel🇦🇱 Base del bot 
-GabrielCuri Plugin`
+GabrielCuri⚡ Plugin
+DanielxlJS✨`
 🐉🐉🐉🐉🐉🐉🐉
 
 
