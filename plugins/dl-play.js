@@ -27,11 +27,12 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
 
     await conn.sendButton2(m.chat, txt, '. ', thumbnail, [
         ['Audio', `${usedPrefix}ytmp3 ${url}`],
-        ['docmp3', `${usedPrefix}ytmp3doc ${url}`],
-        ['Video', `${usedPrefix}ytmp4 ${url}`]
+        ['mp3doc', `${usedPrefix}ytmp3doc ${url}`],
+        ['Video', `${usedPrefix}ytmp4 ${url}`], 
+        ['mp4doc', `${usedPrefix}ytmp4doc ${url}`]
         ], null, [['Canal', 'https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v']], m);
 
-    await m.react('🐉');
+    await m.react('✅');
 };
 
 handler.help = ['play', 'play2', 'ytmp3'];
