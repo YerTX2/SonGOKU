@@ -25,12 +25,10 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     txt += '┗─══──━══─| ✠ |─══━─═──┛ \n';
     txt += '*🌀░S░o░n░G░o░k░u🌀*';
 
-    await conn.sendButton4(m.chat, txt, '. ', thumbnail, [
+    await conn.sendButton3(m.chat, txt, '. ', thumbnail, [
         ['Audio', `${usedPrefix}ytmp3 ${url}`],
-        ['AudioDoc', `${usedPrefix}ytmp3doc ${url}`],
         ['Video', `${usedPrefix}ytmp4 ${url}`]
-        ['VideoDoc', `${usedPrefix}ytmp4doc ${url}`]
-    ], null, [['Canal', 'https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v']], m);
+        ], null, [['Canal', 'https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v']], m);
 
     await m.react('🐉');
 };
