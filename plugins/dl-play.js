@@ -25,7 +25,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     txt += '┗─══──━══─| ✠ |─══━─═──┛ \n';
     txt += '*🌀░S░o░n░G░o░k░u🌀*';
 
-    await conn.sendButton3(m.chat, txt, '. ', thumbnail, [
+    await conn.sendButton2(m.chat, txt, '. ', thumbnail, [
         ['Audio', `${usedPrefix}ytmp3 ${url}`],
         ['Video', `${usedPrefix}ytmp4 ${url}`]
         ], null, [['Canal', 'https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v']], m);
