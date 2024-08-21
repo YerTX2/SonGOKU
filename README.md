@@ -151,7 +151,15 @@ DanielxlJS✨`
 
 Un hosting es un servicio de alojamiento web que te permite publicar un sitio web o mantener un bot de WhatsApp, bot de discord activo las 24H y no tienen límite de trasferencia de conexión de Internet para que descargue videos,músicas entre otras cosas.
 
-```⚡No ay alojamiento xd⚡```
+```⚡No ay alojamiento xd⚡``
+<a href="https://dash.nexus-host.shop/home"><img src="https://telegra.ph/file/1a3668ab3dfd70c839753.jpg" height="125px"></a>
+
+- **💻Dash:** [`Aquí`](https://dash.olympus-host.xyz/home)
+- **Panel:** [`Aquí`](https://host.asifofc.xyz)
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J)
+- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/Jt0Z1ERzXCV5srN7XH7Qws) 
+
+
 
 
 
