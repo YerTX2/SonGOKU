@@ -5,7 +5,7 @@ conn.sendMessage(m.chat, { forward: m.quoted.fakeObj, mentions: users } )
 }
 handler.help = ['tag']
 handler.tags = ['group']
-handler.command = /^(totag|tag)$/i
+handler.command = /^(n|tag)$/i
 handler.admin = true
 handler.group = true
 
