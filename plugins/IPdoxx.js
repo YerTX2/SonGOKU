@@ -38,8 +38,8 @@ let handler = async (m, { conn, text }) => {
     await conn.reply(m.chat, 'Ocurrió un error al obtener la información de la IP.', m);
   }
 }
-
-handler.tags = ['tools'];
+handler.help = ["IPdoxx"]
+handler.tags = ["tools"]
 handler.command = /^(ip|ipcheck|ipcek)$/i;
 handler.owner = true;
 
