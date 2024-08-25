@@ -9,8 +9,8 @@ user.premiumTime = 0
 user.premium = false 
 }}}
 //handler.help = ['premium <usuario>']
-handler.tags = ['owner']
-handler.command = ['premium', 'darpremium'] 
+//handler.tags = ['owner']
+//handler.command = ['premium', 'darpremium'] 
 handler.owner = true
 
 export default handler
