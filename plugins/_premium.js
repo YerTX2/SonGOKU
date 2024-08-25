@@ -8,7 +8,7 @@ await m.reply(`🚩 @${m.sender.split`@`[0]} se terminó tu tiempo como usuario 
 user.premiumTime = 0
 user.premium = false 
 }}}
-handler.help = ['premium <usuario>']
+//handler.help = ['premium <usuario>']
 handler.tags = ['owner']
 handler.command = ['premium', 'darpremium'] 
 handler.owner = true
