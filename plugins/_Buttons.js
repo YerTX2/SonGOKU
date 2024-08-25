@@ -22,9 +22,3 @@ async function before(m, chatUpdate) {
         conn.ev.emit('messages.upsert', msg)
     }
               }
-handler.help = ['cueva']
-handler.tags = ['search']
-handler.command = ['cueva', 'search'] 
-handler.owner = true
-
-export default handler
