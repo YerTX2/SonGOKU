@@ -41,9 +41,6 @@ const defaultMenu = {
  
 %readmore
   
-ぁ あ ぃ い ぅ う ぇぃ い 
-ぃ いぃ いぃ いぃ いぃ い
-
 \t\t\t 🐉MENÚS SONGOKU🐉
 `.trimStart(),
 header: '╭━━━━━✦✗ *%category* ',
