@@ -44,8 +44,7 @@ const defaultMenu = {
 ぁ あ ぃ い ぅ う ぇぃ い 
 ぃ いぃ いぃ いぃ いぃ い
 
-\t\t\t L I S T A  -  M E N Ú S
-🌀░S░o░n░G░o░k░u🌀
+\t\t\t 🐉MENÚS SONGOKU🐉
 `.trimStart(),
 header: '╭━━━━━✦✗ *%category* ',
 body: '│  > 🐉 *%cmd*\n',
