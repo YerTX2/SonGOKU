@@ -26,19 +26,19 @@ let tags = {
 }
 
 const defaultMenu = {
-  before: `
+  before: ` 
 
-ぁ あ ぃ い ぅ う ぇぃ い 
-ぃ いぃ いぃ いぃ いぃ い
-“ Hola *%name*, 🐉Bienvenido 
-A ░S░o░n░G░o░k░u🐉  ”
-
+“ Hola *%name*,Soy > SonGoku  ”
 ╭━─━━─≪ *TU INFO*
 │  🐉 *✨ Nombre ∙* %name
 │  🐉 *⚡ Ki ∙* %limit
 │  🐉 *🪐 XP ∙* %totalexp
 │  🐉 *🔰 Nivel ∙* %level
 ╰━──━─≪
+▬▬ι════════════ﺤ
+⇝⌛ *Tiempo* : %uptime
+▬▬ι════════════ﺤ
+ 
 %readmore
   
 ぁ あ ぃ い ぅ う ぇぃ い 
