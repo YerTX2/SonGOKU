@@ -36,7 +36,7 @@ const defaultMenu = {
 > 🪐 XP ∙* %totalexp
 > 🔰 Nivel ∙* %level
 ╰━──━─≪
-> SonGoku Online
+> SON GOKU 
 ▬▬ι════════════ﺤ
 ⇝⌛ *Tiempo* : %uptime
 ▬▬ι════════════ﺤ
