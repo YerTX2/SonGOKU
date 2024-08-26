@@ -43,7 +43,7 @@ const defaultMenu = {
  
 %readmore
   
-\t\t\t 🐉MENÚS SONGOKU🐉
+> MENÚS SON GOKU 
 `.trimStart(),
 header: '╭━━━━━✦✗ *%category* ',
 body: '│  > 🐉 *%cmd*\n',
