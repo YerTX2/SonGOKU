@@ -111,7 +111,7 @@ var hawemod = [
 loading()    
 };
 handler.help = ['doxear <nombre> | <@tag>'];
-handler.tags = ['fun'];
+handler.tags = ['game']
 handler.command = /^Doxxeo|doxxeo|doxxear|Doxxear|doxeo|doxear|doxxeame|doxeame/i;
 export default handler;
 
