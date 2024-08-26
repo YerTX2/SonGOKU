@@ -12,7 +12,7 @@ await conn.sendFile(m.chat, url, filename, null, m)
 } catch {
 }}
 handler.help = ['gitclone <url git>']
-handler.tags = ['downloader']
+handler.tags = ["Descargas de archivos"]
 handler.command = ['gitclone'] 
 handler.register = true 
 //handler.limit = 1
