@@ -38,15 +38,12 @@ const defaultMenu = {
 ▬▬ι════════════ﺤ
 ⇝⌛ *Tiempo* : %uptime
 ▬▬ι════════════ﺤ
- 
-%readmore
-  
-> MENÚS SON GOKU 
+ %readmore
 `.trimStart(),
-header: '╭━━━━━✦✗ *%category* ',
-body: '│  > 🐉 *%cmd*\n',
-footer: '╰━━━━━✦✗ \n',
-after: '',
+  header: '`MENU X %category`\n\n┏━━━°⌜ 赤い糸 ⌟°━━━┓',
+  body: '乂 *%cmd*\n',
+  footer: '┗━━━°⌜ 赤い糸 ⌟°━━━┛ \n',
+  after: '',
 }
 
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
