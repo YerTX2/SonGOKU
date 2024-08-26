@@ -19,6 +19,7 @@ await conn.groupParticipantsUpdate(m.chat, [user], 'remove')
 
 handler.command = /^(ruletadelban)$/i
 handler.group = true
+handler.tags = ['game']
 handler.admin = true
 handler.botAdmin = true
 export default handler
