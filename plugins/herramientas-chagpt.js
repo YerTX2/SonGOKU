@@ -126,6 +126,6 @@ let res = await gpt.json()
 await m.reply(res.message)
 }}
 handler.help = ["chagpt", "ia", "openai", "gemini", "copilot"]
-handler.tags = ["buscadores"]
+handler.tags = ["inteligencia artificial🤖"]
 handler.command = /^(openai|chatgpt|ia|ai|openai2|chatgpt2|ia2|gemini|copilot|bing)$/i;
 export default handler;
