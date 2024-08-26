@@ -21,7 +21,8 @@ let tags = {
   'nsfw': 'Nsfw', 
   'owner': 'Creador', 
   'audio': 'Audios', 
-  'advanced': 'Avanzado',
+  'advanced': 'Avanzado', 
+  'porno': '+18',
  
 }
 
