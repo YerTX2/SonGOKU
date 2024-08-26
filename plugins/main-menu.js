@@ -152,7 +152,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
 let urls = [
 "https://telegra.ph/file/c83ffaff88b5c60f2bb34.mp4", 
 "https://telegra.ph/file/beb5354b079073c158c73.mp4", 
-"https://telegra.ph/file//c711989bd33680a18f4be.mp4" 
+"https://tinyurl.com/2y56m8ag" 
 ];
 let gifUrl = urls[Math.floor(Math.random() * urls.length)];
 await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
