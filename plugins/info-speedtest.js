@@ -24,7 +24,7 @@ m.reply(wait)
     }
 };
 handler.help = ['speedtest'];
-handler.tags = ['info'];
+handler.tags = ['main']
 handler.command = /^(speedtest?|test?speed)$/i;
 handler.register = true
 export default handler;
