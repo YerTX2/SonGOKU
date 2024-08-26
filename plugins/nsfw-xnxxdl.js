@@ -13,7 +13,7 @@ await m.react('✅')
 } catch {
 await m.react('✖️')
 }}
-handler.tags = ['porno', '+18']
+handler.tags = ['+18']
 handler.help = ['xnxxdl *<url>*']
 handler.command = ['xnxxdl']
 //handler.limit = 200
