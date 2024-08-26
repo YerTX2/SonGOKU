@@ -41,7 +41,7 @@ const defaultMenu = {
  %readmore
 `.trimStart(),
   header: '`MENU X %category`\n\n┏━━━━━°⌜ 赤い糸 ⌟°━━━━━┓',
-  body: '乂 *%cmd*\n',
+  body: `'乂 *%cmd*`\n',
   footer: '┗━━━━━°⌜ 赤い糸 ⌟°━━━━━┛ \n',
   after: '',
 }
