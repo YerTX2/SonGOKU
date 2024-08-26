@@ -24,6 +24,6 @@ import fetch from 'node-fetch';
    } 
  }; 
  handler.help = ['playstore <aplicacion>']; 
- handler.tags = ['Descargas']; 
+ handler.tags = ['downloader'] 
  handler.command = /^(playstore)$/i; 
  export default handler;
