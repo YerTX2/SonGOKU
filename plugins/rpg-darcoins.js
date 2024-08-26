@@ -25,7 +25,7 @@ Impuesto 2% : *${-imt}*  ⚡ Ki
 Total gastado: *${-limit}* ⚡ Ki`)
     conn.fakeReply(m.chat, `*+${poin}* *⚡ Ki.*`, who, m.text)
 }
-handler.help = ['darstars *@user <cantidad>*']
+handler.help = ['darki *@user <cantidad>*']
 handler.tags = ['rpg']
 handler.command = ['darki', 'darki']
 handler.register = true 
