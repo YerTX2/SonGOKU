@@ -40,9 +40,9 @@ const defaultMenu = {
 ▬▬ι════════════ﺤ
  %readmore
 `.trimStart(),
-  header: '`MENU X %category`\n\n┏━━━°⌜ 赤い糸 ⌟°━━━┓',
+  header: '`MENU X %category`\n\n┏━━━━━°⌜ 赤い糸 ⌟°━━━━━┓',
   body: '乂 *%cmd*\n',
-  footer: '┗━━━°⌜ 赤い糸 ⌟°━━━┛ \n',
+  footer: '┗━━━━━°⌜ 赤い糸 ⌟°━━━━━┛ \n',
   after: '',
 }
 
