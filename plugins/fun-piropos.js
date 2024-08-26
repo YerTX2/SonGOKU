@@ -12,7 +12,7 @@ let hasil = Math.floor(Math.random() * 5000)
 \n**╚═══❖•ೋ° °ೋ•❖═══╝**
 `)
 }
-handler.tags = ['fun']
+handler.tags = ['game']
 handler.command = handler.help = ['piropo']
 
 //handler.limit = 1
