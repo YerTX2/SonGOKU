@@ -35,7 +35,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     await m.react('✅');
 };
 
-handler.help = ['play', 'play2', 'ytmp3'];
+handler.help = ['play'];
 handler.tags = ['downloader'] 
 handler.command = ['play',];
 
