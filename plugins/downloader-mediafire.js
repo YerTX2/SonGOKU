@@ -20,7 +20,7 @@ await m.react('✅')
 await m.react('✖️')
 }}
 handler.help = ['mediafire'].map(v => v + ' *<url>*')
-handler.tags = ['downloader', 'premium']
+handler.tags = ['downloader']
 handler.command = ['mediafire', 'mdfire', 'mf']
 handler.premium = true 
 
