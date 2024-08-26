@@ -31,11 +31,10 @@ const defaultMenu = {
 “ Hola *%name*,"  
 
 ╭━─━━─≪ *TU INFO*
-> *✨ Nombre.*%name
-│  🐉 *⚡ Ki ∙* %limit
-│  🐉 *🪐 XP ∙* %totalexp
-│  🐉 *🔰 Nivel ∙* %level
-| 
+> ✨ Nombre.*%name
+> ⚡ Ki ∙* %limit
+> 🪐 XP ∙* %totalexp
+> 🔰 Nivel ∙* %level
 ╰━──━─≪
 > SonGoku Online
 ▬▬ι════════════ﺤ
