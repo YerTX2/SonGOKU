@@ -23,8 +23,7 @@ let tags = {
   'audio': 'Audios', 
   'advanced': 'Avanzado', 
   'porno': '+18',
-  'archivos': 'Descargas de archivos',
- 
+  
 }
 
 const defaultMenu = {
