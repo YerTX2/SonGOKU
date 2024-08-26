@@ -5,7 +5,7 @@ let handler = async (m, { text, conn }) => {
     await m.reply(`🌀 Estas en *AFK*, Motivo *${text ? ': ' + text : ''}*`)
 }
 handler.help = ['afk <razón>']
-handler.tags = ['fun']
+handler.tags = ['game']
 handler.command = ['afk']
 handler.group = false 
 
