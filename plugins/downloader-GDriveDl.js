@@ -16,7 +16,7 @@ await conn.sendMessage(m.chat, { document: { url: dl_url }, fileName: title, mim
 } catch {
 }}
 handler.help = ['gdrive <url gdrive>']
-handler.tags = ['downloader']
+handler.tags = ["Descargas de archivos"]
 handler.command = ['gdrive']
 handler.register = true
 handler.limit = 500
