@@ -144,15 +144,40 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-let urls = [
+//let urls = [
 "https://telegra.ph/file/fa9c0515f3b2f6df9f2bd.mp4",
 "https://telegra.ph/file/0779e78886636806c7422.mp4", 
 "https://telegra.ph/file/d791a9594ac30fbf97183.mp4", 
 "https://telegra.ph/file/6a0a1eabb9b50b9744543.mp4", 
 "https://telegra.ph/file/4f8676c687995ec8333cb.mp4" 
 ];
-let gifUrl = urls[Math.floor(Math.random() * urls.length)];
+//let gifUrl = urls[Math.floor(Math.random() * urls.length)];
 await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
+
+conn.sendList(m.chat, menu, botname, `𝑇𝑂𝐶𝐴 𝐴𝑄𝑈𝐼 ✨`, listSections, {quoted: fkontak})
+}
+
+if (command === 'menu' || command === 'Menu') {
+    m.react('✨');
+    
+    // Selecciona una imagen aleatoriamente
+    let randomImage = pickRandom([img1, img2, img, img3, img4, img5, img6, img7, img8, img9]);
+    
+    
+    conn.sendButton(m.chat, submenu, menu0, randomImage, 
+        [['𝙈𝙀𝙉𝙐 𝙇𝙄𝙎𝙏𝘼 💥', `#help`], 
+         ['𝙈𝙀𝙉𝙐 𝘾𝙊𝙈𝙋𝙇𝙀𝙏𝙊 📜', `#allmenu`], 
+         ['𝙋𝙍𝙐𝙀𝘽𝘼 𝘿𝙀 𝙑𝙀𝙇𝙊𝘾𝙄𝘿𝘼𝘿⚡', `#ping`],
+         ['𝘼𝙐𝙏𝙊 𝙑𝙀𝙍𝙄𝙁𝙄𝘾𝘼𝙍 ✅', `#reg ${pushname}.${nunber}`]], 
+        null, null, m);
+}*/
+
+
+if (command === 'menu1' || command === 'descarga') {
+    m.react('🚀');
+
+    // Selecciona una imagen aleatoriamente
+    // let randomImage = pickRandom([img1, img2, img, img3, img4, img5, img6, img7, img8, img9]);
 
 
   } catch (e) {
