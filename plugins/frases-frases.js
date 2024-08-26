@@ -25,7 +25,7 @@ ${translation_en}
     m.reply(contoh + data + anjuran)
 }
 handler.help = ['frase [escribe un número 1 - 99]']
-handler.tags = ['fun']
+handler.tags = ['game']
 handler.command = /^(frase(s)?)$/i
 handler.register = true
 export default handler
