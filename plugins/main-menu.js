@@ -186,9 +186,9 @@ if (command === 'menu1' || command === 'descarga') {
   }
 }
 
-handler.help = ['menu']
+//handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu', 'help','goku', 'menú'] 
+//handler.command = ['menu', 'help','goku', 'menú'] 
 handler.register = true 
 export default handler
 
