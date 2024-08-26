@@ -17,7 +17,6 @@ let tags = {
   'nable': 'On/Off', 
   'downloader': 'Descargas',
   'tools': 'Herramientas',
-  'fun': 'Diversión',
   'nsfw': 'Nsfw', 
   'owner': 'Creador', 
   'audio': 'Audios', 
