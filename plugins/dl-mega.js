@@ -8,7 +8,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
         const file = File.fromURL(text);
         await file.loadAttributes();
 
-        if (file.size >= 300000000) return m.reply('Error: El archivo es grande (Maximo tamaño: 300MB)');
+        if (file.size >= 300000000) return m.reply('Error: El archivo es grande (Maximo tamaño: 800MB)');
 
         const downloadingMessage = `🌩️ Descargando Archivo... Porfavor Espera.`;
         m.reply(downloadingMessage);
