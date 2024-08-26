@@ -13,7 +13,7 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
 }
 
 handler.help = ['listcmd']
-handler.tags = ['cmd']
+handler.tags = ['main'] 
 handler.command = ['listcmd']
 
 export default handler
