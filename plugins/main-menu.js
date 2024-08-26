@@ -34,7 +34,8 @@ const defaultMenu = {
 > ✨ Nombre.*%name
 > ⚡ Ki ∙* %limit
 > 🪐 XP ∙* %totalexp
-> 🔰 Nivel ∙* %level
+> 🗡️ Nivel ∙* %level
+> 🎖️ addprem .*%user
 ╰━──━─≪
 > SON GOKU 
 ▬▬ι════════════ﺤ
