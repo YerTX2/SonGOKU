@@ -33,7 +33,7 @@ if (!db.data.chats[m.chat].nsfw on && m.isGroup) return conn.sendFile(m.chat, [p
   }
 };
 handler.help = ['xnxxsearch'].map((v) => v + ' <query>');
-handler.tags = ['nsfw'];
+handler.tags = ['+18'];
 handler.command = /^xnxxsearch|xnxxs$/i;
 handler.limit = 10
 handler.register = true
