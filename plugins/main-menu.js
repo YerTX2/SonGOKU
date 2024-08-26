@@ -22,7 +22,7 @@ let tags = {
   'owner': 'Creador', 
   'audio': 'Audios', 
   'advanced': 'Avanzado', 
-  'porno': '+18',
+  '+18': '+18',
   
 }
 
