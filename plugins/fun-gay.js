@@ -5,7 +5,7 @@ let handler = async (m, { groupMetadata }) => {
 }
 
 handler.help = ['gay']
-handler.tags = ['fun']
+handler.tags = ['game']
 handler.command = ['cekgay', 'gay']
 
 handler.group = true
