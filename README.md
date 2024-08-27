@@ -157,7 +157,7 @@ Un hosting es un servicio de alojamiento web que te permite publicar un sitio we
 - **💻Dash:** [`Aquí`](https://dash.nexus-host.shop/register?ref=P8FQ3w9Y)
 - **Panel:** [`Aquí`](https://panel.nexus-host.shop)
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029ValPGGT3GJOqnlYiTx2d)
-- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/DlErIXnbKfx4AvvyngFuSX) 
+- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/IeozwFJkPb201lHdjJ8k6f) 
 - **SOPORTÉ NEXUS:** [`Aquí`](https://chat.whatsapp.com/DlErIXnbKfx4AvvyngFuSX)
 
 
