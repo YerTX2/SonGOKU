@@ -2,7 +2,7 @@ import fg from 'api-dylux'
 import yts from 'yt-search'
 import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
 import fetch from 'node-fetch' 
-let limit = 200
+let limit = 500
 
 let handler = async (m, { conn: star, args, text, isPrems, isOwner, usedPrefix, command }) => {
 if (!args || !args[0]) return star.reply(m.chat, '🚩 Ingresa el enlace del vídeo de YouTube junto al comando.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* https://youtu.be/QSvaCSt8ixs`, m, rcanal)
@@ -24,7 +24,7 @@ if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas
        txt += `	✩   *Titulo* : ${title}\n`
        txt += `	✩   *Calidad* : ${q}\n`
        txt += `	✩   *Tamaño* : ${size}\n\n`
-       txt += `> *- ↻ El audio se esta enviando espera un momento, soy lenta. . .*`
+       txt += `> *- ↻ Se está descargado su pedido 📥 espere un momento @SonGoku*`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await star.sendMessage(m.chat, { document: { url: dl_url }, caption: '', mimetype: 'audio/mpeg', fileName: `${title}.mp3`}, { quoted: m })
 await m.react('✅')
@@ -41,7 +41,7 @@ if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas
        txt += `	✩   *Titulo* : ${title}\n`
        txt += `	✩   *Calidad* : ${q}\n`
        txt += `	✩   *Tamaño* : ${size}\n\n`
-       txt += `> *- ↻ El audio se esta enviando espera un momento, soy lenta. . .*`
+       txt += `> *- Se está descargado su pedido 📥 espere un momento @SonGoku*`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await star.sendMessage(m.chat, { document: { url: dl_url }, caption: '', mimetype: 'audio/mpeg', fileName: `${title}.mp3`}, { quoted: m })
 await m.react('✅')
