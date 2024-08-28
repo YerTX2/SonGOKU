@@ -25,8 +25,7 @@ if (size.split('GB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas
        txt += `	✩   *Titulo* : ${title}\n`
        txt += `	✩   *Calidad* : ${q}\n`
        txt += `	✩   *Tamaño* : ${size}\n\n`
-       txt += `> *- ↻ Se está descargado su pedido 📥 espere un momento  Nombre.*%name    
-@SonGoku*`
+       txt += `> *- ↻ Se está descargado su pedido 📥 espere un momento @SonGoku*`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await star.sendMessage(m.chat, { document: { url: dl_url }, caption: '', mimetype: 'video/mp4', fileName: `${title}` + `.mp4`}, {quoted: m })
 await m.react('✅')
@@ -44,8 +43,7 @@ if (size.split('GB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas
        txt += `	✩   *Titulo* : ${title}\n`
        txt += `	✩   *Calidad* : ${q}\n`
        txt += `	✩   *Tamaño* : ${size}\n\n`
-       txt += `> *- ↻ Se está descargado su pedido 📥 espere un momento  Nombre.*%name    
-@SonGoku*`
+       txt += `> *- ↻ Se está descargado su pedido 📥 espere un momento @SonGoku*`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await star.sendMessage(m.chat, { document: { url: dl_url }, caption: '', mimetype: 'video/mp4', fileName: `${title}` + `.mp4`}, {quoted: m })
 await m.react('✅')
@@ -61,8 +59,7 @@ if (size.split('GB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas
        txt += `	✩   *Titulo* : ${title}\n`
        txt += `	✩   *Calidad* : ${q}\n`
        txt += `	✩   *Tamaño* : ${size}\n\n`
-       txt += `> *- ↻ Se está descargado su pedido 📥 espere un momento  Nombre.*%name    
-@SonGoku*`
+       txt += `> *- ↻ Se está descargado su pedido 📥 espere un momento @SonGoku*`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await star.sendMessage(m.chat, { document: { url: dl_url }, caption: '', mimetype: 'video/mp4', fileName: `${title}` + `.mp4`}, {quoted: m })
 await m.react('✅')
