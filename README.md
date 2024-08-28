@@ -136,7 +136,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
 
 ## <h2>`PROPIETARIO DEL BOT`</h2> 
-        `YerTX2`
+               `YERTX2`
 
 <a href="https://github.com/YerTX2"><img src="https://github.com/YerTX2.png" width="200" height="200" alt="YerTX2"/></a>
 
