@@ -20,7 +20,7 @@ export async function before(m) {
       }
     } else {
       const comando = m.text.trim().split(' ')[0];
-      await m.reply(`⚡︎ El comando "${comando}" no es válido.\nUsa "#help" para ver los comandos disponibles.`);
+      await m.reply(`El comando *"${comando}"* no es válido.\nUsa ".menu" para ver los comandos disponibles.`);
     }
   }
 }
