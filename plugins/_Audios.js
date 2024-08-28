@@ -6,7 +6,7 @@ let handler = async (m, { conn }) => {
 
   const audioMap = {
     'hola': './audios/hola.mp3',
-    'cómo estás': './audios/como_estas.mp3',
+    'cómo estás': './goku/elcorazon.mp3',
     'goku': './audios/goku.mp3'
   };
 
