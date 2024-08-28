@@ -8,6 +8,9 @@ let handler = async (m, { conn }) => {
     'hola': './goku/hdpta.mp3',
     'xd': './goku/elcorazon.mp3',
     'goku': './goku/elcorazon.mp3'
+    'ayuda': './goku/ayuda.mp3'
+    'gey': './goku/gey.mp3'
+    
   };
 
   for (let key in audioMap) {
