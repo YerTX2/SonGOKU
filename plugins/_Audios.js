@@ -29,5 +29,5 @@ let handler = async (m, { conn }) => {
 
 handler.customPrefix = /^(hola|cómo estás|goku)/i;
 handler.command = new RegExp;
-handler.tags = ['Audios'] 
+handler.tags = ['Audios Dbz'] 
 export default handler;
