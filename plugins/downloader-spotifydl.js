@@ -49,7 +49,7 @@ try {
         txt += `	✩   *Artista* : ${artist}\n`
         txt += `	✩   *Album* : ${album}\n`
         txt += `	✩   *Fecha de lanzamiento ∙* ${year}\n\n`
-        txt += `*- ↻ El audio se esta enviando espera un momento, soy lenta. . .*`
+        txt += `*- ↻ Se está descargado su pedido 📥 espere un momento @SonGoku*`
 
 await await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
 await conn.sendFile(m.chat, downloadLink, title + '.mp3', `
