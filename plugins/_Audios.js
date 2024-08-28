@@ -27,7 +27,7 @@ let handler = async (m, { conn }) => {
   }
 };
 
-handler.help = ['hdpa,'el corazón', 'cayolaley'];
+handler.help = ['hdpa,'el corazón,' 'cayolaley'];
 handler.customPrefix = /^(hola|cómo estás|goku)/i;
 handler.command = new RegExp;
 handler.tags = ['Audios Dbz'] 
