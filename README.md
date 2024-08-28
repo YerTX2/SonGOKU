@@ -136,10 +136,10 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
 
 ## <h2>`PROPIETARIO DEL BOT`</h2> 
+        `YerTX2`
 
 <a href="https://github.com/YerTX2"><img src="https://github.com/YerTX2.png" width="200" height="200" alt="YerTX2"/></a>
 
-`DESARROLLADOR DEL BOT Y EDITOR (YerTX2)✨`
 
 `COLABORADORES`
      `matias-crypto]27/08/2024`
