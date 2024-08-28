@@ -18,7 +18,6 @@ let tags = {
   'tools': 'Herramientas',
   'nsfw': 'Nsfw', 
   'owner': 'Creador', 
-  'audio': 'Audios', 
   'advanced': 'Avanzado', 
   '+18': '+18',
   
