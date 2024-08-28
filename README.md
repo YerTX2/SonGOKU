@@ -140,7 +140,8 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 <a href="https://github.com/YerTX2"><img src="https://github.com/YerTX2.png" width="200" height="200" alt="YerTX2"/></a>
 
 `DESARROLLADOR DEL BOT Y EDITOR (YerTX2)✨`
-`[COLABORADOR matias-crypto]27/08/2024`
+
+          `[COLABORADOR matias-crypto]27/08/2024`
 
 
 ✨'' ALOJAMIENTO DE SON GOKU''' ✨
