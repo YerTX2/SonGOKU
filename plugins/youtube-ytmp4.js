@@ -7,7 +7,7 @@ if (!args[0].match(/youtu/gi)) return conn.reply(m.chat, `Verifica que el enlace
 let user = global.db.data.users[m.sender]
 try {
 let { title, size, quality, thumbnail, dl_url } = await Scraper.ytmp4(args[0])
-if (size.includes('GB') || size.replace(' MB', '') > 300) { return await m.reply('El archivo pesa mas de 300 MB, se canceló la Descarga.')}
+if (size.includes('GB') || size.replace(' MB', '') > 300) { return await m.reply('El archivo pesa mas de 120 MB, se canceló la Descarga Descargue en MP4DOC PARA QUE DE ENVÍE SU VIDEO.')}
 let txt = `╭─⬣「 *YouTube Download* 」⬣\n`
     txt += `│  ≡◦ *🔍 Titulo ∙* ${title}\n`
     txt += `│  ≡◦ *🪴 Calidad ∙* ${quality}\n`
