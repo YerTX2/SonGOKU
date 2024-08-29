@@ -37,7 +37,7 @@ let handler = async (m, { conn }) => {
 
 handler.help = ['ayuda', 'gey', 'ayuda', 'elcorazon', 'sin sentimiento', 'linda', 'negra', 'callate', 'super albañil',
 'peruano', 'viva venezuela']
-handler.customPrefix = /^(hola|cómo estás|goku|gey|si te mueves|ayuda|sin sentimiento|linda|negra|callate|super albañil|peruano|viva venezuela|)/i;
+handler.customPrefix = /^(hola|cómo estás|goku|gey|si te mueves|ayuda|sin sentimiento|linda|negra|eres tu|callate|super albañil|peruano|viva venezuela|)/i;
 handler.command = new RegExp;
 handler.tags = ['Audios Dbz'] 
 export default handler;
