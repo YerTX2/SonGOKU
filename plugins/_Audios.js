@@ -9,7 +9,7 @@ let handler = async (m, { conn }) => {
     'xd': './goku/elcorazon.mp3',
     'goku': './goku/elcorazon.mp3',
     'hola': './goku/ayuda.mp3',
-    'hola': './goku/gey.mp3'
+    'gey': './goku/gey.mp3'
     
   };
 
