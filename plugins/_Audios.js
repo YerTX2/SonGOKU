@@ -7,7 +7,7 @@ let handler = async (m, { conn }) => {
   const audioMap = {
     'linda': './goku/hdpta.mp3',
     'sin sentimiento': './goku/elcorazon.mp3',
-    'goku': './goku/elcorazon.mp3',
+    'elcorazone': './goku/elcorazon.mp3',
     'ayuda': './goku/ayuda.mp3',
     'gey': './goku/gey.mp3'
     
@@ -30,7 +30,7 @@ let handler = async (m, { conn }) => {
   }
 };
 
-handler.help = ['Falta']
+handler.help = ['ayuda', 'gey', 'ayuda', 'elcorazon', 'sin sentimiento', 'linda']
 handler.customPrefix = /^(hola|cómo estás|goku|gey|si te mueves|ayuda|sin sentimiento|linda)/i;
 handler.command = new RegExp;
 handler.tags = ['Audios Dbz'] 
