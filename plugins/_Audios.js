@@ -9,11 +9,11 @@ let handler = async (m, { conn }) => {
     'sin sentimiento': './goku/elcorazon.mp3',
     'elcorazone': './goku/elcorazon.mp3',
     'ayuda': './goku/ayuda.mp3',
-    'gey': './goku/gey.mp3'
-    'negra': './goku/negra.mp3'
-    'callate': './goku/callate.mp3'
-    'super albañil': './goku/super albañil.mp3'
-    'peruano': './goku/peruano.mp3'
+    'gey': './goku/gey.mp3', 
+    'negra': './goku/negra.mp3', 
+    'callate': './goku/callate.mp3', 
+    'super albañil': './goku/super albañil.mp3', 
+    'peruano': './goku/peruano.mp3', 
     'viva venezuela': './goku/viva venezuela.mp3'
     
   };
