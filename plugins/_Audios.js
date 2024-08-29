@@ -5,7 +5,7 @@ let handler = async (m, { conn }) => {
   let user = global.db.data.users[m.sender];
 
   const audioMap = {
-    'hola': './goku/hdpta.mp3',
+    'linda': './goku/hdpta.mp3',
     'sin sentimiento': './goku/elcorazon.mp3',
     'goku': './goku/elcorazon.mp3',
     'ayuda': './goku/ayuda.mp3',
@@ -31,7 +31,7 @@ let handler = async (m, { conn }) => {
 };
 
 handler.help = ['Falta']
-handler.customPrefix = /^(hola|cómo estás|goku|gey|si te mueves|ayuda|sin sentimiento)/i;
+handler.customPrefix = /^(hola|cómo estás|goku|gey|si te mueves|ayuda|sin sentimiento|linda)/i;
 handler.command = new RegExp;
 handler.tags = ['Audios Dbz'] 
 export default handler;
