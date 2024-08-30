@@ -21,7 +21,9 @@ Canal :
 
 
 
-> TEAM 
+> TEAM MoonLight Team
+> CANAL 'https://whatsapp.com/channel/0029Vablj8M05MUnustq3q1S' 
+>GRUPO https://chat.whatsapp.com/GpbF3JCTEr2CSj3zLJ1IQj
 
 > 🚩 ${textbot}`
 await conn.sendFile(m.chat, img, "Thumbnail.jpg", txt, m, null, rcanal)
