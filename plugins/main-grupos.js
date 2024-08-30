@@ -17,6 +17,12 @@ let txt = `*Hola!, te invito a formar parte de la comunidad de ░G░o░k░u�
 Canal :
 *🪐* ${canal}
 
+
+
+
+
+> TEAM 
+
 > 🚩 ${textbot}`
 await conn.sendFile(m.chat, img, "Thumbnail.jpg", txt, m, null, rcanal)
 }
