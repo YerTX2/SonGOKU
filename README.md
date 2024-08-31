@@ -173,7 +173,7 @@ Un hosting es un servicio de alojamiento web que te permite publicar un sitio we
 - **Contacto:** [`Support-CorinPlus Host`](https://wa.me/message/B3KTM5XN2JMRD1)
 - **Contacto:** [`elrebelde21`](https://facebook.com/elrebelde21)
 
-- [x] **Configuración** <details><summary>**Ajustes del Servidor - SonGoku🐉**</summary><img src="https://telegra.ph/file/5ba9167b88400845635df.jpg"></details>
+- [x] **Configuración** <details><summary>**Ajustes del Servidor - SonGoku🐉**</summary><img src="https://telegra.ph/file/4d4f5aa6c5853ab7ffbfa.jpg"></details>
 
 
 
