@@ -154,6 +154,8 @@ Un hosting es un servicio de alojamiento web que te permite publicar un sitio we
             ⚡ NEXUS HOSTING ⚡
 <a <a href="https://dash.nexus-host.shop/home "><img src="https://telegra.ph/file/d3842590c88393563191d.png" height="125px"></
 
+<a href="https://dash.nexus-host.shop"><img src="https://telegra.ph/file/d3842590c88393563191d.jpg" height="125px"></a>
+
 - **💻Dash:** [`Aquí`](https://dash.nexus-host.shop/register?ref=P8FQ3w9Y)
 - **Panel:** [`Aquí`](https://panel.nexus-host.shop)
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029ValPGGT3GJOqnlYiTx2d)
