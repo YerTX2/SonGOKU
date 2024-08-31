@@ -160,6 +160,8 @@ Un hosting es un servicio de alojamiento web que te permite publicar un sitio we
 - **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/IeozwFJkPb201lHdjJ8k6f) 
 - **SOPORTÉ NEXUS:** [`Aquí`](https://chat.whatsapp.com/DlErIXnbKfx4AvvyngFuSX)
 
+| ☁️ **CORINPLUS HOST** | *Activar en CorinPlus Host* |[ver](https://github.com/GataNina-Li/GataBot-MD/edit/master/README.md#%EF%B8%8F-corinplus-hots) 
+
 
 
 
