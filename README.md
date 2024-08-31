@@ -152,7 +152,6 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 Un hosting es un servicio de alojamiento web que te permite publicar un sitio web o mantener un bot de WhatsApp, bot de discord activo las 24H y no tienen límite de trasferencia de conexión de Internet para que descargue videos,músicas entre otras cosas.
 
             ⚡ NEXUS HOSTING ⚡
-<a <a href="https://dash.nexus-host.shop/home "><img src="https://telegra.ph/file/d3842590c88393563191d.png" height="125px"></
 
 <a href="https://dash.nexus-host.shop"><img src="https://telegra.ph/file/d3842590c88393563191d.jpg" height="125px"></a>
 
