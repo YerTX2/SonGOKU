@@ -8,10 +8,10 @@ let user = global.db.data.users[m.sender]
 try {
 let { title, size, quality, thumbnail, dl_url } = await Scraper.ytmp4(args[0])
 if (size.includes('GB') || size.replace(' MB', '') > 120) { return await m.reply('El archivo pesa mas de 120 MB, se canceló la Descarga Descargue en MP4DOC PARA QUE DE ENVÍE SU VIDEO.')}
-let txt = `╭─⬣「 *YouTube Download* 」⬣\n`
-    txt += `│  ≡◦ *🔍 Titulo ∙* ${title}\n`
-    txt += `│  ≡◦ *🪴 Calidad ∙* ${quality}\n`
-    txt += `│  ≡◦ *⚖ Peso ∙* ${size}\n`
+let txt = ` ╭─⬣「 *YouTube Descarga* 」⬣\n`
+    txt += `│  : ̗̀➛ *🔍 Titulo ∙* ${title}\n`
+    txt += `│  : ̗̀➛ *🪴 Calidad ∙* ${quality}\n`
+    txt += `│  : ̗̀➛*⚖ Peso ∙* ${size}\n`
     txt += `╰─⬣`
 await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', txt, m)
 await conn.sendFile(m.chat, dl_url, title + '.mp4', `*🔍 Titulo ∙* ${title}\n*🪴 Calidad ∙* ${quality}`, m, false, { asDocument: user.useDocument })
