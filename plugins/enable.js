@@ -71,7 +71,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       if (!/[01]/.test(command)) return m.reply(`
 *🚩 Ingresa una opción para habilitar o deshabilitar*
 
-*≡ Lista de opciones*
+*≡ Lista de opciones on-off*
 *Tipo :* welcome
 *Descripción :* Des/Activa la *Bienvenida* y *Despedida* para Grupos
 
@@ -84,9 +84,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 *Tipo :* antilink 
 *Descripción :* Des/Activa el *AntiLink* para Grupos
 
-
-*Tipo :* document 
-*Descripción :* Des/Activa la *Descarga En Documentos* para el Usuario
+🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉
 
 *• Ejemplo:*
 *- ${usedPrefix + command}* welcome
@@ -96,8 +94,8 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
   m.reply(`La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* ${isAll ? 'para este bot' : isUser ? '' : 'para este chat'}`)
 }
 
-handler.help = ['enable', 'disable']
-handler.tags = ['nable']
+handler.help = ['lista on off', 'on']
+handler.tags = ['group']
 handler.command = /^(enable|disable|on|off|1|0)$/i
 
 export default handler
