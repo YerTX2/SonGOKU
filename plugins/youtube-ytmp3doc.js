@@ -24,7 +24,7 @@ if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas
        txt += `	✩   *Titulo* : ${title}\n`
        txt += `	✩   *Calidad* : ${q}\n`
        txt += `	✩   *Tamaño* : ${size}\n\n`
-       txt += `> *- ↻ Se está descargado su pedido 📥 espere un momento @SonGoku*`
+       txt += `> *- ↻ Se está descargado su pedido 📥 espere un momento 🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉*`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await star.sendMessage(m.chat, { document: { url: dl_url }, caption: '', mimetype: 'audio/mpeg', fileName: `${title}.mp3`}, { quoted: m })
 await m.react('✅')
@@ -41,7 +41,7 @@ if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas
        txt += `	✩   *Titulo* : ${title}\n`
        txt += `	✩   *Calidad* : ${q}\n`
        txt += `	✩   *Tamaño* : ${size}\n\n`
-       txt += `> *- Se está descargado su pedido 📥 espere un momento @SonGoku*`
+       txt += `> *- Se está descargado su pedido 📥 espere un momento 🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉*`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await star.sendMessage(m.chat, { document: { url: dl_url }, caption: '', mimetype: 'audio/mpeg', fileName: `${title}.mp3`}, { quoted: m })
 await m.react('✅')
@@ -56,7 +56,7 @@ if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas
        txt += `	✩   *Titulo* : ${title}\n`
        txt += `	✩   *Calidad* : ${q}\n`
        txt += `	✩   *Tamaño* : ${size}\n\n`
-       txt += `> *- ↻ Se está descargado su pedido 📥 espere un momento @SonGoku*`
+       txt += `> *- ↻ Se está descargado su pedido 📥 espere un momento 🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉*`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await star.sendMessage(m.chat, { document: { url: dl_url }, caption: '', mimetype: 'audio/mpeg', fileName: `${title}.mp3`}, { quoted: m })
 await m.react('✅')
