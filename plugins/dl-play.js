@@ -2,7 +2,7 @@ import yts from 'yt-search';
 
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     if (!text) {
-        return conn.reply(m.chat, '*Que quieres que busque SonGoku*', m);
+        return conn.reply(m.chat, '*Que quieres que busque 🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉*', m);
     }
 
     await m.react('⏳');
