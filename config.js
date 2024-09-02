@@ -50,7 +50,7 @@ global.wait = '*🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉*'
 global.botname = '🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉 '
 global.textbot = `🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉`
 global.listo = '*⚔️ Aqui tiene*'
-global.namechannel = '【🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉】'
+global.namechannel = '【✗🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉✗】'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 global.fantasyVid = ['./media/menus/Menuvid1.mp4', './media/menus/Menuvid2.mp4', './media/menus/Menuvid3.mp4']
