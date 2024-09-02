@@ -21,7 +21,7 @@ await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
            txt += `┌  ✩  *Nombre* : ${conn.getName(m.sender)}\n`
            txt += `│  ✩  *Nivel Anterior* : ${before}\n`
            txt += `└  ✩  *Nivel Actual* : ${user.level}\n\n`
-           txt += `⚔️ Cuanto más interactúes con *🌀░S░o░n░G░o░k░u🌀*, mayor será tu Nivel ⬆️`
+           txt += `⚔️ Cuanto más interactúes con *🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉*, mayor será tu Nivel ⬆️`
 
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
         }
