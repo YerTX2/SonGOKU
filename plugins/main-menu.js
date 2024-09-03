@@ -26,14 +26,14 @@ let tags = {
 const defaultMenu = {
   before: ` 
 > SON GOKU
-“ Hola saya *%name*,"  
+> %name*,"  
 > ┍--┈┈∘┈˃̶༒˂̶┈∘┈┈ 
-> |✨ Nombre.*%name
+> |✨ name.*%name
 > |⚡ Ki ∙* %limit
 > |🪐 XP ∙* %totalexp
-> | Nivel ∙* %level
+> |🛡️ Nivel ∙* %level
 > ╰--┈┈∘┈˃̶༒˂̶┈∘┈┈
-> : %uptime
+> 孫ՏᴏɴᏀᴏᴋᴜ孫: %uptime
  %readmore
 `.trimStart(),
   header: '`MENU X %category`\n\n╭── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ ⋅ ──╮',
