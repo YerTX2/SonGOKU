@@ -38,9 +38,9 @@ const defaultMenu = {
 ▬▬ι════════════ﺤ
  %readmore
 `.trimStart(),
-  header: '`MENU X %category`\n\n┏━━━━━°⌜ 赤い糸 ⌟°━━━━━┓',
-  body: '乂 *%cmd*\n',
-  footer: '┗━━━━━°⌜ 赤い糸 ⌟°━━━━━┛ \n',
+  header: '`MENU X %category`\n\n╭── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ ⋅ ──╮',
+  body: '> *%cmd*\n',
+  footer: '╰── ⋅ ⋅ ── ✩ ── ⋅ ⋅ ──╯  \n',
   after: '',
 }
 
