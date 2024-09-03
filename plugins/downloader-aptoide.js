@@ -1,26 +1,21 @@
-import Starlights from "@StarlightsTeam/Scraper"
-
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) return conn.reply(m.chat, `*• Ingresa el nombre de la aplicación que deseas descargar.*\n\nEjemplo:\n*${usedPrefix + command}* WhatsApp`, m, rcanal)
-await m.react('🕓')
-try {
-let { name, packname, update, size, thumbnail, dl_url } = await Starlights.aptoide(text)
-if (size.includes('GB') || size.replace(' MB', '') > 300) { return await m.reply('El archivo pesa mas de 300 MB, se canceló la Descarga.')}
-let txt = `*乂  A P T O I D E  -  D O W N L O A D*\n\n`
-    txt += `	✩   *Nombre* : ${name}\n`
-    txt += `	✩   *Package* : ${packname}\n`
-    txt += `	✩   *Update* : ${update}\n`
-    txt += `	✩   *Peso* :  ${size}\n\n`
-    txt += `*- ↻ El archivo se esta enviando espera un momento, soy lenta. . .*`
-await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', txt, m, null, rcanal)
-await conn.sendMessage(m.chat, {document: { url: dl_url }, mimetype: 'application/vnd.android.package-archive', fileName: name + '.apk', caption: null }, {quoted: m})
-await m.react('✅')
-} catch {
-await m.react('✖️')
-}}
-handler.help = ['aptoide *<búsqueda>*']
-handler.tags = ['downloader']
-handler.command = ['aptoide', 'apk']
-handler.register = true 
-//handler.limit = 5
-export default handler
+import {search, download} from 'aptoide-scraper';
+const handler = async (m, {conn, usedPrefix, command, text}) => {
+if (!text) throw `${lenguajeGB['smsAvisoMG']()} ${mid.smsApk}`;
+try {    
+const searchA = await search(text);
+const data5 = await download(searchA[0].id);
+let response = `${eg}┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n┃💫 ${mid.name}: ${data5.name}\n┃📦 𝙋𝘼𝘾𝙆𝘼𝙂𝙀: ${data5.package}\n┃🕒 ${mid.smsApk2}: ${data5.lastup}\n┃💪 ${mid.smsYT11} ${data5.size}\n┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n┃ ${mid.smsApk3} 🚀🚀🚀`
+await conn.sendMessage(m.chat, {image: {url: data5.icon}, caption: response}, {quoted: m});
+if (data5.size.includes('GB') || data5.size.replace(' MB', '') > 999) {
+return await conn.sendMessage(m.chat, {text: mid.smsApk4}, {quoted: m})}
+await conn.sendMessage(m.chat, {document: {url: data5.dllink}, mimetype: 'application/vnd.android.package-archive', fileName: data5.name + '.apk', caption: null}, {quoted: m}); 
+} catch (e) {
+await conn.reply(m.chat, `${lenguajeGB['smsMalError3']()}#report ${lenguajeGB['smsMensError2']()} ${usedPrefix + command}\n\n${fantasy} 𝐛𝐲 ${wm}`, m)
+console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
+console.log(e)
+handler.limit = false
+}};
+handler.command = /^(apkmod|apk|modapk|dapk2|aptoide|aptoidedl)$/i;
+//handler.register = true
+handler.limit = 2
+export default handler;
