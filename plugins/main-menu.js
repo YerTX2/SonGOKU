@@ -26,7 +26,7 @@ let tags = {
 const defaultMenu = {
   before: ` 
 > SON GOKU
-> %name*,"  
+> Son%name*,"  
 ┌--┈┈∘┈˃̶༒˂̶┈∘┈
  Nombre %name
  ki %limit
