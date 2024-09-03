@@ -40,7 +40,7 @@ const defaultMenu = {
 `.trimStart(),
   header: '`MENU X %category`\n\n╭── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ ⋅ ──╮',
   body: '> *%cmd*\n',
-  footer: '╰── ⋅ ⋅ ── ✩ ── ⋅ ⋅ ──╯  \n',
+  footer: '╰── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ ⋅ ──╯  \n',
   after: '',
 }
 
