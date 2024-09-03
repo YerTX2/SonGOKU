@@ -27,12 +27,12 @@ const defaultMenu = {
   before: ` 
 > SON GOKU
 > %name*,"  
-┌--┈┈∘┈˃̶༒˂̶┈
+┌--┈┈∘┈˃̶༒˂̶┈∘┈
  Nombre %name
  ki %limit
  exp %totalexp
  Nivel %level
-╰--┈┈∘┈˃̶༒˂̶┈
+╰--┈┈∘┈˃̶༒˂̶┈∘┈
 > 孫ՏᴏɴᏀᴏᴋᴜ孫: %uptime
  %readmore
 `.trimStart(),
