@@ -1,34 +1,41 @@
-import { search, download } from 'aptoide-scraper'
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+    if (!text) throw `Debes proporcionar el nombre de una aplicación para buscar.\nEjemplo:\n${usedPrefix + command} WhatsApp`;
 
-var handler = async (m, {conn, usedPrefix, command, text}) => {
-if (!text) return conn.reply(m.chat, '❤️ *Ingrese el nombre de la apk para descargarlo.*', m, rcanal)
-try {
-await m.react(rwait)
-conn.reply(m.chat, '💙 *Descargando su aplicación...*', m, {
-contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
-title: packname,
-body: wm,
-previewType: 0, thumbnail: icons,
-sourceUrl: channel }}})
-let searchA = await search(text)
-let data5 = await download(searchA[0].id)
-let txt = `*乂  APTOIDE - DESCARGAS* 乂\n\n`
-txt += `☁️ *Nombre* : ${data5.name}\n`
-txt += `☁️ *Package* : ${data5.package}\n`
-txt += `☁️ *Update* : ${data5.lastup}\n`
-txt += `☁️ *Peso* :  ${data5.size}`
-await conn.sendFile(m.chat, data5.icon, 'thumbnail.jpg', txt, m, null, rcanal) 
-await m.react(done)  
-if (data5.size.includes('GB') || data5.size.replace(' MB', '') > 999) {
-return await conn.reply(m.chat, '🛑 *El archivo es demaciado pesado*', m, rcanal )}
-await conn.sendMessage(m.chat, {document: {url: data5.dllink}, mimetype: 'application/vnd.android.package-archive', fileName: data5.name + '.apk', caption: null}, {quoted: fkontak})
-} catch {
-return conn.reply(m.chat, '🛑 *Ocurrió un fallo*', m, rcanal )}}
+    try {
+        await m.reply(`🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉 Buscando la aplicación "${text}"...`);
 
-handler.tags = ['dl']
-handler.corazones = 7
-handler.help = ['apkmod']
-handler.command = /^(apkmod|apk|dapk2|aptoide|aptoidedl)$/i
-handler.register = true
+        let res = await fetch(`https://api.diego-ofc.site/v2/apk-dl?text=${encodeURIComponent(text)}`);
+        if (!res.ok) throw `🚩 Error en la respuesta de la API: ${res.status}`;
 
-export default handler
+        let json = await res.json();
+        // Asegúrate de acceder correctamente a la propiedad de la aplicación
+        if (!json.name || !json.dllink || !json.icon) throw `🚩 No se encontraron aplicaciones relacionadas con "${text}".`;
+let nombre = json.name;
+        let package2 = json.package
+        let link = json.dllink;
+        let imageUrl = json.icon;
+        let lastupdate2 = json.lastUpdate;
+        let icono2 = json.icon
+        let caption = `*Nombre:* ${nombre}\n`;
+       caption += `*package*: ${package2}\n`
+        caption += `*Enlace:* ${link}\n`;
+       caption+=  `*icono:*  ${icono2}\n`
+        caption += `*Lasupdate:* ${lastupdate2}\n`
+        caption += `*Descargando APK 🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉.*`;
+
+        await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: caption }, { quoted: m });
+        
+        // No necesitas volver a hacer un fetch en el link, ya que es un enlace directo
+        await conn.sendMessage(m.chat, { document: { url: link }, mimetype: 'application/vnd.android.package-archive', fileName: `${nombre}.apk`, caption: null }, { quoted: m });
+
+    } catch (e) {
+        console.error(e);
+        throw `🐉 Hubo un error al buscar o descargar la aplicación "${text}": ${e.message || e}`;
+    }
+}
+
+handler.help = ['apk'].map(v => v + ' <nombre de la aplicación>');
+handler.tags = ['search', 'dl'];
+handler.command = /^(apk|apkd|apkdownload)$/i;
+
+export default handler;
