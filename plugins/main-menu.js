@@ -28,10 +28,10 @@ const defaultMenu = {
 > SON GOKU
 > %name*,"  
 > ┍--┈┈∘┈˃̶༒˂̶┈∘┈┈ 
-> |✨ name.*%name
-> |⚡ Ki ∙* %limit
-> |🪐 XP ∙* %totalexp
-> |🛡️ Nivel ∙* %level
+> | %name
+> | %limit
+> | %totalexp
+> | %level
 > ╰--┈┈∘┈˃̶༒˂̶┈∘┈┈
 > 孫ՏᴏɴᏀᴏᴋᴜ孫: %uptime
  %readmore
