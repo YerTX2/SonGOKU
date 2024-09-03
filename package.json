@@ -81,7 +81,7 @@
         "yt-search": "^2.10.3",
         "@vitalets/google-translate-api": "^9.2.0",
         "openai": "^3.3.0",
-        "aptoide-scraper": "^1.0.1", 
+        "aptoide-scraper": "^1.0.1",
         "fb-downloader-scrapper": "^1.0.1",
         "megajs": "^1.1.4",
         "mime-types": "^2.1.35",
