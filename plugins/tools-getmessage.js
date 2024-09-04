@@ -15,11 +15,13 @@ let handler = async (m, { conn, text, args }) => {
         let response = await fetch(url);
         let json = await response.json();
 
-        if (json.length === 0) {
-            await m.reply('No hay mensajes en este momento.');
-        } else {
+        if (Array.isArray(json) && json.length > 0) {
             let mensajes = json.map(msg => `De: ${msg.sender}\nAsunto: ${msg.subject}\nMensaje: ${msg.body}`).join('\n\n');
             await m.reply(mensajes);
+        } else if (Array.isArray(json) && json.length === 0) {
+            await m.reply('No hay mensajes en este momento.');
+        } else {
+            await m.reply('Formato de respuesta inesperado.');
         }
     } catch (error) {
         await m.reply('Error obteniendo los mensajes: ' + error.message);
