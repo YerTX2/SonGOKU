@@ -23,7 +23,8 @@ let tags = {
   
 }
 
-    const document = doc[Math.floor(Math.random() * doc.length)];
+const defaultMenu = {
+  before: ` 
   const { key } = await conn.sendMessage(m.chat, {text: `${wait}`}, {quoted: m})
 await conn.sendMessage(m.chat, {text: `.....․⁀⸱⁀⸱︵૰⳹․㊪․⳼૰︵⸱⁀⸱⁀․.....╮̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
       ┈┈┈┈┈⃐ᤢ࣪࣪ Cẚᵣgᵃₙdₒ┈⃐ᤢ࣪࣪┈┈┈┈   
@@ -61,8 +62,6 @@ await conn.sendMessage(m.chat, {text: `╭̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
 『𖤍𝐄𝐱𝐢𝐭𝐨 𝐩𝐫𝐨𝐧𝐭𝐨 𝐭𝐞𝐧𝐝𝐫𝐚 𝐞𝐥 𝐦𝐞𝐧𝐮́𖤍』
 ╰▭ׄ▭ׅ▭ׄ▭ׅ▭ׄ  ✿ໍ ▭ׅ▭ׄ▭ׅ▭ׄ▭ׅ╯
      `, edit: key})
-const defaultMenu = {
-  before: ` 
 > SON GOKU
 > Son%name*,"  
 ┌--┈┈∘┈˃̶༒˂̶┈∘┈
