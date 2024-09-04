@@ -19,7 +19,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 };
 
 handler.help = ['getemail'];
-handler.tags = ['search'];
+handler.tags = ['tools'];
 handler.command = ['getemail'];
 // handler.limit = 1;
 handler.register = true;
