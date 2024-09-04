@@ -26,10 +26,10 @@ let tags = {
 > SON GOKU
 > Son%name*,"  
 ┌--┈┈∘┈˃̶༒˂̶┈∘┈
- Nombre %name
- ki %limit
- exp %totalexp
- Nivel %level
+ ⁀➷Nombre %name
+ ⁀➷ki %limit
+ ⁀➷exp %totalexp
+ ⁀➷Nivel %level
 ╰--┈┈∘┈˃̶༒˂̶┈∘┈
 > 孫ՏᴏɴᏀᴏᴋᴜ孫: %uptime
  %readmore
