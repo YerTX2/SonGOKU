@@ -28,16 +28,16 @@ const defaultMenu = {
 > SON GOKU
 > Son%name*,"  
 ┌--┈┈∘┈˃̶༒˂̶┈∘┈
- ⁀➷Nombre %name
- ⁀➷ki %limit
- ⁀➷exp %totalexp
- ⁀➷Nivel %level
+  ⁀➷Nombre %name
+  ⁀➷ki %limit
+  ⁀➷exp %totalexp
+  ⁀➷Nivel %level
 ╰--┈┈∘┈˃̶༒˂̶┈∘┈
 > 孫ՏᴏɴᏀᴏᴋᴜ孫: %uptime
  %readmore
 `.trimStart(),
   header: '`MENU X %category`\n\n╭── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ ⋅ ──╮',
-  body: '⁀➷*%cmd*\n',
+  body: ' ⁀➷%cmd*\n',
   footer: '╰── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ ⋅ ──╯  \n',
   after: '',
 }
