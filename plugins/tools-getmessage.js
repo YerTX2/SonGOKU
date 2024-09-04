@@ -5,7 +5,7 @@ let emailGuardado = null;
 let handler = async (m, { conn, text, args }) => {
 
     if (!emailGuardado) {
-        await m.reply('Primero genera un correo usando el comando getemail.');
+        await m.reply('Solo se detectarán mensajes de los emails generados con el comando getemail.');
         return;
     }
 
@@ -28,7 +28,7 @@ let handler = async (m, { conn, text, args }) => {
 };
 
 handler.help = ['getmessage'];
-handler.tags = ['tools'];
+handler.tags = ['search'];
 handler.command = ['getmessage'];
 handler.register = true;
 
