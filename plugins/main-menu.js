@@ -35,7 +35,7 @@ let tags = {
  %readmore
 `.trimStart(),
   header: '`MENU X %category`\n\n╭── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ ⋅ ──╮',
-  body: '> *%cmd*\n',
+  body: '⁀➷*%cmd*\n',
   footer: '╰── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ ⋅ ──╯  \n',
   after: '',
 }
