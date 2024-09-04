@@ -1,15 +1,14 @@
 import fetch from 'node-fetch';
 
-let emailGuardado = null;
-
 let handler = async (m, { conn, text, args }) => {
 
-    if (!emailGuardado) {
-        await m.reply('Solo se detectarán mensajes de los emails generados con el comando getemail.');
+    let correo = args[0]; 
+
+    if (!correo) {
+        await m.reply('Por favor, proporciona el correo electrónico generado con el comando getemail.');
         return;
     }
 
-    let correo = emailGuardado;
     let url = `https://api.cafirexos.com/api/tempmail/getmessages?mail=${correo}`;
 
     try {
