@@ -177,9 +177,9 @@ Un hosting es un servicio de alojamiento web que te permite publicar un sitio we
 
 
 
-                `🌟Azure-Ultra🌟`
+           `🌟Azure-Ultra🌟`
 
-<a href="https://store.azuraultra-host.pro/home"><img src="https://telegra.ph/file/f9b7bf7d0f5ca2427ff20.jpg" height="125px"></a>
+<a href="https://store.azuraultra-host.pro/home"><img src="https://telegra.ph/file/f9b7bf7d0f5ca2427ff20.jpg" height="135px"></a>
 
 - **💻Dash:** [`Aquí`](https://store.azuraultra-host.pro/home)
 - **Panel:** [`Aquí`](https://control.azuraultra-host.pro/)
