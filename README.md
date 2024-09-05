@@ -176,7 +176,8 @@ Un hosting es un servicio de alojamiento web que te permite publicar un sitio we
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - SonGoku🐉**</summary><img src="https://telegra.ph/file/4d4f5aa6c5853ab7ffbfa.jpg"></details>
 
 
-  🌟 Azure-Ultra 🌟
+
+> 🌟Azure-Ultra🌟
 
 <a href="https://store.azuraultra-host.pro/home"><img src="https://telegra.ph/file/f9b7bf7d0f5ca2427ff20.jpg" height="125px"></a>
 
