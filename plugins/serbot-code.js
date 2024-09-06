@@ -11,10 +11,6 @@ const { CONNECTING } = ws;
 import { Boom } from '@hapi/boom';
 import { makeWASocket } from '../lib/simple.js';
 if (!(global.conns instanceof Array)) global.conns = [];
-let handler = async (m, { conn: _conn, args, usedPrefix, command, Public  }) => {
-if (!global.db.data.settings[_conn.user.jid].jadibotmd) {
-conn.reply(m.chat, '🚩 Este Comando está deshabilitado por mi creador.', m, rcanal)
-return
 }
 let parent = args[0] && args[0] == 'plz' ? _conn : await global.conn
 if (!((args[0] && args[0] == 'plz') || (await global.conn).user.jid == _conn.user.jid)) {
