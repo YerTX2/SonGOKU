@@ -17,6 +17,7 @@ await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', txt, m)
 await conn.sendFile(m.chat, dl_url, title + '.mp4', `*🔍 Titulo ∙* ${title}\n*🪴 Calidad ∙* ${quality}`, m, false, { asDocument: user.useDocument })
 } catch {
 }}
+[['Canal', 'https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v']], m);
 handler.help = ['ytmp4 <yt url>']
 handler.tags = ['downloader']
 handler.command = ['ytmp4', 'yt', 'ytv']
