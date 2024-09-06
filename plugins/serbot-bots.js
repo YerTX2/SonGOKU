@@ -13,7 +13,7 @@ const message = Array.from(uniqueUsers.values()).map((user, index) => `┌  ✩ 
 
 const replyMessage = message.length === 0 ? "" : message
 const totalUsers = uniqueUsers.size;
-const responseMessage = `${` –  *S U B B O T S*\n\n${replyMessage.trim()}`.trim()}`
+const responseMessage = `${` –  *🐉S U B B O T S SON GOKU🐉*\n\n${replyMessage.trim()}`.trim()}`
 
 let img = await (await fetch(`https://i.ibb.co/jr3LdJN/20240906-115913.jpg`)).buffer()
 
