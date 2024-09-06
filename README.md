@@ -86,7 +86,9 @@ href="https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v" target="white"><img
 
 
 ✨'' ALOJAMIENTO DE SON GOKU''' ✨
- En esos hostig puede obtener el bot SonGoku para que use para su grupo de WhatsApp o para su uso personal⤵️
+                
+
+En esos hostig puede obtener el bot SonGoku para que use para su grupo de WhatsApp o para su uso personal⤵️
 
            ¿Que es hostig? 
 
