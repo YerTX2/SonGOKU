@@ -68,67 +68,7 @@ href="https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v" target="white"><img
 
 [![Run on Repl.it](https://repl.it/badge/github/YerTX2/SonGOKU)](https://repl.it/github/YerTX2/SonGOKU) 
 
-## <h1>Instalación automática por termux</h1>
 
-```ts
-termux-setup-storage
-```  
-```ts
-apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/YerTX2/SonGOKU/SonGOKU.sh | bash
-```
-
- <p align="center"> 
-<a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=20&duration=3000&color=[00FFFF]&center=falso&vCenter=falso&lines=𝚃𝚎𝚛𝚖𝚞𝚡++;𝙰𝚌𝚝𝚒𝚟𝚊+𝙴𝙻+𝙱𝚘𝚝+𝙴𝚗" height="50px"></a> 
-</p>
-
-- ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-```
-termux-setup-storage
-```
-
-```
-apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
-```
-
-```
-git clone https://github.com/YerTX2/SonGOKU && cd SonGOKU
-```
-
-```
-yarn install && npm install
-```
-
-```
-npm start
-```
-
-## usar a SonGOKU 24/7
-```bash
-termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
-```
-
-<p align="center"> 
-<a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[00FFFF]&center=falso&vCenter=falso&lines=♥️✨++;𝙴𝚗+𝙲𝚊𝚜𝚘+𝙳𝚎+𝙳𝚎𝚝𝚎𝚗𝚎𝚛𝚜𝚎+𝚎𝚗+𝚃𝚎𝚛𝚖𝚞𝚡" height="70px"></a> 
-</p>
-
-```bash
-ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd
-> cd SonGOKU
-> npm start
-```
-
-<p align="center"> 
-<a href="https://github.com/YerTX2"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=15&duration=4000&color=[000000]&center=falso&vCenter=falso&lines=✨♥️++;Pedir+otro+codigo+qr+en+termux" height="60px"></a> 
-</p>
-  
-
-```bash
-ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd 
-> rm -rf SonGOKU
-> npm start
-```
 
 
  ### ` DUDAS SOBRE EL BOT?, CONTACTAME`
