@@ -15,7 +15,7 @@ const replyMessage = message.length === 0 ? "" : message
 const totalUsers = uniqueUsers.size;
 const responseMessage = `${` –  *S E R B O T  -  S U B B O T S*\n\n${replyMessage.trim()}`.trim()}`
 
-let img = await (await fetch(`https://i.ibb.co/ZWtV5Ph/20240705-085716.jpg`)).buffer()
+let img = await (await fetch(`https://i.ibb.co/jr3LdJN/20240906-115913.jpg`)).buffer()
 
 await _envio.sendFile(m.chat, img, 'thumbnail.jpg', responseMessage, m, false, { mentions: _envio.parseMention(responseMessage) })
 }
