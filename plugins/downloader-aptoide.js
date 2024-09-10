@@ -35,7 +35,7 @@ let nombre = json.name;
 }
 
 handler.help = ['apk'].map(v => v + ' <nombre de la aplicación>');
-handler.tags = ['search', 'dl'];
+handler.tags = ['Descargas'];
 handler.command = /^(apk|apkd|apkdownload)$/i;
 
 export default handler;
