@@ -20,7 +20,7 @@ const handler = async (m, { conn, usedPrefix }) => {
       }
     }
     if (filesDeleted === 0) {
-      await conn.sendMessage(m.chat, {text: '⚠️ No se encontró ningún archivo para de ՏᴏɴᏀᴏᴋᴜ eliminar en la carpeta sessions.'}, {quoted: m});
+      await conn.sendMessage(m.chat, {text: '⚠️ No se encontró ningún archivo  de ՏᴏɴᏀᴏᴋᴜ para eliminar en la carpeta sessions.'}, {quoted: m});
     } else {
       await conn.sendMessage(m.chat, {text: `✅ Se eliminaron ${filesDeleted} archivos de ՏᴏɴᏀᴏᴋᴜ.`}, {quoted: m});
     }
