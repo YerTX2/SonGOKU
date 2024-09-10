@@ -140,24 +140,14 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-let urls = [
-"https://telegra.ph/file/fa9c0515f3b2f6df9f2bd.mp4",
-"https://telegra.ph/file/0779e78886636806c7422.mp4", 
-"https://telegra.ph/file/d791a9594ac30fbf97183.mp4", 
-"https://telegra.ph/file/6a0a1eabb9b50b9744543.mp4", 
-"https://telegra.ph/file/4f8676c687995ec8333cb.mp4",
-"https://telegra.ph/file/c4c2f5d0931ac30accca2.mp4", 
-"https://telegra.ph/file/0a9683f4aedcae4eca935.mp4", 
-"https://telegra.ph/file/3ba419b5970c3812dbac6.mp4", 
-"https://telegra.ph/file/c023e62cf15c5cb85caab.mp4", 
-"https://telegra.ph/file/636df9fe26f85b6fd2ade.mp4" 
-];
-let gifUrl = urls[Math.floor(Math.random() * urls.length)];
-await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
-
+let img = await (await fetch(`https://i.ibb.co/RyVfBHv/file.jpg`)).buffer()
+    await m.react('🐉')
+   // await conn.sendMessage(m.chat, { video: { url: [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10, pp11, pp12, pp13, pp14, pp15].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: estilo })
+    await conn.sendFile(m.chat, img, 'thumbnail.jpg', text.trim(), m, null, rcanal)
+   //await conn.sendAi(m.chat, botname, textbot, text.trim(), img, img, canal, estilo)
 
   } catch (e) {
-    conn.reply(m.chat, 'Lo sentimos, el menú tiene un error.', m)
+    conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error.', m)
     throw e
   }
 }
