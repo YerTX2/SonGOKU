@@ -94,15 +94,7 @@ En esos hostig puede obtener el bot SonGoku para que use para su grupo de WhatsA
 
 Un hosting es un servicio de alojamiento web que te permite publicar un sitio web o mantener un bot de WhatsApp, bot de discord activo las 24H y no tienen límite de trasferencia de conexión de Internet para que descargue videos,músicas entre otras cosas.
 
-            ⚡ NEXUS HOSTING ⚡
-
-<a href="https://dash.nexus-host.shop"><img src="https://telegra.ph/file/d3842590c88393563191d.jpg" height="125px"></a>
-
-- **💻Dash:** [`Aquí`](https://dash.nexus-host.shop/register?ref=P8FQ3w9Y)
-- **Panel:** [`Aquí`](https://panel.nexus-host.shop)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029ValPGGT3GJOqnlYiTx2d)
-- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/LhlBSyakvI3GjGSvFTa1hh) 
-- **SOPORTÉ NEXUS:** [`Aquí`](https://chat.whatsapp.com/DlErIXnbKfx4AvvyngFuSX)
+            
 
 ### ☁️ CORINPLUS HOTS 
 <a href="https://dash.corinplus.com"><img src="https://qu.ax/ZycD.png" height="125px"></a>
