@@ -26,7 +26,7 @@ let handler = async (m, { conn }) => {
     'lala': './goku/lala.mp3',
     'dios': './goku/dios.mp3', 
     'sad': './goku/sad.mp3', 
-    'jaja': './goku/jaja.mp3', 
+    'risa': './goku/jaja.mp3', 
     'motivar': './goku/motivar.mp3', 
     'calculadora': './goku/calculadora.mp3', 
     'tengo novia': './goku/tengo novia.mp3'
@@ -50,7 +50,7 @@ let handler = async (m, { conn }) => {
   }
 };
 
-handler.help = ['ayuda', 'gey', 'ayuda', 'elcorazon', 'sin sentimiento', 'linda','negra', 'callate', 'super albañil', 'que me importa', 'mondongo', 'bebitofiufiu', 'lala', 'dios', 'jaja', 'tengo novia', 'calculadora', 'motivar',
+handler.help = ['ayuda', 'gey', 'ayuda', 'elcorazon', 'sin sentimiento', 'linda','negra', 'callate', 'super albañil', 'que me importa', 'mondongo', 'bebitofiufiu', 'lala', 'dios', 'risa', 'tengo novia', 'calculadora', 'motivar',
 'peruano', 'viva venezuela', 'sad']
 handler.customPrefix = /^(hola|cómo estás|goku|gey|si te mueves|ayuda|sin sentimiento|linda|negra|eres tu|callate|super albañil|peruano|viva venezuela|que me importa|mondongo|bebitofiufiu|lala|dios|sad|jaja|motivar|calculadora|tengo novia)/i;
 handler.command = new RegExp;
