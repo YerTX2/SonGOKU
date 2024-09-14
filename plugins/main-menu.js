@@ -25,13 +25,12 @@ let tags = {
 const defaultMenu = {
   before: `  
 > SON GOKU
-> Son%name*,"  
 ╭──────────────────✎
 ╰─▗ ▘➤INFO
 │KI %limit
 │Exp %totalexp
 │Nivel %level
-╰───────────────⁀➷Nombre %name
+╰───────────────⁀➷ %name*," 
 > 孫ՏᴏɴᏀᴏᴋᴜ孫: %uptime
  %readmore
 `.trimStart(),
