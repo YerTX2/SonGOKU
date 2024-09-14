@@ -27,9 +27,9 @@ const defaultMenu = {
 > SON GOKU
 ╭──────────────────✎
 ╰─➤INFO
-│KI %limit
-│Exp %totalexp
-│Nivel %nivel
+│KI : %limit
+│Exp : %totalexp
+│Nivel : %level
 ╰────────────➤ %name
 > 孫ՏᴏɴᏀᴏᴋᴜ孫: %uptime
  %readmore
