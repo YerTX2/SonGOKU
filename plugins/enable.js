@@ -21,6 +21,15 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       }
       chat.bienvenida = isEnable
       break
+      
+     case 'modoadmin': case 'modeadmin':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.modoadmin = isEnable          
+break    
      
      case 'autoread':
     case 'autoleer':
@@ -83,6 +92,8 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 
 *Tipo :* antilink 
 *Descripción :* Des/Activa el *AntiLink* para Grupos
+
+🌸 \`\`\`${usedPrefix}on/off\`\`\` *${lenguajeGB.lenguaje() == 'es' ? 'modoadmin' : 'modeadmin'}*\n
 
 🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉
 
