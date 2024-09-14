@@ -30,7 +30,7 @@ const defaultMenu = {
 │KI %limit
 │Exp %totalexp
 │Nivel %level
-╰───────────────⁀➷ %name*," 
+╰───────────────⁀➷ %name
 > 孫ՏᴏɴᏀᴏᴋᴜ孫: %uptime
  %readmore
 `.trimStart(),
