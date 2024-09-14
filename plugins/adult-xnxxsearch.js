@@ -32,7 +32,7 @@ if (!global.db.data.chats[m.chat].nsfw) return conn.reply(m.chat, `🚩 El grupo
     throw e;
   }
 };
-handler.help = ['xnxxsearch'].map((v) => v + ' <query>');
+handler.help = ['xnxxsearch'].map((v) => v + ' <nsfw on>');
 handler.tags = ['+18'] 
 handler.command = /^xnxxsearch|xnxxs$/i;
 handler.limit = 10
