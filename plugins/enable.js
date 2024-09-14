@@ -22,17 +22,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       chat.bienvenida = isEnable
       break
        
-            case 'modoadmin':
-      if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
-          global.dfail('admin', m, conn)
-          throw false
-        }
-      }
-      chat.modoadmin = isEnable
-      break
-  
-     
+              
      case 'autoread':
     case 'autoleer':
       isAll = true
