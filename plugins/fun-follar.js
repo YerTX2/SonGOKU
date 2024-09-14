@@ -1,6 +1,6 @@
 let handler = async (m, { conn, usedPrefix, command}) => {
-    let pp = 'https://tinyurl.com/23zlp9h7'
-    let pp2 = 'https://tinyurl.com/23zlp9h7'
+    let pp = 'https://tinyurl.com/28b8j9m7'
+    let pp2 = 'https://tinyurl.com/263szwef'
     let who
     if (m.isGroup) who = m.mentionedJid[0]
     else who = m.chat
