@@ -1,4 +1,3 @@
-
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
   let isEnable = /true|enable|(turn)?on|1/i.test(command)
   let chat = global.db.data.chats[m.chat]
@@ -21,8 +20,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       }
       chat.bienvenida = isEnable
       break
-       
-              
+
      case 'autoread':
     case 'autoleer':
       isAll = true
@@ -38,7 +36,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     isUser = true
     user.useDocument = isEnable
     break
- 
+
     case 'antilink':
       if (m.isGroup) {
         if (!(isAdmin || isOwner)) {
@@ -48,7 +46,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       }
       chat.antiLink = isEnable
       break
-      
+
       case 'nsfw':
       case 'modohorny':
        if (m.isGroup) {
@@ -72,7 +70,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       if (!/[01]/.test(command)) return m.reply(`
 *🚩 Ingresa una opción para habilitar o deshabilitar*
 
-*≡ Lista de opciones on-off*
+*≡ Lista de opciones*
 *Tipo :* welcome
 *Descripción :* Des/Activa la *Bienvenida* y *Despedida* para Grupos
 
@@ -85,8 +83,11 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 *Tipo :* antilink 
 *Descripción :* Des/Activa el *AntiLink* para Grupos
 
+*Tipo :* autoread 
+*Descripción :* Des/Activa el *AutoRead* para el Bot
 
-🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉
+*Tipo :* document 
+*Descripción :* Des/Activa la *Descarga En Documentos* para el Usuario
 
 *• Ejemplo:*
 *- ${usedPrefix + command}* welcome
@@ -96,8 +97,8 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
   m.reply(`La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* ${isAll ? 'para este bot' : isUser ? '' : 'para este chat'}`)
 }
 
-handler.help = ['lista on off', 'on']
-handler.tags = ['group']
+handler.help = ['enable', 'disable']
+handler.tags = ['nable']
 handler.command = /^(enable|disable|on|off|1|0)$/i
 
 export default handler
