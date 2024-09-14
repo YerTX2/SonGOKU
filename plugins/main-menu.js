@@ -29,6 +29,7 @@ const defaultMenu = {
 ╰─➤INFO
 │KI : %limit
 │Exp : %totalexp
+│Premiun : %premium 
 │Nivel : %level
 ╰────────────➤ %name
 > 孫ՏᴏɴᏀᴏᴋᴜ孫: %uptime
