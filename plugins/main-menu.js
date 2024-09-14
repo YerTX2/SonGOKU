@@ -14,7 +14,6 @@ let tags = {
   'group': 'Grupos',
   'logo': 'Logo',
   'nable': 'On/Off', 
-  'downloader': 'Descargas',
   'tools': 'Herramientas',
   'nsfw': 'Nsfw', 
   'owner': 'Creador', 
