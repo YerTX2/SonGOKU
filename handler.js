@@ -93,6 +93,7 @@ export async function handler(chatUpdate) {
                     chat.onlyLatinos = false
                  if (!('nsfw' in chat))
                     chat.nsfw = false
+                if (!('modoadmin' in chat)) chat.modoadmin = false     
                 if (!isNumber(chat.expired))
                     chat.expired = 0
             } else
