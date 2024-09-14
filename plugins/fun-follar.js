@@ -11,6 +11,6 @@ let handler = async (m, { conn, usedPrefix, command}) => {
     await conn.sendMessage(m.chat, { video: { url: [pp, pp2].getRandom() }, gifPlayback: true, caption: `*${name}*` + 'Esta violando🍆 a' + ` *${name2}*` + ' 💦💦 *:・ﾟ✧' }, { quoted: m })
     }
     handler.help = ['follar *<@user>*']
-    handler.tags = ['fun']
+    handler.tags = ['game']
     handler.command = ['cum', 'follar']
     export default handler
