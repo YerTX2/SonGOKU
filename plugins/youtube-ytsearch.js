@@ -16,13 +16,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
         txt += ` ╰──────────⬣`
         txt += `\n`
     })
-await conn.sendButtonMessages(m.chat, [
-[formattedData.title, titulowm2, bestItem.image || logo, [
-], null, [
-[]
-],
-[["ʀᴇꜱᴜʟᴛᴀᴅᴏꜱ 🍂", formattedData.rows]]
-]], m, fake)
+await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
 }
 handler.help = ['ytsearch <búsqueda>']
 handler.tags = ['search']
