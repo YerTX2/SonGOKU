@@ -23,11 +23,6 @@ await conn.sendButtonMessages(m.chat, [
 ],
 [["ʀᴇꜱᴜʟᴛᴀᴅᴏꜱ 🍂", formattedData.rows]]
 ]], m, fake)
-
-} catch (error) {
-console.error(error)
-conn.reply(m.chat, `Ocurrió un error.${error}`, m)
-}
 }
 handler.help = ['ytsearch <búsqueda>']
 handler.tags = ['search']
