@@ -53,7 +53,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
                 buttons: [
                     {
                           
-                        "buttonParamsJson": `{"display_text":"Mirar en YouTube","url":"${video.url}"}`
+                        "buttonParamsJson": `{"display_text":"MP3","url":"${video.url}"}`
                     }
                 ]
             })
