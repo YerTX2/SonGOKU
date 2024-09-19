@@ -1,6 +1,6 @@
 //import yts from 'yt-search';
 
-let handler = async (m, { conn, command, args, text, usedPrefix }) => {
+//let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     if (!text) {
         return conn.reply(m.chat, '*Que quieres que busque 🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉*', m);
     }
