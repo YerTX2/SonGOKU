@@ -82,4 +82,4 @@ async function start(files) {
   }
 }
 
-start(['starlights.js'])
+start(['SonGoku.js'])
