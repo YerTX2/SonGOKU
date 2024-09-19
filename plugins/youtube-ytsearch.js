@@ -50,16 +50,13 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
                 imageMessage: await createImage(pr) // Thumbnail video
             }),
             nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
-                buttons: [
-                    {
-                          
-                        "buttonParamsJson": `{"display_text":"MP3","url":"${video.url}"}`
-                    }
-                ]
-            })
-        });
-    }
 
+await conn.sendButton2(m.chat, txt, '. ', thumbnail, [
+        ['MP3', `${usedPrefix}play.1${url}`],
+        ['MP3DOC', `${usedPrefix}ytmp3doc ${url}`],
+        ['MP4', `${usedPrefix}ytmp4 ${url}`], 
+        ['MP4DOC', `${usedPrefix}ytmp4doc ${url}`]
+        ], null, [['Canal', 'https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v']], m);
     const bot = generateWAMessageFromContent(m.chat, {
         viewOnceMessage: {
             message: {
