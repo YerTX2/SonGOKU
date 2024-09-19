@@ -88,9 +88,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
     await conn.relayMessage(m.chat, bot.message, { messageId: bot.key.id });
 }
-
-handler.help = ["ytsearch"];
-handler.tags = ["buscador"];
+handler.help = ['ytsearch <búsqueda>']
+handler.tags = ['search']
 handler.command = ["ytsearch"];
 
 export default handler;
