@@ -53,7 +53,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
                 buttons: [
                     {
                           
-                        "buttonParamsJson": `{"display_text":"'MP3', `${usedPrefix}play.1${url}"}`
+                        "buttonParamsJson": `{"display_text":'MP3', `${usedPrefix}play.1${url} `
                     }
                 ]
             })
