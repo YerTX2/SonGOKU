@@ -6,7 +6,7 @@ import FormData from "form-data";
 import Jimp from "jimp";
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) return m.reply(`• *Ejemplo:* ${usedPrefix + command} elaina edit`);
+    if (!text) return m.reply(`• *Ejemplo:* ${usedPrefix + command} SonGoku épico momentos`);
 
     await m.reply('*_`Buscando espere un momento`_*');
 
@@ -53,7 +53,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
                 buttons: [
                     {
                           
-                        "buttonParamsJson": `{"display_text":'MP3', `${usedPrefix}play.1${url} `
+                        "buttonParamsJson": `{"display_text":"Mirar en YouTube","url":"${video.url}"}`
                     }
                 ]
             })
