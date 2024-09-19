@@ -8,7 +8,7 @@ import Jimp from "jimp";
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!text) return m.reply(`• *Ejemplo:* ${usedPrefix + command} elaina edit`);
 
-    await m.reply('*_`Cargando`_*');
+    await m.reply('*_`Buscando espere un momento`_*');
 
     async function createImage(img) {
         const { imageMessage } = await generateWAMessageContent({
