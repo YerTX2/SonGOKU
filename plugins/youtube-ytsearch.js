@@ -28,7 +28,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
     let push = [];
     let results = await yts(text);
-    let videos = results.videos.slice(0, 5); // Ambil 5 hasil teratas
+    let videos = results.videos.slice(0, 8); // Ambil 8 hasil teratas
     shuffleArray(videos); // Mengacak hasil video
 
     let i = 1;
