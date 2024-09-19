@@ -55,7 +55,7 @@ buttons: [
                     {
 
                         "buttonParamsJson": `{"display_text":"Mirar en YouTube","url":"${video.url}"}`
-                    }
+               }
                 ]
             })
         });
