@@ -61,7 +61,6 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 };
 
 handler.help = ["ytmp3"].map((v) => v + " <url>");
-handler.tags = ["dl"];
 handler.command = /^(yta|ytmp3)$/i;
 handler.register = true
 
