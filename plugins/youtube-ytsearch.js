@@ -52,9 +52,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
             nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
 
 buttons: [
-                    {
-
-                        "buttonParamsJson": `{"display_text":"Mirar en YouTube","url":"${video.url}"}`
+                    {"buttonParamsJson": `{"display_text":"Mirar en YouTube","url":"${video.url}"}`
                }
                 ]
             })
