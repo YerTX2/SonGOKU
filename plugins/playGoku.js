@@ -63,7 +63,7 @@ const handler = async (m, { command, usedPrefix, conn, text }) => {
     const dataMessage = `_*< DESCARGAS - PLAY V2 />*_\n\n▢ *̶T̶í̶t̶u̶l̶o:* ${data.resultado.title}\n▢ *𝐏𝐮𝐛𝐥𝐢𝐜𝐚𝐝𝐨:* ${data.resultado.publicDate}\n▢ *𝐂𝐚𝐧𝐚𝐥:* ${data.resultado.channel}\n▢ *𝐕𝐢́𝐝𝐞𝐨 𝐔𝐑𝐋:* ${data.resultado.url}`.trim();  
     if (!text.includes('SN@') && command !== 'playyt') await conn.sendMessage(m.chat, { text: dataMessage }, { quoted: m });      
 
-    if (command === 'playyt') {
+    if (command === 'play') {
       var messa = await prepareWAMessageMedia({ image: {url: data.resultado.image}}, { upload: conn.waUploadToServer });
       let msg = generateWAMessageFromContent(m.chat, {
           viewOnceMessage: {
