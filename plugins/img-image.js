@@ -14,8 +14,8 @@ const messages = [['Imagen 1', dev, await res.getRandom(),
 [[]], [[]], [[]], [[]]], ['Imagen 2', dev, await res.getRandom(), [[]], [[]], [[]], [[]]], ['Imagen 2', dev, await res.getRandom(), [[]], [[]], [[]], [[]]], ['Imagen 4', dev, await res.getRandom(), [[]], [[]], [[]], [[]]]]
 await conn.sendCarousel(m.chat, `🌸 Resultado de ${text}`, '🔎 Imagen - Descargas', null, messages, m);
 };
-handler.help = ['imagen <búsqueda>']
-handler.tags = ['img']
-handler.command = ['image', 'gimage', 'imagen']
+handler.help = ['imagen <query>'];
+handler.tags = ['buscador', 'tools', 'descargas'];
+handler.command = ['image', 'imagen'];
 handler.register = true;
 export default handler;
