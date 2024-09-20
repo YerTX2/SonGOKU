@@ -47,7 +47,7 @@ const imgUrl = 'https://telegra.ph/file/a83d8f5535e6b744986b4.png';
                 return conn.reply(m.chat, `𝙴𝚕 𝚊𝚛𝚌𝚑𝚒𝚟𝚘 𝚙𝚎𝚜𝚊 𝚖á𝚜 𝚍𝚎 ${limit} 𝙼𝙱, 𝚜𝚎 𝚌𝚊𝚗𝚌𝚎𝚕ó 𝚕𝚊 𝙳𝚎𝚜𝚌𝚊𝚛𝚐𝚊.`, m);
             }
 
-            await conn.sendFile(m.chat, dl_url, 'yt.mp3', `${vid.title}.mp3`, m);
+            await conn.sendFile(m.chat, dl_url, 'yt.mp3', `${vid.title}.link yt`, m);
             await m.react('✅');
         } 
             
