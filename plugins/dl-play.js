@@ -26,7 +26,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     txt += '孫ՏᴏɴᏀᴏᴋᴜ孫';
 
     await conn.sendButton2(m.chat, txt, '. ', thumbnail, [
-        ['Audio', `${usedPrefix}ytmp3 ${url}`],
+        ['MP3', `${usedPrefix}ytmp3 ${url}`],
         ['MP3DOC', `${usedPrefix}ytmp3doc ${url}`],
         ['MP4', `${usedPrefix}ytmp4 ${url}`], 
         ['MP4DOC', `${usedPrefix}ytmp4doc ${url}`]
