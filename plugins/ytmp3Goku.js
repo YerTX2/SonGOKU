@@ -49,25 +49,13 @@ const imgUrl = 'https://telegra.ph/file/a83d8f5535e6b744986b4.png';
 
             await conn.sendFile(m.chat, dl_url, 'yt.mp3', `${vid.title}.mp3`, m);
             await m.react('✅');
-        } else if (format == "mp4" || format == "ytv" || format == "video" || format == "mp4doc" || format == "ytvdoc" || format == "videodoc" || format == "videodoc") {
-            let q = '720p';
-            let yt = await fg.ytv(vid.url, q);
-            let { title, dl_url, size } = yt;
-            let limit = 500;
-
+        } 
+            
             if (parseFloat(size.split('MB')[0]) >= limit) {
                 return conn.reply(m.chat, `𝙴𝚕 𝚊𝚛𝚌𝚑𝚒𝚟𝚘 𝚙𝚎𝚜𝚊 𝚖á𝚜 𝚍𝚎 ${limit} 𝙼𝙱, 𝚜𝚎 𝚌𝚊𝚗𝚌𝚎𝚕ó 𝚕𝚊 𝙳𝚎𝚜𝚌𝚊𝚛𝚐𝚊.`, m);
             }
 
-            await conn.sendFile(m.chat, dl_url, 'yt.mp4', `${vid.title}.mp4`, m);
-            await m.react('✅');
-        }
-    } catch (error) {
-        await conn.reply(m.chat, `ɴᴏ ᴇꜱᴛᴀ ɪɴꜱᴛᴀʟᴀᴅᴏ ꜰꜰᴍᴘɢ ᴠᴜᴇʟᴠᴀ ᴀʟ ʀᴇᴘᴏꜱɪᴛᴏʀɪᴏ ᴘᴀʀᴀ ᴄʜᴇᴄᴀʀ ᴄᴏᴍᴏ ɪɴꜱᴛᴀʟᴀʀʟᴏ`, m);
-        console.error(error);
-    }
-};
-
+            
 handler.help = ['ytmp3"<link yt>']
 handler.tags = ["downloader"];
 handler.command = ['ytmp3'];
