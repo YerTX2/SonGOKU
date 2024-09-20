@@ -6,8 +6,7 @@ import axios from 'axios';
 
 const imgUrl = 'https://telegra.ph/file/a83d8f5535e6b744986b4.png';
 
-let handler = async (m, { conn, args, usedPrefix, text, command }) => {
-    let lister = ["mp3", "yta", "audio", "ytv", "video", "vídeo", "mp4", "mp3doc", "ytadoc", "audiodoc", "mp4doc", "ytvdoc", "videodoc", "vídeodoc"];
+
 
     let [format, ...keywords] = text.split(" ");
     let searchQuery = keywords.join(" ");
