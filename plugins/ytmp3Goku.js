@@ -73,7 +73,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
 
 handler.help = ["play3"].map(v => v + " <formato> <búsqueda>");
 handler.tags = ["downloader"];
-handler.command = ['play3'];
+handler.command = ['audio'];
 handler.register = true;
 
 export default handler;
