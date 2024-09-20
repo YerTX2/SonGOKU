@@ -2,7 +2,7 @@
 import Starlights from '@StarlightsTeam/Scraper'
 import fetch from 'node-fetch' 
 let limit = 100
-const imgUrl = 'https://telegra.ph/file/a83d8f5535e6b744986b4.png'; 
+const imgUrl = 
 
 let handler = async (m, { conn: star, args, text, isPrems, isOwner, usedPrefix, command }) => {
 if (!args[0].match(/youtu/gi)) return star.reply(m.chat, '🚩 Ingresa el enlace del vídeo de YouTube junto al comando.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* https://youtu.be/QSvaCSt8ixs`, m, rcanal)
@@ -17,7 +17,7 @@ if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas
        txt += `        ✩   *Titulo* : ${title}\n`
        txt += `        ✩   *Calidad* : ${quality}\n`
        txt += `        ✩   *Tamaño* : ${size}\n\n`
-       txt += `> *- ↻ El audio se esta enviando espera un momento, soy lenta. . .*`
+       txt += `> *ՏᴏɴᏀᴏᴋᴜ esta enviando su música espere*`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await star.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })
 await m.react('✅')
