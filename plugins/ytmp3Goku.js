@@ -71,7 +71,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     }
 };
 
-handler.help = ["play3"].map(v => v + " <formato> <búsqueda>");
+handler.help = ['ytmp3 <yt url'].map(v => v + "<yt url>");
 handler.tags = ["downloader"];
 handler.command = ['audio'];
 handler.register = true;
