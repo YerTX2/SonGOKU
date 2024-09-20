@@ -40,7 +40,7 @@ const imgUrl = 'https://telegra.ph/file/a83d8f5535e6b744986b4.png';
 
         await conn.sendFile(m.chat, responseImg.data, "thumbnail.jpg", txt, m, null, rcanal);
 
-        if (format == "mp3" || format == "yta" || format == "audio" || format == "mp3doc" || format == "ytadoc" || format == "audiodoc") {
+       
             let yt = await fg.yta(vid.url, q);
             let { title, dl_url, size } = yt;
             let limit = 100;
