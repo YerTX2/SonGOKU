@@ -15,7 +15,7 @@ if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas
        txt += `        ✩   *Titulo* : ${title}\n`
        txt += `        ✩   *Calidad* : ${quality}\n`
        txt += `        ✩   *Tamaño* : ${size}\n\n`
-       txt += `> *- ↻ El audio se esta enviando espera un momento, soy lenta. . .*`
+       txt += `> *ՏᴏɴᏀᴏᴋᴜ esta enviando su música en documento espere*`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await star.sendMessage(m.chat, { document: { url: dl_url }, caption: '', mimetype: 'audio/mpeg', fileName: `${title}.mp3`}, { quoted: m })
 await m.react('✅')
