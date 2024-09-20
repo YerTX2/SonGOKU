@@ -70,7 +70,7 @@ const imgUrl = 'https://telegra.ph/file/a83d8f5535e6b744986b4.png';
     }
 };
 
-handler.help = ["ytmp3"<link yt>*']
+handler.help = ["ytmp3"<link yt>*"]
 handler.tags = ["downloader"];
 handler.command = ['ytmp3'];
 handler.register = true;
