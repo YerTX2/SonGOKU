@@ -73,7 +73,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
 
 handler.help = ['ytmp3 <yt url'].map(v => v + "<yt url>");
 handler.tags = ["downloader"];
-handler.command = ['audio'];
+handler.command = ['ytmp3'];
 handler.register = true;
 
 export default handler;
