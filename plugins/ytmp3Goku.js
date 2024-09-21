@@ -1,5 +1,3 @@
-
-
 import Scraper from "@SumiFX/Scraper"
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
@@ -8,13 +6,14 @@ if (!args[0].match(/youtu/gi)) return conn.reply(m.chat, `Verifica que el enlace
 
 let user = global.db.data.users[m.sender]
 try {
+let { title, size, quality, thumbnail, dl_url } = await Scraper.ytmp3(args[0])
 if (size.includes('GB') || size.replace(' MB', '') > 200) { return await m.reply('El archivo pesa mas de 200 MB, se canceló la Descarga.')}
 let txt = `╭─⬣「 *YouTube Download* 」⬣\n`
     txt += `│  ≡◦ * Titulo ∙* ${title}\n`
     txt += `│  ≡◦ *🪴Calidad ∙* ${quality}\n`
     txt += `│  ≡◦ * Peso ∙* ${size}\n`
     txt += `╰─⬣`
- txt, m)
+await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', txt, m)
 await conn.sendFile(m.chat, dl_url, title + '.mp3', `*🇦🇱 Titulo ∙* ${title}\n*🪴 Calidad ∙* ${quality}`, m, false, { mimetype: 'audio/mpeg', asDocument: user.useDocument })
 } catch {
 }}
