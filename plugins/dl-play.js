@@ -23,7 +23,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     txt += `> *𝚅𝚒𝚜𝚒𝚝𝚊𝚜* : _${views.toLocaleString()}_\n`;
     txt += `> *𝙻𝚒𝚗𝚔* : _https://www.youtube.com/watch?v=${videoId}_\n`;
     txt += '·̇·̣̇̇·̣̣̇·̣̇̇·̇ 🇦🇱•🐉•୨୧┈┈┈୨୧•🐉•🇦🇱 ·̇·̣̇̇·̣̣̇·̣̇̇·̇ \n';
-    txt += '孫ՏᴏɴᏀᴏᴋᴜ孫';
+    txt =   '```◤──•~.     ՏᴏɴᏀᴏᴋu.       ~•──◥```\n';
 
     await conn.sendButton2(m.chat, txt, '. ', thumbnail, [
         ['MP3', `${usedPrefix}ytmp3 ${url}`],
