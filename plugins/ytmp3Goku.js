@@ -1,33 +1,27 @@
 
-import Starlights from '@StarlightsTeam/Scraper'
-import fetch from 'node-fetch' 
-let limit = 100
-const imgUrl = 
 
-let handler = async (m, { conn: star, args, text, isPrems, isOwner, usedPrefix, command }) => {
-if (!args[0].match(/youtu/gi)) return star.reply(m.chat, '🚩 Ingresa el enlace del vídeo de YouTube junto al comando.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* https://youtu.be/QSvaCSt8ixs`, m, rcanal)
+import Scraper from "@SumiFX/Scraper"
 
-await m.react('🕓')
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+if (!args[0]) return m.reply('🍭 Ingresa el enlace del vídeo de YouTube junto al comando.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* https://youtu.be/QSvaCSt8ixs`)
+if (!args[0].match(/youtu/gi)) return conn.reply(m.chat, `Verifica que el enlace sea de YouTube.`, m)
+
+let user = global.db.data.users[m.sender]
 try {
-let { title, size, quality, thumbnail, dl_url } = await Starlights.ytmp3(args[0])
-
-let img = await (await fetch(`${thumbnail}`)).buffer()
-if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m, rcanal).then(_ => m.react('✖️'))
-        let txt = '`乂  Y O U T U B E  -  M P 3`\n\n'
-       txt += `        ✩   *Titulo* : ${title}\n`
-       txt += `        ✩   *Calidad* : ${quality}\n`
-       txt += `        ✩   *Tamaño* : ${size}\n\n`
-       txt += `> *ՏᴏɴᏀᴏᴋᴜ esta enviando su música espere*`
-await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
-await star.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })
-await m.react('✅')
+let { title, size, quality, thumbnail, dl_url } = await Scraper.ytmp3(args[0])
+if (size.includes('GB') || size.replace(' MB', '') > 200) { return await m.reply('El archivo pesa mas de 200 MB, se canceló la Descarga.')}
+let txt = `╭─⬣「 *YouTube Download* 」⬣\n`
+    txt += `│  ≡◦ *🍭 Titulo ∙* ${title}\n`
+    txt += `│  ≡◦ *🪴 Calidad ∙* ${quality}\n`
+    txt += `│  ≡◦ *⚖ Peso ∙* ${size}\n`
+    txt += `╰─⬣`
+await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', txt, m)
+await conn.sendFile(m.chat, dl_url, title + '.mp3', `*🍭 Titulo ∙* ${title}\n*🪴 Calidad ∙* ${quality}`, m, false, { mimetype: 'audio/mpeg', asDocument: user.useDocument })
 } catch {
-await m.react('✖️')
 }}
-handler.help = ['ytmp3 *<link yt>*']
+handler.help = ['ytmp3 <yt url>']
 handler.tags = ['downloader']
-handler.command = ['ytmp3', 'yta', 'fgmp3']
-//handler.limit = 1
+handler.command = ['ytmp3', 'yta']
 handler.register = true 
-
+//handler.limit = 1
 export default handler
