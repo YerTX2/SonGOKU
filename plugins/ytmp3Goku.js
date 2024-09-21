@@ -15,7 +15,7 @@ let txt = `╭─⬣「 *YouTube Download* 」⬣\n`
     txt += `│  ≡◦ *🪴Calidad ∙* ${quality}\n`
     txt += `│  ≡◦ * Peso ∙* ${size}\n`
     txt += `╰─⬣`
-await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', txt, m)
+ txt, m)
 await conn.sendFile(m.chat, dl_url, title + '.mp3', `*🇦🇱 Titulo ∙* ${title}\n*🪴 Calidad ∙* ${quality}`, m, false, { mimetype: 'audio/mpeg', asDocument: user.useDocument })
 } catch {
 }}
