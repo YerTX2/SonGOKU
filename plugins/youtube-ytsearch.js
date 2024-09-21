@@ -52,7 +52,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
             nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
 
 buttons: [
-                    {"buttonParamsJson": `{"display_text":"Mirar en YouTube","url":"${video.url}"}`
+                    {"buttonParamsJson": `       [['Canal', 'https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v']], m);
                }
                 ]
             })
