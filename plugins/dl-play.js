@@ -19,13 +19,9 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     txt += ' \n';
     txt += ` *𝚃𝚒𝚝𝚞𝚕𝚘* 
     : _${title}_\n`;
-   
     txt += ` *𝙲𝚛𝚎𝚊𝚍𝚘* : _${ago}_\n`;
-   
     txt += ` *𝙳𝚞𝚛𝚊𝚌𝚒𝚘𝚗* : _${timestamp}_\n`;
-    
     txt += ` *𝚅𝚒𝚜𝚒𝚝𝚊𝚜* : _${views.toLocaleString()}_\n`;
-    
     txt += ` *𝙻𝚒𝚗𝚔* : _https://www.youtube.com/watch?v=${videoId}_\n`;
     txt += '  \n';
     txt += '孫ՏᴏɴᏀᴏᴋᴜ孫';
