@@ -15,7 +15,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
 
     let { title, thumbnail, ago, timestamp, views, videoId, url } = play;
 
-    let txt = '```𝚈𝚘𝚞𝚃𝚞𝚋𝚎 𝙳𝚎𝚜𝚌𝚊𝚛𝚐𝚊𝚜```\n';
+    let txt = '```·:*¨✘𝚈𝚘𝚞𝚃𝚞𝚋𝚎 𝙳𝚎𝚜𝚌𝚊𝚛𝚐𝚊𝚜✘ ¨*:·```\n';
     txt += ' \n';
     txt += ` *𝚃𝚒𝚝𝚞𝚕𝚘* : _${title}_\n`;
    
