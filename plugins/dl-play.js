@@ -13,7 +13,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
         throw `Error: Vídeo no encontrado`;
     }
 
-    let { title, thumbnail, ago, timestamp, views, videoId, url } = play;
+    const imgUrl = 'https://telegra.ph/file/a83d8f5535e6b744986b4.png';
 
     let txt =   '```𝚈𝚘𝚞𝚃𝚞𝚋𝚎 𝙳𝚎𝚜𝚌𝚊𝚛𝚐𝚊𝚜```\n';
     txt += '╭━─━─━─━─≪✠≫─━─━─━─━╮\n';
