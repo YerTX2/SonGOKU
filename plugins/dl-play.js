@@ -17,12 +17,16 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
 
     let txt = '```·:*¨✘𝚈𝚘𝚞𝚃𝚞𝚋𝚎 𝙳𝚎𝚜𝚌𝚊𝚛𝚐𝚊𝚜✘¨*:·```\n';
     txt += ' \n';
-    txt +=.            `*乂✮Titulo✮乂*
+    txt +=             `*乂✮Titulo✮乂*
      : _${title}_\n`;
-    txt += ` *𝙲𝚛𝚎𝚊𝚍𝚘* : _${ago}_\n`;
-    txt += ` *𝙳𝚞𝚛𝚊𝚌𝚒𝚘𝚗* : _${timestamp}_\n`;
-    txt += ` *𝚅𝚒𝚜𝚒𝚝𝚊𝚜* : _${views.toLocaleString()}_\n`;
-    txt += ` *𝙻𝚒𝚗𝚔* : _https://www.youtube.com/watch?v=${videoId}_\n`;
+    txt +=             `*乂✮Creado✮乂*
+: _${ago}_\n`;
+    txt +=             `*乂✮Duracion✮乂*
+ : _${timestamp}_\n`;
+    txt +=              `乂✮Visitas✮乂* 
+: _${views.toLocaleString()}_\n`;
+    txt +=              `*乂✮Link✮乂*`  
+: _https://www.youtube.com/watch?v=${videoId}_\n`;
    
     txt += 'Selecciona un método de descarga\n';
     txt += '孫ՏᴏɴᏀᴏᴋᴜ孫';
