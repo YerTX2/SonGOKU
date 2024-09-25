@@ -27,7 +27,8 @@ let handler = async (m, { conn }) => {
     'dios': './goku/dios.mp3', 
     'sad': './goku/sad.mp3', 
     'risa': './goku/jaja.mp3', 
-    'motivar': './goku/motivar.mp3', 
+    'motivar': './goku/motivar.mp3',
+    'se unió usando el enlace de invitación del este grupo' : './se unió usando el enlace de invitación del este grupo.mp3',
     'calculadora': './goku/calculadora.mp3', 
     'tengo novia': './goku/tengo novia.mp3'
     
@@ -51,8 +52,8 @@ let handler = async (m, { conn }) => {
 };
 
 handler.help = ['ayuda', 'gey', 'ayuda', 'elcorazon', 'sin sentimiento', 'linda','negra', 'callate', 'super albañil', 'que me importa', 'mondongo', 'bebitofiufiu', 'lala', 'dios', 'risa', 'tengo novia', 'calculadora', 'motivar',
-'peruano', 'viva venezuela', 'sad']
-handler.customPrefix = /^(hola|cómo estás|goku|gey|si te mueves|ayuda|sin sentimiento|linda|negra|eres tu|callate|super albañil|peruano|viva venezuela|que me importa|mondongo|bebitofiufiu|lala|dios|sad|jaja|motivar|calculadora|tengo novia)/i;
+'peruano', 'se unió usando el enlace de invitación del este grupo', 'viva venezuela', 'sad']
+handler.customPrefix = /^(hola|cómo estás|goku|gey|si te mueves|ayuda|sin sentimiento|linda|negra|eres tu|callate|super albañil|peruano|viva venezuela|que me importa|mondongo|bebitofiufiu|lala|dios|sad|jaja|motivar|calculadora|tengo novia|se unió usando el enlace de invitación del este grupo)/i;
 handler.command = new RegExp;
 handler.tags = ['Audios Dbz'] 
 export default handler;
