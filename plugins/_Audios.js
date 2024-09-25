@@ -28,7 +28,7 @@ let handler = async (m, { conn }) => {
     'sad': './goku/sad.mp3', 
     'risa': './goku/jaja.mp3', 
     'motivar': './goku/motivar.mp3',
-    'se unió usando el enlace de invitación del este grupo': './se unió usando el enlace de invitación del este grupo.mp3',
+    'se unió usando el enlace de invitación del este grupo': './goku/se unió usando el enlace de invitación del este grupo.mp3',
     'calculadora': './goku/calculadora.mp3', 
     'tengo novia': './goku/tengo novia.mp3'
     
