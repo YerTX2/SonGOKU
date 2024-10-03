@@ -5,7 +5,7 @@ import fetch from 'node-fetch'
 let limit = 100
 
 let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
-if (!args || !args[0]) conn.reply(m.chat, `🧃 Escribe la URL de un video de YouTube que deseas descargar.`,  m)
+if (!args || !args[0]) conn.reply(m.chat, `🐉 Escribe la URL de un video de YouTube que deseas descargar.`,  m)
 if (!args[0].match(/youtu/gi)) return conn.reply(m.chat, `Verifica que la *URL* sea de YouTube`, m).then(_ => m.react('✖️'))
 let q = '128kbps'
 
@@ -19,7 +19,7 @@ let { thumbnail, url } = vid
 if (size.split('MB')[0] >= limit) return conn.reply(m.chat,`El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m).then(_ => m.react('✖️'))
 
 await conn.sendMessage(m.chat, {
-        text: `  🍭 *Título ∙* ${title}\n\n⚖️ *Tamaño ∙* ${size}\n\n*↻ Espera @${m.sender.split`@`[0]}, soy lenta. . .* .`,
+        text: `  🇦🇱 *Título ∙* ${title}\n\n⚖️ *Tamaño ∙* ${size}\n\n*↻ Espera @${m.sender.split`@`[0]}, espera un momento SonGoku esta enviando su música 🎶🎵* .`,
         contextInfo: { 
           mentionedJid: [m.sender],
         }
@@ -45,7 +45,7 @@ let { thumbnail, url } = vid
 if (size.split('MB')[0] >= limit) return conn.reply(m.chat,`El archivo pesa mas de ${limit} MB, se canceló la Descarga.`,  m, fake,).then(_ => m.react('✖️'))
 
 await conn.sendMessage(m.chat, {
-        text: `  🍭 *Título ∙* ${title}\n\n⚖️ *Tamaño ∙* ${size}\n\n*↻ Espera @${m.sender.split`@`[0]}, soy lenta. . .* .`,
+        text: `  🇦🇱 *Título ∙* ${title}\n\n⚖️ *Tamaño ∙* ${size}\n\n*↻  @${m.sender.split`@`[0]}, espera un momento SonGoku esta enviando su música 🎶🎵. . .* .`,
         contextInfo: { 
           mentionedJid: [m.sender],
         }
