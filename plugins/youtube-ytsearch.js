@@ -26,4 +26,3 @@ handler.help = ['ytsearch <búsqueda>']
 handler.tags = ['search']
 handler.command = ["ytsearch"];
 export default handler;
-export default handler
