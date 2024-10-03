@@ -7,7 +7,7 @@ const openaiii = new OpenAIApi(configuration);
 const handler = async (m, {conn, text, usedPrefix, command}) => {
 if (usedPrefix == 'a' || usedPrefix == 'A') return;
 if (!text) return m.reply(`*Hola cómo esta 😊, El que te puedo ayudar?*, ingrese una petición o orden para usar la función de chagpt\n*Ejemplo:*\n${usedPrefix + command} Recomienda un top 10 de películas de acción`) 
-let syst = `Actuaras como un Bot de WhatsApp el cual fue creado por elrebelde, tu seras LoliBot.`
+let syst = `Actuaras como un Bot de WhatsApp el cual fue creado por YerTX2, tu seras SonGoku.`
 
 if (command == 'ia' || command == 'chatgpt') {
 try {     
