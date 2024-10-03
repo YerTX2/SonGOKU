@@ -1,85 +1,75 @@
-import { prepareWAMessageMedia, generateWAMessageFromContent, getDevice } from '@whiskeysockets/baileys'
-import yts from 'yt-search';
-import fs from 'fs';
+import ytSearch from "yt-search"
+const handler = async (m, { conn, usedPrefix, args, command }) => {
+try {
+const text = args.length >= 1 ? args.slice(0).join(" ") : (m.quoted && m.quoted?.text || m.quoted?.caption || m.quoted?.description) || null
 
-const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
-    const datas = global;
-    const device = await getDevice(m.key.id);
+if (!text) return conn.reply(m.chat, `🤍 *Escriba el título de algún vídeo de Youtube*\n\nEjemplo, ${usedPrefix + command} Génesis AI`, m, rcanal, )
 
-  if (!text) throw `⚠️ *Error*`;
+const { all: [bestItem, ...moreItems] } = await ytSearch(text)
+const videoItems = moreItems.filter(item => item.type === 'video')
+const formattedData = {
+title: `\`[ YOUTUBE - SEARCH ]\`\n\n> 🤍 *\`Titulo :\`* ${bestItem.title}\n> 🤍 *\`Duración :\`* ${bestItem.timestamp}\n> 🤍 *\`Visitas :\`* ${bestItem.views}\n> 🤍 *\`Subido :\`* ${bestItem.ago}\n> 🤍 *\`Url :\`* ${bestItem.url}`,
+rows: [{
+title: "Vídeo más Popular 😼",
+highlight_label: "Popular",
+rows: [{
+header: bestItem.title,
+id: `${usedPrefix}ytmp4 ${bestItem.url}`,
+title: bestItem.title,
+description: ""
+}]
+}, {
+title: "Videos Encontrados 🤍",
+rows: videoItems.map(({
+title,
+url,
+description
+}, index) => ({
+header: `${index + 1}). ${title}`,
+id: `.ytmp4 ${url}`,
+title: title,
+description: ""
+}))
+}]
+}
+const emojiMap = {
+type: "🎥",
+videoId: "🆔",
+url: "🔗",
+title: "📺",
+description: "📝",
+image: "🖼️",
+thumbnail: "🖼️",
+seconds: "⏱️",
+timestamp: "⏰",
+ago: "⌚",
+views: "👀",
+author: "👤"
+}
 
-  if (device !== 'desktop' || device !== 'web') {      
+const caption = Object.entries(bestItem).map(([key, value]) => {
+const formattedKey = key.charAt(0).toUpperCase() + key.slice(1)
+const valueToDisplay = key === 'views' ? new Intl.NumberFormat('en', { notation: 'compact' }).format(value) : key === 'author' ? `Nombre: ${value.name || 'Desconocido'}\nURL: ${value.url || 'Desconocido'}` : value || 'Desconocido';
+return ` ${emojiMap[key] || '🔹'} *${formattedKey}:* ${valueToDisplay}`}).join('\n')
 
-  const results = await yts(text);
-  const videos = results.videos.slice(0, 20);
-  const randomIndex = Math.floor(Math.random() * videos.length);
-  const randomVideo = videos[randomIndex];
+await conn.sendButtonMessages(m.chat, [
+[formattedData.title, titulowm2, bestItem.image || logo, [
+], null, [
+[]
+],
+[["ʀᴇꜱᴜʟᴛᴀᴅᴏꜱ 🍂", formattedData.rows]]
+]], m, fake)
 
-  var messa = await prepareWAMessageMedia({ image: {url: randomVideo.thumbnail}}, { upload: conn.waUploadToServer })
-  const interactiveMessage = {
-    body: { text: `*🍟 Resultados De:* ${text}\n*🍟 Resultados obtenidos:* ${results.videos.length}`.trim() },
-    footer: { text: `${global.wm}`.trim() },  
-      header: {
-          title: `*•/• YouTube - Search •/•*`,
-          hasMediaAttachment: true,
-          imageMessage: messa.imageMessage,
-      },
-    nativeFlowMessage: {
-      buttons: [
-        {
-          name: 'single_select',
-          buttonParamsJson: JSON.stringify({
-            title: 'SELECCIONE AQUÍ',
-            sections: videos.map((video) => ({
-              title: video.title,
-              rows: [
-                {
-                  header: video.title,
-                  title: video.author.name,
-                  description: 'Descargar MP3',
-                  id: `${prefijo}fgmp3 ${video.url}`
-                },
-                {
-                  header: video.title,
-                  title: video.author.name,
-                  description: 'Descargar MP4',
-                  id: `${prefijo}fgmp4 ${video.url}`
-                }
-              ]
-            }))
-          })
-        }
-      ],
-      messageParamsJson: ''
-    }
-  };        
+} catch (error) {
+console.error(error)
+conn.reply(m.chat, `Ocurrió un error.${error}`, m)
+}
+}
 
-        let msg = generateWAMessageFromContent(m.chat, {
-            viewOnceMessage: {
-                message: {
-                    interactiveMessage,
-                },
-            },
-        }, { userJid: conn.user.jid, quoted: m })
-      conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id});
-
-  } else {
-  const results = await yts(text);
-  const tes = results.all;
-  const teks = results.all.map((v) => {
-    switch (v.type) {
-      case 'video': return `
-° *_${v.title}_*
-↳ 🫐 *_Url_* ${v.url}
-↳ 🕒 *_Fecha_* ${v.timestamp}
-↳ 📥 *_fecha_* ${v.ago}
-↳ 👁 *_Vista_* ${v.views}`;
-    }
-  }).filter((v) => v).join('\n\n◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦\n\n');
-  conn.sendFile(m.chat, tes[0].thumbnail, 'error.jpg', teks.trim(), m);      
-  }    
-};
 handler.help = ['ytsearch <búsqueda>']
 handler.tags = ['search']
 handler.command = ["ytsearch"];
 export default handler;
+handler.register = true
+handler.ki = 2
+export default handler
