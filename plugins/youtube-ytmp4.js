@@ -23,7 +23,7 @@ await conn.sendMessage(m.chat, {
         }
       }, { quoted: m })
 
-await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n▁ ▂ ▃ ▄ ▅ ▆ █ 100% ${vid.timestamp}`, m)
+await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n██████████ ${vid.timestamp}`, m)
 await m.react('✅')
 } catch {
 try {
@@ -40,7 +40,7 @@ await conn.sendMessage(m.chat, {
         }
       }, { quoted: m })
 
-await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n00:15 ━━━━●────── ${vid.timestamp}`, m)
+await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n██████████ ${vid.timestamp}`, m)
 await m.react('✅')
 } catch {
 await conn.reply(m.chat,`*☓ Ocurrió un error inesperado*`, m).then(_ => m.react('✖️'))
