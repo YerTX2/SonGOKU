@@ -1,37 +1,23 @@
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw `Debes proporcionar el nombre de una aplicación para buscar.\nEjemplo:\n${usedPrefix + command} WhatsApp`;
+import { search, download } from 'aptoide-scraper'
 
-    try {
-        await m.reply(`🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉 Buscando la aplicación "${text}"...`);
+var handler = async (m, {conn, usedPrefix, command, text}) => {
 
-        let res = await fetch(`https://api.diego-ofc.site/v2/apk-dl?text=${encodeURIComponent(text)}`);
-        if (!res.ok) throw `🚩 Error en la respuesta de la API: ${res.status}`;
+if (!text) return conn.reply(m.chat, '🎌 *Ingrese el nombre de la apk que esta buscando*', m, fake, )
 
-        let json = await res.json();
-        // Asegúrate de acceder correctamente a la propiedad de la aplicación
-        if (!json.name || !json.dllink || !json.icon) throw `🚩 No se encontraron aplicaciones relacionadas con "${text}".`;
-let nombre = json.name;
-        let package2 = json.package
-        let link = json.dllink;
-        let imageUrl = json.icon;
-        let lastupdate2 = json.lastUpdate;
-        let icono2 = json.icon
-        let caption = `*Nombre:* ${nombre}\n`;
-       caption += `*package*: ${package2}\n`
-        caption += `*Enlace:* ${link}\n`;
-       caption+=  `*icono:*  ${icono2}\n`
-        caption += `*Lasupdate:* ${lastupdate2}\n`
-        caption += `*Descargando APK 🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉.*`;
+try {
 
-        await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: caption }, { quoted: m });
+let searchA = await search(text)
+let data5 = await download(searchA[0].id)
+let response = `💌 *Nombre:* ${data5.name}\n📦 *Paquete:* ${data5.package}\n🕒 *Actualización:* ${data5.lastup}\n📥 *Tamaño:* ${data5.size}`
+await conn.sendMessage(m.chat, { text: response, contextInfo: { externalAdReply: { title: data5.name, body: wm, sourceUrl: md, thumbnailUrl: data5.icon, mediaType: 1, showAdAttribution: true, renderLargerThumbnail: true }}} , { quoted: m })   
 
-        // No necesitas volver a hacer un fetch en el link, ya que es un enlace directo
-        await conn.sendMessage(m.chat, { document: { url: link }, mimetype: 'application/vnd.android.package-archive', fileName: `${nombre}.apk`, caption: null }, { quoted: m });
-
-    } catch (e) {
-        console.error(e);
-        throw `🐉 Hubo un error al buscar o descargar la aplicación "${text}": ${e.message || e}`;
-    }
+ if (data5.size.includes('GB') || data5.size.replace(' MB', '') > 999) {
+return await conn.reply(m.chat, '🚩 *El archivo es demaciado pesado*', m, fake, )
+}
+await conn.sendMessage(m.chat, {document: {url: data5.dllink}, mimetype: 'application/vnd.android.package-archive', fileName: data5.name + '.apk', caption: null}, {quoted: m})
+} catch {
+return conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )
+}    
 }
 
 handler.help = ['apk'].map(v => v + ' <nombre de la aplicación>');
