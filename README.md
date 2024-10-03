@@ -77,7 +77,7 @@ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
 
 ```bash
-git clone https://github.com/YerTX2/Hades-BotZx.git && cd Hades-BotZx 
+git clone https://github.com/YerTX2/SonGOKU.git && cd SonGOKU
 ```
 
 ```bash
