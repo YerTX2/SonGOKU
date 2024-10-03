@@ -17,13 +17,13 @@ let vid = (await yts(text)).all[0]
 if (size.split('MB')[0] >= limit) return conn.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m).then(_ => m.react('✖️'))
 
 await conn.sendMessage(m.chat, {
-        text: `🇦🇱 *Título ∙* ${title}\n⚖️ *Tamaño ∙* ${size}\n\n*↻ Espera @${m.sender.split`@`[0]}, soy lenta. . .*`,
+        text: `🇦🇱 *Título ∙* ${title}\n⚖️ *Tamaño ∙* ${size}\n\n*↻ Espera @${m.sender.split`@`[0]}, se está enviando su video. . .*`,
         contextInfo: { 
           mentionedJid: [m.sender],
         }
       }, { quoted: m })
 
-await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n██████████ ${vid.timestamp}`, m)
+await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n Duración ${vid.timestamp}`, m)
 await m.react('✅')
 } catch {
 try {
@@ -34,16 +34,16 @@ let vid = (await yts(text)).all[0]
 if (size.split('MB')[0] >= limit) return conn.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m).then(_ => m.react('✖️'))
 
 await conn.sendMessage(m.chat, {
-        text: `🇦🇱 *Título ∙* ${title}\n⚖️ *Tamaño ∙* ${size}\n\n*↻ Espera @${m.sender.split`@`[0]}, soy lenta. . .*`,
+        text: `🇦🇱 *Título ∙* ${title}\n⚖️ *Tamaño ∙* ${size}\n\n*↻ Espera @${m.sender.split`@`[0]},se  está enviando su video . . .*`,
         contextInfo: { 
           mentionedJid: [m.sender],
         }
       }, { quoted: m })
 
-await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n██████████ ${vid.timestamp}`, m)
+await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n Duración ${vid.timestamp}`, m)
 await m.react('✅')
 } catch {
-await conn.reply(m.chat,`*☓ Ocurrió un error inesperado*`, m).then(_ => m.react('✖️'))
+await conn.reply(m.chat,`*☓ Ocurrió un error inesperado pesa más de 120MB use el comando ytmp4doc para descargar *`, m).then(_ => m.react('✖️'))
 //console.error(error)
 }}}
 handler.help = ['ytmp4 <yt url>']
