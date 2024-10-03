@@ -65,9 +65,9 @@ await m.react('✅')
 await conn.reply(m.chat, `*☓ Ocurrió un error inesperado*`,  m, fake,).then(_ => m.react('✖️'))
 console.error(error)
 }}}
-handler.help = ['ytmp3 <url yt>']
+handler.help = ['ytmp3 <yt url>']
 handler.tags = ['downloader']
-handler.command = /^(fgmp3|dlmp3|getaud|yt(a|mp3))$/i
-handler.star = 2
+handler.command = ['ytmp3', 'yta']
 handler.register = true 
+//handler.limit = 1
 export default handler
