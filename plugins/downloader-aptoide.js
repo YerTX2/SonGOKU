@@ -1,27 +1,26 @@
-import { search, download } from 'aptoide-scraper'
+import Starlights from "@StarlightsTeam/Scraper"
 
-var handler = async (m, {conn, usedPrefix, command, text}) => {
-
-if (!text) return conn.reply(m.chat, '🎌 *Ingrese el nombre de la apk que esta buscando*', m, fake, )
-
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+if (!text) return conn.reply(m.chat, `*• Ingresa el nombre de la aplicación que deseas descargar.*\n\nEjemplo:\n*${usedPrefix + command}* WhatsApp`, m, rcanal)
+await m.react('🕓')
 try {
-
-let searchA = await search(text)
-let data5 = await download(searchA[0].id)
-let response = `💌 *Nombre:* ${data5.name}\n📦 *Paquete:* ${data5.package}\n🕒 *Actualización:* ${data5.lastup}\n📥 *Tamaño:* ${data5.size}`
-await conn.sendMessage(m.chat, { text: response, contextInfo: { externalAdReply: { title: data5.name, body: wm, sourceUrl: md, thumbnailUrl: data5.icon, mediaType: 1, showAdAttribution: true, renderLargerThumbnail: true }}} , { quoted: m })   
-
- if (data5.size.includes('GB') || data5.size.replace(' MB', '') > 999) {
-return await conn.reply(m.chat, '🚩 *El archivo es demaciado pesado*', m, fake, )
-}
-await conn.sendMessage(m.chat, {document: {url: data5.dllink}, mimetype: 'application/vnd.android.package-archive', fileName: data5.name + '.apk', caption: null}, {quoted: m})
+let { name, packname, update, size, thumbnail, dl_url } = await Starlights.aptoide(text)
+if (size.includes('GB') || size.replace(' MB', '') > 300) { return await m.reply('El archivo pesa mas de 300 MB, se canceló la Descarga.')}
+let txt = `*乂  A P T O I D E  -  D O W N L O A D*\n\n`
+    txt += `        ✩   *Nombre* : ${name}\n`
+    txt += `        ✩   *Package* : ${packname}\n`
+    txt += `        ✩   *Update* : ${update}\n`
+    txt += `        ✩   *Peso* :  ${size}\n\n`
+    txt += `*- ↻ El archivo se esta enviando espera un momento, soy lenta. . .*`
+await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', txt, m, null, rcanal)
+await conn.sendMessage(m.chat, {document: { url: dl_url }, mimetype: 'application/vnd.android.package-archive', fileName: name + '.apk', caption: null }, {quoted: m})
+await m.react('✅')
 } catch {
-return conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )
-}    
-}
-
-handler.help = ['apk'].map(v => v + ' <nombre de la aplicación>');
- handler.tags = ['downloader'] 
-handler.command = /^(apk|apkd|apkdownload)$/i;
-
-export default handler;
+await m.react('✖️')
+}}
+handler.help = ['aptoide *<búsqueda>*']
+handler.tags = ['downloader']
+handler.command = ['aptoide', 'apk']
+handler.register = true 
+//handler.limit = 5
+export default handler
