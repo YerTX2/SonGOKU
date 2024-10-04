@@ -28,8 +28,8 @@ let handler = async (m, { conn, usedPrefix, text }) => {
   conn.reply(m.chat, txt, m, rcanal);
 };
 
-handler.help = ["spotifysearch"];
-handler.tags = ["search"];
+handler.help = ["spotify <nombre de la canción>"];
+///handler.tags = ["search"];
 handler.command = /^(spotifysearch)$/i;
 
 export default handler;
