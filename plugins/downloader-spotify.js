@@ -5,9 +5,9 @@ import pkg2 from 'fluid-spotify.js'
 let { Spotify } = pkg2
 
 let handler = async (m, { conn, text }) => {
- if (!text) throw `🐉 Ingresa el enlace de algún Track, PlayList o Álbum de Spotify.`; 
+ if (!text) throw ` Ingresa el enlace de algún Track, PlayList o Álbum de Spotify.`; 
  let isSpotifyUrl = text.match(/^(https:\/\/open\.spotify\.com\/(album|track|playlist)\/[a-zA-Z0-9]+)/i);
- if (!isSpotifyUrl && !text) throw `🐉Ingresa el enlace de algún Track, Playlist o Álbum de Spotify.`
+ if (!isSpotifyUrl && !text) throw ` Ingresa el enlace de algún Track, Playlist o Álbum de Spotify.`
 let user = global.db.data.users[m.sender]
 await m.react('🕓')
 try {
@@ -15,12 +15,11 @@ if (isSpotifyUrl) {
 if (isSpotifyUrl[2] === 'album') {
 let album = await downloadAlbum(isSpotifyUrl[0])
 let img = await (await fetch(`${album.metadata.cover}`)).buffer()
-let txt = `*乂  S P O T I F Y  -  D O W N L O A D*\n\n`
-    txt += `	✩  *Album* : ${album.metadata.title}\n`
-    txt += `	✩   *Artista* :${album.metadata.artists}\n`
-    txt += `	✩   *Publicado* : ${album.metadata.releaseDate}\n`   
-    txt += `	✩   *Tracks totales* : ${album.trackList.length}\n\n`   
-    txt += `*- ↻ Se está descargado su pedido 📥 espere un momento @SonGoku*`
+let txt = `*°ᡣ𐭩 . ° 𝚂𝙿𝙾𝚃𝙸𝙵𝚈 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚂*\n\n`
+    txt += `        ‹𝟹  *Album* : ${album.metadata.title}\n`
+    txt += `        ‹𝟹   *Artista* :${album.metadata.artists}\n`
+    txt += `        ‹𝟹   *Publicado* : ${album.metadata.releaseDate}\n`   
+    txt += `        ‹𝟹   *Tracks totales* : ${album.trackList.length}\n\n`   
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
 for (let i = 0; i < album.trackList.length; i++) {
 await conn.sendFile(m.chat, album.trackList[i].audioBuffer, album.trackList[i].metadata.name + '.mp3', null, m, false, { mimetype: 'audio/mpeg', asDocument: user.useDocument })
@@ -30,13 +29,12 @@ await m.react('✅')
 let track = await downloadTrack(isSpotifyUrl[0])
 let dlspoty = track.audioBuffer
 let img = await (await fetch(`${track.imageUrl}`)).buffer()
-let txt = `*乂  S P O T I F Y  -  D O W N L O A D*\n\n`
-    txt += `	✩   *Título* : ${track.title}\n`
-    txt += `	✩   *Artista* : ${track.artists}\n`
-    txt += `	✩   *Duración* : ${track.duration}\n`
-    txt += `	✩   *Album* : ${track.album.name}\n`                 
-    txt += `	✩   *Publicado* : ${track.album.releasedDate}\n\n`   
-    txt += `*- ↻ Se está descargado su pedido 📥 espere un momento @SonGoku*`
+let txt = `*°ᡣ𐭩 . ° 𝚂𝙿𝙾𝚃𝙸𝙵𝚈 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚂*\n\n`
+    txt += `        ‹𝟹   *Título* : ${track.title}\n`
+    txt += `        ‹𝟹  *Artista* : ${track.artists}\n`
+    txt += `        ‹𝟹   *Duración* : ${track.duration}\n`
+    txt += `        ‹𝟹   *Album* : ${track.album.name}\n`                 
+    txt += `        ‹𝟹  *Publicado* : ${track.album.releasedDate}\n\n`   
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
 await conn.sendFile(m.chat, dlspoty, track.title + '.mp3', null, m, false, { mimetype: 'audio/mpeg', asDocument: user.useDocument })
 await m.react('✅')
@@ -49,10 +47,9 @@ let playlistId = isSpotifyUrl[0].split('/').pop()
 let playlistInfoByID = await infos.getPlaylist(playlistId)
 let tracks = playlistInfoByID.tracks.items
 let img = await (await fetch(`${playlistInfoByID.images[0].url}`)).buffer()
-let txt = `*乂  S P O T I F Y  -  D O W N L O A D*\n\n`
-    txt += `	✩   *Playlist* : ${playlistInfoByID.name}\n`
-    txt += `	✩   *Tracks totales* : ${tracks.length}\n\n`
-    txt += `*- ↻ Se está descargado su pedido 📥 espere un momento @SonGoku*`
+let txt = `*°ᡣ𐭩 . ° 𝚂𝙿𝙾𝚃𝙸𝙵𝚈 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚂*\n\n`
+    txt += `        ‹𝟹   *Playlist* : ${playlistInfoByID.name}\n`
+    txt += `        ‹𝟹   *Tracks totales* : ${tracks.length}\n\n`
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
 let target = m.chat
 if (m.isGroup && tracks.length > 20) {
@@ -67,13 +64,12 @@ await m.react('✅')
 let searchTrack = await downloadTrack(text)
 let dlspoty = searchTrack.audioBuffer
 let img = await (await fetch(`${searchTrack.imageUrl}`)).buffer()
-let txt = `*乂  S P O T I F Y  -  D O W N L O A D*\n\n`
-    txt += `	✩   *Título* : ${searchTrack.title}\n`
-    txt += `	✩   *Artista* : ${searchTrack.artists}\n`
-    txt += `	✩   *Duración* : ${searchTrack.duration}\n`
-    txt += `	✩   *Album* : ${searchTrack.album.name}\n`                 
-    txt += `	✩   *Publicado* : ${searchTrack.album.releasedDate}\n\n`   
-    txt += `*- ↻ Se está descargado su pedido 📥 espere un momento @SonGoku*`
+let txt = `*°ᡣ𐭩 . ° S P O T I F Y  -  D O W N L O A D*\n\n`
+    txt += `        ‹𝟹   *Título* : ${searchTrack.title}\n`
+    txt += `        ‹𝟹   *Artista* : ${searchTrack.artists}\n`
+    txt += `        ‹𝟹   *Duración* : ${searchTrack.duration}\n`
+    txt += `        ‹𝟹   *Album* : ${searchTrack.album.name}\n`                 
+    txt += `        ‹𝟹   *Publicado* : ${searchTrack.album.releasedDate}\n\n`   
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
 await conn.sendFile(m.chat, dlspoty, searchTrack.title + '.mp3', null, m, false, { mimetype: 'audio/mpeg', asDocument: user.useDocument })
 await m.react('✅')
@@ -84,6 +80,5 @@ await m.react('✖️')
 handler.tags = ['downloader']
 handler.help = ['spotify']
 handler.command = ['spotify']
-//handler.limit = 1
 handler.register = true
 export default handler
