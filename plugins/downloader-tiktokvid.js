@@ -1,4 +1,4 @@
-//SonGOKU 
+// Este código fue por Gabriel Curi si vas a cargar mis plugis dame créditos crack Saludos
 import axios from 'axios';
 const baileys = (await import("@whiskeysockets/baileys")).default;
 const { proto } = baileys;
@@ -84,8 +84,9 @@ let handler = async (message, { conn, text }) => {
     }
 };
 
-handler.command = ['tts', 'tiktokvid', 'ttvid'];
-handler.help = ['tiktoksearch <texto>'];
-handler.registrado = true;
-handler.diamantes = 1;
+handler.help = ['tiktokdl <url>'];
+handler.tags = ['downloader'];
+handler.command = ['tiktoksearch','tts','ttsearch'];
+handler.register = true
+
 export default handler;
