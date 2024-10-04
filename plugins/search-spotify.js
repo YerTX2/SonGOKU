@@ -1,35 +1,26 @@
-import fetch from "node-fetch";
+import Scraper from '@SumiFX/Scraper'
 
-let handler = async (m, { conn, usedPrefix, text }) => {
-  if (!text) return conn.reply(m.chat,"*💚 𝙸𝚗𝚐𝚛𝚎𝚜𝚊 𝚕𝚘 𝚚𝚞𝚎 𝚍𝚎𝚜𝚎𝚊𝚜 𝚋𝚞𝚜𝚌𝚊𝚛 𝚎𝚗 𝚂𝚙𝚘𝚝𝚒𝚏𝚢.*", m);
-  await m.react("💚");
-  let results;
+let handler = async (m, { conn, text, args, usedPrefix, command }) => {
+  if (!text) return conn.reply(m.chat, '🔍 Ingresa el título de una canción de Spotify.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m)
   try {
-    results = await fetch(`https://rembotapi.vercel.app/api/spotify/search?q=${encodeURIComponent(text)}`).then(res => res.json());
-  } catch (error) {
-    console.error(error);
-    await m.react("❌");
-    return conn.reply(m.chat,"𝙷𝚞𝚋𝚘 𝚞𝚗 𝚎𝚛𝚛𝚘𝚛 𝚊𝚕 𝚌𝚘𝚗𝚜𝚞𝚕𝚝𝚊𝚛 𝚎𝚗 𝚂𝚙𝚘𝚝𝚒𝚏𝚢.", m);
-  }
+    let Sumi = await Scraper.spotifySearch(text)
+    let img = await (await fetch(`${Sumi[0].thumbnail}`)).buffer()
+    let txt = `╭─⬣「 *Spotify Search* 」⬣\n`
+    for (let i = 0; i < Sumi.length; i++) {
+      txt += ` │  ≡◦ *🔢 Nro ∙* ${i + 1}\n`
+      txt += ` │  ≡◦ *🔍 Titulo ∙* ${Sumi[i].title}\n`
+      txt += ` │  ≡◦ *📚 Artista ∙* ${Sumi[i].artist}\n`
+      txt += ` │  ≡◦ *⛓ Url ∙* ${Sumi[i].url}\n`
+      txt += ` ╰──────────⬣`
+      txt += `\n`
+    }
 
-  if (!results || !results.data || results.data.tracks.length === 0)
-    return conn.reply(m.chat,"𝙽𝚘 𝚜𝚎 𝚎𝚗𝚌𝚘𝚗𝚝𝚛𝚊𝚛𝚘𝚗 𝚛𝚎𝚜𝚞𝚕𝚝𝚊𝚍𝚘𝚜, 𝚒𝚗𝚝𝚎𝚗𝚝𝚊 𝚌𝚘𝚗 𝚘𝚝𝚛𝚘 𝚝é𝚛𝚖𝚒𝚗𝚘 𝚍𝚎 𝚋ú𝚜𝚚𝚞𝚎𝚍𝚊.", m).then((_) => m.react("❌"));
+await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
+} catch {
+}}
+handler.help = ['spotifysearch <búsqueda>']
+handler.tags = ['search']
+handler.command = ['spotifysearch']
+handler.register = true
 
-  let txt = `*Ｓｐｏｔｉｆｙ-Ｓｅａｒｃｈ \n ⇄ Ⅰ<    ⅠⅠ    >Ⅰ   ↻*`;
-  for (let i = 0; i < (results.data.tracks.length >= 10 ? 10 : results.data.tracks.length); i++) {
-    const track = results.data.tracks[i];
-    txt += `\n\n`;
-    txt += `        ❧  *𝚃𝚒𝚝𝚞𝚕𝚘* : ${track.name}\n`;
-    txt += `        ❧  *𝙰𝚛𝚝𝚒𝚜𝚝𝚊* : ${track.artists}\n`;
-    txt += `        ❧  *Á𝚕𝚋𝚞𝚖* : ${track.album}\n`;
-    txt += `        ❧  *𝙻𝚒𝚗𝚔* : ${track.external_urls.spotify}\n`;
-  }
-
-  conn.reply(m.chat, txt, m, rcanal);
-};
-
-handler.help = ["spotifysearch"];
-handler.tags = ["search"];
-handler.command = /^(spotifysearch)$/i;
-
-export default handler;
+export default handler
