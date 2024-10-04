@@ -18,8 +18,8 @@ let handler = async (m, {conn, usedPrefix, text }) => {
    await conn.sendFile(m.chat, res[0].image, '', txt, m)
    await m.react('✅')
 }
-handler.help = ['ytsearch']
-handler.tags = ['search']
-handler.command = ['applesearch', 'applemusicsearch']
+//handler.help = ['ytsearch']
+//handler.tags = ['search']
+//handler.command = ['applesearch', 'applemusicsearch']
 handler.register = true 
 export default handler
