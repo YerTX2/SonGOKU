@@ -84,9 +84,8 @@ let handler = async (message, { conn, text }) => {
     }
 };
 
-handler.help = ['tiktokdl <url>'];
-handler.tags = ['downloader'];
-handler.command = ['tiktoksearch','tts','ttsearch'];
-handler.register = true
-
+handler.command = ['tts', 'tiktokvid', 'ttvid'];
+handler.help = ['tiktoksearch <texto>'];
+handler.registrado = true;
+handler.diamantes = 1;
 export default handler;
