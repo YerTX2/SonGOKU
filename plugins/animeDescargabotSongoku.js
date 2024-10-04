@@ -17,7 +17,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
         const file = File.fromURL(megaLink);
         await file.loadAttributes();
         if (file.size >= 300000000) return m.reply('Error: El archivo es grande (Máximo tamaño: 300MB)');
-        await conn.loadingMsg(m.chat, '💙 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼𝙉𝘿𝙊 𝙎𝙐 𝘼𝙉𝙄𝙈𝙀 \n ᴛᴇɴɢᴀ ᴇɴ ᴄᴜᴇɴᴛᴀ Qᴜᴇ ᴇʟ ᴠɪᴅᴇᴏ ᴅᴇ ʟᴏꜱ ᴀɴɪᴍᴇꜱ ᴇɴ ᴇꜱᴛʀᴇɴᴏ ꜱᴜ ᴠɪᴅᴇᴏ ꜱᴏʟᴏ ᴅᴜʀᴀ 3 ᴅɪᴀꜱ ᴅᴇɴᴛʀᴏ ᴅᴇ ʟᴀ ɴᴜʙᴇ ꜱᴇᴀ ʀᴀᴘɪᴅᴏ', `✅ ᴍᴀɴᴅᴀɴᴅᴏ ᴀʀᴄʜɪᴠᴏ`, [
+        await conn.loadingMsg(m.chat, '🐉 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼𝙉𝘿𝙊 𝙎𝙐 𝘼𝙉𝙄𝙈𝙀 \n ᴛᴇɴɢᴀ ᴇɴ ᴄᴜᴇɴᴛᴀ Qᴜᴇ ᴇʟ ᴠɪᴅᴇᴏ ᴅᴇ ʟᴏꜱ ᴀɴɪᴍᴇꜱ ᴇɴ ᴇꜱᴛʀᴇɴᴏ ꜱᴜ ᴠɪᴅᴇᴏ ꜱᴏʟᴏ ᴅᴜʀᴀ 3 ᴅɪᴀꜱ ᴅᴇɴᴛʀᴏ ᴅᴇ ʟᴀ ɴᴜʙᴇ ꜱᴇᴀ ʀᴀᴘɪᴅᴏ', `✅ ᴍᴀɴᴅᴀɴᴅᴏ ᴀʀᴄʜɪᴠᴏ`, [
             "▰▱▱▱▱ ᴄᴀʀɢᴀɴᴅᴏ ...",
             "▰▰▱▱▱ ᴄᴀʀɢᴀɴᴅᴏ ...",
             "▰▰▰▱▱ ᴄᴀʀɢᴀɴᴅᴏ ...",
