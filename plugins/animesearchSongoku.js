@@ -84,7 +84,7 @@ let handler = async (message, { conn, text }) => {
     }
 };
 
-handler.help = ['animedl <nombre>'];
+handler.help = ['animesearch <nombre>'];
 handler.tags = ['downloader'];
 handler.command = ['animeflvsearch', 'animeflv', 'animesearch'];
 handler.register = true;
