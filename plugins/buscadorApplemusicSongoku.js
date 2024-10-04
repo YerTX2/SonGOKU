@@ -4,7 +4,7 @@ let handler = async (m, {conn, text }) => {
   let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : ''
    if (!teks) throw `✳️ Introduce el nombre de la canción.`
    try {
-  let res = await fetch(global.API('https://eliasaryt-api-v8np.onrender.com', '/lyrics', { title: teks }))
+  let res = await fetch(global.API('https://eliasaryt-api-v8np.onrender.com/api/lyrics', { title: teks }))
   if (!res.ok) throw await res.text()
   let json = await res.json()
   if (!json.thumbnail.genius) throw json
