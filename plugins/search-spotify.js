@@ -18,9 +18,9 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
 } catch {
 }}
-handler.help = ['spotifysearch <búsqueda>']
-handler.tags = ['search']
-handler.command = ['spotifysearch']
-handler.register = true
+//handler.help = ['spotifysearch <búsqueda>']
+//handler.tags = ['search']
+//handler.command = ['spotifysearch']
+//handler.register = true
 
 export default handler
