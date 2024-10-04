@@ -47,7 +47,7 @@ let playlistId = isSpotifyUrl[0].split('/').pop()
 let playlistInfoByID = await infos.getPlaylist(playlistId)
 let tracks = playlistInfoByID.tracks.items
 let img = await (await fetch(`${playlistInfoByID.images[0].url}`)).buffer()
-let txt = `*°ᡣ𐭩 . ° 𝚂𝙿𝙾𝚃𝙸𝙵𝚈 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚂*\n\n`
+let txt = `*🇦🇱𝚂𝙿𝙾𝚃𝙸𝙵𝚈 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚂🇦🇱*\n\n`
     txt += `        ┈➤   *Playlist* : ${playlistInfoByID.name}\n`
     txt += `        ┈➤  *Tracks totales* : ${tracks.length}\n\n`
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
@@ -64,7 +64,7 @@ await m.react('✅')
 let searchTrack = await downloadTrack(text)
 let dlspoty = searchTrack.audioBuffer
 let img = await (await fetch(`${searchTrack.imageUrl}`)).buffer()
-let txt = `*°ᡣ𐭩 . ° S P O T I F Y  -  D O W N L O A D*\n\n`
+let txt = `*🇦🇱𝚂𝙿𝙾𝚃𝙸𝙵𝚈 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚂🇦🇱*\n\n`
     txt += `        ┈➤   *Título* : ${searchTrack.title}\n`
     txt += `        ┈➤   *Artista* : ${searchTrack.artists}\n`
     txt += `        ┈➤  *Duración* : ${searchTrack.duration}\n`
