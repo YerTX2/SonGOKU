@@ -26,7 +26,7 @@ let handler = async (message, { conn, text }) => {
         if (videos.length < 4) {
             return conn.reply(message.chat, ' *No se encontraron suficientes videos.*', message);
         }
-        const responseMessages = await Promise.all(videos.slice(0, 4).map(async (video) => {
+        const responseMessages = await Promise.all(videos.slice(0, 8).map(async (video) => {
             const videoMessage = await createVideoMessage(video.videoUrl);
             return {
                 body: proto.Message.InteractiveMessage.Body.fromObject({
