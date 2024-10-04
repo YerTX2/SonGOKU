@@ -1,5 +1,4 @@
-// EL CODIGO COMO LA API FUE ECHO POR GABRIEL CURI, SI VAS, USAR MIS PLUGINS DAME CREDITOS
-// DAME CREDITOS P NO SEAS LACRA :v
+
 import axios from 'axios';
 const baileys = (await import("@whiskeysockets/baileys")).default;
 const { proto } = baileys;
