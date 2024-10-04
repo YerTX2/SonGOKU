@@ -29,7 +29,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
 };
 
 handler.help = ["spotify <nombre de la canción>"];
-///handler.tags = ["search"];
-handler.command = /^(spotifysearch)$/i;
+handler.tags = ["search"];
+handler.command = /^(spotify)$/i;
 
 export default handler;
