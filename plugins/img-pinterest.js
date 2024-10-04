@@ -49,7 +49,7 @@ let handler = async (message, { conn, text }) => {
                                 text: ' `𝙋𝙄𝙉𝙏𝙀𝙍𝙀𝙎𝙏`'
                             }),
                             header: proto.Message.InteractiveMessage.Header.create({
-                                title: 'REM CHAM BOT',
+                                title: '孫ՏᴏɴᏀᴏᴋᴜ孫',
                                 hasMediaAttachment: false
                             }),
                             carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({
