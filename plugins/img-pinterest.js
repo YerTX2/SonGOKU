@@ -1,4 +1,4 @@
-// ESTE CODIGO FUE ECHO POR GABRIEL CURI, SI VAS USARLO DAME CREDITOS CRACK SALUDOS
+
 import axios from 'axios';
 const baileys = (await import("@whiskeysockets/baileys")).default;
 const { proto } = baileys;
