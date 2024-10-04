@@ -1,4 +1,4 @@
-// Este código fue por Gabriel Curi si vas a cargar mis plugis dame créditos crack Saludos
+
 import axios from 'axios';
 const baileys = (await import("@whiskeysockets/baileys")).default;
 const { proto } = baileys;
