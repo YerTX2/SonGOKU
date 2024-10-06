@@ -43,10 +43,8 @@ m.reply(`*[❗𝐈𝐍𝐅𝐎❗] 𝙑𝙐𝙀𝙇𝙑𝘼 𝘼 𝙄𝙉𝙏�
 console.log(e)}
 
 }
-handler.help = ['mediafire']
-handler.tags = ['descargas']
-handler.command = ['mediafire', 'mfire']
-handler.diamond = true
-handler.register = true
+handler.help = ['mediafire'].map(v => v + ' *<url>*')
+handler.tags = ["Descargas de archivos"]
+handler.command = ['mediafire', 'mdfire', 'mf']
 
 export default handler
