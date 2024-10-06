@@ -5,7 +5,7 @@ let result = await res.json();
 let { name, size, lastUpdate, icon } = result;
 let URL = result.dllink
 let packe = result.package
-let texto = `  ❯───「 𝗔𝗣𝗞 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 ՏᴏɴᏀᴏᴋᴜ 」───❮
+let texto = `  ❯───「 𝗔𝗣𝗞 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 」───❮
     🇦🇱 𝐍𝐨𝐦𝐛𝐫𝐞 : ⇢ ${name} 📩
     🇦🇱 𝐓𝐚𝐦𝐚𝐧̃𝐨 : ⇢ ${size} ⚖️
     🇦🇱 𝐏𝐚𝐜𝐤𝐚𝐠𝐞 : ⇢ ${packe} 📦
