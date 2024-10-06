@@ -1,5 +1,5 @@
-import axios from 'axios'
-import fetch from 'node-fetch'
+//import axios from 'axios'
+//import fetch from 'node-fetch'
 
 let handler = async (m, { conn, args, text, isPrems, isOwner, usedPrefix, command }) => {
   if (!args || !args[0]) return conn.reply(m.chat, `*• Ingresa un enlace Spotify*`, m)
@@ -58,9 +58,9 @@ await m.react('✅')
 } catch {
 await m.react('✖️')
 }}}}
-handler.tags = ['downloader']
-handler.help = ['spotifydl *<url spotify>*']
-handler.command = ['spotifydl']
+//handler.tags = ['downloader']
+//handler.help = ['spotifydl *<url spotify>*']
+//handler.command = ['spotifydl']
 //handler.limit = 1
 handler.register = true
 export default handler
