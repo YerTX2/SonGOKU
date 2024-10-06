@@ -43,7 +43,7 @@ await conn.sendMessage(m.chat, {
 await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n Duración ${vid.timestamp}`, m)
 await m.react('✅')
 } catch {
-await conn.reply(m.chat,`*☓ Ocurrió un error inesperado pesa más de 120MB use el comando ytmp4doc para descargar *`, m).then(_ => m.react('✖️'))
+await conn.reply(m.chat,`*☓ Ocurrió un error inesperado pesa más de 130MB use el comando ytmp4doc para descargar *`, m).then(_ => m.react('✖️'))
 //console.error(error)
 }}}
 handler.help = ['ytmp4 <yt url>']
