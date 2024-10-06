@@ -6,7 +6,7 @@ let limit = 130
 let handler = async (m, { conn, args, text, isPrems, isOwner, usedPrefix, command }) => {
 if (!args || !args[0]) return conn.reply(m.chat, `🐉 Escribe la URL de un video de YouTube que deseas descargar.`, m)
 if (!args[0].match(/youtu/gi)) return conn.reply(m.chat,`Verifica que la *URL* sea de YouTube`, m).then(_ => m.react('✖️'))
-let q = args[1] || '720p'
+let q = args[1] || '480p'
 
 await m.react('🕓')
 try {
