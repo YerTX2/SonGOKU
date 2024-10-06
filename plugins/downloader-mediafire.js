@@ -4,7 +4,7 @@ import cheerio from 'cheerio';
 import { mediafiredl } from '@bochilteam/scraper';
 
 const handler = async (m, { conn, args, usedPrefix, command }) => {
-  const limitMB = 200; // Límite de 200 MB
+  const limitMB = 800; // Límite de 800 MB
   const datas = global;
 
   if (!args[0]) throw `*🚀 Ingrese un enlace de MediaFire.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} https://www.mediafire.com/file/r0lrc9ir5j3e2fs/DOOM_v13_UNCLONE_`;
@@ -18,13 +18,13 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
 
     // Verificar si el tamaño del archivo supera los 200 MB
     if (fileSizeMB > limitMB) {
-      return m.reply(`*🚨 El archivo es demasiado grande (${resEX.filesize}), supera el límite de 200 MB.*`);
+      return m.reply(`*⚠️ El archivo es demasiado grande (${resEX.filesize}), supera el límite de 800 MB.*`);
     }
 
     const captionES = `_*MEDIAFIRE*_\n
-    ▢ *Nombre:*  ${resEX.filename}
-    ▢ *Tamaño:*  ${resEX.filesizeH}
-    ▢ *Extensión:* ${resEX.ext}\n\n
+    🇦🇱 *Nombre:*  ${resEX.filename}
+    🇦🇱 *Tamaño:*  ${resEX.filesizeH}
+    🇦🇱 *Extensión:* ${resEX.ext}\n\n
     *🚀 Se está enviando el archivo. espere...*`.trim();
     m.reply(captionES);
 
@@ -42,13 +42,13 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
 
       // Verificar si el tamaño del archivo supera los 200 MB
       if (fileSizeMB > limitMB) {
-        return m.reply(`*🚨 El archivo es demasiado grande (${size}), supera el límite de 200 MB.*`);
+        return m.reply(`*⚠️ El archivo es demasiado grande (${size}), supera el límite de 800 MB.*`);
       }
 
       const caption = `_*MEDIAFIRE*_\n
-      ▢ *Nombre:*  ${name}
-      ▢ *Tamaño:*  ${size}
-      ▢ *Extensión:* ${mime}\n\n
+      🇦🇱 *Nombre:*  ${name}
+      🇦🇱 *Tamaño:*  ${size}
+      🇦🇱 *Extensión:* ${mime}\n\n
       *🚀 Se está enviando el archivo. espere...*`.trim();
       await m.reply(caption);
       await conn.sendFile(m.chat, link, name, '', m, null, { mimetype: mime, asDocument: true });
