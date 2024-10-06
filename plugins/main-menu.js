@@ -16,7 +16,8 @@ let tags = {
   'tools': 'Herramientas',
   'nsfw': 'Nsfw', 
   'owner': 'Creador', 
-  'advanced': 'Avanzado', 
+  'advanced': 'Avanzado',
+  'descargas': 'descargas', 
   '+18': '+18',
   
 }
