@@ -17,7 +17,6 @@ let tags = {
   'nsfw': 'Nsfw', 
   'owner': 'Creador', 
   'advanced': 'Avanzado',
-  'descargas': 'descargas', 
   '+18': '+18',
   
 }
