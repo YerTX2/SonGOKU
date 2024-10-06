@@ -1,26 +1,23 @@
-import Starlights from "@StarlightsTeam/Scraper"
+let handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
+if (!args[0]) throw `\`\`\`[ 🌟 ] Ingresa el nombre de la aplicación que quieres descargar. Ejemplo:\n${usedPrefix + command} Clash Royale\`\`\``
+let res = await fetch(`https://api.dorratz.com/v2/apk-dl?text=${args[0]}`);
+let result = await res.json();
+let { name, size, lastUpdate, icon } = result;
+let URL = result.dllink
+let packe = result.package
+let texto = `  ❯───「 𝗔𝗣𝗞 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 」───❮
+    ✦ 𝐍𝐨𝐦𝐛𝐫𝐞 : ⇢ ${name} 📛
+    ✦ 𝐓𝐚𝐦𝐚𝐧̃𝐨 : ⇢ ${size} ⚖️
+    ✦ 𝐏𝐚𝐜𝐤𝐚𝐠𝐞 : ⇢ ${packe} 📦
+    ✦ 𝐀𝐜𝐭𝐮𝐚𝐥𝐢𝐳𝐚𝐝𝐨 : ⇢ ${lastUpdate} 🗓️
+    
+## Su aplicación se enviará en un momento POR FAVOR ESPERE . . .`
+await conn.sendFile(m.chat, icon, name + '.jpg', texto, m)
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) return conn.reply(m.chat, `*• Ingresa el nombre de la aplicación que deseas descargar.*\n\nEjemplo:\n*${usedPrefix + command}* WhatsApp`, m, rcanal)
-await m.react('🕓')
-try {
-let { name, packname, update, size, thumbnail, dl_url } = await Starlights.aptoide(text)
-if (size.includes('GB') || size.replace(' MB', '') > 300) { return await m.reply('El archivo pesa mas de 300 MB, se canceló la Descarga.')}
-let txt = `*乂  A P T O I D E  -  D O W N L O A D*\n\n`
-    txt += `        ✩   *Nombre* : ${name}\n`
-    txt += `        ✩   *Package* : ${packname}\n`
-    txt += `        ✩   *Update* : ${update}\n`
-    txt += `        ✩   *Peso* :  ${size}\n\n`
-    txt += `*- ↻ El archivo se esta enviando espera un momento, soy lenta. . .*`
-await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', txt, m, null, rcanal)
-await conn.sendMessage(m.chat, {document: { url: dl_url }, mimetype: 'application/vnd.android.package-archive', fileName: name + '.apk', caption: null }, {quoted: m})
-await m.react('✅')
-} catch {
-await m.react('✖️')
-}}
-handler.help = ['aptoide *<búsqueda>*']
-handler.tags = ['downloader']
-handler.command = ['aptoide', 'apk']
-handler.register = true 
-//handler.limit = 5
+await conn.sendMessage(m.chat, { document: { url: URL }, mimetype: 'application/vnd.android.package-archive', fileName: name + '.apk', caption: ''}, { quoted: m });
+}
+handler.command = ['apk', 'apkdl', 'modapk']
+handler.help = ['apkdl']
+handler.tags = ['descargas']
+handler.group = true 
 export default handler
