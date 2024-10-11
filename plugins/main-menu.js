@@ -33,7 +33,7 @@ const defaultMenu = {
 └➤孫ACTIVO: %uptime 
  %readmore
 `.trimStart(),
-  header: '`MENU X %category`\n\n╭── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ ',
+  header: '`✧͜͡҉MENU X %category⛤⃗͜ᬏ᭄`\n\n╭── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ ',
   body: '│ ⋆ ҈͜͡➳ %cmd*\n',
   footer: '╰── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ \n',
   after: '',
