@@ -24,7 +24,7 @@ let tags = {
 const defaultMenu = {
   before: `  
 ঔৣ͜͡SonGokuBOTꦽꦼᬏ
-💠 Github: github.com/YerTX2/SonGOKU 
+⸼݇҉ֻ᠂⃟🐉─➤Github: github.com/YerTX2/SonGOKU 
 ╭──────────────────✎
 ╰─➤INFO
 │㆒⸼݇҉ֻ᠂⃟🐉KI : %limit
