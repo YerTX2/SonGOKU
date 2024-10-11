@@ -23,7 +23,7 @@ let tags = {
 
 const defaultMenu = {
   before: `  
-> ঔৣ͜͡SonGokuBOTꦽꦼᬏ
+'`ঔৣ͜͡SonGokuBOTꦽꦼᬏ`
 ╭──────────────────✎
 ╰─➤INFO
 │KI : %limit
