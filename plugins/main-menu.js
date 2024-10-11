@@ -23,7 +23,7 @@ let tags = {
 
 const defaultMenu = {
   before: `  
->   ঔৣ͜͡SonGokuBOTꦽꦼᬏ
+> ঔৣ͜͡SonGokuBOTꦽꦼᬏ
 ╭──────────────────✎
 ╰─➤INFO
 │KI : %limit
@@ -34,7 +34,7 @@ const defaultMenu = {
  %readmore
 `.trimStart(),
   header: '`MENU X %category`\n\n╭── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ ',
-  body: '│ ⋆ ★%cmd*\n',
+  body: '│ ⋆ ҈͜͡➳ %cmd*\n',
   footer: '╰── ⋅ ⋅ ──孫ՏᴏɴᏀᴏᴋᴜ孫── ⋅ \n',
   after: '',
 }
