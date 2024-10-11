@@ -1,63 +1,34 @@
 import { canLevelUp, xpRange } from '../lib/levelling.js'
+import fetch from 'node-fetch'
+
 let handler = async (m, { conn }) => {
-          let name = conn.getName(m.sender)
-    let pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://i.ibb.co/1ZxrXKJ/avatar-contact.jpg')
+    let img = await (await fetch(`https://tinyurl.com/256luy5x`)).buffer()
+        let name = conn.getName(m.sender)
     let user = global.db.data.users[m.sender]
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
         let { min, xp, max } = xpRange(user.level, global.multiplier)
-        let txt = `
-┌───⊷ *NIVEL*
-▢ Nombre : *${name}*
-▢ Nivel : *${user.level}*
-▢ XP : *${user.exp - min}/${xp}*
-▢ Rango : *${user.role}*
-└──────────────
-
-Te falta *${max - user.exp}* de *XP* para subir de nivel
-`.trim()
-try {
-  let imgg = API('fgmods', '/api/maker/rank', {
-    username: name,
-    xp: user.exp - min,
-    exp: xp,
-    avatar: pp,
-    level: user.level,
-    ranklog: 'https://i.ibb.co/7gfnyMw/gold.png',
-    background: 'https://i.ibb.co/CsNgBYw/qiyana.jpg'
-}, 'apikey')
-
-    conn.sendFile(m.chat, imgg, 'level.jpg', txt, m)
-} catch (e) {
-    m.reply(txt)
-}
+        let txt = ` –  *L E V E L U P  -  U S E R*\n\n`
+            txt += `┌  🌀  *Nombre* : ${name}\n`
+            txt += `│  🌀  *Nivel* : ${user.level}\n`
+            txt += `└  🌀 *XP* : ${user.exp - min}/${xp}\n\n`
+            txt += `Te falta *${max - user.exp}* de *🌀 XP* para subir de nivel`
+await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
     }
     let before = user.level * 1
     while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
     if (before !== user.level) {
-            user.role = global.rpg.role(user.level).name
+       let txt = ` –  *L E V E L U P  -  U S E R*\n\n`
+           txt += `┌  ✩  *Nombre* : ${conn.getName(m.sender)}\n`
+           txt += `│  ✩  *Nivel Anterior* : ${before}\n`
+           txt += `└  ✩  *Nivel Actual* : ${user.level}\n\n`
+           txt += `⚔️ Cuanto más interactúes con *🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉*, mayor será tu Nivel ⬆️`
 
-        let str = `
-┌─⊷ *LEVEL UP*
-▢ Nivel anterior : *${before}*
-▢ Nivel actual : *${user.level}*
-▢ Rango : *${user.role}*
-└──────────────
-
-*_Cuanto más interactúes con los bots, mayor será tu nivel_*
-`.trim()
-        try {
-            let img = API('fgmods', '/api/maker/levelup', { 
-                avatar: pp 
-             }, 'apikey')
-      conn.sendFile(m.chat, img, 'levelup.jpg', str, m)
-        } catch (e) {
-            m.reply(str)
+await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
         }
     }
-}
-
 handler.help = ['levelup']
 handler.tags = ['rpg']
-handler.command = ['nivel', 'lvl', 'levelup', 'level'] 
 
+handler.command = ['nivel', 'lvl', 'levelup', 'level'] 
+handler.register = true 
 export default handler
