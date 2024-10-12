@@ -58,4 +58,3 @@ handler.tags = ["Descargas de archivos"]
 handler.command = ['mediafire', 'mdfire', 'mf']
 handler.premium = true
 
-export default handler
