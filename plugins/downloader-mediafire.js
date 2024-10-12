@@ -1,80 +1,61 @@
-import axios from 'axios';
-import fetch from 'node-fetch';
-import cheerio from 'cheerio';
-import { mediafiredl } from '@bochilteam/scraper';
+import fetch from 'node-fetch'
+import { mediafiredl } from '@bochilteam/scraper'
+import fg from 'api-dylux'
+let free = 150 // limite de descarga
+let prem = 300 //si su servidor tienes menos de 2GB baja el límite
+let handler = async (m, { conn, args, text, usedPrefix, command, isOwner, isPrems }) => {
 
-const handler = async (m, { conn, args, usedPrefix, command }) => {
-  const limitMB = 800; // Límite de 800 MB
-  const datas = global;
+   if (!args[0]) throw `✳️ Ingrese el link de mediafire junto al comando`
+    if (!args[0].match(/mediafire/gi)) throw `❎ Link incorrecto`
+    m.react(rwait)
 
-  if (!args[0]) throw `*🚀 Ingrese un enlace de MediaFire.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} https://www.mediafire.com/file/r0lrc9ir5j3e2fs/DOOM_v13_UNCLONE_`;
-
-  try {
-    await m.react('⏳'); // Reacción de espera
-    const resEX = await mediafiredl(args[0]);
-
-    // Convertir el tamaño a MB para verificar el límite
-    const fileSizeMB = parseFloat(resEX.filesize.replace('MB', '').trim());
-
-    // Verificar si el tamaño del archivo supera los 200 MB
-    if (fileSizeMB > limitMB) {
-      return m.reply(`*⚠️ El archivo es demasiado grande (${resEX.filesize}), supera el límite de 800 MB.*`);
-    }
-
-    const captionES = `_*MEDIAFIRE*_\n
-    🇦🇱 *Nombre:*  ${resEX.filename}
-    🇦🇱 *Tamaño:*  ${resEX.filesizeH}
-    🇦🇱 *Extensión:* ${resEX.ext}\n\n
-    *🚀 Se está enviando el archivo. espere...*`.trim();
-    m.reply(captionES);
-
-    await conn.sendFile(m.chat, resEX.url, resEX.filename, '', m, null, { mimetype: resEX.ext, asDocument: true });
-    await m.react('✅'); // Reacción de éxito
-
-  } catch {
+    let limit = isPrems || isOwner ? prem : free
+        let u = /https?:\/\//.test(args[0]) ? args[0] : 'https://' + args[0]
+    let ss = await (await fetch(global.API('nrtm', '/api/ssweb', { delay: 1000, url: u }))).buffer()
     try {
-      await m.react('⏳'); // Reacción de espera
-      const res = await mediafireDl(args[0]);
-      const { name, size, mime, link } = res;
-
-      // Convertir el tamaño a MB para verificar el límite
-      const fileSizeMB = parseFloat(size.replace('MB', '').trim());
-
-      // Verificar si el tamaño del archivo supera los 200 MB
-      if (fileSizeMB > limitMB) {
-        return m.reply(`*⚠️ El archivo es demasiado grande (${size}), supera el límite de 800 MB.*`);
-      }
-
-      const caption = `_*MEDIAFIRE*_\n
-      🇦🇱 *Nombre:*  ${name}
-      🇦🇱 *Tamaño:*  ${size}
-      🇦🇱 *Extensión:* ${mime}\n\n
-      *🚀 Se está enviando el archivo. espere...*`.trim();
-      await m.reply(caption);
-      await conn.sendFile(m.chat, link, name, '', m, null, { mimetype: mime, asDocument: true });
-      await m.react('✅'); // Reacción de éxito
+    let res = await mediafiredl(args[0])
+    let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
+    let isLimit = limit * 1024 < filesize
+    let caption = `
+   ≡ *MEDIAFIRE*
+▢ *Nombre:* ${filename}
+▢ *Tamaño:* ${filesizeH}
+▢ *Extension:* ${ext}
+▢ *Subido:* ${aploud}
+${isLimit ? `\n▢ El archivo supera el límite de descarga *+${free} MB*\nPásate a premium para poder descargar archivos más de *${prem} MB*` : ''} 
+`.trim()
+    await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)  
+    if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
+    m.react(done)
 
     } catch {
-      await m.reply('Hubo un error en la descarga.');
-      await m.react('❌'); // Reacción de error
-    }
-  }
-};
 
+        try {
+        let res = await fg.mediafireDl(args[0])
+     let { url, url2, filename, ext, upload_date, filesize, filesizeB } = res
+    let isLimit = limit * 1024 < filesizeB
+    let caption = `
+   ≡ *MEDIAFIRE*
+▢ *Nombre:* ${filename}
+▢ *Tamaño:* ${filesize}
+▢ *Extension:* ${ext}
+▢ *Subido:* ${upload_date}
+${isLimit ? `\n▢ El archivo supera el límite de descarga *+${free} MB*\nPásate a premium para poder descargar archivos más de *${prem} MB*` : ''} 
+`.trim()
+
+await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
+if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
+    m.react(done)
+} catch {
+    m.reply(`Error: intenta con otro link`)
+}
+
+  }
+
+}
 handler.help = ['mediafire'].map(v => v + ' *<url>*')
 handler.tags = ["Descargas de archivos"]
 handler.command = ['mediafire', 'mdfire', 'mf']
-handler.premium = true 
+handler.premium = true
 
 export default handler
-async function mediafireDl(url) {
-  const res = await axios.get(`https://www-mediafire-com.translate.goog/${url.replace('https://www.mediafire.com/', '')}?_x_tr_sl=en&_x_tr_tl=fr&_x_tr_hl=en&_x_tr_pto=wapp`);
-  const $ = cheerio.load(res.data);
-  const link = $('#downloadButton').attr('href');
-  const name = $('body > main > div.content > div.center > div > div.dl-btn-cont > div.dl-btn-labelWrap > div.promoDownloadName.notranslate > div').attr('title').replaceAll(' ', '').replaceAll('\n', '');
-  const size = $('#downloadButton').text().replace('Download', '').replace('(', '').replace(')', '').replace('\n', '').replace('\n', '').replace('                         ', '').replaceAll(' ', '');
-  let mime = '';
-  const rese = await axios.head(link);
-  mime = rese.headers['content-type'];
-  return { name, size, mime, link };
-}
