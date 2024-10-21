@@ -27,12 +27,3 @@ handler.command = ['tiktok', 'ttdl', 'tiktokdl', 'tiktoknowm']
 handler.register = true
 
 export default handler
-
-function convertBytesToMB(bytes) {
-    return (bytes / (1024 * 1024)).toFixed(2) + ' MB'
-}
-
-function formatDate(unixTimestamp) {
-    const date = new Date(unixTimestamp * 1000)
-    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
-}
