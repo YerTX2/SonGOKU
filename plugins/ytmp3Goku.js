@@ -40,14 +40,6 @@ await conn.sendMessage(m.chat, {
         mimetype: 'audio/mp4', 
       }, { quoted: m });
 }
-
-    await conn.sendMessage(m.chat, doc, { quoted: m });
-    await m.react("✅");
-  } catch (error) {
-    console.error(error);
-    await conn.reply(m.chat, `${global.error}`, m).then(_ => m.react('❌'));
-  }
-};
 handler.help = ['ytmp3 <yt url>']
 handler.tags = ['downloader']
 handler.command = ['ytmp3', 'yta']
