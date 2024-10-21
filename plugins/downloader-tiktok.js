@@ -1,69 +1,26 @@
-import Scraper from '@SumiFX/Scraper'
-import axios from 'axios'
-import fetch from 'node-fetch'
+const axios = require('axios');
 
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0])  m.reply(`🔍 Ingresa un enlace del vídeo de TikTok junto al comando.\n\nEjemplo:\n${usedPrefix + command} https://vm.tiktok.com/ZMMCYHnxf/`)
+async function ttsanzy(url) {
+  try {
+    const response = await axios.post('https://tikdown.xyz/api/download', {
+      url: url
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36',
+        'Referer': 'https://tikdown.xyz/'
+      }
+    });
 
-    try {
-        let { title, published, quality, likes, commentCount, shareCount, views, dl_url } = await Scraper.tiktokdl(args[0])
-            let txt = `╭─⬣「 *TikTok Download* 」⬣\n`
-                txt += `│  ≡◦ *🔍 Título* : ${title}\n`
-                txt += `│  ≡◦ *📅 Publicado* : ${published}\n`
-                txt += `│  ≡◦ *🪴 Calidad* : ${quality}\n`
-                txt += `│  ≡◦ *👍 Likes* : ${likes}\n`
-                txt += `│  ≡◦ *🗣 Comentarios* : ${commentCount}\n`
-                txt += `│  ≡◦ *💫 Share* : ${shareCount}\n`
-                txt += `│  ≡◦ *📹 Visitas* : ${views}\n`
-                txt += `╰─⬣`
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching TikTok video:', error);
+    throw error;
+  }
+}
 
-        await conn.sendMessage(m.chat, { video: { url: dl_url }, caption: txt }, { quoted: m })
-    } catch {
-    try {
-        const api = await fetch(`https://tikdown.xyz/api/download'`)
-        const data = await api.json()
 
-        if (data.status) {
-            const { author, view, comment, play, share, download, duration, title, video } = data.data;
-            let txt = `╭─⬣「 *TikTok Download* 」⬣\n`
-                txt += `│  ≡◦ *🔍 Título* : ${title}\n`
-                txt += `│  ≡◦ *📚 Autor* : ${author.nickname}\n`
-                txt += `│  ≡◦ *🕜 Duración* : ${duration} Segundos\n`
-                txt += `│  ≡◦ *🌵 Descargas* : ${download}\n`
-                txt += `│  ≡◦ *🗣 Comentarios* : ${comment}\n`
-                txt += `│  ≡◦ *💫 Share* : ${share}\n`
-                txt += `│  ≡◦ *🌀 Visitas* : ${play}\n`
-                txt += `╰─⬣`
-
-            await conn.sendMessage(m.chat, { video: { url: video }, caption: txt }, { quoted: m })
-        }
-    } catch {
-    try {
-        const api1 = await fetch(`https://delirius-api-oficial.vercel.app/api/tiktok?url=${args[0]}`)
-        const data1 = await api1.json()
-
-        if (data1.status) {
-            const { author, repro, like, share, comment, download, duration, title, meta, published } = data1.data
-            const publishedDate = formatDate(published)
-            const fileSize = convertBytesToMB(meta.media[0].size_org)
-
-            let txt = `╭─⬣「 *TikTok Download* 」⬣\n`
-                txt += `│  ≡◦ *🔍 Título* : ${title}\n`
-                txt += `│  ≡◦ *👥 Autor* : ${author.nickname}\n`
-                txt += `│  ≡◦ *🕜 Duración* : ${duration} Segundos\n`
-                txt += `│  ≡◦ *📹 Reproducciones* : ${repro}\n`
-                txt += `│  ≡◦ *👍 Likes* : ${like}\n`;
-                txt += `│  ≡◦ *🗣 Comentarios* : ${comment}\n`
-                txt += `│  ≡◦ *📦 Descargas* : ${download}\n`
-                txt += `│  ≡◦ *💫 Share* : ${share}\n`
-                txt += `│  ≡◦ *📅 Publicado* : ${publishedDate}\n`
-                txt += `│  ≡◦ *🌵 Tamaño* : ${fileSize}\n`
-                txt += `╰─⬣`
-
-            await conn.sendMessage(m.chat, { video: { url: meta.media[0].org }, caption: txt }, { quoted: m })
-        }
-    } catch {
-}}}}
+return ttsanzy('https://vt.tiktok.com/ZSje1Vkup/')
 handler.help = ['tiktok <url tt>']
 handler.tags = ['downloader']
 handler.command = ['tiktok', 'ttdl', 'tiktokdl', 'tiktoknowm']
