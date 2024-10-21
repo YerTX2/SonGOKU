@@ -1,57 +1,45 @@
 
-import axios from "axios";
-import fs from "fs";
-import { pipeline } from "stream";
-import { promisify } from "util";
-import os from "os";
+import yts from 'yt-search';
+import axios from 'axios';
+import fetch from "node-fetch"
 
-let streamPipeline = promisify(pipeline);
+const handler = async (m, { text, usedPrefix, command, conn }) => {
+    if (!text) {
+      throw m.reply("✧ Ingresa una consulta de *YouTube*");
+    }
+    let res = await yts(text);
+    let videoList = res.all;
+    let videos = videoList[0];
 
-let handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) return conn.reply(m.chat, `*_々 Ingresa un enlace de YouTube*\n\n*ejemplo:*\n${usedPrefix + command} https://youtu.be/w_ufjahQlyw?si=jMBHaX8SgkNdcG2v`, m);
 
-  try {
-    let videoUrl = text; 
-    let apiUrl = `https://rembotapi.vercel.app/api/yt?url=${encodeURIComponent(videoUrl)}`;
-
-    let response = await axios.get(apiUrl);
-    let data = response.data;
-
-    if (!data.status) throw new Error("Error al obtener datos del video");
-
-    let { title, thumbnail, audioUrl } = data.data;
-    await m.react("⏱");
-
-    let tmpDir = os.tmpdir();
-    let fileName = `${title}.mp3`;
-    let filePath = `${tmpDir}/${fileName}`;
-
-    let audioResponse = await axios({
-      url: audioUrl,
-      method: 'GET',
-      responseType: 'stream'
+async function ytdl(url) {
+    const response = await fetch('https://shinoa.us.kg/api/download/ytdl', {
+        method: 'POST',
+        headers: {
+            'accept': '*/*',
+            'api_key': 'free',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            text: url
+        })
     });
 
-    let writableStream = fs.createWriteStream(filePath);
-    await streamPipeline(audioResponse.data, writableStream);
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
 
-    let doc = {
-      audio: {
-        url: filePath,
-      },
-      mimetype: "audio/mp4",
-      fileName: `${title}`,
-      contextInfo: {
-        externalAdReply: {
-          showAdAttribution: true,
-          mediaType: 2,
-          mediaUrl: videoUrl,
-          title: title,
-          sourceUrl: videoUrl,
-          thumbnail: await (await conn.getFile(thumbnail)).data,
-        },
-      },
-    };
+    const data = await response.json();
+    return data;
+}
+
+let data_play = await ytdl(videos.url)
+console.log(data_play)
+await conn.sendMessage(m.chat, { 
+        audio: { url: data_play.data.mp3 }, 
+        mimetype: 'audio/mp4', 
+      }, { quoted: m });
+}
 
     await conn.sendMessage(m.chat, doc, { quoted: m });
     await m.react("✅");
