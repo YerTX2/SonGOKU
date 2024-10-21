@@ -20,7 +20,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         await conn.sendMessage(m.chat, { video: { url: dl_url }, caption: txt }, { quoted: m })
     } catch {
     try {
-        const api = await fetch(`https://api-starlights-team.koyeb.app/api/tiktok?url=${args[0]}`)
+        const api = await fetch(`https://tikdown.xyz/api/download'`)
         const data = await api.json()
 
         if (data.status) {
