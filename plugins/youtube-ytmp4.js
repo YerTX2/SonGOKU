@@ -1,8 +1,8 @@
-case 'ytmp4': {
+case 'play2': {
 const yts = require("youtube-yts");
 if (global.db.data.users[m.sender].registered < true) return reply(info.registra);
 if (!isGroupAdmins) return;
-if (!text) return conn.sendMessage(from, { text: `*🚩 ${lenguaje.sms.text}*\n${prefix + command} Paulo londra` }, { quoted: msg });
+if (!text) return conn.sendMessage(from, { text: `*🚩 ${lenguaje.sms.text}*\n${prefix + command} ozuna` }, { quoted: msg });
 m.react("⌛");
 const videoSearch = await yts(text);
 if (!videoSearch.all.length) {
