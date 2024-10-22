@@ -9,7 +9,7 @@ const handler = async (m, {conn, text, args, usedPrefix, command}) => {
 //m.react('🕒') 
   if (!text) return m.reply(`✧ Te falto el enlace de algun video de tiktok`);
   if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) if (!text) return m.reply(`✧ Te falto el enlace de algun video de tiktok`);
-  const texto = `_👾 @${m.sender.split`@`[0]} ;
+  const texto = `hola' @${m.sender.split`@`[0]} ;
   // let buttons = [{ buttonText: { displayText: '♫ 𝙰𝚄𝙳𝙸𝙾 ♫' }, buttonId: `${usedPrefix}tomp3` }]
   try {
 m.react('🕒') 
@@ -26,13 +26,13 @@ m.react('🕒')
     //await conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id, mentions: [m.sender]});
     const dataF = await tiktok.v1(args[0]);
     // let desc1 =  `*𝙽𝙸𝙲𝙺𝙽𝙰𝙼𝙴:* ${dataF.nickname || 'Indefinido'}`
-    const desc1 = ``;
+    const desc1 = `hola`;
     await conn.sendMessage(m.chat, {video: {url: dataF.play}, caption: desc1}, {quoted: fkontak});
   } catch (e1) {
     try {
       const tTiktok = await tiktokdlF(args[0]);
       // let desc2 = `🔗 *Url:* ${tTiktok.video}`
-      const desc2 = ``;
+      const desc2 = `hola`;
       await conn.sendMessage(m.chat, {video: {url: tTiktok.video}, caption: desc2}, {quoted: fkontak});
     } catch (e2) {
       try {
