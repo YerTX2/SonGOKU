@@ -1,26 +1,50 @@
-import { promises } from 'fs'
-import { join } from 'path'
-import fetch from 'node-fetch'
-import { xpRange } from '../lib/levelling.js'
+import ws from 'ws';
 
-let tags = {
-  'main': 'Info',
-  'serbot': 'Sub Bots',
-  'rpg': 'RPG',
-  'rg': 'Registro',
-  'sticker': 'Stickers',
-  'img': 'Imágenes',
-  'group': 'Grupos',
-  'logo': 'Logo',
-  'nable': 'On/Off', 
-  'tools': 'Herramientas',
-  'nsfw': 'Nsfw', 
-  'owner': 'Creador', 
-  'advanced': 'Avanzado',
-  '+18': '+18',
-  
-}
+let handler = async (m, { conn, usedPrefix, text, args, command }) => {
+    let uniqueUsers = new Map();
 
+/*    global.conns.forEach((conn) => {
+        if (conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED) {
+            uniqueUsers.set(conn.user.jid, conn);
+        }
+    });*/
+
+    let users = [...uniqueUsers.values()];
+    let totalUsers = users.length;
+    let totalusr = Object.keys(global.db.data.users).length;
+    let rtotal = Object.entries(global.db.data.users).length || '0'
+    let _uptime = process.uptime() * 1000;
+    let uptime = clockString(_uptime);
+    let username = conn.getName(m.sender);
+    let locale = 'es';
+    let d = new Date(new Date + 3600000);
+    let time = d.toLocaleTimeString(locale, {
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric'
+    });
+
+/*    let sbot =
+        conn.user.jid == global.conn.user.jid
+        ? "`ʙᴏᴛ ::` Principal"
+        : "`ꜱᴜʙʙᴏᴛ ᴅᴇ ::`" + `  Wa.me/${global.conn.user.jid.split`@`[0]}`;*/
+
+/*    global.fcontact = {
+        key: {
+            fromMe: false,
+            participant: `0@s.whatsapp.net`,
+            remoteJid: "status@broadcast",
+        },
+        message: {
+            contactMessage: {
+                displayName: ``,
+                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${username}\nitem1.TEL;waid=${m.sender.split("@")[0]}:${m.sender.split("@")[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
+            },
+        },
+    };*/
+
+    let totalreg = Object.keys(global.db.data.users).length;
+    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length;
 
     m.react("🇦🇱");
     let menu = ``;
@@ -36,13 +60,7 @@ let tags = {
     txt += '`ᴠᴇʀɪꜰɪᴄᴀᴅᴏꜱ ::`' + ` ${rtotalreg}\n`;
     txt += '`ᴀᴄᴛɪᴠᴏ ::`' + ` ${uptime}\n`;
     txt += "ᴄᴏɴᴛᴀᴄᴛᴏ ::` #owner\n\n";
- %readmore
-
-let handler = async (m, { conn, usedPrefix, text, args, command }) => {
-    let uniqueUsers = new Map();
-
-
-      
+    
     let listSections = [];
 
         listSections.push({
@@ -120,3 +138,43 @@ handler.command = ["menu", "help", "menú"];
 handler.tags = ['menu'];
 handler.help = ['menu'];
 export default handler;
+
+
+function clockString(ms) {
+  const h = Math.floor(ms / 3600000);
+  const m = Math.floor(ms / 60000) % 60;
+  const s = Math.floor(ms / 1000) % 60;
+  console.log({ ms, h, m, s });
+  return [h, m, s].map((v) => v.toString().padStart(2, 0)).join(":");
+}
+
+
+  var ase = new Date();
+  var hour = ase.getHours();
+switch(hour){
+  case 0: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌙'; break;
+  case 1: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 💤'; break;
+  case 2: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🦉'; break;
+  case 3: hour = 'Bᴜᴇɴᴏs Dɪᴀs ✨'; break;
+  case 4: hour = 'Bᴜᴇɴᴏs Dɪᴀs 👾'; break;
+  case 5: hour = 'Bᴜᴇɴᴏs Dɪᴀs 🌅'; break;
+  case 6: hour = 'Bᴜᴇɴᴏs Dɪᴀs 🌄'; break;
+  case 7: hour = 'Bᴜᴇɴᴏs Dɪᴀs 🌅'; break;
+  case 8: hour = 'Bᴜᴇɴᴏs Dɪᴀs 👾'; break;
+  case 9: hour = 'Bᴜᴇɴᴏs Dɪᴀs ✨'; break;
+  case 10: hour = 'Bᴜᴇɴᴏs Dɪᴀs 🌞'; break;
+  case 11: hour = 'Bᴜᴇɴᴏs Dɪᴀs 🌨'; break;
+  case 12: hour = 'Bᴜᴇɴᴏs Dɪᴀs ❄'; break;
+  case 13: hour = 'Bᴜᴇɴᴏs Dɪᴀs 🌤'; break;
+  case 14: hour = 'Bᴜᴇɴᴀs Tᴀʀᴅᴇs 🌇'; break;
+  case 15: hour = 'Bᴜᴇɴᴀs Tᴀʀᴅᴇs 🥀'; break;
+  case 16: hour = 'Bᴜᴇɴᴀs Tᴀʀᴅᴇs 🌹'; break;
+  case 17: hour = 'Bᴜᴇɴᴀs Tᴀʀᴅᴇs 🌆'; break;
+  case 18: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌙'; break;
+  case 19: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌃'; break;
+  case 20: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌌'; break;
+  case 21: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌃'; break;
+  case 22: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌙'; break;
+  case 23: hour = 'Bᴜᴇɴᴀs Nᴏᴄʜᴇs 🌃'; break;
+}
+  var greeting = hour;
