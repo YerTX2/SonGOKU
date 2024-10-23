@@ -1,4 +1,4 @@
-import ws from 'ws';
+import ws from 'fs';
 
 let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     let uniqueUsers = new Map();
