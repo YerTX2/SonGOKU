@@ -34,12 +34,7 @@ const defaultMenu = {
  ㆒⸼݇҉ֻ᠂⃟🐉ACTIVO: %uptime 
  %readmore
 `.trimStart(),
-  header: '`✧͜͡҉MENU %category⛤⃗͜ᬏ᭄`\n\n┌─⋅☆·̇·̣̇̇·̣̣̇·̣̇̇·̇⸼݇҉ֻ᠂⃟🐉୨୧┈┈┈୨୧⸼݇҉ֻ᠂⃟🐉·̇·̣̇̇·̣̣̇·̣̇̇☆─⋅┐',
-  body: '│ ⋆ ҈͜͡➳ %cmd*\n',
-  footer: '└─⋅☆·̇·̣̇̇·̣̣̇·̣̇̇·̇⸼݇҉ֻ᠂⃟🐉୨୧┈┈┈୨୧⸼݇҉ֻ᠂⃟🐉·̇·̣̇̇·̣̣̇·̣̇̇☆─⋅┘\n',
-  after: '',
-}
-
+  
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
