@@ -21,7 +21,7 @@ let tags = {
 'menulista': 'menulista' 
   
 }
-⸼݇҉ֻ᠂⃟🐉─➤Github: github.com/YerTX2/SonGOKU 
+text:⸼݇҉ֻ᠂⃟🐉─➤Github: github.com/YerTX2/SonGOKU 
 ╭──────────────────✎
 ╰─➤INFO
 │㆒⸼݇҉ֻ᠂⃟🐉KI : %limit
