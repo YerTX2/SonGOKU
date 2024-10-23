@@ -32,7 +32,7 @@ const defaultMenu = {
 │㆒⸼݇҉ֻ᠂⃟🐉Exp : %totalexp
 │㆒⸼݇҉ֻ᠂⃟🐉Nivel : %level
 ╰─────➤☆ۣۜۜ͜͡%name𖣘⃟ᗒ  
- ㆒⸼݇҉ֻ᠂⃟🐉ACTIVO: %uptime 
+ ㆒⸼݇҉ֻ᠂⃟🐉ACTIVO: %uptime} 
  
 
 
