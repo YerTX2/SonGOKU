@@ -17,14 +17,64 @@ const defaultMenu = {
 │㆒⸼݇҉ֻ᠂⃟🐉Nivel : %level
 ╰─────➤☆ۣۜۜ͜͡%name𖣘⃟ᗒ  
  ㆒⸼݇҉ֻ᠂⃟🐉ACTIVO: %uptime 
- %readmore
-`.trimStart(),
-  header: '`%⛤⃗͜ᬏ᭄`\n\n┌─⋅☆·̇·̣̇̇·̣̣̇·̣̇̇·̇⸼݇҉ֻ᠂⃟🐉୨୧┈┈┈୨୧⸼݇҉ֻ᠂⃟🐉·̇·̣̇̇·̣̣̇·̣̇̇☆─⋅┐',
-  body: '│ ⋆ ҈͜͡➳ \n',
-  footer: '└─⋅☆·̇·̣̇̇·̣̣̇·̣̇̇·̇⸼݇҉ֻ᠂⃟🐉୨୧┈┈┈୨୧⸼݇҉ֻ᠂⃟🐉·̇·̣̇̇·̣̣̇·̣̇̇☆─⋅┘\n',
-  after: '1',
-}
 
+    let listSections = [];
+
+        listSections.push({
+        title: `🔖 SELECCIÓNA LO QUE NECESITES`, highlight_label: `Popular 複|ᴋᴜʀᴜᴍɪᏴo͢Ꭲツ`,
+        rows: [
+            {
+                header: "AUTO VERIFICAR ✅",
+                title: "",
+                description: `Verificacion Automáticamente`,
+                id: `.reg Kurumi.18`,
+            },
+            {
+                header: "MENU COMPLETO 🇦🇱",
+                title: "",
+                description: `𝘮𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘤𝘰𝘮𝘱𝘭𝘦𝘵𝘰`,
+                id: `.allmenu`,
+            }, 
+            
+          
+            {
+                header: "MENU DESCARGAS 📥",
+                title: "",
+                description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘥𝘦 𝘥𝘦𝘴𝘤𝘢𝘳𝘨𝘢𝘴`,
+                id: `${usedPrefix}menudl`,
+            },
+             {
+                header: "MENU  GRUPO👥",
+                title: "",
+                description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘥𝘦 grupos`,
+                id: `${usedPrefix}menugrupo`,
+            }, 
+             {
+                header: "MENU SEARCH",
+                title: "",
+                description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘥𝘦 SEARCH`,
+                id: `${usedPrefix}menusearch`,
+            },
+             {
+                header: "MENU NSFW 🔞",
+                title: "",
+                description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘦𝘭 𝘮𝘦𝘯𝘶 𝘤𝘢𝘭𝘪𝘦𝘯𝘵𝘦`,
+                id: `${usedPrefix}labiblia`,
+            },
+            {
+                header: "REDES 🇦🇱",
+                title: "",
+                description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘭𝘢𝘴 𝘳𝘦𝘥𝘦𝘴 𝘥𝘦𝘭 𝘣𝘰𝘵`,
+                id: `${usedPrefix}redes`,
+            },
+            {
+                header: "GRUPOS 🌟",
+                title: "",
+                description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘭𝘰𝘴 𝘨𝘳𝘶𝘱𝘰𝘴 𝘥𝘦𝘭 𝘣𝘰𝘵`,
+                id: `${usedPrefix}grupos`,
+            },
+        ],
+    });
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
