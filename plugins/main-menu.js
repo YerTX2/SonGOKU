@@ -47,20 +47,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length;
 
     m.react("🇦🇱");
-    let menu = ``;
-
-    let txt = ""
-    txt += '`ᴄʀᴇᴀᴅᴏʀ ::`' + ` YerTX2\n`;
-    txt += '`ʙᴏᴛ ::`' + ` 複|ᴋᴜʀᴜᴍɪᏴo͢Ꭲツ\n`;
-    txt += '`ꜰᴇᴄʜᴀ ::`' + ` ${fecha}\n`;
-    txt += '`ᴠᴇʀꜱɪᴏɴ ::`' + ` ${vs}\n`;
-//    txt += `${sbot}\n`;
-    txt += '`ᴘʀᴇꜰɪᴊᴏ ::`' + ` [  ${usedPrefix}  ]\n`;
-    txt += '`ᴜꜱᴜᴀʀɪᴏꜱ ::`' + ` ${rtotal}\n`;
-    txt += '`ᴠᴇʀɪꜰɪᴄᴀᴅᴏꜱ ::`' + ` ${rtotalreg}\n`;
-    txt += '`ᴀᴄᴛɪᴠᴏ ::`' + ` ${uptime}\n`;
-    txt += "ᴄᴏɴᴛᴀᴄᴛᴏ ::` #owner\n\n";
-    
+ 
     let listSections = [];
 
         listSections.push({
