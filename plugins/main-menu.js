@@ -21,10 +21,6 @@ let tags = {
 'menulista': 'menulista' 
   
 }
-
-const defaultMenu = {
-  before: `  
-ঔৣ͜͡SonGokuBOTꦽꦼᬏ
 ⸼݇҉ֻ᠂⃟🐉─➤Github: github.com/YerTX2/SonGOKU 
 ╭──────────────────✎
 ╰─➤INFO
@@ -32,7 +28,7 @@ const defaultMenu = {
 │㆒⸼݇҉ֻ᠂⃟🐉Exp : %totalexp
 │㆒⸼݇҉ֻ᠂⃟🐉Nivel : %level
 ╰─────➤☆ۣۜۜ͜͡%name𖣘⃟ᗒ  
- ㆒⸼݇҉ֻ᠂⃟🐉ACTIVO: %uptime} 
+ ㆒⸼݇҉ֻ᠂⃟🐉ACTIVO: %uptime
  
 
 
