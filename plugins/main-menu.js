@@ -39,3 +39,12 @@ const defaultMenu = {
   footer: '└─⋅☆·̇·̣̇̇·̣̣̇·̣̇̇·̇⸼݇҉ֻ᠂⃟🐉୨୧┈┈┈୨୧⸼݇҉ֻ᠂⃟🐉·̇·̣̇̇·̣̣̇·̣̇̇☆─⋅┘\n',
   after: '',
 }
+
+
+
+
+handler.help = ['menu']
+handler.tags = ['main']
+handler.command = ['menu', 'help','goku', 'menú'] 
+handler.register = true 
+export default handler
