@@ -2,13 +2,7 @@ import yts from 'yt-search';
 
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     if (!text) {
-        return conn.reply(m.chat, '*Que quieres que busque 🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉*', m);
-    }
-
-    await m.react('⏳');
-    let res = await yts(text);
-    let play = res.videos[0];
-
+        
     if (!menu) {
         throw `Error: Vídeo no encontrado`;
     }
