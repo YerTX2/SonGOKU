@@ -1,44 +1,40 @@
+import fetch from 'node-fetch' 
+let limit = 100
 
-import yts from 'yt-search';
-import axios from 'axios';
-import fetch from "node-fetch"
+let handler = async (m, { conn, args, text, isPrems, isOwner, usedPrefix, command }) => {
+if (!args[0]) return conn.reply(m.chat, '[ ✰ ] Ingresa el enlace del vídeo de *YouTube* junto al comando.\n\n`» Ejemplo :`\n' + `> *${usedPrefix + command}* https://youtu.be/QSvaCSt8ixs`, m, rcanal)
 
-const handler = async (m, { text, usedPrefix, command, conn }) => {
-    if (!text) {
-      throw m.reply("✧ Ingresa una consulta de *YouTube*");
-    }
-    let res = await yts(text);
-    let videoList = res.all;
-    let videos = videoList[0];
+await m.react('🕓')
+try {
+let { title, duration, size, thumbnail, dl_url } = await Starlights.ytmp3v2(args[0])
 
+let img = await (await fetch(`${thumbnail}`)).buffer()
+if (size.split('MB')[0] >= limit) return conn.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m, rcanal).then(_ => m.react('✖️'))
+        let txt = '` M P 3`\n\n'
+       txt += `        ✩   *Titulo* : ${title}\n`
+       txt += `        ✩   *Duración* : ${duration}\n`
+       txt += `        ✩   *Tamaño* : ${size}\n\n`
+       txt += `> *- .*`
+await conn.sendMessage(m.chat, {image: img, caption: txt }, {quoted: m})
+await conn.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })
+await m.react('✅')
+} catch {
+try {
+let { title, size, quality, thumbnail, dl_url } = await Starlights.ytmp3(args[0])
 
-async function ytdl(url) {
-    const response = await fetch('https://shinoa.us.kg/api/download/ytdl', {
-        method: 'POST',
-        headers: {
-            'accept': '*/*',
-            'api_key': 'free',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            text: url
-        })
-    });
-
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    return data;
-}
-
-let data_play = await ytdl(videos.url)
-console.log(data_play)
-await conn.sendMessage(m.chat, { 
-        audio: { url: data_play.data.mp3 }, 
-        mimetype: 'audio/mp4', 
-      }, { quoted: m });
+let img = await (await fetch(`${thumbnail}`)).buffer()
+if (size.split('MB')[0] >= limit) return conn.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m, rcanal).then(_ => m.react('✖️'))
+        let txt = '`.    -  M P 3`\n\n'
+       txt += `        ✩   *Titulo* : ${title}\n`
+       txt += `        ✩   *Calidad* : ${quality}\n`
+       txt += `        ✩   *Tamaño* : ${size}\n\n`
+       txt += `> *- .*`
+await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
+await conn.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })
+await m.react('✅')
+} catch {
+await m.react('✖️')
+}}}
 }
 handler.help = ['ytmp3 <yt url>']
 handler.tags = ['downloader']
