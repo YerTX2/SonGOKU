@@ -293,7 +293,7 @@ export async function handler(chatUpdate) {
                 else
                     m.exp += xp
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                    conn.reply(m.chat, `Ya no tiene más *⚡ Ki para ganar más Ki ingrese al siguiente menu .kijuegos*`, m, rcanal)
+                    conn.reply(m.chat, `Ya no tiene más *⚡ Ki para ganar más Ki ingrese al siguiente menu .menuki*`, m, rcanal)
                     continue
                 }
                 let extra = {
