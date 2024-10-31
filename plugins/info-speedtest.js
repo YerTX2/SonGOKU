@@ -1,28 +1,31 @@
-import cp from 'child_process';
-import { promisify } from 'util';
-const exec = promisify(cp.exec).bind(cp);
+import speedTest from 'speedtest-net'
 
-const handler = async (m) => {
-    let o;
-m.reply(wait) 
-    try {
-        o = await exec('python3 speed.py --secure --share');
-        const {stdout, stderr} = o;
-        if (stdout.trim()) {
-            const match = stdout.match(/http[^"]+\.png/);
-            const urlImagen = match ? match[0] : null;
-            await conn.sendMessage(m.chat, {image: {url: urlImagen}, caption: stdout.trim()}, {quoted: m});
-        }
-        if (stderr.trim()) { 
-            const match2 = stderr.match(/http[^"]+\.png/);
-            const urlImagen2 = match2 ? match2[0] : null;    
-            await conn.sendMessage(m.chat, {image: {url: urlImagen2}, caption: stderr.trim()}, {quoted: m});
-        }
-    } catch (e) {
-        o = e.message;
-        return m.reply(o)
-    }
-};
+let handler = async (m, { conn }) => {
+  try {
+    await m.react('🕓')
+    let test = await speedTest({ acceptLicense: true, acceptGdpr: true })
+
+    let serverName = test.server?.name || 'Desconocido'
+    let serverLocation = test.server?.location || 'Desconocida'
+    let ping = test.ping?.latency ? `${test.ping.latency} ms` : 'No disponible'
+    let downloadSpeed = test.download?.bandwidth ? `${(test.download.bandwidth / 125000).toFixed(2)} Mbit/s` : 'No disponible';
+    let uploadSpeed = test.upload?.bandwidth ? `${(test.upload.bandwidth / 125000).toFixed(2)} Mbit/s` : 'No disponible'
+
+    let txt = '`乂  S P E E D - T E S T`\n\n'
+        txt += `        ✩   *Hosted By* : ${serverName}\n`
+        txt += `        ✩   *Ubicación* : ${serverLocation}\n`
+        txt += `        ✩   *Ping* : ${ping}\n`
+        txt += `        ✩   *Speed Descarga* : ${downloadSpeed}\n`
+        txt += `        ✩   *Speed Subida* : ${uploadSpeed}\n\n`
+        txt += `> 🚩 ${textbot}`
+
+    await conn.reply(m.chat, txt, m, rcanal)
+    await m.react('✅')
+
+  } catch {
+    await m.react('✖️')
+  }
+}
 handler.help = ['speedtest'];
 handler.tags = ['main']
 handler.command = /^(speedtest?|test?speed)$/i;
