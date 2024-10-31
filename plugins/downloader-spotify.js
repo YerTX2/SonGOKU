@@ -81,5 +81,6 @@ handler.tags = ['downloader']
 handler.help = ['spotify']
 handler.command = ['spotify']
 handler.limit = 4
-handler.register = true
+handler.group = true
+//handler.register = true
 export default handler
