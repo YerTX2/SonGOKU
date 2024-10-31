@@ -196,7 +196,7 @@ await m.react('📩')
 }
 handler.help = ['dl']
 handler.tags = ['menu']
-handler.command = ['dl']
+handler.command = ['menuki']
 
 export default handler
 
