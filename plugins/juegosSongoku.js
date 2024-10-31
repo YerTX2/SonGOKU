@@ -21,7 +21,7 @@ const defaultMenu = {
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
-'dl': 'kijuegos',
+'game': 'kijuegos',
 }
 let img = 'https://i.ibb.co/PGJGjQk/file.jpg'
 
