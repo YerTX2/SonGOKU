@@ -16,6 +16,7 @@ throw m.reply(`Error`)
 handler.tags = ['downloader']
 handler.help = ['pindl <pin url>']
 handler.command = /^(pindl)$/i
-handler.register = true 
+//handler.register = true 
+handler.group = true
 handler.limit = 1
 export default handler
