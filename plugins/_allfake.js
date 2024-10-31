@@ -7,9 +7,9 @@ let img = catalogo
     contextInfo: {
     	isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "120363314192605628@newsletter",
+      newsletterJid: "120363351265614462@newsletter",
       serverMessageId: 100,
-      newsletterName: 'Son - Goku Channel 🌀',
+      newsletterName: 'ƬΣΛM ΛПG',
     },
 	    externalAdReply: {
 				    showAdAttribution: true,
