@@ -55,6 +55,7 @@ function formatBytes(bytes) {
 handler.help = ['animedl <anime-id> <episode-number>'];
 handler.tags = ['downloader'];
 handler.command = ['animedl', 'animeflvdl', 'anidl'];
-handler.register = true
+handler.group = true
+handler.limit = 3
 
 export default handler;
