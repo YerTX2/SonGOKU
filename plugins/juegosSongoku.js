@@ -190,7 +190,7 @@ await m.react('✨')
         { quoted: estilo})
 
   } catch (e) {
-    conn.reply(m.chat, 'Lo siento, el menú tiene un error.', m)
+    conn.reply(m.chat, 'Lo siento, el menú en desarrollo [TEAM ⭐ ANG] .', m)
     throw e
   }
 }
