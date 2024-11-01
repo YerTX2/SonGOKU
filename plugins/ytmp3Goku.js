@@ -59,10 +59,9 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
     await conn.reply(m.chat, `${global.error}`, m).then(_ => m.react('❌'));
   }
 };
-
-handler.help = ["ytmp3"].map((v) => v + " <url>");
-handler.tags = ["dl"];
-handler.command = /^(yta|ytmp3)$/i;
-handler.register = true
-
-export default handler;
+handler.help = ['ytmp3 <yt url>']
+handler.tags = ['downloader']
+handler.command = ['ytmp3', 'yta']
+handler.register = true 
+//handler.limit = 1
+export default handler
