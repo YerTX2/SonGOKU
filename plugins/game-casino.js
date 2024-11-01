@@ -36,7 +36,7 @@ let handler = async (m, { conn, args, usedPrefix, command, DevMode }) => {
                 conn.reply(m.chat, '`🗡️ Veamos que numeros tienen!`\n\n'+ `➠ *Ai Hoshino* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *GANASTE* ${formatNumber(count * 2)} ⚡ Ki.`.trim(), m, rcanal)
             } else {
                 user.limit += count * 1
-                conn.reply(m.chat, '`🗡️ Veamos que numeros tienen!`\n\n'+ `➠ *Ai Hoshino* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username} obtienes ${formatNumber(count * 1)} ⚡ Ki.`.trim(), m, rcanal)
+                conn.reply(m.chat, '`🗡️ Veamos que numeros tienen!`\n\n'+ `➠ *SonGoku BOT * : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username} obtienes ${formatNumber(count * 1)} ⚡ Ki.`.trim(), m, rcanal)
             }
         } else conn.reply(m.chat, `No tienes *${formatNumber(count)} ⚡ Ki* para apostar!`.trim(), m, rcanal)
     
