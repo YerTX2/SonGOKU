@@ -17,7 +17,7 @@ await delay(2000)
 await conn.groupParticipantsUpdate(m.chat, [user], 'remove')
 }
 
-handler.command = /^(ruletadelban)$/i
+handler.command =['ruleta'] 
 handler.group = true
 handler.tags = ['game']
 handler.admin = true
