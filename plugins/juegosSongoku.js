@@ -23,7 +23,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
 'rpg': 'menuki',
 }
-let img = 'https://i.ibb.co/PGJGjQk/file.jpg'
+let img = 'https://qu.ax/cmhqR.jpg'
 
   try {
           // DEFAULT MENU
