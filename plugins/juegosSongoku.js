@@ -195,7 +195,7 @@ await m.react('🐉')
   }
 }
 handler.help = ['rpg']
-handler.tags = ['menu']
+handler.tags = ['main']
 handler.command = ['menuki']
 
 export default handler
