@@ -194,7 +194,7 @@ await m.react('🐉')
     throw e
   }
 }
-handler.help = ['rpg']
+handler.help = ['menuki']
 handler.tags = ['main']
 handler.command = ['menuki']
 
