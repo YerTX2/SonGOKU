@@ -25,5 +25,7 @@ console.error(error)
 }}
 
 handler.command = /^(spotifydl)$/i
+handler.tags = ['downloader']
+handler.help = ['spotifydl']
 
 export default handler
