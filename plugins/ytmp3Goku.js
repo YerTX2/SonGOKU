@@ -49,5 +49,6 @@ let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, comman
 
 handler.command = ['ytmp3', 'yta'];
 handler.limit = 4
+handler.tags = ['downloader']
 handler.group = true
 export default handler;
