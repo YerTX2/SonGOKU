@@ -94,7 +94,9 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
   conn.sendFile(m.chat, tes[0].thumbnail, 'error.jpg', teks.trim(), m);      
   }    
 };
-handler.help = ['ytsearch <búsqueda>']
-handler.tags = ['search']
-handler.command = ["ytsearch"];
+handler.help = ['ytsearch <texto>'];
+//handler.tags = ['search'];
+handler.command = ['ytsearch','yts','searchyt','buscaryt','videosearch','audiosearch'];
+handler.register = true;
+handler.group = true;
 export default handler;
