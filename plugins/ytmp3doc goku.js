@@ -53,7 +53,7 @@ await m.react('✖️')
 }}}}
 handler.help = ['ytmp3doc *<link yt>*']
 handler.corazones = 2
-handler.tags = ['descargas']
+handler.tags = ['downloader']
 handler.command = ['ytmp3doc', 'ytadoc'] 
 //handler.limit = 1
 handler.register = true 
