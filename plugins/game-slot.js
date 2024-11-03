@@ -61,7 +61,7 @@ ${x[2]} : ${y[2]} : ${z[2]}
 ${end}`, m) 
 }
 handler.help = ['slot <apuesta>']
-handler.tags = ['game']
+handler.tags = ['game', 'rpg']
 handler.command = ['slot']
 handler.register = true
 handler.group = false 
