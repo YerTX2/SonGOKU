@@ -18,6 +18,7 @@ let tags = {
   'owner': 'Creador', 
   'advanced': 'Avanzado',
   '+18': '+18',
+  'menu': 'menu', 
   
 }
 
