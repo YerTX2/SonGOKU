@@ -27,7 +27,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     await conn.sendButton2(m.chat, txt, '. ', thumbnail, [
         ['MP3🎵', `${usedPrefix}ytmp3 ${url}`],      
         ['MP4📹', `${usedPrefix}ytmp4 ${url}`], 
-        ['MP4DOC📹📄', `${usedPrefix}ytmp4doc ${url}`], 
+        //['MP4DOC📹📄', `${usedPrefix}ytmp4doc ${url}`], 
         ['MÁS VÍDEOS', `${usedPrefix}ytsearch ${url}`]
         ], null, [['Canal', 'https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v']], m);
 
