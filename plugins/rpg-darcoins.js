@@ -1,5 +1,3 @@
-import db from '../lib/database.js'
-
 import MessageType from '@whiskeysockets/baileys'
 let impuesto = 0.02
 let handler = async (m, { conn, text }) => {
@@ -19,7 +17,7 @@ let handler = async (m, { conn, text }) => {
     if (limit > users[m.sender].limit) throw 'No tienes suficientes *⭐ Estrellas* para dar.'
     users[m.sender].limit -= limit
     users[who].limit += poin
-    
+
     await m.reply(`*${-poin}* ⭐ Estrellas 
 Impuesto 2% : *${-imt}* ⭐ Estrellas
 Total gastado: *${-limit}* ⭐ Estrellas`)
