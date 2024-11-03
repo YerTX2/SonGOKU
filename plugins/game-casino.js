@@ -30,10 +30,10 @@ let handler = async (m, { conn, args, usedPrefix, command, DevMode }) => {
         if (user.limit >= count * 1) {
             user.limit -= count * 1
             if (Aku > Kamu) {
-                conn.reply(m.chat, '`🗡️ Veamos que numeros tienen!`\n\n'+ `➠ *Ai Hoshino* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *PERDISTE* ${formatNumber(count)} ⚡ Ki.`.trim(), m, rcanal)
+                conn.reply(m.chat, '`🗡️ Veamos que numeros tienen!`\n\n'+ `➠ *Son Goku* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *PERDISTE* ${formatNumber(count)} ⚡ Ki.`.trim(), m, rcanal)
             } else if (Aku < Kamu) {
                 user.limit += count * 2
-                conn.reply(m.chat, '`🗡️ Veamos que numeros tienen!`\n\n'+ `➠ *Ai Hoshino* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *GANASTE* ${formatNumber(count * 2)} ⚡ Ki.`.trim(), m, rcanal)
+                conn.reply(m.chat, '`🗡️ Veamos que numeros tienen!`\n\n'+ `➠ *Son Goku* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *GANASTE* ${formatNumber(count * 2)} ⚡ Ki.`.trim(), m, rcanal)
             } else {
                 user.limit += count * 1
                 conn.reply(m.chat, '`🗡️ Veamos que numeros tienen!`\n\n'+ `➠ *SonGoku BOT * : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username} obtienes ${formatNumber(count * 1)} ⚡ Ki.`.trim(), m, rcanal)
@@ -43,7 +43,7 @@ let handler = async (m, { conn, args, usedPrefix, command, DevMode }) => {
 }
     
 handler.help = ['apostar *<cantidad>*']
-handler.tags = ['game']
+handler.tags = ['game', 'rpg']
 handler.command = /^(apostar|casino)$/i
 handler.register = true
 
