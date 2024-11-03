@@ -25,7 +25,7 @@ Total gastado: *${-limit}* ⭐ Estrellas`)
 }
 handler.help = ['darstars *@user <cantidad>*']
 handler.tags = ['rpg']
-handler.command = ['darcoins', 'darstars']
+handler.command = ['darki', 'darstars']
 handler.register = true 
 
 export default handler
