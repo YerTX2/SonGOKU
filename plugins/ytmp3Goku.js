@@ -1,58 +1,51 @@
-import axios from "axios";
-import fs from "fs";
-import { pipeline } from "stream";
-import { promisify } from "util";
-import os from "os";
+import yts from 'yt-search';
 
-let streamPipeline = promisify(pipeline);
+let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
 
-let handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) return conn.reply(m.chat, `*_々 Ingresa un enlace de YouTube*\n\n*ejemplo:*\n${usedPrefix + command} https://youtu.be/w_ufjahQlyw?si=jMBHaX8SgkNdcG2v`, m);
+    if (!text) throw `🐉 Te Faltó Un Link De Un Video De Youtube.\n_(Puedes hacer una búsqueda utilizando el comando ${usedPrefix}yts)_\n _💨.- Ejemplo:_ *${usedPrefix + command}* https://youtu.be/sBKR6aUorzA?si=TmC01EGbXUx2DUca`;
 
-  try {
-    let videoUrl = text; 
-    let apiUrl = `https://rembotapi.vercel.app/api/yt?url=${encodeURIComponent(videoUrl)}`;
+    await conn.sendMessage(m.chat, { react: { text: '🐉', key: m.key }});
 
-    let response = await axios.get(apiUrl);
-    let data = response.data;
+    const videoSearch = await yts(text);
+    if (!videoSearch.all.length) {
+        return global.errori;
+    }
 
-    if (!data.status) throw new Error("Error al obtener datos del video");
+    const vid = videoSearch.all[0];
+    const videoUrl = vid.url;
+    const apiUrl = `https://deliriussapi-oficial.vercel.app/download/ytmp4?url=${encodeURIComponent(videoUrl)}`;
+    const apiResponse = await fetch(apiUrl);
+    const delius = await apiResponse.json();
 
-    let { title, thumbnail, audioUrl } = data.data;
-    await m.react("⏱");
+    if (!delius.status) {
+        return global.errori;
+    }
 
-    let tmpDir = os.tmpdir();
-    let fileName = `${title}.mp3`;
-    let filePath = `${tmpDir}/${fileName}`;
+    const downloadUrl = delius.data.download.url;
 
-    let audioResponse = await axios({
-      url: audioUrl,
-      method: 'GET',
-      responseType: 'stream'
-    });
+    // Crear el mensaje informativo del video/audio
+    let body = `*『 𝐊 𝐚 𝐤 𝐚 𝐫 𝐨 𝐭 𝐨 - 𝐁 𝐨 𝐭 』*
 
-    let writableStream = fs.createWriteStream(filePath);
-    await streamPipeline(audioResponse.data, writableStream);
+ *☊.- 𝚃𝚒́𝚝𝚞𝚕𝚘:* ${vid.title || 'Desconocido'}
+ *♕.- 𝙰𝚞𝚝𝚘𝚛:* ${vid.author?.name || 'Desconocido'}
+ *⛨.- 𝙲𝚊𝚗𝚊𝚕:* ${vid.author?.url || 'Desconocido'}
+ *🝓.- 𝙵𝚎𝚌𝚑𝚊 𝚍𝚎 𝙿𝚞𝚋𝚕𝚒𝚌𝚊𝚌𝚒𝚘́𝚗:* ${vid.ago || 'Desconocido'}
+ *🜵.- 𝙳𝚞𝚛𝚊𝚌𝚘́𝚗:* ${vid.timestamp || 'Desconocido'}
+ *🜚.- 𝚅𝚒𝚜𝚝𝚊𝚜:* ${`${vid.views || 'Desconocido'}`}
+ *🝤.- 𝙻𝚒𝚗𝚔:* ${videoUrl}\n
+*🝩.- 𝙴𝚗𝚟𝚒𝚊𝚗𝚍𝚘 𝚊𝚞𝚍𝚒𝚘, 𝚊𝚐𝚞𝚊𝚝𝚊 𝚞𝚗 𝚖𝚘𝚖𝚎𝚗𝚝𝚘...*
 
-    let doc = {
-      audio: {
-        url: filePath,
-      },
-      mimetype: "audio/mp4",
-      fileName: `${title}`,
-      contextInfo: {
-        externalAdReply: {
-          showAdAttribution: true,
-          mediaType: 2,
-          mediaUrl: videoUrl,
-          title: title,
-          sourceUrl: videoUrl,
-          thumbnail: await (await conn.getFile(thumbnail)).data,
-        },
-      },
-    };
+> 𝓚𝓪𝓴𝓪𝓻𝓸𝓽𝓸-𝓑𝓸𝓽-𝓜𝓓`;
 
-    await conn.sendMessage(m.chat, doc, { quoted: m });
+    // Enviar el mensaje informativo con la imagen
+    await conn.sendMessage(m.chat, { 
+        image: { url: vid.thumbnail }, 
+        caption: body 
+    }, { quoted: m });
+
+    await conn.sendMessage(m.chat, { react: { text: '💨', key: m.key }});
+    await conn.sendMessage(m.chat, { audio: { url: downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
+};
     await m.react("✅");
   } catch (error) {
     console.error(error);
