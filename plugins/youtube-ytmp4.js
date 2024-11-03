@@ -1,7 +1,7 @@
 import fg from 'api-dylux'
 import yts from 'yt-search'
 import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
-let limit = 130
+let limit = 500
 
 let handler = async (m, { conn, args, text, isPrems, isOwner, usedPrefix, command }) => {
 if (!args || !args[0]) return conn.reply(m.chat, `🐉 Escribe la URL de un video de YouTube que deseas descargar.`, m)
