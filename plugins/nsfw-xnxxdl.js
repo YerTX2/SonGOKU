@@ -41,7 +41,7 @@ const handler = async (m, {conn, args, command, usedPrefix}) => {
 handler.tags = ['+18']
 handler.help = ['xnxxdl *<url>*']
 handler.command = ['xnxxdl']
-handler.limit = 50
+handler.limit = 100 
 handler.group = true 
 handler.register = true 
 export default handler
