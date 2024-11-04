@@ -19,7 +19,7 @@ handler.command = ['genshin', 'swimsuit', 'schoolswimsuit', 'white', 'barefoot',
 handler.tags = ['nsfw'] 
 handler.premium = false 
 handler.register = true 
-//handler.limit = 10
+handler.limit = 10
 handler.group = true 
 
 export default handler
