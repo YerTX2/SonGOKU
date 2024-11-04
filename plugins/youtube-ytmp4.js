@@ -49,6 +49,6 @@ await conn.reply(m.chat,`*☓ Ocurrió un error inesperado pesa más de 130MB us
 handler.help = ['ytmp4 <yt url>']
 handler.tags = ['downloader']
 handler.command = ['ytmp4', 'yt', 'ytv']
-handler.limit = 3
+handler.limit = 5
 handler.group = true
 export default handler
