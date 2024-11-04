@@ -16,5 +16,5 @@ handler.tags = ['nsfw']
 handler.command = ['hentai']
 handler.group = true 
 handler.register = true
-//handler.limit = 10
+handler.limit = 10
 export default handler
