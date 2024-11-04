@@ -35,7 +35,7 @@ let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, comman
     await conn.sendMessage(m.chat, { audio: { url: downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
 };
 handler.command = ['ytmp3', 'yta'];
-handler.limit = 4
+handler.limit = 10
 handler.tags = ['downloader']
 handler.group = true
 export default handler; 
