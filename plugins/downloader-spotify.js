@@ -16,6 +16,7 @@ if (isSpotifyUrl[2] === 'album') {
 let album = await downloadAlbum(isSpotifyUrl[0])
 let img = await (await fetch(`${album.metadata.cover}`)).buffer()
 let txt = `*🇦🇱𝚂𝙿𝙾𝚃𝙸𝙵𝚈 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚂🇦🇱*\n\n`
+let txt = `*CONTENIDO DE CHANNEL Musicas,Videos Y Mucho Más🔥*\n\n`
     txt += `        ┈➤  *Album* : ${album.metadata.title}\n`
     txt += `        ┈➤   *Artista* :${album.metadata.artists}\n`
     txt += `        ┈➤  *Publicado* : ${album.metadata.releaseDate}\n`   
