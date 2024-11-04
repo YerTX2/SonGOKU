@@ -81,7 +81,7 @@ await m.react('✖️')
 handler.tags = ['downloader']
 handler.help = ['spotify']
 handler.command = ['spotify']
-handler.limit = 10
+handler.limit = 7
 handler.group = true
 //handler.register = true
 export default handler
