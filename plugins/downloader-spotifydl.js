@@ -26,6 +26,7 @@ console.error(error)
 
 handler.command = /^(spotifydl)$/i
 handler.tags = ['downloader']
+handler.limit = 10
 handler.help = ['spotifydl']
 
 export default handler
