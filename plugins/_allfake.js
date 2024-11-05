@@ -9,7 +9,7 @@ let img = catalogo
     forwardedNewsletterMessageInfo: {
       newsletterJid: "120363350628883149@newsletter",
       serverMessageId: 100,
-      newsletterName: 'ƬΣΛM ΛПG',
+      newsletterName: '【✗TEAM ANG CHANNEL  OFC✗ 】', 
     },
 	    externalAdReply: {
 				    showAdAttribution: true,
