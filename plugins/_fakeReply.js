@@ -7,7 +7,7 @@ let img = await (await fetch(`https://tinyurl.com/299lyvo5`)).buffer()
     contextInfo: {
     	isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "120363314192605628@newsletter",
+      newsletterJid: "120363350628883149@newsletter",
       serverMessageId: 100,
       newsletterName: namechannel,
     },
