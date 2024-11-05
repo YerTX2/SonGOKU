@@ -156,7 +156,7 @@ Un hosting es un servicio de alojamiento web que te permite publicar un sitio we
 - **Panel:** [`AquÃ­`](https://panel.skyultraplus.com)
 - **Estado de servicios:** [`AquÃ­`](https://estado.skyultraplus.com)
 - **Canal de WhatsApp:** [`AquÃ­`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
-- **Comunidad:** [`AquÃ­`](https://chat.whatsapp.com/JPwcXvPEUwlEOyjI3BpYys)
+- **Comunidad:** [`AquÃ­`](https://chat.whatsapp.com/KGPhTIfgOzZCMNqoc3R7OW)
 - **Contacto(s):** [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
 - **Discord:** [`SkyUltraPlus`](https://discord.gg/Ph4eWsZ8)
 ----
