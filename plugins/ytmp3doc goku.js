@@ -24,10 +24,8 @@ const getBuffer = async (url) => {
 	await conn.sendMessage(m.chat, { document: videop, caption: `\`✦ Pedido terminado\``, mimetype: 'video/mp4', fileName: `${dp.result.title}` + `.mp4`}, {quoted: m })
 	await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }})
 }
-handler.help = ['ytmp3doc *<link yt>*']
+handler.help = ['ytmp5doc']
 //handler.tags = ['downloader']
-handler.command = ['ytmp3doc', 'ytadoc'] 
-//handler.limit = 1
-handler.register = true 
-
-export default handler 
+handler.command = /^(ytmp5doc|ytvdoc)$/i
+handler.register = true
+export default handler```
