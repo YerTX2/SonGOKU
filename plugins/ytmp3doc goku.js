@@ -25,7 +25,6 @@ const getBuffer = async (url) => {
 	await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }})
 }
 handler.help = ['ytmp3doc *<link yt>*']
-handler.corazones = 2
 //handler.tags = ['downloader']
 handler.command = ['ytmp3doc', 'ytadoc'] 
 //handler.limit = 1
