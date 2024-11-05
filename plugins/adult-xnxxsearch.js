@@ -35,7 +35,7 @@ if (!global.db.data.chats[m.chat].nsfw) return conn.reply(m.chat, `🚩 El grupo
 handler.help = ['xnxxsearch'].map((v) => v + ' <nsfw on>');
 handler.tags = ['+18'] 
 handler.command = /^xnxxsearch|xnxxs$/i;
-handler.limit = 10
+handler.limit = 30
 handler.register = true
 export default handler;
 
