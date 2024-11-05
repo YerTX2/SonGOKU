@@ -70,7 +70,7 @@ await m.react('✖️')
 handler.help = ['ytmp4doc *<link yt>*']
 handler.tags = ['downloader']
 handler.command = ['ytmp4doc', 'ytvdoc', 'ytdoc']
-//handler.limit = 1
+handler.limit = 15
 handler.register = true 
 
 export default handler
