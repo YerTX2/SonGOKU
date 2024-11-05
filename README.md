@@ -146,28 +146,19 @@ Un hosting es un servicio de alojamiento web que te permite publicar un sitio we
 
             
 
-### ☁️ CORINPLUS HOTS 
-<a href="https://dash.corinplus.com"><img src="https://qu.ax/ZycD.png" height="125px"></a>
-### Información sobre CorinPlus
+### â˜ï¸ SKY ULTRA PLUS 
+[![YouTube](https://img.shields.io/badge/SkyUltraPlus-Host-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/fZbcCLpSH6Y?si=1sDen7Bzmb7jVpAI)
 
-- **Dashboard:** [`Aquí`](https://dash.corinplus.com)
-- **Panel:** [`Aquí`](https://ctrl.corinplus.com)
-- **Estado de servicios:** [`Aquí`](https://status.corinplus.com)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
-- **Grupo - Soporte:** [`Aquí`](https://chat.whatsapp.com/K235lkvaGvlGRQKYm26xZP)
-- **Contacto:** [`Support-CorinPlus Host`](https://wa.me/message/B3KTM5XN2JMRD1)
-- **Contacto:** [`elrebelde21`](https://facebook.com/elrebelde21)
+<a href="https://dash.corinplus.com"><img src="https://qu.ax/zFzXF.png" height="125px"></a>
 
-- [x] **Configuración** <details><summary>**Ajustes del Servidor - SonGoku🐉**</summary><img src="https://telegra.ph/file/4d4f5aa6c5853ab7ffbfa.jpg"></details>
-
-
-
-           `🌟Azure-Ultra🌟`
-
-<a href="https://store.azuraultra-host.pro/home"><img src="https://telegra.ph/file/f9b7bf7d0f5ca2427ff20.jpg" height="135px"></a>
-
-- **💻Dash:** [`Aquí`](https://store.azuraultra-host.pro/home)
-- **Panel:** [`Aquí`](https://control.azuraultra-host.pro/)
-- **Grupo - Soporte:** [`Aquí`](https://chat.whatsapp.com/KhcwE17XcalGuMwS4Tc2L0)
+### InformaciÃ³n sobre Sky
+- **Dashboard:** [`AquÃ­`](https://dash.skyultraplus.com)
+- **Panel:** [`AquÃ­`](https://panel.skyultraplus.com)
+- **Estado de servicios:** [`AquÃ­`](https://estado.skyultraplus.com)
+- **Canal de WhatsApp:** [`AquÃ­`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
+- **Comunidad:** [`AquÃ­`](https://chat.whatsapp.com/JPwcXvPEUwlEOyjI3BpYys)
+- **Contacto(s):** [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
+- **Discord:** [`SkyUltraPlus`](https://discord.gg/Ph4eWsZ8)
+----
 
 
