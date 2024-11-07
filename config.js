@@ -49,7 +49,7 @@ global.author = `{\n "bot": {\n   "name": "🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉",\n
 global.wait = '*🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉*'
 global.botname = '🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉 '
 global.textbot = `🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉`
-global.listo = 'ENVIADO POR BOT SONGOKU 🔥TEAM ANG🔥'
+global.listo = 'ENVIADO POR BOT SonGoku & 【★】𝚃𝚎𝚊𝚖  乂   𝐴𝑁𝐺  乂 𝐶𝐻𝐴𝑁𝑁𝐸𝐿  𝑂𝑓𝑐【★】'
 global.namechannel = '【★】𝚃𝚎𝚊𝚖  乂   𝐴𝑁𝐺  乂 𝐶𝐻𝐴𝑁𝑁𝐸𝐿  𝑂𝑓𝑐【★】 '
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
