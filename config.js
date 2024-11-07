@@ -50,7 +50,7 @@ global.wait = '*🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉*'
 global.botname = '🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉 '
 global.textbot = `🐉孫ՏᴏɴᏀᴏᴋᴜ孫🐉`
 global.listo = 'ENVIADO POR BOT SONGOKU 🔥TEAM ANG🔥'
-global.namechannel = '【✗TEAM ANG CHANNEL  OFC✗ 】'
+global.namechannel = '【★】𝚃𝚎𝚊𝚖  乂   𝐴𝑁𝐺  乂 𝐶𝐻𝐴𝑁𝑁𝐸𝐿  𝑂𝑓𝑐【★】 '
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 global.fantasyVid = ['./media/menus/Menuvid1.mp4', './media/menus/Menuvid2.mp4', './media/menus/Menuvid3.mp4']
