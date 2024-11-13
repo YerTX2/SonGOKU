@@ -5,7 +5,7 @@ let handler = async (m, { conn, command, usedPrefix, args }) => {
   const text = _.get(args, "length") ? args.join(" ") : _.get(m, "quoted.text") || _.get(m, "quoted.caption") || _.get(m, "quoted.description") || ""
   if (typeof text !== 'string' || !text.trim()) return m.reply(`✦ Ingresa una consulta\n*Ejemplo:* .${command} Joji Ew`)
 
-  await m.reply('✦ Espere un momento...')
+  await m.reply('🐉Espere un momento SonGoku ta enviando.🐉')
 
   const vid = await ytsearch(text)
   if (!vid?.url) return m.reply("Audio no encontrado, intenta usando otra consulta.")
