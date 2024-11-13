@@ -1,54 +1,24 @@
-import fg from 'api-dylux'
-import yts from 'yt-search'
-import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
-let limit = 500
+import axios from 'axios';
+import yts from 'yt-search';
+import fetch from 'node-fetch';
 
-let handler = async (m, { conn, args, text, isPrems, isOwner, usedPrefix, command }) => {
-if (!args || !args[0]) return conn.reply(m.chat, `🐉 Escribe la URL de un video de YouTube que deseas descargar.`, m)
-if (!args[0].match(/youtu/gi)) return conn.reply(m.chat,`Verifica que la *URL* sea de YouTube`, m).then(_ => m.react('✖️'))
-let q = args[1] || '360p'
+let handler = async (m, { conn, text, usedPrefix, command }) => {
 
-await m.react('🕓')
-try {
-const yt = await fg.ytv(args[0], q)
-let { title, dl_url, size } = yt 
-let vid = (await yts(text)).all[0]
+  if (!text) throw m.reply(`Ejemplo de uso: ${usedPrefix + command} https://youtube.com/watch?v=kGobHQ7z8X4`);
+  
+    let results = await yts(text);
+    let tes = results.videos[0]
+    
+await conn.sendMessage(m.chat, { react: { text: '🕒', key: m.key }})
+let dataos = await fetch(`https://api.zenkey.my.id/api/download/ytmp4?url=${tes.url}&apikey=zenkey`)
+let dp = await dataos.json()
+let { title, mediaLink } = dp.result.content[0]
+//	await conn.sendFile(m.chat, mediaLink, `${title}.mp4`, `\`✦ Pedido terminado\``, m)
+	await conn.sendMessage(m.chat, { document: { url: mediaLink }, caption: `\`✦ Pedido terminado: ${title}\``, mimetype: 'video/mp4', fileName: `${title}` + `.mp4`}, {quoted: m })
+	await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }})
+}
+handler.help = ['ytmp4','ytvdoc'];
+handler.tags = ['downloader'];
+handler.command = /^(ytmp4|ytvdoc)$/i;
 
-if (size.split('MB')[0] >= limit) return conn.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m).then(_ => m.react('✖️'))
-
-await conn.sendMessage(m.chat, {
-        text: `🇦🇱 *Título ∙* ${title}\n⚖️ *Tamaño ∙* ${size}\n\n*↻ Espera @${m.sender.split`@`[0]}, se está enviando su video en 360P. . .*`,
-        contextInfo: { 
-          mentionedJid: [m.sender],
-        }
-      }, { quoted: m })
-
-await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n Duración ${vid.timestamp}`, m)
-await m.react('✅')
-} catch {
-try {
-let yt = await fg.ytmp4(args[0], q)
-let { title, size, dl_url } = yt
-let vid = (await yts(text)).all[0]
-
-if (size.split('MB')[0] >= limit) return conn.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m).then(_ => m.react('✖️'))
-
-await conn.sendMessage(m.chat, {
-        text: `🇦🇱 *Título ∙* ${title}\n⚖️ *Tamaño ∙* ${size}\n\n*↻ Espera @${m.sender.split`@`[0]},se  está enviando su video . . .*`,
-        contextInfo: { 
-          mentionedJid: [m.sender],
-        }
-      }, { quoted: m })
-
-await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n Duración ${vid.timestamp}`, m)
-await m.react('✅')
-} catch {
-await conn.reply(m.chat,`*☓ Ocurrió un error inesperado pesa más de 130MB use el comando ytmp4doc para descargar *`, m).then(_ => m.react('✖️'))
-//console.error(error)
-}}}
-handler.help = ['ytmp4 <yt url>']
-handler.tags = ['downloader']
-handler.command = ['ytmp4', 'yt', 'ytv']
-handler.limit = 5
-handler.group = true
-export default handler
+export default handler;
