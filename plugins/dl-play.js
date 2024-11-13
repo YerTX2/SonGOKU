@@ -52,7 +52,7 @@ let handler = async (m, { conn, command, usedPrefix, args }) => {
 handler.help = ["play <consulta>"]
 handler.tags = ["downloader"]
 handler.command = /^(play|ytplay|playmp3|song)$/i
-handler.limit = true
+handler.limit = 3
 export default handler
 
 async function ytsearch(query, maxResults = 5, similarityThreshold = .5) {
