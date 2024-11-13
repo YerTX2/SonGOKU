@@ -1,41 +1,91 @@
- import yts from 'yt-search';
-let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
-    if (!text) throw `🐉 Te Faltó Un Link De Un Video De Youtube.\n_(Puedes hacer una búsqueda utilizando el comando ${usedPrefix}yts)_\n _💨.- Ejemplo:_ *${usedPrefix + command}* https://youtu.be/sBKR6aUorzA?si=TmC01EGbXUx2DUca`;
-    await conn.sendMessage(m.chat, { react: { text: '📩', key: m.key }});
-    const videoSearch = await yts(text);
-    if (!videoSearch.all.length) {
-        return global.errori;
+import axios from 'axios';
+import yts from 'yt-search';
+import fetch from 'node-fetch';
+
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+
+  if (!text) throw m.reply(`Ejemplo de uso: ${usedPrefix + command} https://youtube.com/watch?v=kGobHQ7z8X4`);
+  
+    let results = await yts(text);
+    let tes = results.videos[0]
+    
+const baseUrl = 'https://cuka.rfivecode.com';
+const cukaDownloader = {
+  youtube: async (url, exct) => {
+    const format = [ 'mp3', 'mp4' ];
+    try {
+      const response = await fetch(`${baseUrl}/download`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+          body: JSON.stringify({ url, format: exct })
+      });
+
+      const data = await response.json();
+      return data;
+      console.log('Data:' + data);
+    } catch (error) {
+      return { success: false, message: error.message };
+      console.error('Error:', error);
     }
-    const vid = videoSearch.all[0];
-    const videoUrl = vid.url;
-    const apiUrl = `https://deliriussapi-oficial.vercel.app/download/ytmp4?url=${encodeURIComponent(videoUrl)}`;
-    const apiResponse = await fetch(apiUrl);
-    const delius = await apiResponse.json();
-    if (!delius.status) {
-        return global.errori;
+  },
+  tiktok: async (url) => {
+    try {
+      const response = await fetch(`${baseUrl}/tiktok/download`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+          body: JSON.stringify({ url })
+      });
+
+      const data = await response.json();
+      return data;
+      console.log('Data:' + data);
+    } catch (error) {
+      return { success: false, message: error.message };
+      console.error('Error:', error);
     }
-    const downloadUrl = delius.data.download.url;
-    // Crear el mensaje informativo del video/audio
-    let body = `*🐉SonGoku ⚡ Team ANG⚡*
- *.- 𝚃𝚒́𝚝𝚞𝚕𝚘:* ${vid.title || 'Desconocido'}
- *.- 𝙰𝚞𝚝𝚘𝚛:* ${vid.author?.name || 'Desconocido'}
- *.- 𝙲𝚊𝚗𝚊𝚕:* ${vid.author?.url || 'Desconocido'}
- *.- 𝙵𝚎𝚌𝚑𝚊 𝚍𝚎 𝙿𝚞𝚋𝚕𝚒𝚌𝚊𝚌𝚒𝚘́𝚗:* ${vid.ago || 'Desconocido'}
- *.- 𝙳𝚞𝚛𝚊𝚌𝚘́𝚗:* ${vid.timestamp || 'Desconocido'}
- *.- 𝚅𝚒𝚜𝚝𝚊𝚜:* ${`${vid.views || 'Desconocido'}`}
- *🝤.- 𝙻𝚒𝚗𝚔:* ${videoUrl}\n
-* ESPERE UN MOMENTO SE ESTÁ ENVIANDO SU MUSICA📩*
-> 🐉TEAM ANG 🐉`;
-    // Enviar el mensaje informativo con la imagen
-    await conn.sendMessage(m.chat, { 
-        image: { url: vid.thumbnail }, 
-        caption: body 
-    }, { quoted: m });
-    await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }});
-    await conn.sendMessage(m.chat, { audio: { url: downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
-};
-handler.command = ['ytmp3 ${url}'];
-handler.limit = 10
-handler.tags = ['downloader']
-handler.group = true
-export default handler; 
+  },
+  spotify: async (url) => {
+    try {
+      const response = await fetch(`${baseUrl}/spotify/download`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+          body: JSON.stringify({ url })
+      });
+
+      const data = await response.json();
+      return data;
+      console.log('Data:' + data);
+    } catch (error) {
+      return { success: false, message: error.message };
+      console.error('Error:', error);
+    }
+  }
+}
+await conn.sendMessage(m.chat, { react: { text: '🕒', key: m.key }})
+let dataos = await cukaDownloader.youtube(tes.url, "mp3")
+let { title, thumbnail, quality, downloadUrl } = dataos
+ const getBuffer = async (url) => {
+  try {
+    const response = await fetch(url);
+    const buffer = await response.arrayBuffer();
+    return Buffer.from(buffer);
+  } catch (error) {
+    console.error("Error al obtener el buffer", error);
+    throw new Error("Error al obtener el buffer");
+  }
+}
+    let audiop = await getBuffer(downloadUrl)
+	await conn.sendMessage(m.chat, { document: audiop, caption: `\`✦ Pedido terminado\``, mimetype: 'audio/mpeg', fileName: `${title}` + `.mp3`}, {quoted: m })
+	await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }})
+}
+handler.help = ['ytmp3','ytadoc'];
+handler.tags = ['downloader'];
+handler.command = /^(ytmp3|ytadoc)$/i;
+
+export default handler;
