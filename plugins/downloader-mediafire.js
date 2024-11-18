@@ -7,7 +7,7 @@ if (!text) throw m.reply(`Ingresa un link de mediafire\n*🏆 Ejemplo:* ${usedPr
 conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
         let ouh = await fetch(`https://api.agatz.xyz/api/mediafire?url=${text}`)
   let gyh = await ouh.json()
-        await conn.sendFile(m.chat, gyh.data[0].link, `${gyh.data[0].nama}`, `*🇦🇱 Nombre:* ${gyh.data[0].nama}\n*🪷 Tamaño:* ${gyh.data[0].size}\n*🇦🇱 Extensión:* ${gyh.data[0].mime}\n> NEW GOKU `, m)
+        await conn.sendFile(m.chat, gyh.data[0].link, `${gyh.data[0].nama}`, `*🇦🇱 Nombre:* ${gyh.data[0].nama}\n*🪷 Tamaño:* ${gyh.data[0].size}\n*🇦🇱 Extensión:* ${gyh.data[0].mime}\n> 🏆✨ `, m)
         await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }})
 }
 handler.help = ['mediafire']
