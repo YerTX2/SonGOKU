@@ -41,6 +41,9 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
 handler.help = ["mega"]
 handler.tags = ["Descargas de archivos"]
 handler.command = /^(mega)$/i
+handler.premium = false
+handler.group = true
+handler.limit = 1000
 export default handler
 
 function formatBytes(bytes) {
