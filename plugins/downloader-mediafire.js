@@ -3,11 +3,11 @@
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) throw m.reply(`Ingresa un link de mediafire\n*🌸 Ejemplo:* ${usedPrefix}${command} https://www.mediafire.com/file/2v2x1p0x58qomva/WhatsApp_Messenger_2.24.21.8_beta_By_WhatsApp_LLC.apk/file`);
+if (!text) throw m.reply(`Ingresa un link de mediafire\n*🏆 Ejemplo:* ${usedPrefix}${command} https://www.mediafire.com/file/2v2x1p0x58qomva/WhatsApp_Messenger_2.24.21.8_beta_By_WhatsApp_LLC.apk/file`);
 conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
         let ouh = await fetch(`https://api.agatz.xyz/api/mediafire?url=${text}`)
   let gyh = await ouh.json()
-        await conn.sendFile(m.chat, gyh.data[0].link, `${gyh.data[0].nama}`, `*🌹 Nombre:* ${gyh.data[0].nama}\n*🪷 Tamaño:* ${gyh.data[0].size}\n*🍒 Extensión:* ${gyh.data[0].mime}\n> ৎ୭࠭͢𝒴𝓊𝓀𝒾_𝒮𝓊𝑜𝓊-𝐵𝑜𝑡𝐭ⷭ𓆪͟͞ `, m)
+        await conn.sendFile(m.chat, gyh.data[0].link, `${gyh.data[0].nama}`, `*🇦🇱 Nombre:* ${gyh.data[0].nama}\n*🪷 Tamaño:* ${gyh.data[0].size}\n*🇦🇱 Extensión:* ${gyh.data[0].mime}\n> NEW GOKU `, m)
         await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }})
 }
 handler.help = ['mediafire']
