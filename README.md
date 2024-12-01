@@ -4,7 +4,7 @@
 
 
 <a
-href="https://wa.me/+51907376960" target="white"><img src="https://img.shields.io/badge/☄️-Prueba la IA por tiempo limitado-000000?style=for-the-badge&logo=whatsapp&logoColor=black" /></a>
+href="https://wa.me/+529241560311" target="white"><img src="https://img.shields.io/badge/☄️-Prueba la IA por tiempo limitado-000000?style=for-the-badge&logo=whatsapp&logoColor=black" /></a>
 
 <p align="center">
 <img src="https://telegra.ph/file/5a2eb62dca1eafb952f31.jpg" alt="SonGOKU" width="900"/>
