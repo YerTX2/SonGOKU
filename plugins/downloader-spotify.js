@@ -65,7 +65,7 @@ return response.data;
 return text;
 }}
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) throw `> ⓘ  𝙳𝙴𝙱𝙴 𝙳𝙴 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙲𝙾𝙼𝙾 𝙴𝚂𝚃𝙴 𝙴𝙹𝙴𝙼𝙿𝙻𝙾: ${usedPrefix + command} \`Ari Abdul babydoll\``
+if (!text) throw `${lenguajeGB.smsMalused2()} ⊱ *${usedPrefix + command} Bellyache*`
 try {
 m.react('⌛️')
 let songInfo = await spotifyxv(text)
@@ -73,16 +73,16 @@ if (!songInfo.length) throw `*No se encontró una canción.*`
 let res = songInfo[0]
 let fileSizeInMB = (await getBuffer(res.url)).length / (1024 * 1024)
 let shortURL = await getTinyURL(res.url)
-const info = `*TITULO:*
+const info = `✨ *${mid.smsYT1}:*
 _${res.name}_
 
-*ARTISTA:*
+🗣️ *${mid.smsYT13}:*
 » _${res.artista.join(', ')}_
 
-*URL DE DESCARGA:*
+🌐 *${mid.smsYT4}*:
 » _${shortURL}_
 
-*Enviando canción...*
+🎶 *${mid.smsSpoti}*
 ${wm}`
 
 let resImg = await fetch(res.imagen)
