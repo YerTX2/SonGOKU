@@ -43,7 +43,7 @@ handler.tags = ["Descargas de archivos"]
 handler.command = /^(mega)$/i
 handler.premium = false
 handler.group = true
-handler.limit = 1000
+handler.limit = 40
 export default handler
 
 function formatBytes(bytes) {
