@@ -1,27 +1,19 @@
 import cp from 'child_process';
-import {promisify} from 'util';
-const exec = promisify(cp.exec).bind(cp);
+import { promisify } from 'util';
+
+const exec = promisify(cp.exec);
+
 const handler = async (m) => {
-    conn.reply(m.chat, wait, m, {
-    contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
-    title: packname,
-    body: "hola",
-    previewType: 0, thumbnail: icons,
-    sourceUrl: channel }}})
-  let o;
   try {
-    o = await exec('python3 speed.py');
-  } catch (e) {
-    o = e;
-  } finally {
-    const {stdout, stderr} = o;
+    const { stdout } = await exec('python3 speed.py');
     if (stdout.trim()) m.reply(stdout);
-    if (stderr.trim()) m.reply(stderr);
+  } catch (e) {
+    m.reply('Hubo un error al ejecutar el test de velocidad.');
   }
 };
+
 handler.help = ['speedtest'];
 handler.tags = ['info'];
-handler.command = /^(speedtest?|info?|stest?speed)$/i;
+handler.command = /^(speedtest|stest)$/i;
 
-handler.register = true
 export default handler;
