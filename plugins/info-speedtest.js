@@ -15,14 +15,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         m.react(done) 
     }
 }
-
-    await conn.reply(m.chat, txt, m, rcanal)
-    await m.react('✅')
-
-  } catch {
-    await m.react('✖️')
-  }
-}
 handler.help = ['speedtest'];
 handler.tags = ['main']
 handler.command = /^(speedtest?|test?speed)$/i;
