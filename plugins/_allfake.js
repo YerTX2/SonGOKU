@@ -7,9 +7,9 @@ let img = catalogo
     contextInfo: {
     	isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "120363350628883149@newsletter",
+      newsletterJid: "120363314192605628@newsletter",
       serverMessageId: 100,
-      newsletterName: '【★】𝚃𝚎𝚊𝚖  乂   𝐴𝑁𝐺  乂 𝐶𝐻𝐴𝑁𝑁𝐸𝐿  𝑂𝑓𝑐【★】', 
+      newsletterName: '【★ Son Goku BOT ★】', 
     },
 	    externalAdReply: {
 				    showAdAttribution: true,
