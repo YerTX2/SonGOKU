@@ -1,19 +1,30 @@
-import cp from 'child_process'
-import { promisify } from 'util'
-let exec = promisify(cp.exec).bind(cp)
-let handler = async (m, { conn, usedPrefix, command }) => {
-        m.react(rwait) 
-    let o
-    try {
-        o = await exec('python3 speed.py --share --secure')
-    } catch (e) {
-        o = e
-    } finally {
-        let { stdout, stderr } = o
-        if (stdout.trim()) m.reply(`*≡ SPEEDTEST.NET*\n\n${stdout}`)  //conn.sendButton(m.chat, `*≡ SPEEDTEST.NET*`, stdout, null, [['BIEN', 'khajs']], m)
-        if (stderr.trim()) m.reply(stderr)
-        m.react(done) 
-    }
+import speedTest from 'speedtest-net'
+
+let handler = async (m, { conn }) => {
+  try {
+    await m.react('🕓')
+    let test = await speedTest({ acceptLicense: true, acceptGdpr: true })
+
+    let serverName = test.server?.name || 'Desconocido'
+    let serverLocation = test.server?.location || 'Desconocida'
+    let ping = test.ping?.latency ? `${test.ping.latency} ms` : 'No disponible'
+    let downloadSpeed = test.download?.bandwidth ? `${(test.download.bandwidth / 125000).toFixed(2)} Mbit/s` : 'No disponible';
+    let uploadSpeed = test.upload?.bandwidth ? `${(test.upload.bandwidth / 125000).toFixed(2)} Mbit/s` : 'No disponible'
+
+    let txt = '`乂  S P E E D - T E S T`\n\n'
+        txt += `        ✩   *Hosted By* : ${serverName}\n`
+        txt += `        ✩   *Ubicación* : ${serverLocation}\n`
+        txt += `        ✩   *Ping* : ${ping}\n`
+        txt += `        ✩   *Speed Descarga* : ${downloadSpeed}\n`
+        txt += `        ✩   *Speed Subida* : ${uploadSpeed}\n\n`
+        txt += `> 🚩 ${textbot}`
+
+    await conn.reply(m.chat, txt, m, rcanal)
+    await m.react('✅')
+
+  } catch {
+    await m.react('✖️')
+  }
 }
 handler.help = ['speedtest'];
 handler.tags = ['main']
