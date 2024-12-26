@@ -22,20 +22,20 @@ let tags = {
 
 const defaultMenu = {
   before: `  
-ঔৣ͜͡SonGokuBOTꦽꦼᬏ
-⸼݇҉ֻ᠂⃟🐉─➤Github: github.com/YerTX2/SonGOKU 
-╭──────────────────✎
-╰─➤INFO
-│㆒⸼݇҉ֻ᠂⃟🐉KI : %limit
-│㆒⸼݇҉ֻ᠂⃟🐉Exp : %totalexp
-│㆒⸼݇҉ֻ᠂⃟🐉Nivel : %level
+☞︎︎︎SonGokuBO☜︎︎︎
+⸼݇҉ֻ᠂⃟ꕥ─➤Github: github.com/YerTX2/SonGOKU 
+╭──────────────────
+╰─🅸︎🅽︎🅵︎🅾︎
+│㆒⸼݇҉ֻ᠂⃟𓇽𝖐𝖎 : %limit
+│㆒⸼݇҉ֻ᠂⃟𓇽𝖊𝖝𝖕 : %totalexp
+│㆒⸼݇҉ֻ᠂⃟𓇽𝖓𝖎𝖛𝖊𝖑 : %level
 ╰─────➤☆ۣۜۜ͜͡%name𖣘⃟ᗒ  
- ㆒⸼݇҉ֻ᠂⃟🐉ACTIVO: %uptime 
+ ㆒⸼݇҉ֻ᠂⃟𓇽𝘈𝘤𝘵𝘪𝘷𝘰𝘉𝘖𝘛: %uptime 
  %readmore
 `.trimStart(),
-  header: '`✧͜͡҉MENU %category⛤⃗͜ᬏ᭄`\n\n┌─⋅☆·̇·̣̇̇·̣̣̇·̣̇̇·̇⸼݇҉ֻ᠂⃟🐉୨୧┈┈┈୨୧⸼݇҉ֻ᠂⃟🐉·̇·̣̇̇·̣̣̇·̣̇̇☆─⋅┐',
-  body: '│ ⋆ ҈͜͡➳ %cmd*\n',
-  footer: '└─⋅☆·̇·̣̇̇·̣̣̇·̣̇̇·̇⸼݇҉ֻ᠂⃟🐉୨୧┈┈┈୨୧⸼݇҉ֻ᠂⃟🐉·̇·̣̇̇·̣̣̇·̣̇̇☆─⋅┘\n',
+  header: '`𝖒𝖊𝖓𝖚 %𝖈𝖆𝖙𝖊𝖌𝖔𝖗𝖞⛤⃗͜`\n\n┌─⋅☆·̇·̣̇̇·̣̣̇·̣̇̇·̇⸼݇҉ֻ᠂⃟୨୧┈┈┈୨୧⸼݇҉ֻ᠂⃟·̇·̣̇̇·̣̣̇·̣̇̇☆─⋅┐',
+  body: '│ ⋆➪ %𝔠𝔪𝔡*\n',
+  footer: '└─⋅☆·̇·̣̇̇·̣̣̇·̣̇̇·̇⸼݇҉ֻ᠂⃟୨୧┈┈┈୨୧⸼݇҉ֻ᠂⃟·̇·̣̇̇·̣̣̇·̣̇̇☆─⋅┘\n',
   after: '',
 }
 
