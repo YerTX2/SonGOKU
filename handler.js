@@ -1,10 +1,121 @@
-import { smsg } from './lib/simple.js'
-import { format } from 'util' 
-import { fileURLToPath } from 'url'
-import path, { join } from 'path'
-import { unwatchFile, watchFile } from 'fs'
-import chalk from 'chalk'
-import fetch from 'node-fetch'
+import { smsg } from './lib/simple.js';
+import { format } from 'util';
+import { fileURLToPath } from 'url';
+import path, { join } from 'path';
+import { unwatchFile, watchFile } from 'fs';
+import chalk from 'chalk';
+import fetch from 'node-fetch';
+import qrcode from 'qrcode';
+import { useMultiFileAuthState, fetchLatestBaileysVersion, makeWASocket } from '@whiskeysockets/baileys';
+
+global.conns = global.conns || [];
+
+export async function handler(chatUpdate) {
+    this.msgqueque = this.msgqueque || [];
+    if (!chatUpdate) return;
+
+    // Procesamiento inicial
+    this.pushMessage(chatUpdate.messages).catch(console.error);
+    let m = chatUpdate.messages[chatUpdate.messages.length - 1];
+    if (!m) return;
+
+    if (global.db.data == null) await global.loadDatabase();
+
+    try {
+        m = smsg(this, m) || m;
+        if (!m) return;
+
+        // Nueva funcionalidad: Sub-bot
+        if (m.text?.startsWith('/jadibot')) {
+            let args = m.text.trim().split(' ').slice(1);
+            let isCode = args.includes('--code');
+            let mentionedJid = m.mentionedJid ? m.mentionedJid[0] : m.sender;
+            let id = mentionedJid.split('@')[0];
+            let sessionPath = `./sessions/${id}`;
+
+            if (!fs.existsSync(sessionPath)) fs.mkdirSync(sessionPath, { recursive: true });
+
+            if (args[0] && isCode) {
+                let credentials = Buffer.from(args[0], 'base64').toString('utf-8');
+                fs.writeFileSync(`${sessionPath}/creds.json`, credentials);
+            }
+
+            let { state, saveCreds } = await useMultiFileAuthState(sessionPath);
+            let { version } = await fetchLatestBaileysVersion();
+
+            const sock = makeWASocket({
+                version,
+                auth: state,
+                logger: P({ level: 'silent' }),
+                printQRInTerminal: false,
+            });
+
+            sock.ev.on('connection.update', async (update) => {
+                const { connection, qr } = update;
+                if (qr && !isCode) {
+                    let qrImage = await qrcode.toBuffer(qr, { scale: 8 });
+                    this.sendMessage(m.chat, { image: qrImage, caption: 'Escanea este QR para conectar.' });
+                }
+            });
+
+            global.conns.push(sock);
+            this.reply(m.chat, '🚩 Sub-bot conectado exitosamente.', m);
+            return;
+        }
+
+        // Continuación de las reglas del handler
+        m.exp = 0;
+        m.limit = false;
+
+        // Configuraciones de usuario y chat
+        if (global.db.data.users[m.sender] == null) {
+            global.db.data.users[m.sender] = {
+                exp: 0,
+                limit: global.limitInitial,
+                registered: false,
+                name: null,
+                age: null,
+                premium: false
+            };
+        }
+
+        // Si el mensaje tiene texto y no es un comando o está en una lista de mensajes a bloquear
+        if (m.text) {
+            if (m.text.startsWith('/')) {
+                // Aquí irían las funcionalidades para comandos adicionales
+            }
+
+            // Reglas adicionales para manejar los mensajes que no sean comandos
+            if (m.exp > 0) {
+                if (global.db.data.users[m.sender].exp >= m.exp) {
+                    global.db.data.users[m.sender].exp -= m.exp;
+                }
+            }
+
+            if (m.limit) {
+                if (global.db.data.users[m.sender].limit >= m.limit) {
+                    global.db.data.users[m.sender].limit -= m.limit;
+                }
+            }
+        }
+
+        // Responder según las configuraciones
+        if (opts['autoread']) await this.readMessages([m.key]);
+    } catch (e) {
+        console.error(e);
+    } finally {
+        // Lógica final del handler
+        if (opts['autoread']) await this.readMessages([m.key]);
+    }
+}
+
+// Actualización dinámica del archivo
+let file = global.__filename(import.meta.url, true);
+watchFile(file, async () => {
+    unwatchFile(file);
+    console.log(chalk.magenta("Se actualizó 'handler.js'"));
+    if (global.reloadHandler) console.log(await global.reloadHandler());
+});
 
 const { proto } = (await import('@whiskeysockets/baileys')).default
 const isNumber = x => typeof x === 'number' && !isNaN(x)
