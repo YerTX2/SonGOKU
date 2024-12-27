@@ -3,19 +3,33 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
   // Descargamos la imagen respondida
   let imageUrl = await m.quoted.download()
-  
+
+  // Subimos la imagen a Qu.ax (cualquier servicio similar que no requiera autenticación)
+  const formData = new FormData()
+  formData.append('file', imageUrl, 'image.jpg')
+
+  // Subimos la imagen a Qu.ax
+  const uploadResponse = await fetch('https://qu.ax/api/upload', {
+    method: 'POST',
+    body: formData
+  })
+
+  const uploadData = await uploadResponse.json()
+  const imageLink = uploadData.link  // Obtenemos la URL de la imagen subida
+
+  // Si la subida fue exitosa, la URL estará disponible en uploadData.link
+  if (!imageLink) return m.reply('No se pudo subir la imagen.')
+
   // URL de la API con la imagen proporcionada
-  let apiUrl = `https://deliriussapi-oficial.vercel.app/ia/age?image=${encodeURIComponent(imageUrl)}&language=es`
+  let apiUrl = `https://deliriussapi-oficial.vercel.app/ia/age?image=${encodeURIComponent(imageLink)}&language=es`
 
   try {
     let res = await fetch(apiUrl)
     let json = await res.json()
 
-    // Verificamos que la respuesta tenga los datos de la edad
     if (json.status === true && json.data && json.data.age) {
       let { age, gender, expression, face_shape } = json.data
 
-      // Mensaje de respuesta con la información obtenida
       m.reply(`
         La edad estimada de la persona en la imagen es: *${age} años*
         Género: *${gender}*
