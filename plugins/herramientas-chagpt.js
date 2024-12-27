@@ -51,7 +51,7 @@ await m.reply(res.gpt)
 }
 
 if (command == 'gemini') {
-let gpt = await fetch(`https://apidelirius.duckdns.org/ia/gemini?query=${text}`)
+let gpt = await fetch(`https://deliriussapi-oficial.vercel.app/ia/gemini?query=${text}`)
 let res = await gpt.json()
 await m.reply(res.message)
 }
