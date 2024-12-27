@@ -76,8 +76,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 };
 
-handler.command = ['play2', 'ytmp4']; // Comandos disponibles
-handler.help = ['play2 <búsqueda o enlace>', 'ytmpp4 <búsqueda o enlace>'];
+handler.command = ['playvideo']; // Comandos disponibles
+handler.help = ['playvideo <búsqueda o enlace>'];
 handler.tags = ['downloader'];
 
 export default handler;
