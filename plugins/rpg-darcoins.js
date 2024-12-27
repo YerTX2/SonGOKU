@@ -25,11 +25,19 @@ let handler = async (m, { conn, text }) => {
     users[m.sender].limit -= totalCost;
     users[who].limit += poin;
 
-    await m.reply(`Has transferido *${poin} ⚡ ki* a *@${who.split`@`[0]}*
+    await conn.reply(
+        m.chat,
+        `Has transferido *${poin} ⚡ ki* a *@${who.split`@`[0]}*
 Impuesto (2%): *${imt} ⚡ ki*
-Total gastado: *${totalCost} ⚡ ki*`);
+Total gastado: *${totalCost} ⚡ ki*`,
+        m
+    );
 
-    conn.fakeReply(m.chat, `*+${poin}* ⚡ ki recibidos.`, who, m.text);
+    await conn.reply(
+        who,
+        `*+${poin}* ⚡ ki recibidos de *@${m.sender.split`@`[0]}*.`,
+        m
+    );
 };
 
 handler.help = ['darstars *@user <cantidad>*'];
