@@ -6,7 +6,7 @@ const handler = async (m, { conn, usedPrefix }) => {
     return conn.sendMessage(m.chat, {text: '⚠️ Este comando solo puede ser utilizado en el bot principal de 孫ՏᴏɴᏀᴏᴋᴜ孫.'}, {quoted: m});
   }
   await conn.sendMessage(m.chat, {text: '✅ Iniciando...'}, {quoted: m});
-  const sessionPath = './Gokusessions'
+  const sessionPath = './GokuSession'
   try {
     if (!existsSync(sessionPath)) {
       return await conn.sendMessage(m.chat, {text: '⚠️ La carpeta session de 孫ՏᴏɴᏀᴏᴋᴜ孫 no existe o está vacía.'}, {quoted: m});
