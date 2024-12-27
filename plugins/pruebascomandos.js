@@ -13,17 +13,23 @@ let handler = async (m, { conn, text, command }) => {
   }
 
   if (!games[chatId]) {
+    const msg = await conn.reply(
+      m.chat,
+      '🎮 *Tateti* 🎮\n\nEsperando otro jugador. Responde a este mensaje con: *jugartateti* para unirte. Si quieres salir, usa el comando *.leavetateti*.',
+      m
+    );
     games[chatId] = {
       waiting: true,
       player1: m.sender,
+      messageId: msg.key.id,
     };
-    return conn.reply(m.chat, '🎮 *Tateti* 🎮\n\nEsperando otro jugador. Responde a este mensaje con: *jugartateti* para unirte. Si quieres salir, usa el comando *.leavetateti*.', m);
+    return;
   }
 
   const currentGame = games[chatId];
 
   if (currentGame.waiting) {
-    if (text === 'jugartateti' && m.sender !== currentGame.player1) {
+    if (m.quoted && m.quoted.id === currentGame.messageId && text.toLowerCase() === 'jugartateti' && m.sender !== currentGame.player1) {
       currentGame.player2 = m.sender;
       currentGame.waiting = false;
       currentGame.board = Array(9).fill(' ');
