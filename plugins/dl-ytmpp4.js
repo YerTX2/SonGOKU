@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
 import yts from 'yt-search';
 
+let resolutions = {}; 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   try {
     let queryOrUrl = text.trim();
@@ -14,12 +15,10 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
     let videoData;
     if (queryOrUrl.startsWith('http')) {
-      
       const response = await fetch(`https://ytdownloader.nvlgroup.my.id/info?url=${queryOrUrl}`);
       if (!response.ok) throw new Error('Error al obtener información del video.');
       videoData = await response.json();
     } else {
-      
       const searchResults = await yts(queryOrUrl);
       if (!searchResults.videos.length) {
         return conn.reply(m.chat, 'No se han encontrado resultados para tu búsqueda.', m);
@@ -32,24 +31,40 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 
     const { title, duration, thumbnail, views, url } = videoData;
-    const quality = '480'; 
     const formattedViews = parseInt(views).toLocaleString('en-US');
 
-    const info = `✰ *Información del video:*\n\n- *Título:* ${title}\n- *Duración:* ${duration || '-'}\n- *Resolución:* ${quality}p\n- *Vistas:* ${formattedViews}\n- *Link:* ${url}`;
-    const exitodescarga = `*¡¡VIDEO O DOCUMENTO DESCARGADO CON ÉXITO!!*\n\n> SonGoku-Bot`;
-
-   
+    const info = `✰ *Información del video:*\n\n- *Título:* ${title}\n- *Duración:* ${duration || '-'}\n- *Resolución:* Elige entre 360p o 480p\n- *Vistas:* ${formattedViews}\n- *Link:* ${url}`;
+    
     await conn.sendMessage(
       m.chat,
       {
         image: { url: thumbnail },
-        caption: info,
+        caption: `${info}\n\nResponde a este mensaje con *360p* o *480p* para elegir la resolución.`,
       },
       { quoted: m }
     );
 
-    
-    const dl_url = `https://ytdownloader.nvlgroup.my.id/download?url=${queryOrUrl}&resolution=${quality}`;
+    resolutions[m.chat] = { queryOrUrl, title }; 
+  } catch (error) {
+    console.error(error);
+    conn.reply(m.chat, `❌ *Error:* ${error.message}`, m);
+  }
+};
+
+handler.onReply = async (m, { conn }) => {
+  const userChoice = m.body.trim();
+  const availableResolutions = ['360p', '480p'];
+  
+  if (!availableResolutions.includes(userChoice)) return;
+
+  const resolution = userChoice.replace('p', '');
+  const userData = resolutions[m.chat];
+
+  if (!userData) return;
+
+  try {
+    const { queryOrUrl, title } = userData;
+    const dl_url = `https://ytdownloader.nvlgroup.my.id/download?url=${queryOrUrl}&resolution=${resolution}`;
     const videoResponse = await fetch(dl_url);
 
     if (!videoResponse.ok) {
@@ -57,10 +72,11 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 
     const videoBuffer = await videoResponse.buffer();
-    const sizeInMB = videoBuffer.length / (1024 * 1024); 
+    const sizeInMB = videoBuffer.length / (1024 * 1024);
+
+    const exitodescarga = `*¡¡VIDEO O DOCUMENTO DESCARGADO CON ÉXITO!!*\n\n> SonGoku-Bot`;
 
     if (sizeInMB > 100) {
-      
       await conn.sendMessage(
         m.chat,
         {
@@ -72,7 +88,6 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         { quoted: m }
       );
     } else {
-      
       await conn.sendMessage(
         m.chat,
         {
@@ -83,6 +98,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         { quoted: m }
       );
     }
+
+    delete resolutions[m.chat]; 
+
   } catch (error) {
     console.error(error);
     conn.reply(m.chat, `❌ *Error:* ${error.message}`, m);
@@ -90,8 +108,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 };
 
 handler.command = ['playvideo'];
-handler.limit = 3
 handler.help = ['playvideo <búsqueda o enlace>'];
 handler.tags = ['downloader'];
+handler.register = true;
 
 export default handler;
