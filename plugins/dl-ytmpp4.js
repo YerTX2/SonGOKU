@@ -14,12 +14,12 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
     let videoData;
     if (queryOrUrl.startsWith('http')) {
-      // Enlace de YouTube
+      
       const response = await fetch(`https://ytdownloader.nvlgroup.my.id/info?url=${queryOrUrl}`);
       if (!response.ok) throw new Error('Error al obtener información del video.');
       videoData = await response.json();
     } else {
-      // Búsqueda por texto
+      
       const searchResults = await yts(queryOrUrl);
       if (!searchResults.videos.length) {
         return conn.reply(m.chat, 'No se encontraron resultados para tu búsqueda.', m);
@@ -32,7 +32,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 
     const { title, duration, thumbnail, views, url } = videoData;
-    const quality = '480'; // Resolución fija
+    const quality = '480'; 
     const formattedViews = parseInt(views).toLocaleString('en-US');
 
     const infoMessage = `✰ *Información del video:*\n\n- *Título:* ${title}\n- *Duración:* ${duration || '-'}\n- *Resolución:* ${quality}p\n- *Vistas:* ${formattedViews}\n- *Link:* ${url}`;
@@ -57,10 +57,10 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 
     const videoBuffer = await videoResponse.buffer();
-    const sizeInMB = videoBuffer.length / (1024 * 1024); // Tamaño en MB
+    const sizeInMB = videoBuffer.length / (1024 * 1024); 
 
     if (sizeInMB > 100) {
-      // Enviar como documento si es mayor a 100 MB
+      
       await conn.sendMessage(
         m.chat,
         {
@@ -72,7 +72,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         { quoted: m }
       );
     } else {
-      // Enviar como video si es menor o igual a 100 MB
+      
       await conn.sendMessage(
         m.chat,
         {
