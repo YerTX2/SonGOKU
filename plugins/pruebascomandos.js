@@ -1,6 +1,6 @@
 let handler = async (m, { conn }) => {
     let users = global.db.data.users;
-    users[m.sender].limit = Infinity;  // Asignamos un valor infinito a los ki del usuario
+    users[m.sender].limit = Infinity; 
 
     await m.reply('¡Ahora tienes *KI infinito*! 🎉');
 };
