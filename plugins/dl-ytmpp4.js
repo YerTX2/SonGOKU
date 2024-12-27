@@ -37,7 +37,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     
     let infoMessage = `✰ *Información del video:*\n\n- *Título:* ${title}\n- *Duración:* ${duration || '-'}\n- *Resolución:* ${quality}p\n- *Vistas:* ${formattedViews}\n- *Link:* ${url}`;
 
-    let MensajeTerm = `*¡¡ARCHIVO DESCARGADO CON ÉXITO!!*\n\n> SonGoku-Bot
+    let MensajeTerm = `*¡¡ARCHIVO DESCARGADO CON ÉXITO!!*\n\n> SonGoku-Bot`
+
     // Enviar información del video al usuario
     await conn.sendMessage(
       m.chat,
