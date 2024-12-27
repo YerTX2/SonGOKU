@@ -31,8 +31,8 @@ let handler = async (m, { conn, text }) => {
     }
 
     
-    users[m.sender].limit -= totalCost; // Restar al remitente el total (cantidad + impuesto)
-    users[who].limit += poin; // Sumar la cantidad transferida al destinatario
+    users[m.sender].limit -= totalCost; 
+    users[who].limit += poin; 
 
     
     await m.reply(`Has transferido *${poin} ⚡ ki* a *@${who.split`@`[0]}*
