@@ -3,12 +3,21 @@ let games = {};
 let handler = async (m, { conn, text, command }) => {
   const chatId = m.chat;
 
+  if (command === 'leavetateti') {
+    if (games[chatId] && games[chatId].waiting && games[chatId].player1 === m.sender) {
+      delete games[chatId];
+      return conn.reply(m.chat, 'Has salido del juego de Tateti.', m);
+    } else {
+      return conn.reply(m.chat, 'No tienes un juego activo del que puedas salir.', m);
+    }
+  }
+
   if (!games[chatId]) {
     games[chatId] = {
       waiting: true,
       player1: m.sender,
     };
-    return conn.reply(m.chat, '🎮 *Tateti* 🎮\n\nEsperando otro jugador. Responde a este mensaje con: *jugartateti* para unirte.', m);
+    return conn.reply(m.chat, '🎮 *Tateti* 🎮\n\nEsperando otro jugador. Responde a este mensaje con: *jugartateti* para unirte. Si quieres salir, usa el comando *.leavetateti*.', m);
   }
 
   const currentGame = games[chatId];
@@ -93,8 +102,8 @@ const checkWinner = (board) => {
   return null;
 };
 
-handler.command = ['tateti'];
-handler.help = ['tateti'];
+handler.command = ['tateti', 'leavetateti'];
+handler.help = ['tateti', 'leavetateti'];
 handler.tags = ['games'];
 
 export default handler;
