@@ -1,8 +1,8 @@
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 let response = args.join(' ').split('|')
-if (!text | !text2) return m.reply(`🔍 Ingresa un texto junto al comando.`)
+if (!text) return m.reply(`🔍 Ingresa un texto junto al comando.`)
 try {
-let res = `https://api.popcat.xyz/caution?text=${text}+${text2}`
+let res = `https://api.popcat.xyz/caution?text=${text}`
 await conn.sendFile(m.chat, res, 'thumbnail.jpg', null, m)
 } catch {
 }}
