@@ -3,43 +3,42 @@ import yts from 'yt-search';
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   try {
-    let queryOrUrl = text.trim(); // Obtener la consulta o enlace
+    let queryOrUrl = text.trim();
     if (!queryOrUrl) {
       return conn.reply(
         m.chat,
-        `Ingresa un *enlace* de YouTube o un *término de búsqueda*.\n\n*Ejemplo:*\n${usedPrefix + command} Never Gonna Give You Up\n${usedPrefix + command} https://youtu.be/dQw4w9WgXcQ`,
+        `Por favor, ingresa un *enlace de YouTube* o un *término de búsqueda*.\n\n*Ejemplo:*\n${usedPrefix + command} Never Gonna Give You Up\n${usedPrefix + command} https://youtu.be/dQw4w9WgXcQ`,
         m
       );
     }
 
     let videoData;
-
-    // Comprobar si es un enlace de YouTube
     if (queryOrUrl.startsWith('http')) {
-      let apiinfo = await fetch(`https://ytdownloader.nvlgroup.my.id/info?url=${queryOrUrl}`);
-      videoData = await apiinfo.json();
+      // Enlace de YouTube
+      const response = await fetch(`https://ytdownloader.nvlgroup.my.id/info?url=${queryOrUrl}`);
+      if (!response.ok) throw new Error('Error al obtener información del video.');
+      videoData = await response.json();
     } else {
       // Búsqueda por texto
       const searchResults = await yts(queryOrUrl);
       if (!searchResults.videos.length) {
         return conn.reply(m.chat, 'No se encontraron resultados para tu búsqueda.', m);
       }
-      let firstVideo = searchResults.videos[0];
+      const firstVideo = searchResults.videos[0];
       queryOrUrl = firstVideo.url;
-      let apiinfo = await fetch(`https://ytdownloader.nvlgroup.my.id/info?url=${queryOrUrl}`);
-      videoData = await apiinfo.json();
+      const response = await fetch(`https://ytdownloader.nvlgroup.my.id/info?url=${queryOrUrl}`);
+      if (!response.ok) throw new Error('Error al obtener información del video.');
+      videoData = await response.json();
     }
 
-    let { title, duration, thumbnail, views, url } = videoData;
-    let quality = '480'; // Resolución fija a 480p
-    let formattedViews = parseInt(views).toLocaleString('en-US');
+    const { title, duration, thumbnail, views, url } = videoData;
+    const quality = '480'; // Resolución fija
+    const formattedViews = parseInt(views).toLocaleString('en-US');
 
-    
-    let infoMessage = `✰ *Información del video:*\n\n- *Título:* ${title}\n- *Duración:* ${duration || '-'}\n- *Resolución:* ${quality}p\n- *Vistas:* ${formattedViews}\n- *Link:* ${url}`;
+    const infoMessage = `✰ *Información del video:*\n\n- *Título:* ${title}\n- *Duración:* ${duration || '-'}\n- *Resolución:* ${quality}p\n- *Vistas:* ${formattedViews}\n- *Link:* ${url}`;
+    const successMessage = `*¡¡ARCHIVO DESCARGADO CON ÉXITO!!*\n\n> SonGoku-Bot`;
 
-    let MensajeTerm = `*¡¡ARCHIVO DESCARGADO CON ÉXITO!!*\n\n> SonGoku-Bot`
-
-    // Enviar información del video al usuario
+    // Enviar información del video
     await conn.sendMessage(
       m.chat,
       {
@@ -49,37 +48,48 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
       { quoted: m }
     );
 
-    // Descargar el video en resolución 480p
-    let dl_url = `https://ytdownloader.nvlgroup.my.id/download?url=${queryOrUrl}&resolution=${quality}`;
-    let vidFetch = await fetch(dl_url);
+    // Descargar el video
+    const dl_url = `https://ytdownloader.nvlgroup.my.id/download?url=${queryOrUrl}&resolution=${quality}`;
+    const videoResponse = await fetch(dl_url);
 
-    if (!vidFetch.ok) {
+    if (!videoResponse.ok) {
       return conn.reply(m.chat, 'Error al descargar el video. Por favor, verifica el enlace.', m);
     }
 
-    let videoBuffer = await vidFetch.buffer();
-    let Tamaño = videoBuffer.length / (1024 * 1024); // Tamaño en MB
+    const videoBuffer = await videoResponse.buffer();
+    const sizeInMB = videoBuffer.length / (1024 * 1024); // Tamaño en MB
 
-    if (Tamaño > 100) {
+    if (sizeInMB > 100) {
+      // Enviar como documento si es mayor a 100 MB
       await conn.sendMessage(
         m.chat,
-        { document: videoBuffer, caption: MensajeTerm, mimetype: 'video/mp4', fileName: `${title}.mp4` },
+        {
+          document: videoBuffer,
+          caption: successMessage,
+          mimetype: 'video/mp4',
+          fileName: `${title}.mp4`,
+        },
         { quoted: m }
       );
     } else {
+      // Enviar como video si es menor o igual a 100 MB
       await conn.sendMessage(
         m.chat,
-        { video: videoBuffer, caption: infoMessage, mimetype: 'video/mp4' },
+        {
+          video: videoBuffer,
+          caption: infoMessage,
+          mimetype: 'video/mp4',
+        },
         { quoted: m }
       );
     }
   } catch (error) {
     console.error(error);
-    conn.reply(m.chat, `Error: ${error.message}`, m);
+    conn.reply(m.chat, `❌ *Error:* ${error.message}`, m);
   }
 };
 
-handler.command = ['playvideo']; // Comandos disponibles
+handler.command = ['playvideo'];
 handler.help = ['playvideo <búsqueda o enlace>'];
 handler.tags = ['downloader'];
 
