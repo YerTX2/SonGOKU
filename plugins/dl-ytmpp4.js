@@ -7,7 +7,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!queryOrUrl) {
       return conn.reply(
         m.chat,
-        `Por favor, ingresa un *enlace de YouTube* o un *término de búsqueda*.\n\n*Ejemplo:*\n${usedPrefix + command} Never Gonna Give You Up\n${usedPrefix + command} https://youtu.be/dQw4w9WgXcQ`,
+        `Por favor, ingresa un *enlace de YouTube* o un *texto*.\n\n*Ejemplo:*\n${usedPrefix + command} Never Gonna Give You Up\n${usedPrefix + command} https://youtu.be/dQw4w9WgXcQ`,
         m
       );
     }
@@ -22,7 +22,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
       
       const searchResults = await yts(queryOrUrl);
       if (!searchResults.videos.length) {
-        return conn.reply(m.chat, 'No se encontraron resultados para tu búsqueda.', m);
+        return conn.reply(m.chat, 'No se han encontrado resultados para tu búsqueda.', m);
       }
       const firstVideo = searchResults.videos[0];
       queryOrUrl = firstVideo.url;
@@ -35,20 +35,20 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     const quality = '480'; 
     const formattedViews = parseInt(views).toLocaleString('en-US');
 
-    const infoMessage = `✰ *Información del video:*\n\n- *Título:* ${title}\n- *Duración:* ${duration || '-'}\n- *Resolución:* ${quality}p\n- *Vistas:* ${formattedViews}\n- *Link:* ${url}`;
-    const successMessage = `*¡¡VIDEO O DOCUMENTO DESCARGADO CON ÉXITO!!*\n\n> SonGoku-Bot`;
+    const info = `✰ *Información del video:*\n\n- *Título:* ${title}\n- *Duración:* ${duration || '-'}\n- *Resolución:* ${quality}p\n- *Vistas:* ${formattedViews}\n- *Link:* ${url}`;
+    const exitodescarga = `*¡¡VIDEO O DOCUMENTO DESCARGADO CON ÉXITO!!*\n\n> SonGoku-Bot`;
 
-    // Enviar información del video
+   
     await conn.sendMessage(
       m.chat,
       {
         image: { url: thumbnail },
-        caption: infoMessage,
+        caption: info,
       },
       { quoted: m }
     );
 
-    // Descargar el video
+    
     const dl_url = `https://ytdownloader.nvlgroup.my.id/download?url=${queryOrUrl}&resolution=${quality}`;
     const videoResponse = await fetch(dl_url);
 
@@ -65,7 +65,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         m.chat,
         {
           document: videoBuffer,
-          caption: successMessage,
+          caption: exitodescarga,
           mimetype: 'video/mp4',
           fileName: `${title}.mp4`,
         },
@@ -77,7 +77,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         m.chat,
         {
           video: videoBuffer,
-          caption: successMessage,
+          caption: exitodescarga,
           mimetype: 'video/mp4',
         },
         { quoted: m }
