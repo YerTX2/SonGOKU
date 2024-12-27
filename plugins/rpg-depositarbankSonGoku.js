@@ -2,7 +2,8 @@ let handler = async (m, { args }) => {
     let user = global.db.data.users[m.sender];
     if (!args[0]) return m.reply('🚩 Ingresa la cantidad de *⚡ Ki* que deseas depositar.');
 
-    if (args[0].toLowerCase() === 'all') { // Detecta "all" correctamente
+    if (args[0].toLowerCase() === 'all') { 
+
         if (user.limit < 1) return m.reply('🚩 No tienes *⚡ Ki* para depositar.');
         let count = user.limit; 
         user.limit = 0;
