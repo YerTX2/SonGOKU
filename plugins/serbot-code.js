@@ -99,5 +99,8 @@ let handler = async (message, { conn, args, usedPrefix, command, isOwner }) => {
   socket.ev.on("creds.update", saveState);
 };
 
+handler.help = ['serbot', "serbot --code"];
+handler.tags = ['jadibot'];
+handler.command = ['jadibot', "serbot"];
 // Exportar el handler
 export default handler;
