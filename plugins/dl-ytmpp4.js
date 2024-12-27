@@ -77,7 +77,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         m.chat,
         {
           video: videoBuffer,
-          caption: infoMessage,
+          caption: successMessage,
           mimetype: 'video/mp4',
         },
         { quoted: m }
