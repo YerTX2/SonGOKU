@@ -181,7 +181,7 @@ m.reply(`_✧ Enviando ${name} (${artist}/${duration})_\n\n> ${url}`);
 }
 handler.help = ['applemusicplay'];
 handler.tags = ['downloader'];
-handler.limit = 5
+handler.limit = 3
 handler.command = /^(applemusicplay|play|song)$/i;
 
 export default handler;
