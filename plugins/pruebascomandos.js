@@ -1,32 +1,35 @@
 let games = {};
 
-let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
+let handler = async (m, { conn, text, command }) => {
   const chatId = m.chat;
 
   if (!games[chatId]) {
-    if (text.includes('|')) {
-      const [player1, player2] = text.split('|').map((id) => id.trim().replace('@', '') + '@s.whatsapp.net');
-      if (!participants.some((p) => p.id === player1) || !participants.some((p) => p.id === player2)) {
-        return conn.reply(m.chat, 'Ambos jugadores deben estar en el grupo.', m);
-      }
-      games[chatId] = {
-        board: Array(9).fill(' '),
-        turn: player1,
-        players: { X: player1, O: player2 },
-      };
-      const board = renderBoard(games[chatId].board);
-      return conn.reply(m.chat, `🎮 Tateti 🎮\n\n${board}\nTurno de: @${player1.split('@')[0]} (X)`, m, {
-        mentions: [player1],
-      });
-    } else {
-      return conn.reply(m.chat, `Usa: ${usedPrefix + command} @jugador1 | @jugador2`, m);
-    }
+    games[chatId] = {
+      waiting: true,
+      player1: m.sender,
+    };
+    return conn.reply(m.chat, '🎮 *Tateti* 🎮\n\nEsperando otro jugador. Responde a este mensaje con: *jugartateti* para unirte.', m);
   }
 
   const currentGame = games[chatId];
-  if (!currentGame.players.X || !currentGame.players.O) {
-    delete games[chatId];
-    return conn.reply(m.chat, 'El juego ha sido reiniciado.', m);
+
+  if (currentGame.waiting) {
+    if (text === 'jugartateti' && m.sender !== currentGame.player1) {
+      currentGame.player2 = m.sender;
+      currentGame.waiting = false;
+      currentGame.board = Array(9).fill(' ');
+      currentGame.turn = currentGame.player1;
+      return conn.reply(
+        m.chat,
+        `🎮 *Tateti* 🎮\n\n¡El juego comienza!\n\nTurno de @${currentGame.turn.split('@')[0]} (X).\n${renderBoard(currentGame.board)}`,
+        m,
+        { mentions: [currentGame.player1, currentGame.player2] }
+      );
+    } else if (m.sender === currentGame.player1) {
+      return conn.reply(m.chat, 'Estás esperando a que otro jugador se una.', m);
+    } else {
+      return conn.reply(m.chat, 'Responde correctamente al mensaje para unirte al juego.', m);
+    }
   }
 
   if (!text || isNaN(text) || +text < 1 || +text > 9 || currentGame.board[+text - 1] !== ' ') {
@@ -39,15 +42,18 @@ let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
     });
   }
 
-  const symbol = currentGame.turn === currentGame.players.X ? 'X' : 'O';
+  const symbol = currentGame.turn === currentGame.player1 ? 'X' : 'O';
   currentGame.board[+text - 1] = symbol;
   const board = renderBoard(currentGame.board);
 
   const winner = checkWinner(currentGame.board);
   if (winner) {
-    conn.reply(m.chat, `🎉 ¡Ganador! @${currentGame.players[winner].split('@')[0]} (${winner})\n\n${board}`, m, {
-      mentions: [currentGame.players[winner]],
-    });
+    conn.reply(
+      m.chat,
+      `🎉 ¡Ganador! @${currentGame[winner === 'X' ? 'player1' : 'player2'].split('@')[0]} (${winner})\n\n${board}`,
+      m,
+      { mentions: [currentGame.player1, currentGame.player2] }
+    );
     delete games[chatId];
     return;
   }
@@ -58,8 +64,8 @@ let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
     return;
   }
 
-  currentGame.turn = currentGame.turn === currentGame.players.X ? currentGame.players.O : currentGame.players.X;
-  conn.reply(m.chat, `${board}\nTurno de: @${currentGame.turn.split('@')[0]} (${currentGame.turn === currentGame.players.X ? 'X' : 'O'})`, m, {
+  currentGame.turn = currentGame.turn === currentGame.player1 ? currentGame.player2 : currentGame.player1;
+  conn.reply(m.chat, `${board}\nTurno de: @${currentGame.turn.split('@')[0]} (${currentGame.turn === currentGame.player1 ? 'X' : 'O'})`, m, {
     mentions: [currentGame.turn],
   });
 };
@@ -88,7 +94,7 @@ const checkWinner = (board) => {
 };
 
 handler.command = ['tateti'];
-handler.help = ['tateti @jugador1 | @jugador2'];
+handler.help = ['tateti'];
 handler.tags = ['games'];
 
 export default handler;
