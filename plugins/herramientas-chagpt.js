@@ -56,8 +56,8 @@ let res = await gpt.json()
 await m.reply(res.message)
 }
 
-if (command == 'pixai' || command == 'pixai') {
-let gpt = await fetch(`https://api.dorratz.com/v2/pix-ai?prompt=${text}`)
+if (command == 'bing' || command == 'bing') {
+let gpt = await fetch(``)
 let res = await gpt.json()
 await m.reply(res.message)
 }}
