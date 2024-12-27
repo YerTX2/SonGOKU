@@ -13,33 +13,28 @@ let handler = async (m, { conn, text }) => {
     if (isNaN(txt)) throw '🚩 Sólo números.';
 
     let poin = parseInt(txt);
-    if (poin < 1) throw '🚩 La cantidad mínima a transferir es *1 ⚡ ki*.';
+    let imt = Math.ceil(poin * impuesto); // Impuesto calculado
+    let totalCost = poin + imt; // Total a descontar del remitente
 
-    let imt = Math.ceil(poin * impuesto);
-    let totalCost = poin + imt;
+    if (totalCost < 1) throw '🚩 La cantidad mínima a transferir es *1 ⚡ ki*.';
 
     let users = global.db.data.users;
 
-    // Verificar si el usuario que transfiere tiene suficientes recursos
+    // Verificar si el remitente tiene suficientes recursos
     if (totalCost > users[m.sender].limit) {
         throw `🚩 No tienes suficientes *⚡ ki* para transferir. Necesitas al menos *${totalCost} ⚡ ki* (incluyendo impuesto).`;
     }
 
-    // Verificar si el destinatario existe en la base de datos
-    if (!users[who]) {
-        throw '🚩 El usuario mencionado no existe en la base de datos.';
-    }
-
     // Realizar la transferencia
-    users[m.sender].limit -= totalCost;
-    users[who].limit += poin;
+    users[m.sender].limit -= totalCost; // Restar el total (incluido el impuesto) al remitente
+    users[who].limit += poin; // Sumar los puntos transferidos al destinatario
 
     // Responder al usuario
     await m.reply(`Has transferido *${poin} ⚡ ki* a *@${who.split`@`[0]}*
 Impuesto (2%): *${imt} ⚡ ki*
 Total gastado: *${totalCost} ⚡ ki*`);
 
-    conn.fakeReply(m.chat, `*+${poin}* ⚡ ki`, who, m.text);
+    conn.fakeReply(m.chat, `*+${poin}* ⚡ ki recibidos.`, who, m.text);
 };
 
 handler.help = ['darstars *@user <cantidad>*'];
