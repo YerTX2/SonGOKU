@@ -56,8 +56,8 @@ let res = await gpt.json()
 await m.reply(res.message)
 }
 
-if (command == 'copilot' || command == 'bing') {
-let gpt = await fetch(`https://apidelirius.duckdns.org/ia/bingia?query=${text}`)
+if (command == 'bing' || command == 'bing') {
+let gpt = await fetch(`https://deliriussapi-oficial.vercel.app/ia/bingia?query=${text}`)
 let res = await gpt.json()
 await m.reply(res.message)
 }}
