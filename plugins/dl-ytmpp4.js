@@ -36,7 +36,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     const formattedViews = parseInt(views).toLocaleString('en-US');
 
     const infoMessage = `✰ *Información del video:*\n\n- *Título:* ${title}\n- *Duración:* ${duration || '-'}\n- *Resolución:* ${quality}p\n- *Vistas:* ${formattedViews}\n- *Link:* ${url}`;
-    const successMessage = `*¡¡ARCHIVO DESCARGADO CON ÉXITO!!*\n\n> SonGoku-Bot`;
+    const successMessage = `*¡¡VIDEO O DOCUMENTO DESCARGADO CON ÉXITO!!*\n\n>SonGoku-Bot`;
 
     // Enviar información del video
     await conn.sendMessage(
