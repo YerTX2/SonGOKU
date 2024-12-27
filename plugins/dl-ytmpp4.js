@@ -90,6 +90,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 };
 
 handler.command = ['playvideo'];
+handler.limit = 3
 handler.help = ['playvideo <búsqueda o enlace>'];
 handler.tags = ['downloader'];
 
