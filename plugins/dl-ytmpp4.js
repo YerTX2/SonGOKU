@@ -34,8 +34,10 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     let quality = '480'; // Resolución fija a 480p
     let formattedViews = parseInt(views).toLocaleString('en-US');
 
-    let infoMessage = `✰ *Información del video:*\n\n- *Título:* ${title}\n- *Duración:* ${duration || '-'}\n- *Resolución:* ${quality}p\n- *Vistas:* ${formattedViews}\n- *Link:* ${url}\n\n*Descargando video...*`;
+    
+    let infoMessage = `✰ *Información del video:*\n\n- *Título:* ${title}\n- *Duración:* ${duration || '-'}\n- *Resolución:* ${quality}p\n- *Vistas:* ${formattedViews}\n- *Link:* ${url}`;
 
+    let MensajeTerm = `*¡¡ARCHIVO DESCARGADO CON ÉXITO!!*\n\n> SonGoku-Bot
     // Enviar información del video al usuario
     await conn.sendMessage(
       m.chat,
@@ -60,7 +62,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (Tamaño > 100) {
       await conn.sendMessage(
         m.chat,
-        { document: videoBuffer, caption: infoMessage, mimetype: 'video/mp4', fileName: `${title}.mp4` },
+        { document: videoBuffer, caption: MensajeTerm, mimetype: 'video/mp4', fileName: `${title}.mp4` },
         { quoted: m }
       );
     } else {
