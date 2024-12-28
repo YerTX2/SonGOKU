@@ -9,5 +9,5 @@ handler.help = ['chetarki'];
 handler.tags = ['rpg'];
 handler.command = ['chetarki'];
 handler.register = true;
-handler.owner = true
+handler.rowner = true
 export default handler;
