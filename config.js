@@ -57,7 +57,7 @@ global.fantasyVid = ['./media/menus/Menuvid1.mp4', './media/menus/Menuvid2.mp4',
 global.catalogo = fs.readFileSync('./storage/img/catalogo.png')
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.group = 'https://chat.whatsapp.com/KpW1rbYU5C98zi03ADu1A1'
+global.group = 'https://chat.whatsapp.com/COGynlbC2SVHx72LaLPsVG'
 global.canal = 'https://whatsapp.com/channel/0029Vaj67qQJUM2Wa5Ey3y1v'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
