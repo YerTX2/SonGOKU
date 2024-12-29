@@ -1,25 +1,50 @@
-import ws from 'ws'
-import fetch from 'node-fetch'
+import ws from 'ws';
+async function handler(m, { usedPrefix }) {
 
-async function handler(m, { conn: _envio, usedPrefix }) {
-const uniqueUsers = new Map()
+const users = [...new Set([...global.conns.filter((conn) => conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED).map((conn) => conn)])];
+function dhms(ms) {
+  var segundos = Math.floor(ms / 1000);
+  var minutos = Math.floor(segundos / 60);
+  var horas = Math.floor(minutos / 60);
+  var días = Math.floor(horas / 24);
 
-global.conns.forEach((conn) => {
-if (conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED) {
-uniqueUsers.set(conn.user.jid.replace(/[^0-9]/g, ''), conn.user)}})
+  segundos %= 60;
+  minutos %= 60;
+  horas %= 24;
 
-const message = Array.from(uniqueUsers.values()).map((user, index) => `┌  🇦🇱  *${index + 1}* : @${user.jid.replace(/[^0-9]/g, '')}\n│  🇦🇱  *Link* : http://wa.me/${user.jid.replace(/[^0-9]/g, '')}\n└  🇦🇱  *Nombre* : ${user.name || 'Sub Bot ՏᴏɴᏀᴏᴋᴜ'}\n`
-  ).join('\n')
+  var resultado = "";
+  if (días !== 0) {
+    resultado += días + 'd '
+  }
+  if (horas !== 0) {
+    resultado += horas + 'h '
+  }
+  if (minutos !== 0) {
+    resultado += minutos + 'm '
+  }
+  if (segundos !== 0) {
+    resultado += segundos + 's'
+  }
 
-const replyMessage = message.length === 0 ? "" : message
-const totalUsers = uniqueUsers.size;
-const responseMessage = `${` –  *🐉S U B-B O T S / SON GOKU🐉*\n\n${replyMessage.trim()}`.trim()}`
-
-let img = await (await fetch(`https://i.ibb.co/jr3LdJN/20240906-115913.jpg`)).buffer()
-
-await _envio.sendFile(m.chat, img, 'thumbnail.jpg', responseMessage, m, false, { mentions: _envio.parseMention(responseMessage) })
+  return resultado;
 }
-handler.command = ['listjadibot', 'bots']
-handler.help = ['bots']
-handler.tags = ['serbot']
+
+  const message = users.map((v, index) => `*\`🐉 SonGoku | Subbot: ${index + 1}\`* \n*\`✅ Tag:\` @${v.user.jid.replace(/[^0-9]/g, '')}*\n*• wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}menu*\n*\`🌼 Nombre: ${v.user.name || '-'}\`*\n*\`🌱 Uptime: ${v.uptime ? dhms(Date.now() - v.uptime) : "Desconocido"}\`*`).join('\n\n*─ ── ──  ── ── ── ── ──  ── ── ─*\n\n');
+  const replyMessage = message.length === 0 ? 'No hay' : message;
+  const totalUsers = users.length;
+  const responseMessage = `
+*\`📝 Subbots activos: ${totalUsers || '0'}\`*
+
+ ${replyMessage.trim()}
+ 
+ 
+_*\`Developed by I'm Fz ~\`*_`.trim();
+
+  await conn.sendMessage(m.chat, { text: responseMessage, mentions: conn.parseMention(responseMessage)}, {quoted: m});
+}
+handler.help = ['botlist']
+handler.tags = ['bebot']
+handler.command = ['listbot', 'listbots', 'bots', 'bebots', 'botlist'] 
+
+
 export default handler
