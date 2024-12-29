@@ -11,7 +11,7 @@ conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
         await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }})
 }
 handler.help = ['mediafire']
-handler.tags = ['descargas']
+handler.tags = ['downloader']
 handler.command = /^(mediafire|mf)$/i
 handler.premium = false
 handler.group = true
