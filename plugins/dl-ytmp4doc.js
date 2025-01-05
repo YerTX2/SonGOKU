@@ -1,3 +1,6 @@
+//Código modificado por YerTX2 🇦🇱para que haga descargar en DOCUMENTO NO SEAS RATA NO BORRES 🦁
+
+
 import fetch from 'node-fetch';
 
 let HS = async (m, { conn, text, usedPrefix, command }) => {
