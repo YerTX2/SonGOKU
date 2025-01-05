@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 let HS = async (m, { conn, text }) => {
-    if (!text) return conn.reply(m.chat, `《✧》Por favor, envia un link de Youtube para descargar su audio.`, m);
+    if (!text) return conn.reply(m.chat, `🐉 Por favor, envia un link de Youtube para descargar su audio.`, m);
 
     try {
         await conn.reply(m.chat, `《⏳》Descargando su audio, por favor espera un momento...`, m);
