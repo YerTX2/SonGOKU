@@ -1,13 +1,15 @@
+//Código modificado por YerTX2 🇦🇱 con advertencias de descarga 
+
 import fetch from 'node-fetch';
 
 let HS = async (m, { conn, text }) => {
   if (!text) return conn.reply(m.chat, `🦁 Ingresa un enlace de YouTube.`, m);
 
   try {
-    // Advertir al usuario que se está procesando la descarga
+    
     await conn.reply(m.chat, `⏳ Descargando el video... Por favor, espera.`, m);
 
-    // Llamada a la API
+   
     let api = await fetch(`https://restapi.apibotwa.biz.id/api/ytmp4?url=${encodeURIComponent(text)}`);
     let json = await api.json();
 
@@ -19,10 +21,10 @@ let HS = async (m, { conn, text }) => {
     let dl_url = json.data.download.url;
     let fileName = json.data.filename || "video";
 
-    // Advertir al usuario que se está enviando el video
+   
     await conn.reply(m.chat, `📤 Enviando el video...`, m);
 
-    // Enviar el video al usuario
+    
     await conn.sendMessage(
       m.chat,
       {
@@ -34,7 +36,7 @@ let HS = async (m, { conn, text }) => {
       { quoted: m }
     );
 
-    // Confirmar que el video ha sido enviado
+ 
     await conn.reply(m.chat, `✅ Video enviado correctamente.`, m);
 
   } catch (error) {
@@ -43,9 +45,5 @@ let HS = async (m, { conn, text }) => {
   }
 };
 
-// Configuración del comando
 HS.command = ['ytmp6'];
-// handler.group = true;
-// handler.limit = 3;
-
 export default HS;
