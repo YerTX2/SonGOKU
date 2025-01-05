@@ -14,7 +14,7 @@ https://whatsapp.com/channel/0029VaBfsIwGk1FyaqFcK91S
 https://whatsapp.com/channel/0029Vanjyqb2f3ERifCpGT0W
 */
 
-//Código modificado por YerTX2 🇦🇱para que haga descargar en DOCUMENTO NO SEAS RATA NO BORRES 🦁
+//Código modificado por YerTX2 🇦🇱para que haga descargar en DOCUMENTO y Opciones de calidad NO SEAS RATA NO BORRES  🦁
 
 
 import fetch from 'node-fetch';
