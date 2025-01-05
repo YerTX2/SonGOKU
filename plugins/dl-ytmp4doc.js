@@ -19,48 +19,73 @@ https://whatsapp.com/channel/0029Vanjyqb2f3ERifCpGT0W
 
 import fetch from 'node-fetch';
 
-let HS = async (m, { conn, text, usedPrefix, command }) => {
+let HS = async (m, { conn, text }) => {
   if (!text) {
-    return conn.reply(m.chat, `❀ Ingresa el enlace de un video de YouTube`, m);
+    return conn.reply(
+      m.chat,
+      '*❌ Error:* Por favor, proporciona un enlace válido de YouTube para descargar el video.',
+      m
+    );
+  }
+
+  const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/;
+  if (!youtubeRegex.test(text)) {
+    return conn.reply(
+      m.chat,
+      '*❌ Error:* El enlace proporcionado no parece ser válido. Asegúrate de que sea un enlace de YouTube.',
+      m
+    );
   }
 
   try {
-    let calidad = '360';
+    let downloadMessage = await conn.reply(
+      m.chat,
+      '⏳ *Descargando video...*\nPor favor, espera mientras procesamos tu solicitud.',
+      m
+    );
 
-    let api = await fetch(`https://api.giftedtech.my.id/api/download/dlmp4q?apikey=gifted&quality=${calidad}&url=${encodeURIComponent(text)}`);
+    let api = await fetch(`https://restapi.apibotwa.biz.id/api/ytmp4?url=${text}&quality=360`);
+    if (!api.ok) throw new Error('No se pudo obtener una respuesta de la API.');
+
     let json = await api.json();
-
-    if (!json.result || !json.result.download_url) {
-      return conn.reply(m.chat, "❌ No se pudo obtener el enlace de descarga. Verifica el enlace y vuelve a intentarlo.", m);
+    if (!json.data || !json.data.download) {
+      throw new Error('No se pudo obtener los datos del video. Verifica el enlace.');
     }
 
-    let { quality, title, download_url } = json.result;
+    let title = json.data.metadata.title;
+    let dl_url = json.data.download.url;
 
-    let safeTitle = title ? title.replace(/[<>:"/\\|?*]+/g, "") : "video";
-
-    await conn.reply(m.chat, "⏳ Procesando tu video en documento, por favor espera...", m);
-
-    await conn.reply(m.chat, "📤 Enviando tu video como documento, por favor espera un momento...", m);
+    await conn.reply(
+      m.chat,
+      '📤 *Enviando video...*\nEsto puede tardar unos momentos dependiendo del tamaño del archivo.',
+      m
+    );
 
     await conn.sendMessage(
       m.chat,
       {
-        document: { url: download_url },
-        caption: `🎥 *Título*: ${title || "Sin título"}\n📹 *Calidad*: ${quality || calidad}`,
-        mimetype: "video/mp4",
-        fileName: `${safeTitle}.mp4`,
+        document: { url: dl_url },
+        fileName: `${title}.mp4`,
+        mimetype: 'video/mp4',
       },
       { quoted: m }
     );
 
-    await conn.reply(m.chat, "✅ Video enviado con éxito. ¡Disfrútalo!", m);
-
+    conn.reply(
+      m.chat,
+      `✅ *Video enviado con éxito:*\n*Título:* ${title}\nGracias por usar el servicio.`,
+      m
+    );
   } catch (error) {
-    console.error("Error procesando el video:", error);
-    return conn.reply(m.chat, "❌ Ocurrió un error al procesar tu solicitud. Por favor, intenta más tarde.", m);
+    console.error(error);
+    conn.reply(
+      m.chat,
+      `❌ *Error al procesar tu solicitud:*\n${error.message}\nPor favor, intenta de nuevo más tarde.`,
+      m
+    );
   }
 };
 
-HS.command = /^(ytmp4doc)$/i;
+HS.command = ['ytmp4doc'];
 
 export default HS;
