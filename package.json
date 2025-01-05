@@ -39,7 +39,7 @@
         "awesome-phonenumber": "^3.4.0",
                 "google-libphonenumber": "latest",   
         "@SumiFX/Scraper": "github:SumiFX/SumiFX-Scraper",
-        "@StarlightsTeam/Scraper": "github:StarlightsTeam/StarlightsTeam-Scraper",
+        "@StarlightsTeam/Scraper": "github:StarlightsTeam/StarlightsTeam-Scraper",  
         "cheerio": "github:AikerDev/cheeiro",
         "axios": "*",
         "acrcloud": "^1.4.0",

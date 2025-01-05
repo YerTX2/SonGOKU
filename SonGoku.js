@@ -104,7 +104,7 @@ loadChatgptDB();
 
 global.creds = 'creds.json'
 global.authFile = 'GokuSession'
-global.authFileJB  = 'GokuJadiBot'
+global.authFileJB  = 'Sesion Subbots'
 /*global.rutaBot = join(__dirname, authFile)
 global.rutaJadiBot = join(__dirname, authFileJB)
 
