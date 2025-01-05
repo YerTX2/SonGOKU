@@ -26,10 +26,10 @@ let HS = async (m, { conn, text }) => {
   }
 
   try {
-    // Advertencia inicial
+    
     await m.reply("⏳ Procesando tu audio, por favor espera...");
 
-    // Llamada a la API
+    
     let api = await fetch(`https://api.giftedtech.my.id/api/download/dlmp3?apikey=gifted&url=${text}`);
     let json = await api.json();
 
@@ -40,10 +40,10 @@ let HS = async (m, { conn, text }) => {
 
     let { quality, title, download_url } = json.result;
 
-    // Advertencia antes de enviar el archivo
+    
     await m.reply("📤 Enviando tu audio, por favor espera...")', m, rcanal
 
-    // Enviar el archivo de audio
+    
     await conn.sendMessage(
       m.chat,
       {
@@ -54,7 +54,7 @@ let HS = async (m, { conn, text }) => {
       { quoted: m }
     );
 
-    // Mensaje final confirmando el envío
+    
     await m.reply("✅ Audio enviado con éxito. ¡Disfrútalo!");
 
   } catch (error) {
