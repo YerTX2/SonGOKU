@@ -33,7 +33,7 @@ Elige una de las opciones para descargar:
       caption: body,
       footer: `© Bot | 🐉SonGoku🐉`,
       buttons: [
-        { buttonId: `.ytmp5 ${videoInfo.url}`, buttonText: { displayText: '🎵 Audio' } },
+        { buttonId: `.ytmp3 ${videoInfo.url}`, buttonText: { displayText: '🎵 Audio' } },
         { buttonId: `.ytmp6 ${videoInfo.url}`, buttonText: { displayText: '📽️ Video' } },
         { buttonId: `.ytmp4doc ${videoInfo.url}`, buttonText: { displayText: '📼 Video Doc' } },
       ],
