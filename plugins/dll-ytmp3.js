@@ -1,71 +1,30 @@
-//Derechos del código de 
-/* 
-*❀ By Jtxs*
-[ Canal Principal ] :
-https://whatsapp.com/channel/0029VaeQcFXEFeXtNMHk0D0n
-
-[ Canal Rikka Takanashi Bot ] :
-https://whatsapp.com/channel/0029VaksDf4I1rcsIO6Rip2X
-
-[ Canal StarlightsTeam] :
-https://whatsapp.com/channel/0029VaBfsIwGk1FyaqFcK91S
-
-[ HasumiBot FreeCodes ] :
-https://whatsapp.com/channel/0029Vanjyqb2f3ERifCpGT0W
-*/
-
-//Código modificado por YerTX2🇦🇱 agregado advertencia de descarga no borres no seas rata 
-
-
-
 import fetch from 'node-fetch';
 
 let HS = async (m, { conn, text }) => {
-  if (!text) {
-    return m.reply("🦁🔥 Ingresa un enlace de YouTube válido.");
-  }
+    if (!text) return conn.reply(m.chat, `《✧》Por favor, envia un link de Youtube para descargar su audio.`, m);
 
-  try {
-    
-    await m.reply("⏳ Procesando tu audio, por favor espera...");
+    try {
+        await conn.reply(m.chat, `《⏳》Descargando su audio, por favor espera un momento...`, m);
 
-    
-    let api = await fetch(`https://api.giftedtech.my.id/api/download/dlmp3?apikey=gifted&url=${text}`);
-    let json = await api.json();
+        let api = await fetch(`https://restapi.apibotwa.biz.id/api/ytmp3?url=${text}`);
+        let json = await api.json();
+        let title = json.result.metadata.title;
+        let dl_url = json.result.download.url;
 
-    // Validación de la respuesta de la API
-    if (!json.result || !json.result.download_url) {
-      return m.reply("❌ No se pudo obtener un enlace de descarga. Por favor, verifica el enlace y vuelve a intentarlo.");
+        await conn.sendMessage(m.chat, { 
+            audio: { url: dl_url }, 
+            fileName: `${title}.mp3`, 
+            mimetype: 'audio/mp4' 
+        }, { quoted: m });
+
+        await conn.reply(m.chat, `《✅》Su audio fue enviado con éxito. ¡Disfrútalo!`, m);
+
+    } catch (error) {
+        console.error(error);
+        conn.reply(m.chat, `《❌》Ocurrió un error al intentar descargar el audio. Por favor, verifica el enlace e inténtalo nuevamente.`, m);
     }
-
-    let { quality, title, download_url } = json.result;
-
-    
-    await m.reply("📤 Enviando tu audio, por favor espera...")', m, rcanal
-
-    
-    await conn.sendMessage(
-      m.chat,
-      {
-        audio: { url: download_url },
-        fileName: `${title}.mp3`,
-        mimetype: "audio/mp4",
-      },
-      { quoted: m }
-    );
-
-    
-    await m.reply("✅ Audio enviado con éxito. ¡Disfrútalo!");
-
-  } catch (error) {
-    console.error("Error procesando la solicitud:", error);
-    return m.reply("❌ Ocurrió un error al procesar tu solicitud. Por favor, intenta más tarde.");
-  }
 };
 
-// Configuración del comando
-HS.command = /^(ytmp5)$/i;
-// handler.group = true;
-// handler.limit = 3;
+HS.command = ['ytmp3', 'fgmp3', 'yta'];
 
 export default HS;
