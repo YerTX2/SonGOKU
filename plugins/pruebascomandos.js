@@ -1,71 +1,92 @@
-//
-import _ from "lodash"
-import fetch from "node-fetch"
+import { performance } from 'perf_hooks'
+import osu from 'node-os-utils'
 
-let handler = async (m, { conn, command, usedPrefix, args }) => {
-try {
+let handler = async(m, { conn, command, usedPrefix, DevMode }) => {
+    try {
+        let NotDetect = 'Not Detect'
+        let old = performance.now()
+        let cpu = osu.cpu
+        let cpuCore = cpu.count()
+        let drive = osu.drive
+        let mem = osu.mem
+        let netstat = osu.netstat
+        let OS = osu.os.platform()
+        let cpuModel = cpu.model()
+        let cpuPer
+        let p1 = cpu.usage().then(cpuPercentage => {
+            cpuPer = cpuPercentage
+        }).catch(() => {
+            cpuPer = NotDetect
+        })
+        let driveTotal, driveUsed, drivePer
+        let p2 = drive.info().then(info => {
+            driveTotal = (info.totalGb + ' GB'),
+                driveUsed = info.usedGb,
+                drivePer = (info.usedPercentage + '%')
+        }).catch(() => {
+            driveTotal = NotDetect,
+                driveUsed = NotDetect,
+                drivePer = NotDetect
+        })
+        let ramTotal, ramUsed
+        let p3 = mem.info().then(info => {
+            ramTotal = info.totalMemMb,
+                ramUsed = info.usedMemMb
+        }).catch(() => {
+            ramTotal = NotDetect,
+                ramUsed = NotDetect
+        })
+        let netsIn, netsOut
+        let p4 = netstat.inOut().then(info => {
+            netsIn = (info.total.inputMb + ' MB'),
+                netsOut = (info.total.outputMb + ' MB')
+        }).catch(() => {
+            netsIn = NotDetect,
+                netsOut = NotDetect
+        })
+        await Promise.all([p1, p2, p3, p4])
+        let _ramTotal = (ramTotal + ' MB')
+        let neww = performance.now()
 
-const text = _.get(args, "length") ? args.join(" ") : _.get(m, "quoted.text") || _.get(m, "quoted.caption") || _.get(m, "quoted.description") || ""
 
-if (!text.trim()) {
-return m.reply(`✦ Por favor, ingresa el nombre de la música.`)
+var txt = `
+*「 Status 」*
+OS : *${OS}*
+CPU Model : *${cpuModel}*
+CPU Core : *${cpuCore} Core*
+CPU : *${cpuPer}%*
+Ram : *${ramUsed} / ${_ramTotal}(${/[0-9.+/]/g.test(ramUsed) &&  /[0-9.+/]/g.test(ramTotal) ? Math.round(100 * (ramUsed / ramTotal)) + '%' : NotDetect})*
+Drive : *${driveUsed} / ${driveTotal} (${drivePer})*
+Ping : *${Math.round(neww - old)} ms*
+Internet IN : *${netsIn}*
+Internet OUT : *${netsOut}*
+`
+
+conn.sendMessage(m.chat,{ image :{ url : "https://telegra.ph/file/ec8cf04e3a2890d3dce9c.jpg" } , caption : txt }, { quoted: m })
+        console.log(OS)
+    } catch (e) {
+        console.log(e)
+        conn.reply(m.chat, eror, m)
+        if (DevMode) {
+            for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
+                conn.reply(jid, 'Status.js error\nNo: *' + m.sender.split `@` [0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', m)
+            }
+        }
+    }
 }
 
-await m.reply("✦ Espere un momento...")
+handler.help = ['status']
+//handler.tags = ['info']
+handler.command = /^(status2)$/i
 
-const searchResponse = await fetch(`https://deliriussapi-oficial.vercel.app/search/spotify?q=${encodeURIComponent(text)}`)
-const searchResult = await searchResponse.json()
-
-if (!searchResult.status || !searchResult.data.length) {
-return m.reply("✦ No se encontraron resultados para tu consulta.")
-}
-
-const firstResult = searchResult.data[0]
-const downloadResponse = await fetch(`https://deliriussapi-oficial.vercel.app/download/spotifydl?url=${firstResult.url}`)
-const downloadResult = await downloadResponse.json()
-
-if (!downloadResult.status || !downloadResult.data) {
-return m.reply("✦ No se pudo descargar el audio. Inténtalo de nuevo más tarde.")
-}
-
-const { title, author, url: downloadUrl, image } = downloadResult.data
-const captvid = `*✦Título:* ${title || "No encontrado"}
-*✧Popularidad:* ${firstResult.popularity || "No disponible"}
-*✦Artista:* ${author || "No encontrado"}
-*✧Álbum:* ${firstResult.album || "No disponible"}
-*✦Duración:* ${firstResult.duration || "No disponible"}
-*✦Publicado:* ${firstResult.publish || "No disponible"}
-*✧Enlace Spotify:* ${firstResult.url || "No disponible"}`
-
-const thumbnail = (await conn.getFile(image))?.data
-
-const infoReply = {
-contextInfo: {
-externalAdReply: {
-body: "✧ En unos momentos se entrega su audio",
-mediaType: 1,
-mediaUrl: firstResult.url,
-previewType: 0,
-renderLargerThumbnail: true,
-sourceUrl: firstResult.url,
-thumbnail: thumbnail,
-title: "S P O T I F Y - A U D I O",
-},},
-}
-
-await conn.reply(m.chat, captvid, m, infoReply)
-infoReply.contextInfo.externalAdReply.body = "Audio descargado con éxito" // Para confirmar la descarga Jjjj
-
-await conn.sendMessage(m.chat, { audio: { url: downloadUrl }, caption: captvid, mimetype: "audio/mpeg", contextInfo: infoReply.contextInfo, }, { quoted: m }
-)} catch (error) {
-console.error("Error en el handler de Spotify:", error)
-return m.reply("✦ Ocurrió un error al procesar tu solicitud. Inténtalo de nuevo más tarde.")
-}}
-
-
-handler.help = ["spotify2"]
-//handler.tags = ["descarga"]
-handler.command = ['splay2', 'spotify']
-handler.limit = true
+//xd
 
 export default handler
+
+function clockString(ms) {
+    let h = Math.floor(ms / 3600000)
+    let m = Math.floor(ms / 60000) % 60
+    let s = Math.floor(ms / 1000) % 60
+    console.log({ ms, h, m, s })
+    return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+}
