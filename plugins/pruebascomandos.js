@@ -22,6 +22,6 @@ await conn.sendFile(m.chat, dl_url, 'HasumiBotFreeCodes.mp3', null, m)
 console.error(error)
 }}
 
-handler.command = /^(spotifydl)$/i
+handler.command = /^(spotify1)$/i
 
 export default handler
