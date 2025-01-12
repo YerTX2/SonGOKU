@@ -47,7 +47,7 @@ let HS = async (m, { conn, text }) => {
         { quoted: m }
       );
 
-      // Confirmar que el video ha sido enviado
+      
       await conn.reply(m.chat, `✅ Video enviado correctamente.`, m);
       success = true; 
 
