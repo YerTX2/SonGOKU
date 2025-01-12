@@ -1,20 +1,5 @@
-//Derechos del código de 
-/* 
-*❀ By Jtxs*
-[ Canal Principal ] :
-https://whatsapp.com/channel/0029VaeQcFXEFeXtNMHk0D0n
-
-[ Canal Rikka Takanashi Bot ] :
-https://whatsapp.com/channel/0029VaksDf4I1rcsIO6Rip2X
-
-[ Canal StarlightsTeam] :
-https://whatsapp.com/channel/0029VaBfsIwGk1FyaqFcK91S
-
-[ HasumiBot FreeCodes ] :
-https://whatsapp.com/channel/0029Vanjyqb2f3ERifCpGT0W
-*/
-
-//Código modificado por YerTX2 🇦🇱para que haga descargar en DOCUMENTO y Opciones de calidad NO SEAS RATA NO BORRES  🦁
+//CÓDIGO MODIFICADO POR DV.YER🇦🇱 NO SEAS CABRO NO QUITES LOS DERECHOS ↩️
+//Código de (SonGoku) Bot 
 
 
 import fetch from 'node-fetch';
@@ -37,50 +22,64 @@ let HS = async (m, { conn, text }) => {
     );
   }
 
-  try {
-    let downloadMessage = await conn.reply(
-      m.chat,
-      '⏳ *Descargando video...*\nPor favor, espera mientras procesamos tu solicitud.',
-      m
-    );
+  let maxRetries = 4; 
+  let attempt = 0;
+  let success = false;
 
-    let api = await fetch(`https://restapi.apibotwa.biz.id/api/ytmp4?url=${text}&quality=360`);
-    if (!api.ok) throw new Error('No se pudo obtener una respuesta de la API.');
+  await conn.reply(
+    m.chat,
+    `⏳ *Descargando video en calidad 360p...*\nSi ocurre un error, se intentará hasta ${maxRetries} veces. Por favor, espera.`,
+    m
+  );
 
-    let json = await api.json();
-    if (!json.data || !json.data.download) {
-      throw new Error('No se pudo obtener los datos del video. Verifica el enlace.');
+  while (attempt < maxRetries && !success) {
+    try {
+      
+      let api = await fetch(`https://restapi.apibotwa.biz.id/api/ytmp4?url=${text}&quality=360`);
+      if (!api.ok) throw new Error('No se pudo obtener una respuesta de la API.');
+
+      let json = await api.json();
+      if (!json.data || !json.data.download) {
+        throw new Error('No se pudo obtener los datos del video. Verifica el enlace.');
+      }
+
+      let title = json.data.metadata.title || 'Sin título';
+      let dl_url = json.data.download.url;
+
+      await conn.reply(
+        m.chat,
+        '📤 *Enviando video en calidad 360p...*\nEsto puede tardar unos momentos dependiendo del tamaño del archivo.',
+        m
+      );
+
+      
+      await conn.sendMessage(
+        m.chat,
+        {
+          document: { url: dl_url },
+          fileName: `${title} (360p).mp4`,
+          mimetype: 'video/mp4',
+        },
+        { quoted: m }
+      );
+
+      conn.reply(
+        m.chat,
+        `✅ *Video enviado con éxito:*\n*Título:* ${title}\n*Calidad:* 360p\nGracias por usar el servicio.`,
+        m
+      );
+
+      success = true; 
+    } catch (error) {
+      console.error(error);
+      attempt++;
     }
+  }
 
-    let title = json.data.metadata.title;
-    let dl_url = json.data.download.url;
-
-    await conn.reply(
-      m.chat,
-      '📤 *Enviando video...*\nEsto puede tardar unos momentos dependiendo del tamaño del archivo.',
-      m
-    );
-
-    await conn.sendMessage(
-      m.chat,
-      {
-        document: { url: dl_url },
-        fileName: `${title}.mp4`,
-        mimetype: 'video/mp4',
-      },
-      { quoted: m }
-    );
-
+  if (!success) {
     conn.reply(
       m.chat,
-      `✅ *Video enviado con éxito:*\n*Título:* ${title}\nGracias por usar el servicio.`,
-      m
-    );
-  } catch (error) {
-    console.error(error);
-    conn.reply(
-      m.chat,
-      `❌ *Error al procesar tu solicitud:*\n${error.message}\nPor favor, intenta de nuevo más tarde.`,
+      `❌ *Error:* No se pudo descargar y enviar el video después de ${maxRetries} intentos.\nPor favor, verifica el enlace e inténtalo nuevamente más tarde.`,
       m
     );
   }
