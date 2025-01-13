@@ -61,7 +61,7 @@ let HS = async (m, { conn, text }) => {
 
     await conn.reply(
       m.chat,
-      `❌ No se pudo descargar y enviar el video después de ${maxRetries} intentos. Por favor, verifica el enlace e inténtalo nuevamente más tarde.`,
+      `❌ No se pudo descargar y enviar el video después de ${maxRetries} intentos. Puede que su pedido superé el límite de MB que WhatsApp WhatsApp permite enviar en video, intenté otra vez pero con el método de ytmp4doc.`,
       m
     );
   }
